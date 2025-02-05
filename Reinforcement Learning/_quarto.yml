@@ -1,0 +1,94 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  favicon: data/images/rl-logo.png
+  author: "Tyler Wallett & Amir Jafari"
+  date: "2/5/2025"
+  sidebar:
+    logo: data/images/rl-logo.png
+    collapse-level: 1
+  chapters:
+    - index.qmd
+    - part: "Lecture 1: Introduction"
+      chapters:
+        - text: "1.1 Probability"
+          file: index.qmd
+        - text: "1.2 Linear Algebra"
+          file: index.qmd
+    - part: "Lecture 2: Mathematical Foundations"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd
+    - part: "Lecture 3: Multi-Armed Bandits"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd
+    - part: "Lecture 4: Dynamic Programming"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd
+    - part: "Lecture 5: Monte Carlo"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd
+    - part: "Lecture 6: Temporal Differencing"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd
+    - part: "Lecture 7: Function Approximation"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd  
+    - part: "Lecture 8: Deep Q-Networks"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd 
+    - part: "Lecture 9: Policy Gradients"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd    
+    - part: "Lecture 10: Advanced Policy Gradients"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd   
+    - part: "Lecture 11: Monte Carlo Tree Search"
+      chapters:
+        - text: "2.1 Introduction to ML"
+          file: index.qmd
+        - text: "2.2 Neural Networks"
+          file: index.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    grid:
+      sidebar-width: 320px
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+
