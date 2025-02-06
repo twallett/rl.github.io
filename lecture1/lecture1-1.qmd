@@ -1,0 +1,77 @@
+---
+title: "What is Reinforcement Learning?"
+format: 
+  html:
+    number-sections: false
+---
+
+# _"Learning Optimal Sequential Decision-Making"_
+
+## Learning
+
+### Evaluative Feedback
+- **Evaluative feedback** indicates how good the action taken was, but not whether it was the best or the worst action.
+
+::: {.center}
+**Intuition:** _Learning through experience._
+:::
+
+::: {.columns}
+:::: {.column width="50%"}
+![Learning to Walk](images/BabyWalking.jpg)
+Learning to Walk
+::::
+
+:::: {.column width="50%"}
+![Ethics (Right vs. Wrong)](images/ethics.jpg)
+Ethics (Right vs. Wrong)
+::::
+:::
+
+### Instructive Feedback
+- **Instructive feedback** indicates the correct action to take, independently of the action actually taken.
+
+::: {.center}
+**Intuition:** _Learning through ground truth._
+:::
+
+::: {.center}
+$\nabla f(x)$
+
+Supervised and Unsupervised Learning
+:::
+
+- **Reinforcement Learning** uses evaluative feedback, whereas **Supervised / Unsupervised Learning** uses instructive feedback.
+
+::: {.columns}
+:::: {.column width="50%"}
+![Supervised Learning](images/cheetah.jpg)
+"Here’s some examples, now learn patterns in these examples..."
+::::
+
+:::: {.column width="50%"}
+![Reinforcement Learning](images/cheetahopenai.jpg)
+"Here’s an environment, now learn patterns by exploring it..."
+::::
+:::
+
+## Optimal
+
+- Maximizing discounted sum of rewards, or goal $G$.
+- Optimal Value Functions $V^{*}$.
+- Optimal Action-Value Functions $Q^{*}$.
+- Optimal Policies $\pi^{*}$.
+- Balancing exploration vs. exploitation trade-off.
+
+## Sequential Decision-Making
+
+::: {.center}
+![Markov Decision Process](images/MDP.png)
+:::
+
+::: {.center}
+$\pi: S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, ... , S_{T-1}, A_{T-1}, R_{T}$
+:::
+
+- The agent will make a series of actions over time.
+- These actions influence not only immediate rewards but also future states and rewards.
