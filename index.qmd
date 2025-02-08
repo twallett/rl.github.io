@@ -1,6 +1,6 @@
 ---
 title: "DATS 6450 – Reinforcement Learning"
-author: "Tyler Wallett, M.S. & Amir Jafari, PhD"
+author: "Tyler Wallett, MS & Amir Jafari, PhD"
 date: "today"
 format: 
   html:
@@ -55,7 +55,7 @@ format:
 
   .slide img {
     width: 120%;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
     margin: auto;
   }
@@ -78,26 +78,24 @@ format:
 
 # Instructor Information
 
-::: {.columns}
+::: {.grid}
 
-::: {.column width="30%" .text-center}
+::: {.g-col-12 .g-col-md-4 .text-center}
 ![](data/images/me.png){width=200 height=250}
 :::
 
-::: {.column width="70%"}
-
-<br>
-
+::: {.g-col-12 .g-col-md-8}
 - **Name:** Tyler Wallett, M.S.  
 - **Term:** Fall 2025  
 - **Office location:** Samson Hall Room 310  
-- **Office hours:** TBD
-- **E-mail:** twallett@gwu.edu  
+- **Office hours:** TBD  
+- **E-mail:** [twallett@gwu.edu](mailto:twallett@gwu.edu)  
 - **Github:** [twallett](https://github.com/twallett)  
-- **Zoom:** Meeting Link
+- **Zoom:** Meeting Link  
 :::
 
 :::
+
 
 # Course Description
 
@@ -154,8 +152,6 @@ pip install stable-baselines3
 | Oct 28, 2025 | Conclusion                     |             |                                                                          |
 | Dec 5, 2025  | Final Project Submission       |             |                                                                          |
 
-
-
 # Prerequisites
 
 - **DATS 6101** - Introduction to Data Science 
@@ -169,32 +165,27 @@ pip install stable-baselines3
 | Exam 2                     |   25   |
 | Final Project              |   25   |
 
-# Average Learning Per Week
-
 ::: {.callout-note}
+# Average Learning Per Week
 Students are expected to spend a minimum of 100 minutes of out-of-class work for every 50 minutes of direct instruction, for a minimum total of 2.5 hours a week. A 3-credit course should include 2.5 hours of direct instruction and a minimum of 5 hours of independent learning or 7.5 hours per week.
 :::
 
-# Online Resources 
-
 ::: {.callout-note}
+# Online Resources 
 For technical requirements and support, student services, obtaining a GWorld card, and state contact information please check [HERE](online.gwu.edu/student-support)
 :::
 
-# Classroom Recording 
-
 ::: {.callout-note}
+# Classroom Recording 
 The particular class recordings will be available to students who are registered on an individual basis, upon request. Please let me know in advance if you have any medical issues or emergencies that will prevent you from joining the class.
 :::
 
-# Virtual Academic Support
-
 ::: {.callout-tip}
+# Virtual Academic Support
 A full range of academic support is offered virtually in fall 2020. See [HERE](coronavirus.gwu.edu/top-faqs) for updates. Tutoring and course review sessions are offered through Academic Commons in an online format. See [HERE](academiccommons.gwu.edu/tutoring). Writing and research consultations are available online. See [HERE](academiccommons.gwu.edu/writing-research-help). Coaching, offered through the Office of Student Success, is available in a virtual format. See [HERE](studentsuccess.gwu.edu/academic-program-support). Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See [HERE](academiccommons.gwu.edu/study-skills). They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See [HERE](tinyurl.com/gw-virtual-learning).
 :::
 
-# Safety and Security
-
 ::: {.callout-warning}
+# Safety and Security
 In an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in [HERE](safety.gwu.edu/emergency-response-handbook). In an active violence situation: Get Out, Hide Out, or Take Out. See [HERE](go.gwu.edu/shooterpret). Stay informed: safety.gwu.edu/stay-informed.
 :::
