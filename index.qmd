@@ -76,7 +76,7 @@ format:
 
 ```
 
-# Instructor Information
+## Instructor Information
 
 ::: {.grid}
 
@@ -96,8 +96,7 @@ format:
 
 :::
 
-
-# Course Description
+## Course Description
 
 The aim of this course is to provide a comprehensive understanding of the **reinforcement learning framework**. The course will explore the key distinctions between reinforcement learning and other artificial intelligence learning paradigms, delve into relevant industry applications, and examine both classical and deep learning approaches. Additionally, the course will cover the taxonomy of reinforcement learning and offer hands-on experience through practical implementations using OpenAI Gymnasium and other learning environments.
 
@@ -107,19 +106,19 @@ The course will introduce the **taxonomy of reinforcement learning** by focusing
 
 To conclude, a discussion on **advanced topics, applications, and outlook** of reinforcement learning will be provided.
 
-# Learning Outcomes
+## Learning Outcomes
 
-1. Implement Reinforcemeent Learning frameworks using NumPy and TensorFlow. <br>
+1. Implement Reinforcement Learning frameworks using NumPy and TensorFlow. <br>
 2. Design decision-making systems using classical and deep learning architectures. <br>
-3. Explain Reinforcement Learning taxonomy. <br>
+3. Explain the Reinforcement Learning taxonomy. <br>
 4. Identify Reinforcement Learning’s challenges, current research, and future outlook. 
 
-# Resources
+## Resources
 
 - *Reinforcement Learning: An Introduction* by Richard S. Sutton and Andrew G. Barto ([Web Link](https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf))
 - *Reinforcement Learning GitHub:* [Extra Materials](https://github.com/amir-jafari/Reinforcement-Learning/tree/main/08-ExtraMaterials)
 
-# Software Requirements
+## Software Requirements
 
 - **Programming:** Python.
   
@@ -133,11 +132,11 @@ pip install stable-baselines3
 
 - **Cloud Services:** AWS & GCP virtual machines.
 
-# Course Outline
+## Course Outline
 
 | Week             | Topic                                      | Quiz/Exams      | Subjects                                             |
 |------------------|--------------------------------------------|-----------------|------------------------------------------------------|
-| Aug 29, 2025 | Introduction to Reinforcement Learning | | - Course Outline  <br> - What is Reinforcement Learning?  <br> - Industry Applications  <br> - Taxonomy <br>|
+| Aug 29, 2025 | Introduction to Reinforcement Learning | | - Course Outline  <br> - Motivation <br> - What is Reinforcement Learning?  <br> - Industry Applications  <br> - Taxonomy <br>|
 | Sep 5, 2025  | Mathematical Foundations       | | - Set Theory <br> - Axiomatic Probability <br> - Conditioning <br> - Independence <br> - Random Variables <br> - Expectation <br> - Probability Distribution |
 | Sep 12, 2025 | Multi-Armed Bandits            | Quiz 1      | - Exploration vs. Exploitation  <br> - $\epsilon$-Greedy  <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling |
 | Sep 19, 2025 | Dynamic Programming            | Quiz 2      | - Markov Chain <br> - Markov Decision Process <br> - Value Functions <br> - Action Value Functions <br> - Bellman Equations <br> - Value Iteration |
@@ -152,11 +151,11 @@ pip install stable-baselines3
 | Oct 28, 2025 | Conclusion                     |             |                                                                          |
 | Dec 5, 2025  | Final Project Submission       |             |                                                                          |
 
-# Prerequisites
+## Prerequisites
 
 - **DATS 6101** - Introduction to Data Science 
 
-# Assignments & Grading
+## Assignments & Grading
 
 | Assignment                    | Points |
 |:------------------------------:|:------:|
@@ -166,26 +165,26 @@ pip install stable-baselines3
 | Final Project              |   25   |
 
 ::: {.callout-note}
-# Average Learning Per Week
+## Average Learning Per Week
 Students are expected to spend a minimum of 100 minutes of out-of-class work for every 50 minutes of direct instruction, for a minimum total of 2.5 hours a week. A 3-credit course should include 2.5 hours of direct instruction and a minimum of 5 hours of independent learning or 7.5 hours per week.
 :::
 
 ::: {.callout-note}
-# Online Resources 
+## Online Resources 
 For technical requirements and support, student services, obtaining a GWorld card, and state contact information please check [HERE](online.gwu.edu/student-support)
 :::
 
 ::: {.callout-note}
-# Classroom Recording 
+## Classroom Recording 
 The particular class recordings will be available to students who are registered on an individual basis, upon request. Please let me know in advance if you have any medical issues or emergencies that will prevent you from joining the class.
 :::
 
 ::: {.callout-tip}
-# Virtual Academic Support
+## Virtual Academic Support
 A full range of academic support is offered virtually in fall 2020. See [HERE](coronavirus.gwu.edu/top-faqs) for updates. Tutoring and course review sessions are offered through Academic Commons in an online format. See [HERE](academiccommons.gwu.edu/tutoring). Writing and research consultations are available online. See [HERE](academiccommons.gwu.edu/writing-research-help). Coaching, offered through the Office of Student Success, is available in a virtual format. See [HERE](studentsuccess.gwu.edu/academic-program-support). Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See [HERE](academiccommons.gwu.edu/study-skills). They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See [HERE](tinyurl.com/gw-virtual-learning).
 :::
 
 ::: {.callout-warning}
-# Safety and Security
+## Safety and Security
 In an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in [HERE](safety.gwu.edu/emergency-response-handbook). In an active violence situation: Get Out, Hide Out, or Take Out. See [HERE](go.gwu.edu/shooterpret). Stay informed: safety.gwu.edu/stay-informed.
 :::

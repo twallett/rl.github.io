@@ -10,14 +10,17 @@ book:
     collapse-level: 1
   chapters:
     - index.qmd
-    # - part: "Lecture 1: Introduction"
-      # chapters:
-        # - text: "1.1 What is Reinforcement Learning?"
-        #   file: lecture1/lecture1-1.qmd
-        # - text: "1.2 Industry Applications"
-        #   file: lecture1/lecture1-2.qmd
-        # - text: "1.3 Taxonomy"
-        #   file: lecture1/lecture1-3.qmd
+    - part: "Lecture 1: Introduction"
+    #   chapters:
+    #     - text: "1.1 Motivation"
+    #       file: lecture1/lecture1-1.qmd
+    #     - text: "1.2 What is Reinforcement Learning?"
+    #       file: lecture1/lecture1-2.qmd
+    #     - text: "1.3 Industry Applications"
+    #       file: lecture1/lecture1-3.qmd
+    #     - text: "1.4 Taxonomy"
+    #       file: lecture1/lecture1-4.qmd
+    # - references.qmd
     # - part: "Lecture 2: Mathematical Foundations"
     #   chapters:
     #     - text: "2.1 Introduction to ML"

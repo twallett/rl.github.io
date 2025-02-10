@@ -1,6 +1,58 @@
 ---
-title: "Taxonomy"
+title: "Industry Applications"
 format: 
   html:
     number-sections: false
 ---
+
+## Recommendation Systems
+
+<div class="text-center">
+  ![Netflix: Recommendation Systems](images/Neflix.png){width=50%}  
+  Trained using MAB (Lecture 2)  
+  [Link to Online Article](https://netflixtechblog.com/artwork-personalization-c589f074ad76)
+</div>
+
+## Games
+
+<div class="text-center">
+  ![Atari: Breakout](images/breakout.gif){width=50%, height=70%}  
+  Trained using DQN (Lecture 9)  
+  [Link to Research Paper](https://arxiv.org/pdf/1312.5602)
+</div>
+
+## Robotics
+
+<div class="text-center">
+  ![OpenAI's Dactyl](images/openaidactyl.png){width=55%}  
+  Trained using PPO (Lecture 11)  
+  [Link to Blog](https://openai.com/index/solving-rubiks-cube/)
+</div>
+
+## Autonomous Vehicles
+
+<div class="text-center">
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/hubWIuuz-e4" 
+          frameborder="0" 
+          allowfullscreen>
+  </iframe> 
+  <br>
+  Partly trained using PPO (Lecture 11)
+</div>
+
+## Natural Language Processing
+
+<div class="text-center">
+  ![ChatGPT: RLHF](images/rlhf.png){width=70%}  
+  Trained using PPO (Lecture 11)  
+  [Link to Research Paper](https://arxiv.org/pdf/2203.02155)
+</div>
+
+## Finance
+
+<div class="text-center">
+  ![J.P. Morgan Chase: Portfolio Optimization](images/jpmorgan.png){width=70%}  
+  Trained using PPO (Lecture 11)  
+  [Link to Research Paper](https://arxiv.org/pdf/2403.16667)
+</div>
