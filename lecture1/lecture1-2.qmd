@@ -1,77 +1,97 @@
 ---
-title: "What is Reinforcement Learning?"
-format: 
-  html:
-    number-sections: false
+title: "1.2 What is Reinforcement Learning?"
+format: revealjs
+html:
+  number-sections: false
 ---
 
-# _"Learning Optimal Sequential Decision-Making"_
+::: {.callout-note appearance="simple" icon=false}
+So now that we have answered the fundamental question of why. It's time for the next big mystery:
+<p style="text-align: center;"> <em> What is Reinforcement Learning?</em> 🤔</p> 
+:::
+
+Good news! We can sum up the core idea of Reinforcement Learning in just one powerful sentence [@brunskill2022cs234]:
+
+::: {style = "text-align:center;"}
+# Learning Optimal Sequential Decision-Making Under Uncertainty 
+:::
+
+But what exactly does that mean? Let’s break it down!
 
 ## Learning
 
-### Evaluative Feedback
-- **Evaluative feedback** indicates how good the action taken was, but not whether it was the best or the worst action.
+At its core, learning in Reinforcement Learning occurs through trial and error, where an agent refines its actions based on _evaluative feedback_ from the environment. 
 
-::: {.center}
-**Intuition:** _Learning through experience._
+::: {.callout-tip}
+## Evaluative Feedback
+_Evaluative feedback_ indicates how good the action taken was, but not whether it was the best or the worst action. <br>
+<p style="text-align: center;"> Intuition: Learning through experience </p> 
 :::
 
-::: {.columns}
-:::: {.column width="50%"}
-![Learning to Walk](images/BabyWalking.jpg)
-Learning to Walk
-::::
-
-:::: {.column width="50%"}
-![Ethics (Right vs. Wrong)](images/ethics.jpg)
-Ethics (Right vs. Wrong)
-::::
+::: columns
+::: {.column width="50%" style = "text-align:center;"}
+<div style="margin-right: 10px">
+  ![Learning to Walk](images/BabyWalking.jpg){width=100% height=200px}
+</div>
+:::
+::: {.column width="50%" style = "text-align:center;"}
+<div style="margin-left: 10px">
+  ![Ethics (Right vs. Wrong)](images/ethics.jpg){width=100% height=200px}
+</div>
+:::
 :::
 
-### Instructive Feedback
-- **Instructive feedback** indicates the correct action to take, independently of the action actually taken.
+Unlike both supervised/unsupervised learning which rely on _instructive feedback_ through gradient based optimization. 
 
-::: {.center}
-**Intuition:** _Learning through ground truth._
+::: {.callout-tip}
+## Instructive Feedback
+_Instructive feedback_ indicates the correct action to take, independently of the action actually taken. <br>
+<p style="text-align: center;"> Intuition: Learning through ground truth</p> 
 :::
 
-::: {.center}
-$\nabla f(x)$
-
-Supervised and Unsupervised Learning
+::: {style = "text-align:center;"}
+![Supervised/Unsupervised Learning](images/nabla.drawio.png){width=25% height=200px fig-align="center"}
 :::
 
-- **Reinforcement Learning** uses evaluative feedback, whereas **Supervised / Unsupervised Learning** uses instructive feedback.
+For example, supervised/unsupervised learning focus on identifying what makes an image a cheetah by learning patterns from a dataset of animal images. In contrast, Reinforcement Learning is about teaching a cheetah how to run by interacting with its environment (Lecture 10).
 
-::: {.columns}
-:::: {.column width="50%"}
-![Supervised Learning](images/cheetah.jpg)
-"Here’s some examples, now learn patterns in these examples..."
-::::
-
-:::: {.column width="50%"}
-![Reinforcement Learning](images/cheetahopenai.jpg)
-"Here’s an environment, now learn patterns by exploring it..."
-::::
+::: columns
+::: {.column width="50%"}
+<div style="margin-right: 10px">
+  ![Supervised Learning](images/cheetah.jpg){width=100% height=200px}
+  "Here’s some examples (images), now learn patterns in these examples..."
+</div>
+:::
+::: {.column width="50%"}
+<div style="margin-left: 10px">
+  ![Reinforcement Learning](images/cheetahopenai.jpg){width=100% height=200px}
+  "Here’s an environment, now learn patterns by exploring it..."
+</div>
+:::
 :::
 
 ## Optimal
 
-- Maximizing discounted sum of rewards, or goal $G$.
+The goal of Reinforcement Learning is to maximize rewards over time by finding the best possible strategy. This involves seeking:
+
+- A Maximized discounted sum of rewards, or goal $G$.
 - Optimal Value Functions $V^{*}$.
 - Optimal Action-Value Functions $Q^{*}$.
 - Optimal Policies $\pi^{*}$.
-- Balancing exploration vs. exploitation trade-off.
+- A Balance between exploration vs. exploitation.
 
 ## Sequential Decision-Making
 
-::: {.center}
+Unlike a one-time choice, Reinforcement Learning involves a chain of decisions where each action affects the next.
+
+::: {.center style = "text-align:center;"}
 ![Markov Decision Process](images/MDP.png)
 :::
 
-::: {.center}
+::: {.center style = "text-align:center;"}
 $\pi: S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, ... , S_{T-1}, A_{T-1}, R_{T}$
 :::
 
-- The agent will make a series of actions over time.
-- These actions influence not only immediate rewards but also future states and rewards.
+- Markov Decision Process (MDP) is a formal framework for modeling decision-making.
+- The agent selects actions over multiple time steps, shaping its future states and rewards.
+- Each decision affects not only immediate rewards but also the trajectory of future outcomes.

@@ -1,9 +1,8 @@
 ---
-title: "Motivation"
-format: 
-  html:
-    number-sections: false
-    footer: Hello
+title: "1.1 Why should I study Reinforcement Learning?"
+format: revealjs
+html:
+  number-sections: false
 ---
 
 ::: {.callout-note appearance="simple" icon=false}
@@ -63,7 +62,7 @@ GWU's learners, alive, alive!
 
 <br>
 
-> In essence, the AI model's behavior <u>closely mirrors human-like actions</u>. This is expected, given its training on extensive datasets derived from human behavior. However, continued training on the same datasets will likely result in models that perform at a human-equivalent level. To achieve significant breakthroughs, we must explore learning methods that <u>transcend typical human capabilities</u>.
+In essence, the AI model's behavior <u>closely mirrors human-like actions</u>. This is expected, given its training on extensive datasets derived from human behavior. However, continued training on the same datasets will likely result in models that perform at a human-equivalent level. To achieve significant breakthroughs, we must explore learning methods that <u>transcend typical human capabilities</u>.
 
 ## The Goal of Reinforcement Learning
 
@@ -72,15 +71,52 @@ GWU's learners, alive, alive!
 Reinforcement Learning is concerned with seeking _emergent behavior_, or behavior that goes beyond what people might do or think of. <br>
 :::
 
-> Ultimately, as scientists, we want to discover new solutions for a task so that when an agent, or decision-maker, is placed in a novel situation it can respond intelligently.
+Ultimately, as scientists, we want to discover new solutions for a task so that when an agent, or decision-maker, is placed in a novel situation it can respond intelligently [@levine2019deeprl].
 
+### Example: AlphaGO
 
-![](images/go.png)
-
-<figcaption style = "text-align:center;">AlphaGo Move 37 (Lecture 11)</figcaption>
-
-
-::: {#refs}
-
-dddd
+::: {.columns style = "text-align:center;"}
+   
+::: {.column width="50%"}
+![AlphaGo Move 37](images/go.png)
 :::
+
+::: {.column width="50%"}
+
+"_It’s not a human move. I’ve never seen a human play this move._" – Commentator on Move 37, AlphaGo (2017)
+
+:::
+
+:::
+
+### Example: Matrix Multiplication
+
+::: {.columns}
+   
+::: {.column width="50%"}
+[![Discovering faster matrix multiplication algorithms with reinforcement learning](images/MatrixMultiplication.png)](https://www.nature.com/articles/s41586-022-05172-4)
+:::
+
+
+::: {.column width="50%"}
+
+"_Trained from scratch, AlphaTensor discovers matrix multiplication algorithms that are more efficient than existing human and computer-designed algorithms._" - Discovering faster matrix multiplication algorithms with reinforcement learning
+
+:::
+
+:::
+
+## So why should I study Reinforcement Learning?
+
+Reinforcement Learning (RL) is not just another machine learning paradigm; it is a fundamental framework for decision-making, control, and optimizing sequential actions in uncertain environments. Studying RL enables us to: <br>
+
+::: {style="text-align:center;"}
+✅ Understand Intelligence <br>
+✅ Develop Cutting-Edge AI <br>
+✅ Solve Real-World Problems <br>
+✅ Push Beyond Human Limits <br>
+:::
+
+By studying RL, we gain the tools to create AI that learns, adapts, and innovates beyond predefined rules and static datasets. 🚀  
+
+

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tyler Wallett, MS &amp; Amir Jafari, PhD">
-<meta name="dcterms.date" content="2025-02-11">
 
-<title>DATS 6450 – Reinforcement Learning</title>
+<title>1.2 What is Reinforcement Learning?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,61 +20,48 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./lecture1/lecture1-1.html" rel="next">
-<link href="./data/images/rl-logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lecture1/lecture1-3.html" rel="next">
+<link href="../lecture1/lecture1-1.html" rel="prev">
+<link href="../data/images/rl-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -146,7 +131,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs">DATS 6450 – Reinforcement Learning</h1>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">1.2 What is Reinforcement Learning?</span></h1>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,8 +145,8 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./data/images/rl-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../data/images/rl-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -173,43 +158,43 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">DATS 6450 – Reinforcement Learning</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">DATS 6450 – Reinforcement Learning</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Lecture 1: Introduction</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lecture1/lecture1-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></a>
+  <a href="../lecture1/lecture1-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lecture1/lecture1-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.2 What is Reinforcement Learning?</span></a>
+  <a href="../lecture1/lecture1-2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">1.2 What is Reinforcement Learning?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lecture1/lecture1-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.3 Where is Reinforcement Learning Applied?</span></a>
+  <a href="../lecture1/lecture1-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.3 Where is Reinforcement Learning Applied?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lecture1/lecture1-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.4 How is Reinforcement Learning Structured?</span></a>
+  <a href="../lecture1/lecture1-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.4 How is Reinforcement Learning Structured?</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -223,14 +208,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#instructor-information" id="toc-instructor-information" class="nav-link active" data-scroll-target="#instructor-information">Instructor Information</a></li>
-  <li><a href="#course-description" id="toc-course-description" class="nav-link" data-scroll-target="#course-description">Course Description</a></li>
-  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#software-requirements" id="toc-software-requirements" class="nav-link" data-scroll-target="#software-requirements">Software Requirements</a></li>
-  <li><a href="#course-outline" id="toc-course-outline" class="nav-link" data-scroll-target="#course-outline">Course Outline</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#assignments-grading" id="toc-assignments-grading" class="nav-link" data-scroll-target="#assignments-grading">Assignments &amp; Grading</a></li>
+  <li><a href="#learning-optimal-sequential-decision-making-under-uncertainty" id="toc-learning-optimal-sequential-decision-making-under-uncertainty" class="nav-link active" data-scroll-target="#learning-optimal-sequential-decision-making-under-uncertainty">Learning Optimal Sequential Decision-Making Under Uncertainty</a></li>
+  <li><a href="#learning" id="toc-learning" class="nav-link" data-scroll-target="#learning">Learning</a></li>
+  <li><a href="#optimal" id="toc-optimal" class="nav-link" data-scroll-target="#optimal">Optimal</a></li>
+  <li><a href="#sequential-decision-making" id="toc-sequential-decision-making" class="nav-link" data-scroll-target="#sequential-decision-making">Sequential Decision-Making</a></li>
   </ul>
 </nav>
     </div>
@@ -239,26 +220,14 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">DATS 6450 – Reinforcement Learning</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">1.2 What is Reinforcement Learning?</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Tyler Wallett, MS &amp; Amir Jafari, PhD </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 11, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -268,341 +237,139 @@ window.Quarto = {
 </header>
 
 
-<div class="slideshow-container">
-  <div class="slideshow">
-    <div class="slide">
-      <img src="data/images/breakout.gif">
-      <figcaption>Breakout (Lecture 8)</figcaption>
-    </div>
-    <div class="slide">
-      <img src="data/images/cheetah.gif">
-      <figcaption>Cheetah (Lecture 10)</figcaption>
-    </div>
-    <div class="slide">
-      <img src="data/images/gridworld.gif">
-      <figcaption>Gridworld (Lectures 4-6)</figcaption>
-    </div>
-    <div class="slide">
-      <img src="data/images/highway.gif">
-      <figcaption>Highway (Lecture 8)</figcaption>
-    </div>
-  </div>
-</div>
-
-<style>
-  .slideshow-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-
-  .slideshow {
-    display: flex;
-    width: 100%;
-    animation: slide 16s ease-in-out infinite;
-  }
-
-  .slide {
-    width: 100%;
-    flex-shrink: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .slide img {
-    width: 120%;
-    max-width: 415px;
-    height: auto;
-    margin: auto;
-  }
-
-  figcaption {
-    font-size: 14px;
-    margin-top: 5px;
-  }
-
-  @keyframes slide {
-    0%, 20% { transform: translateX(0); }
-    25%, 45% { transform: translateX(-100%); }
-    50%, 70% { transform: translateX(-200%); }
-    75%, 95% { transform: translateX(-300%); }
-    100% { transform: translateX(0); }
-  }
-</style>
-
-<section id="instructor-information" class="level2">
-<h2 class="anchored" data-anchor-id="instructor-information">Instructor Information</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-4 text-center">
-<p><img src="data/images/me.png" width="200" height="250"></p>
-</div>
-<div class="g-col-12 g-col-md-8">
-<ul>
-<li><strong>Name:</strong> Tyler Wallett, M.S.<br>
-</li>
-<li><strong>Term:</strong> Fall 2025<br>
-</li>
-<li><strong>Office location:</strong> Samson Hall Room 310<br>
-</li>
-<li><strong>Office hours:</strong> TBD<br>
-</li>
-<li><strong>E-mail:</strong> <a href="mailto:twallett@gwu.edu">twallett@gwu.edu</a><br>
-</li>
-<li><strong>Github:</strong> <a href="https://github.com/twallett">twallett</a><br>
-</li>
-<li><strong>Zoom:</strong> Meeting Link<br>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="course-description" class="level2">
-<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
-<p>The aim of this course is to provide a comprehensive understanding of the <strong>reinforcement learning framework</strong>. The course will explore the key distinctions between reinforcement learning and other artificial intelligence learning paradigms, delve into relevant industry applications, and examine both classical and deep learning approaches. Additionally, the course will cover the taxonomy of reinforcement learning and offer hands-on experience through practical implementations using OpenAI Gymnasium and other learning environments.</p>
-<p>The <strong>classical approach</strong> will focus on learning methods designed to find optimal solutions in tabular environments, whereas the <strong>deep learning approach</strong> will tackle the challenge of finding approximate optimal solutions in large or continuous environments through the use of deep learning architectures.</p>
-<p>The course will introduce the <strong>taxonomy of reinforcement learning</strong> by focusing on model-free value-based methods, transitioning to value function approximation and deep learning approaches, followed by novel policy-based methods using state-of-the-art architectures to tackle complex environments.</p>
-<p>To conclude, a discussion on <strong>advanced topics, applications, and outlook</strong> of reinforcement learning will be provided.</p>
-</section>
-<section id="learning-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
-<ol type="1">
-<li>Implement Reinforcement Learning frameworks using NumPy and TensorFlow. <br></li>
-<li>Design decision-making systems using classical and deep learning architectures. <br></li>
-<li>Explain the Reinforcement Learning taxonomy. <br></li>
-<li>Identify Reinforcement Learning’s challenges, current research, and future outlook.</li>
-</ol>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li><em>Reinforcement Learning: An Introduction</em> by Richard S. Sutton and Andrew G. Barto (<a href="https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf">Web Link</a>)</li>
-<li><em>Reinforcement Learning GitHub:</em> <a href="https://github.com/amir-jafari/Reinforcement-Learning/tree/main/08-ExtraMaterials">Extra Materials</a></li>
-</ul>
-</section>
-<section id="software-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="software-requirements">Software Requirements</h2>
-<ul>
-<li><strong>Programming:</strong> Python.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tensorflow</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pygame</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install gymnasium</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install stable-baselines3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li><strong>Cloud Services:</strong> AWS &amp; GCP virtual machines.</li>
-</ul>
-</section>
-<section id="course-outline" class="level2">
-<h2 class="anchored" data-anchor-id="course-outline">Course Outline</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 33%">
-<col style="width: 12%">
-<col style="width: 40%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Week</th>
-<th>Topic</th>
-<th>Quiz/Exams</th>
-<th>Subjects</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Aug 29, 2025</td>
-<td>Introduction to Reinforcement Learning</td>
-<td></td>
-<td>- Course Outline <br> - Why should I study Reinforcement Learning? <br> - What is Reinforcement Learning? <br> - Where is Reinforcement Learning Applied? <br> - How is Reinforcement Learning Structured? <br></td>
-</tr>
-<tr class="even">
-<td>Sep 5, 2025</td>
-<td>Mathematical Foundations</td>
-<td></td>
-<td>- Set Theory <br> - Axiomatic Probability <br> - Conditioning <br> - Independence <br> - Random Variables <br> - Expectation <br> - Probability Distribution</td>
-</tr>
-<tr class="odd">
-<td>Sep 12, 2025</td>
-<td>Multi-Armed Bandits</td>
-<td>Quiz 1</td>
-<td>- Exploration vs.&nbsp;Exploitation <br> - <span class="math inline">\(\epsilon\)</span>-Greedy <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling</td>
-</tr>
-<tr class="even">
-<td>Sep 19, 2025</td>
-<td>Dynamic Programming</td>
-<td>Quiz 2</td>
-<td>- Markov Chain <br> - Markov Decision Process <br> - Value Functions <br> - Action Value Functions <br> - Bellman Equations <br> - Value Iteration</td>
-</tr>
-<tr class="odd">
-<td>Sep 26, 2025</td>
-<td>Monte Carlo Methods</td>
-<td>Quiz 3</td>
-<td>- OpenAI Gymansium Environment: GridWorld <br> - On-Policy Monte Carlo <br> - Off-Policy Monte Carlo</td>
-</tr>
-<tr class="even">
-<td>Oct 3, 2025</td>
-<td>Temporal-Difference</td>
-<td>Quiz 4</td>
-<td>- OpenAI Gymansium Environment: GridWorld <br> - Temporal Difference Prediction <br> - SARSA <br> - Q-Learning <br> - Double Q-Learning <br> - (Optional) n-step TD</td>
-</tr>
-<tr class="odd">
-<td>Oct 10, 2025</td>
-<td>Function Approximation</td>
-<td><strong>Exam 1</strong></td>
-<td>- OpenAI Gymansium Environment: MountainCar <br> - Value Function Approximation (VFA) <br> - On-Policy Function Approximation <br> - Semi-gradient SARSA <br> - Limitations of Off-Policy Function Approximation</td>
-</tr>
-<tr class="even">
-<td>Oct 24, 2025</td>
-<td>Deep Q-Networks</td>
-<td>Quiz 5</td>
-<td>- OpenAI Gymansium Environment: BreakOut <br> - Multi-Layered Perceprtons (MLPs) <br> - Convolutional Neural Networks (CNNs) <br> - Experience Replay <br> - Fixed Targets <br> - Vanilla Deep Q-Network</td>
-</tr>
-<tr class="odd">
-<td>Oct 31, 2025</td>
-<td>Policy Gradients</td>
-<td>Quiz 6</td>
-<td>- OpenAI Gymansium Environment: CartPole <br> - Policy Gradient Theorem <br> - Vanilla Policy Gradient</td>
-</tr>
-<tr class="even">
-<td>Nov 7, 2025</td>
-<td>Advanced Policy Gradients</td>
-<td>Quiz 7</td>
-<td>- OpenAI Gymansium Environment: HalfCheetah <br> - Trust Region Policy Optimization (TRPO) <br> - Proximal Policy Optimization: KL-Divergence <br> - Proximal Policy Optimization: Clip</td>
-</tr>
-<tr class="odd">
-<td>Nov 14, 2025</td>
-<td><strong>Thanksgiving Break</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Nov 21, 2025</td>
-<td>Monte Carlo Tree Search</td>
-<td><strong>Exam 2</strong></td>
-<td>- OpenAI Gymansium Environment: Tic Tac Toe <br> - Model-based Reinforcement Learning <br> - Monte Carlo Tree Search <br> - AlphaGo <br> - MuZero</td>
-</tr>
-<tr class="odd">
-<td>Oct 28, 2025</td>
-<td>Conclusion</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Dec 5, 2025</td>
-<td>Final Project Submission</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<ul>
-<li><strong>DATS 6101</strong> - Introduction to Data Science</li>
-</ul>
-</section>
-<section id="assignments-grading" class="level2">
-<h2 class="anchored" data-anchor-id="assignments-grading">Assignments &amp; Grading</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Assignment</th>
-<th style="text-align: center;">Points</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Quizzes (5 best scores)</td>
-<td style="text-align: center;">25</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Exam 1</td>
-<td style="text-align: center;">25</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Exam 2</td>
-<td style="text-align: center;">25</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Final Project</td>
-<td style="text-align: center;">25</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Average Learning Per Week
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Students are expected to spend a minimum of 100 minutes of out-of-class work for every 50 minutes of direct instruction, for a minimum total of 2.5 hours a week. A 3-credit course should include 2.5 hours of direct instruction and a minimum of 5 hours of independent learning or 7.5 hours per week.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Online Resources
+<div class="callout-body-container">
+So now that we have answered the fundamental question of why. It’s time for the next big mystery:
+<p style="text-align: center;">
+<em> What is Reinforcement Learning?</em> 🤔
+</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>For technical requirements and support, student services, obtaining a GWorld card, and state contact information please check <a href="online.gwu.edu/student-support">HERE</a></p>
 </div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Classroom Recording
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The particular class recordings will be available to students who are registered on an individual basis, upon request. Please let me know in advance if you have any medical issues or emergencies that will prevent you from joining the class.</p>
-</div>
-</div>
+<p>Good news! We can sum up the core idea of Reinforcement Learning in just one powerful sentence <span class="citation" data-cites="brunskill2022cs234">(<a href="../references.html#ref-brunskill2022cs234" role="doc-biblioref">Brunskill 2022</a>)</span>:</p>
+<section id="learning-optimal-sequential-decision-making-under-uncertainty" class="level1" style="text-align:center;">
+<h1>Learning Optimal Sequential Decision-Making Under Uncertainty</h1>
+</section>
+<p>But what exactly does that mean? Let’s break it down!</p>
+<section id="learning" class="level2">
+<h2 class="anchored" data-anchor-id="learning">Learning</h2>
+<p>At its core, learning in Reinforcement Learning occurs through trial and error, where an agent refines its actions based on <em>evaluative feedback</em> from the environment.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Virtual Academic Support
+Evaluative Feedback
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A full range of academic support is offered virtually in fall 2020. See <a href="coronavirus.gwu.edu/top-faqs">HERE</a> for updates. Tutoring and course review sessions are offered through Academic Commons in an online format. See <a href="academiccommons.gwu.edu/tutoring">HERE</a>. Writing and research consultations are available online. See <a href="academiccommons.gwu.edu/writing-research-help">HERE</a>. Coaching, offered through the Office of Student Success, is available in a virtual format. See <a href="studentsuccess.gwu.edu/academic-program-support">HERE</a>. Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See <a href="academiccommons.gwu.edu/study-skills">HERE</a>. They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See <a href="tinyurl.com/gw-virtual-learning">HERE</a>.</p>
+<em>Evaluative feedback</em> indicates how good the action taken was, but not whether it was the best or the worst action. <br>
+<p style="text-align: center;">
+Intuition: Learning through experience
+</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="columns">
+<div class="column" style="text-align:center;">
+<div style="margin-right: 10px">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/BabyWalking.jpg" style="width:100.0%" height="200" class="figure-img"></p>
+<figcaption>Learning to Walk</figcaption>
+</figure>
+</div>
+</div>
+</div><div class="column" style="text-align:center;">
+<div style="margin-left: 10px">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ethics.jpg" style="width:100.0%" height="200" class="figure-img"></p>
+<figcaption>Ethics (Right vs.&nbsp;Wrong)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Unlike both supervised/unsupervised learning which rely on <em>instructive feedback</em> through gradient based optimization.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Safety and Security
+Instructive Feedback
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in <a href="safety.gwu.edu/emergency-response-handbook">HERE</a>. In an active violence situation: Get Out, Hide Out, or Take Out. See <a href="go.gwu.edu/shooterpret">HERE</a>. Stay informed: safety.gwu.edu/stay-informed.</p>
+<em>Instructive feedback</em> indicates the correct action to take, independently of the action actually taken. <br>
+<p style="text-align: center;">
+Intuition: Learning through ground truth
+</p>
 </div>
 </div>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/nabla.drawio.png" style="width:25.0%" height="200" class="figure-img"></p>
+<figcaption>Supervised/Unsupervised Learning</figcaption>
+</figure>
+</div>
+</div>
+<p>For example, supervised/unsupervised learning focus on identifying what makes an image a cheetah by learning patterns from a dataset of animal images. In contrast, Reinforcement Learning is about teaching a cheetah how to run by interacting with its environment (Lecture 10).</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="margin-right: 10px">
+<p><img src="images/cheetah.jpg" style="width:100.0%" height="200" alt="Supervised Learning"> “Here’s some examples (images), now learn patterns in these examples…”</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="margin-left: 10px">
+<p><img src="images/cheetahopenai.jpg" style="width:100.0%" height="200" alt="Reinforcement Learning"> “Here’s an environment, now learn patterns by exploring it…”</p>
+</div>
+</div>
+</div>
+</section>
+<section id="optimal" class="level2">
+<h2 class="anchored" data-anchor-id="optimal">Optimal</h2>
+<p>The goal of Reinforcement Learning is to maximize rewards over time by finding the best possible strategy. This involves seeking:</p>
+<ul>
+<li>A Maximized discounted sum of rewards, or goal <span class="math inline">\(G\)</span>.</li>
+<li>Optimal Value Functions <span class="math inline">\(V^{*}\)</span>.</li>
+<li>Optimal Action-Value Functions <span class="math inline">\(Q^{*}\)</span>.</li>
+<li>Optimal Policies <span class="math inline">\(\pi^{*}\)</span>.</li>
+<li>A Balance between exploration vs.&nbsp;exploitation.</li>
+</ul>
+</section>
+<section id="sequential-decision-making" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-decision-making">Sequential Decision-Making</h2>
+<p>Unlike a one-time choice, Reinforcement Learning involves a chain of decisions where each action affects the next.</p>
+<div class="center" style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/MDP.png" class="img-fluid figure-img"></p>
+<figcaption>Markov Decision Process</figcaption>
+</figure>
+</div>
+</div>
+<div class="center" style="text-align:center;">
+<p><span class="math inline">\(\pi: S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, ... , S_{T-1}, A_{T-1}, R_{T}\)</span></p>
+</div>
+<ul>
+<li>Markov Decision Process (MDP) is a formal framework for modeling decision-making.</li>
+<li>The agent selects actions over multiple time steps, shaping its future states and rewards.</li>
+<li>Each decision affects not only immediate rewards but also the trajectory of future outcomes.</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-brunskill2022cs234" class="csl-entry" role="listitem">
+Brunskill, Emma. 2022. <span>“CS234: Reinforcement Learning - Lecture 1.”</span> Course Lecture Slides, Stanford University. <a href="https://web.stanford.edu/class/cs234/slides/lecture1pre.pdf">https://web.stanford.edu/class/cs234/slides/lecture1pre.pdf</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1025,10 +792,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../lecture1/lecture1-1.html" class="pagination-link" aria-label="1.1 Why should I study Reinforcement Learning?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lecture1/lecture1-1.html" class="pagination-link" aria-label="1.1 Why should I study Reinforcement Learning?">
-        <span class="nav-page-text"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lecture1/lecture1-3.html" class="pagination-link" aria-label="1.3 Where is Reinforcement Learning Applied?">
+        <span class="nav-page-text"><span class="chapter-title">1.3 Where is Reinforcement Learning Applied?</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,6 +1,10 @@
 ---
-title: "Taxonomy"
-format: 
-  html:
-    number-sections: false
+title: "1.4 How is Reinforcement Learning Structured?"
+format: revealjs
+html:
+  number-sections: false
 ---
+
+::: {style = "text-align:center;"}
+![Taxonomy of Reinforcement Learning](images/SuggestedOutline.drawio.svg)
+:::

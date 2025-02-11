@@ -64,7 +64,7 @@
     "href": "index.html#course-outline",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "Course Outline",
-    "text": "Course Outline\n\n\n\n\n\n\n\n\n\nWeek\nTopic\nQuiz/Exams\nSubjects\n\n\n\n\nAug 29, 2025\nIntroduction to Reinforcement Learning\n\n- Course Outline  - Motivation  - What is Reinforcement Learning?  - Industry Applications  - Taxonomy \n\n\nSep 5, 2025\nMathematical Foundations\n\n- Set Theory  - Axiomatic Probability  - Conditioning  - Independence  - Random Variables  - Expectation  - Probability Distribution\n\n\nSep 12, 2025\nMulti-Armed Bandits\nQuiz 1\n- Exploration vs. Exploitation  - \\(\\epsilon\\)-Greedy  - Upper Confidence Boundary (UCB)  - Thompson Sampling\n\n\nSep 19, 2025\nDynamic Programming\nQuiz 2\n- Markov Chain  - Markov Decision Process  - Value Functions  - Action Value Functions  - Bellman Equations  - Value Iteration\n\n\nSep 26, 2025\nMonte Carlo Methods\nQuiz 3\n- OpenAI Gymansium Environment: GridWorld  - On-Policy Monte Carlo  - Off-Policy Monte Carlo\n\n\nOct 3, 2025\nTemporal-Difference\nQuiz 4\n- OpenAI Gymansium Environment: GridWorld  - Temporal Difference Prediction  - SARSA  - Q-Learning  - Double Q-Learning  - (Optional) n-step TD\n\n\nOct 10, 2025\nFunction Approximation\nExam 1\n- OpenAI Gymansium Environment: MountainCar  - Value Function Approximation (VFA)  - On-Policy Function Approximation  - Semi-gradient SARSA  - Limitations of Off-Policy Function Approximation\n\n\nOct 24, 2025\nDeep Q-Networks\nQuiz 5\n- OpenAI Gymansium Environment: BreakOut  - Multi-Layered Perceprtons (MLPs)  - Convolutional Neural Networks (CNNs)  - Experience Replay  - Fixed Targets  - Vanilla Deep Q-Network\n\n\nOct 31, 2025\nPolicy Gradients\nQuiz 6\n- OpenAI Gymansium Environment: CartPole  - Policy Gradient Theorem  - Vanilla Policy Gradient\n\n\nNov 7, 2025\nAdvanced Policy Gradients\nQuiz 7\n- OpenAI Gymansium Environment: HalfCheetah  - Trust Region Policy Optimization (TRPO)  - Proximal Policy Optimization: KL-Divergence  - Proximal Policy Optimization: Clip\n\n\nNov 14, 2025\nThanksgiving Break\n\n\n\n\nNov 21, 2025\nMonte Carlo Tree Search\nExam 2\n- OpenAI Gymansium Environment: Tic Tac Toe  - Model-based Reinforcement Learning  - Monte Carlo Tree Search  - AlphaGo  - MuZero\n\n\nOct 28, 2025\nConclusion\n\n\n\n\nDec 5, 2025\nFinal Project Submission",
+    "text": "Course Outline\n\n\n\n\n\n\n\n\n\nWeek\nTopic\nQuiz/Exams\nSubjects\n\n\n\n\nAug 29, 2025\nIntroduction to Reinforcement Learning\n\n- Course Outline  - Why should I study Reinforcement Learning?  - What is Reinforcement Learning?  - Where is Reinforcement Learning Applied?  - How is Reinforcement Learning Structured? \n\n\nSep 5, 2025\nMathematical Foundations\n\n- Set Theory  - Axiomatic Probability  - Conditioning  - Independence  - Random Variables  - Expectation  - Probability Distribution\n\n\nSep 12, 2025\nMulti-Armed Bandits\nQuiz 1\n- Exploration vs. Exploitation  - \\(\\epsilon\\)-Greedy  - Upper Confidence Boundary (UCB)  - Thompson Sampling\n\n\nSep 19, 2025\nDynamic Programming\nQuiz 2\n- Markov Chain  - Markov Decision Process  - Value Functions  - Action Value Functions  - Bellman Equations  - Value Iteration\n\n\nSep 26, 2025\nMonte Carlo Methods\nQuiz 3\n- OpenAI Gymansium Environment: GridWorld  - On-Policy Monte Carlo  - Off-Policy Monte Carlo\n\n\nOct 3, 2025\nTemporal-Difference\nQuiz 4\n- OpenAI Gymansium Environment: GridWorld  - Temporal Difference Prediction  - SARSA  - Q-Learning  - Double Q-Learning  - (Optional) n-step TD\n\n\nOct 10, 2025\nFunction Approximation\nExam 1\n- OpenAI Gymansium Environment: MountainCar  - Value Function Approximation (VFA)  - On-Policy Function Approximation  - Semi-gradient SARSA  - Limitations of Off-Policy Function Approximation\n\n\nOct 24, 2025\nDeep Q-Networks\nQuiz 5\n- OpenAI Gymansium Environment: BreakOut  - Multi-Layered Perceprtons (MLPs)  - Convolutional Neural Networks (CNNs)  - Experience Replay  - Fixed Targets  - Vanilla Deep Q-Network\n\n\nOct 31, 2025\nPolicy Gradients\nQuiz 6\n- OpenAI Gymansium Environment: CartPole  - Policy Gradient Theorem  - Vanilla Policy Gradient\n\n\nNov 7, 2025\nAdvanced Policy Gradients\nQuiz 7\n- OpenAI Gymansium Environment: HalfCheetah  - Trust Region Policy Optimization (TRPO)  - Proximal Policy Optimization: KL-Divergence  - Proximal Policy Optimization: Clip\n\n\nNov 14, 2025\nThanksgiving Break\n\n\n\n\nNov 21, 2025\nMonte Carlo Tree Search\nExam 2\n- OpenAI Gymansium Environment: Tic Tac Toe  - Model-based Reinforcement Learning  - Monte Carlo Tree Search  - AlphaGo  - MuZero\n\n\nOct 28, 2025\nConclusion\n\n\n\n\nDec 5, 2025\nFinal Project Submission",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -87,6 +87,203 @@
     "text": "Assignments & Grading\n\n\n\nAssignment\nPoints\n\n\n\n\nQuizzes (5 best scores)\n25\n\n\nExam 1\n25\n\n\nExam 2\n25\n\n\nFinal Project\n25\n\n\n\n\n\n\n\n\n\nAverage Learning Per Week\n\n\n\nStudents are expected to spend a minimum of 100 minutes of out-of-class work for every 50 minutes of direct instruction, for a minimum total of 2.5 hours a week. A 3-credit course should include 2.5 hours of direct instruction and a minimum of 5 hours of independent learning or 7.5 hours per week.\n\n\n\n\n\n\n\n\nOnline Resources\n\n\n\nFor technical requirements and support, student services, obtaining a GWorld card, and state contact information please check HERE\n\n\n\n\n\n\n\n\nClassroom Recording\n\n\n\nThe particular class recordings will be available to students who are registered on an individual basis, upon request. Please let me know in advance if you have any medical issues or emergencies that will prevent you from joining the class.\n\n\n\n\n\n\n\n\nVirtual Academic Support\n\n\n\nA full range of academic support is offered virtually in fall 2020. See HERE for updates. Tutoring and course review sessions are offered through Academic Commons in an online format. See HERE. Writing and research consultations are available online. See HERE. Coaching, offered through the Office of Student Success, is available in a virtual format. See HERE. Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See HERE. They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See HERE.\n\n\n\n\n\n\n\n\nSafety and Security\n\n\n\nIn an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in HERE. In an active violence situation: Get Out, Hide Out, or Take Out. See HERE. Stay informed: safety.gwu.edu/stay-informed.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html",
+    "href": "lecture1/lecture1-1.html",
+    "title": "1.1 Why should I study Reinforcement Learning?",
+    "section": "",
+    "text": "Advances in Artificial Intelligence\nIn essence, the AI model’s behavior closely mirrors human-like actions. This is expected, given its training on extensive datasets derived from human behavior. However, continued training on the same datasets will likely result in models that perform at a human-equivalent level. To achieve significant breakthroughs, we must explore learning methods that transcend typical human capabilities.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Why should I study Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html#advances-in-artificial-intelligence",
+    "href": "lecture1/lecture1-1.html#advances-in-artificial-intelligence",
+    "title": "1.1 Why should I study Reinforcement Learning?",
+    "section": "",
+    "text": "June 2018: OpenAI introduces the Generative Pre-trained Transformer (GPT), laying the foundation for subsequent LLMs.\nFebruary 2019: OpenAI releases GPT-2, demonstrating significant improvements in text generation capabilities.\nJune 2020: GPT-3 is unveiled, featuring 175 billion parameters and showcasing advanced language understanding and generation.\nJanuary 2021: OpenAI announces DALL-E, a model capable of generating images from textual descriptions.\nApril 2022: DALL-E 2 is introduced, offering enhanced image resolution and greater realism in generated images.\nNovember 2022: OpenAI releases ChatGPT, a conversational AI based on the GPT-3.5 architecture, enabling more interactive and contextually relevant dialogues.\n\n\n\n\n\n\n\n\n\n\n\n\n\nAt GWU, where minds aspire,  Reinforcement learners never tire  In search of policies, bold and bright,  They train their agents, day and night.   With Sutton, Barto as their guide,  They walk the path, rewards beside.  Exploring states with epsilon’s grace,  They find the optimal embrace.   Gridworlds vast, mazes deep,  In code they sow, in dreams they reap.  The future’s theirs, they push, they strive–  GWU’s learners, alive, alive!\n\n\n\nPoem and images generated by Large Language Model: ChatGPT 3.5 & Diffusion Models: DALL-E, correspondingly.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Why should I study Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html#the-goal-of-reinforcement-learning",
+    "href": "lecture1/lecture1-1.html#the-goal-of-reinforcement-learning",
+    "title": "1.1 Why should I study Reinforcement Learning?",
+    "section": "The Goal of Reinforcement Learning",
+    "text": "The Goal of Reinforcement Learning\n\n\n\n\n\n\nEmergent Behavior\n\n\n\nReinforcement Learning is concerned with seeking emergent behavior, or behavior that goes beyond what people might do or think of. \n\n\nUltimately, as scientists, we want to discover new solutions for a task so that when an agent, or decision-maker, is placed in a novel situation it can respond intelligently (Levine 2019).\n\nExample: AlphaGO\n\n\n\n\n\nAlphaGo Move 37\n\n\n\n“It’s not a human move. I’ve never seen a human play this move.” – Commentator on Move 37, AlphaGo (2017)\n\n\n\n\nExample: Matrix Multiplication\n\n\n\n\n\nDiscovering faster matrix multiplication algorithms with reinforcement learning\n\n\n\n“Trained from scratch, AlphaTensor discovers matrix multiplication algorithms that are more efficient than existing human and computer-designed algorithms.” - Discovering faster matrix multiplication algorithms with reinforcement learning",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Why should I study Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-2.html",
+    "href": "lecture1/lecture1-2.html",
+    "title": "1.2 What is Reinforcement Learning?",
+    "section": "",
+    "text": "Learning Optimal Sequential Decision-Making Under Uncertainty\nGood news! We can sum up the core idea of Reinforcement Learning in just one powerful sentence (Brunskill 2022):\nBut what exactly does that mean? Let’s break it down!",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1.2 What is Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-2.html#learning",
+    "href": "lecture1/lecture1-2.html#learning",
+    "title": "1.2 What is Reinforcement Learning?",
+    "section": "Learning",
+    "text": "Learning\nAt its core, learning in Reinforcement Learning occurs through trial and error, where an agent refines its actions based on evaluative feedback from the environment.\n\n\n\n\n\n\nEvaluative Feedback\n\n\n\nEvaluative feedback indicates how good the action taken was, but not whether it was the best or the worst action. \n\nIntuition: Learning through experience\n\n\n\n\n\n\n\n\n\nLearning to Walk\n\n\n\n\n\n\n\n\nEthics (Right vs. Wrong)\n\n\n\n\n\nUnlike both supervised/unsupervised learning which rely on instructive feedback through gradient based optimization.\n\n\n\n\n\n\nInstructive Feedback\n\n\n\nInstructive feedback indicates the correct action to take, independently of the action actually taken. \n\nIntuition: Learning through ground truth\n\n\n\n\n\n\n\nSupervised/Unsupervised Learning\n\n\n\nFor example, supervised/unsupervised learning focus on identifying what makes an image a cheetah by learning patterns from a dataset of animal images. In contrast, Reinforcement Learning is about teaching a cheetah how to run by interacting with its environment (Lecture 10).\n\n\n\n “Here’s some examples (images), now learn patterns in these examples…”\n\n\n\n “Here’s an environment, now learn patterns by exploring it…”",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1.2 What is Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-2.html#optimal",
+    "href": "lecture1/lecture1-2.html#optimal",
+    "title": "1.2 What is Reinforcement Learning?",
+    "section": "Optimal",
+    "text": "Optimal\nThe goal of Reinforcement Learning is to maximize rewards over time by finding the best possible strategy. This involves seeking:\n\nA Maximized discounted sum of rewards, or goal \\(G\\).\nOptimal Value Functions \\(V^{*}\\).\nOptimal Action-Value Functions \\(Q^{*}\\).\nOptimal Policies \\(\\pi^{*}\\).\nA Balance between exploration vs. exploitation.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1.2 What is Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-2.html#sequential-decision-making",
+    "href": "lecture1/lecture1-2.html#sequential-decision-making",
+    "title": "1.2 What is Reinforcement Learning?",
+    "section": "Sequential Decision-Making",
+    "text": "Sequential Decision-Making\nUnlike a one-time choice, Reinforcement Learning involves a chain of decisions where each action affects the next.\n\n\n\n\nMarkov Decision Process\n\n\n\n\n\\(\\pi: S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, ... , S_{T-1}, A_{T-1}, R_{T}\\)\n\n\nMarkov Decision Process (MDP) is a formal framework for modeling decision-making.\nThe agent selects actions over multiple time steps, shaping its future states and rewards.\nEach decision affects not only immediate rewards but also the trajectory of future outcomes.\n\n\n\n\n\nBrunskill, Emma. 2022. “CS234: Reinforcement Learning - Lecture 1.” Course Lecture Slides, Stanford University. https://web.stanford.edu/class/cs234/slides/lecture1pre.pdf.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1.2 What is Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html",
+    "href": "lecture1/lecture1-3.html",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "",
+    "text": "Recommendation Systems\nReinforcement Learning powers modern recommendation systems by dynamically adapting to user preferences, optimizing content suggestions in platforms like Netflix, YouTube, and Spotify using techniques such as Multi-Armed Bandits (MAB).",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#recommendation-systems",
+    "href": "lecture1/lecture1-3.html#recommendation-systems",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "",
+    "text": "Trained using MAB (Lecture 2)\nLink to Online Article",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#games",
+    "href": "lecture1/lecture1-3.html#games",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Games",
+    "text": "Games\nReinforcement Learning has revolutionized gaming by enabling AI to master complex environments, from Atari classics to advanced strategy games, using deep learning techniques like Deep Q-Networks (DQN) to achieve superhuman performance.\n\n\nTrained using DQN (Lecture 9)\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#robotics",
+    "href": "lecture1/lecture1-3.html#robotics",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Robotics",
+    "text": "Robotics\nIn robotics, Reinforcement Learning enables autonomous agents to learn complex motor skills, such as dexterous manipulation and locomotion, through continuous interaction and training with Proximal Policy Optimization (PPO).\n\n\nTrained using PPO (Lecture 11)\nLink to Blog",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#autonomous-vehicles",
+    "href": "lecture1/lecture1-3.html#autonomous-vehicles",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Autonomous Vehicles",
+    "text": "Autonomous Vehicles\nSelf-driving cars rely on Reinforcement Learning to navigate complex environments, optimize decision-making, and improve safety, often incorporating PPO and deep learning to refine real-time control strategies.\n\n   Partly trained using PPO (Lecture 11)",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#natural-language-processing",
+    "href": "lecture1/lecture1-3.html#natural-language-processing",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Natural Language Processing",
+    "text": "Natural Language Processing\nReinforcement Learning from Human Feedback (RLHF) enhances AI language models like ChatGPT, allowing them to refine responses based on user interactions and align better with human preferences.\n\n\nTrained using PPO (Lecture 11)\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#finance",
+    "href": "lecture1/lecture1-3.html#finance",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Finance",
+    "text": "Finance\nIn financial markets, RL is applied to portfolio optimization, algorithmic trading, and risk management, leveraging techniques like PPO to make data-driven investment decisions.\n\n\nTrained using PPO (Lecture 11)\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html#so-why-should-i-study-reinforcement-leanring",
+    "href": "lecture1/lecture1-1.html#so-why-should-i-study-reinforcement-leanring",
+    "title": "Motivation",
+    "section": "So why should I study Reinforcement Leanring?",
+    "text": "So why should I study Reinforcement Leanring?\n\n\n\n\n\n\nReinforcement Learning (RL) is not just another machine learning paradigm; it is a fundamental framework for decision-making, control, and optimizing sequential actions in uncertain environments. Studying RL enables us to: \n✅ Understand Intelligence  ✅ Develop Cutting-Edge AI  ✅ Solve Real-World Problems  ✅ Push Beyond Human Limits \nBy studying RL, we gain the tools to create AI that learns, adapts, and innovates beyond predefined rules and static datasets. 🚀",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Motivation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html#so-why-should-i-study-reinforcement-learning",
+    "href": "lecture1/lecture1-1.html#so-why-should-i-study-reinforcement-learning",
+    "title": "1.1 Why should I study Reinforcement Learning?",
+    "section": "So why should I study Reinforcement Learning?",
+    "text": "So why should I study Reinforcement Learning?\nReinforcement Learning (RL) is not just another machine learning paradigm; it is a fundamental framework for decision-making, control, and optimizing sequential actions in uncertain environments. Studying RL enables us to: \n\n✅ Understand Intelligence  ✅ Develop Cutting-Edge AI  ✅ Solve Real-World Problems  ✅ Push Beyond Human Limits \n\nBy studying RL, we gain the tools to create AI that learns, adapts, and innovates beyond predefined rules and static datasets. 🚀\n\n\n\n\nLevine, Sergey. 2019. “Introduction to Deep Reinforcement Learning.” Course Lecture Slides, Deep RL Course, UC Berkeley. https://rail.eecs.berkeley.edu/deeprlcourse/deeprlcourse/static/slides/lec-1.pdf.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Why should I study Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-4.html",
+    "href": "lecture1/lecture1-4.html",
+    "title": "1.4 How is Reinforcement Learning Structured?",
+    "section": "",
+    "text": "Taxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>1.4 How is Reinforcement Learning Structured?</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Brunskill, Emma. 2022. “CS234: Reinforcement Learning - Lecture\n1.” Course Lecture Slides, Stanford University. https://web.stanford.edu/class/cs234/slides/lecture1pre.pdf.\n\n\nLevine, Sergey. 2019. “Introduction to Deep Reinforcement\nLearning.” Course Lecture Slides, Deep RL Course, UC Berkeley. https://rail.eecs.berkeley.edu/deeprlcourse/deeprlcourse/static/slides/lec-1.pdf.",
+    "crumbs": [
+      "References"
     ]
   }
 ]

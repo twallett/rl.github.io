@@ -136,7 +136,7 @@ pip install stable-baselines3
 
 | Week             | Topic                                      | Quiz/Exams      | Subjects                                             |
 |------------------|--------------------------------------------|-----------------|------------------------------------------------------|
-| Aug 29, 2025 | Introduction to Reinforcement Learning | | - Course Outline  <br> - Motivation <br> - What is Reinforcement Learning?  <br> - Industry Applications  <br> - Taxonomy <br>|
+| Aug 29, 2025 | Introduction to Reinforcement Learning | | - Course Outline  <br> - Why should I study Reinforcement Learning? <br> - What is Reinforcement Learning?  <br> - Where is Reinforcement Learning Applied?  <br> - How is Reinforcement Learning Structured? <br>|
 | Sep 5, 2025  | Mathematical Foundations       | | - Set Theory <br> - Axiomatic Probability <br> - Conditioning <br> - Independence <br> - Random Variables <br> - Expectation <br> - Probability Distribution |
 | Sep 12, 2025 | Multi-Armed Bandits            | Quiz 1      | - Exploration vs. Exploitation  <br> - $\epsilon$-Greedy  <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling |
 | Sep 19, 2025 | Dynamic Programming            | Quiz 2      | - Markov Chain <br> - Markov Decision Process <br> - Value Functions <br> - Action Value Functions <br> - Bellman Equations <br> - Value Iteration |

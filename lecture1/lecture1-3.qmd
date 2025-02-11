@@ -1,11 +1,19 @@
 ---
-title: "Industry Applications"
+title: "1.3 Where is Reinforcement Learning Applied?"
 format: 
   html:
     number-sections: false
 ---
 
+::: {.callout-note appearance="simple" icon=false}
+We know why it matters and what it’s all about. Now, let’s dive into:
+<p style="text-align: center;"> <em> Where is Reinforcement Learning Applied?</em> 🤔</p> 
+:::
+
+
 ## Recommendation Systems
+
+Reinforcement Learning powers modern recommendation systems by dynamically adapting to user preferences, optimizing content suggestions in platforms like Netflix, YouTube, and Spotify using techniques such as Multi-Armed Bandits (MAB).
 
 <div class="text-center">
   ![Netflix: Recommendation Systems](images/Neflix.png){width=50%}  
@@ -15,6 +23,8 @@ format:
 
 ## Games
 
+Reinforcement Learning has revolutionized gaming by enabling AI to master complex environments, from Atari classics to advanced strategy games, using deep learning techniques like Deep Q-Networks (DQN) to achieve superhuman performance.
+
 <div class="text-center">
   ![Atari: Breakout](images/breakout.gif){width=50%, height=70%}  
   Trained using DQN (Lecture 9)  
@@ -23,6 +33,8 @@ format:
 
 ## Robotics
 
+In robotics, Reinforcement Learning enables autonomous agents to learn complex motor skills, such as dexterous manipulation and locomotion, through continuous interaction and training with Proximal Policy Optimization (PPO).
+
 <div class="text-center">
   ![OpenAI's Dactyl](images/openaidactyl.png){width=55%}  
   Trained using PPO (Lecture 11)  
@@ -30,6 +42,8 @@ format:
 </div>
 
 ## Autonomous Vehicles
+
+Self-driving cars rely on Reinforcement Learning to navigate complex environments, optimize decision-making, and improve safety, often incorporating PPO and deep learning to refine real-time control strategies.
 
 <div class="text-center">
   <iframe width="560" height="315" 
@@ -43,6 +57,8 @@ format:
 
 ## Natural Language Processing
 
+Reinforcement Learning from Human Feedback (RLHF) enhances AI language models like ChatGPT, allowing them to refine responses based on user interactions and align better with human preferences.
+
 <div class="text-center">
   ![ChatGPT: RLHF](images/rlhf.png){width=70%}  
   Trained using PPO (Lecture 11)  
@@ -50,6 +66,8 @@ format:
 </div>
 
 ## Finance
+
+In financial markets, RL is applied to portfolio optimization, algorithmic trading, and risk management, leveraging techniques like PPO to make data-driven investment decisions.
 
 <div class="text-center">
   ![J.P. Morgan Chase: Portfolio Optimization](images/jpmorgan.png){width=70%}  
