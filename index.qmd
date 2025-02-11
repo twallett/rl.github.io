@@ -55,7 +55,7 @@ format:
 
   .slide img {
     width: 120%;
-    max-width: 400px;
+    max-width: 415px;
     height: auto;
     margin: auto;
   }
