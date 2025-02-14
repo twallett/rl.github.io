@@ -20,13 +20,11 @@ book:
           file: lecture1/lecture1-3.qmd
         - text: "1.4 How is Reinforcement Learning Structured?"
           file: lecture1/lecture1-4.qmd
-    - references.qmd
     # - part: "Lecture 2: Mathematical Foundations"
     #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd
+    #     - text: "2.1 Probability"
+    #       file: lecture2/lecture2-1.qmd
+    - references.qmd
     # - part: "Lecture 3: Multi-Armed Bandits"
     #   chapters:
     #     - text: "2.1 Introduction to ML"

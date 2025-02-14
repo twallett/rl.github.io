@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1.1 Why should I study Reinforcement Learning?</title>
+<title>2.1 Probability</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +30,8 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lecture1/lecture1-2.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../references.html" rel="next">
+<link href="../lecture1/lecture1-4.html" rel="prev">
 <link href="../data/images/rl-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -102,7 +82,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></h1>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">2.1 Probability</span></h1>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,16 +114,16 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Lecture 1: Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture1/lecture1-1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></a>
+  <a href="../lecture1/lecture1-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -165,16 +145,16 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Lecture 2: Mathematical Foundations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture2/lecture2-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2.1 Probability</span></a>
+  <a href="../lecture2/lecture2-1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2.1 Probability</span></a>
   </div>
 </li>
       </ul>
@@ -190,27 +170,15 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#advances-in-artificial-intelligence" id="toc-advances-in-artificial-intelligence" class="nav-link active" data-scroll-target="#advances-in-artificial-intelligence">Advances in Artificial Intelligence</a></li>
-  <li><a href="#the-goal-of-reinforcement-learning" id="toc-the-goal-of-reinforcement-learning" class="nav-link" data-scroll-target="#the-goal-of-reinforcement-learning">The Goal of Reinforcement Learning</a>
-  <ul class="collapse">
-  <li><a href="#example-alphago" id="toc-example-alphago" class="nav-link" data-scroll-target="#example-alphago">Example: AlphaGO</a></li>
-  <li><a href="#example-matrix-multiplication" id="toc-example-matrix-multiplication" class="nav-link" data-scroll-target="#example-matrix-multiplication">Example: Matrix Multiplication</a></li>
-  </ul></li>
-  <li><a href="#so-why-should-i-study-reinforcement-learning" id="toc-so-why-should-i-study-reinforcement-learning" class="nav-link" data-scroll-target="#so-why-should-i-study-reinforcement-learning">So why should I study Reinforcement Learning?</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">2.1 Probability</span></h1>
 </div>
 
 
@@ -227,112 +195,14 @@ div.csl-indent {
 </header>
 
 
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-Welcome to DATS 6450: Reinforcement Learning! 🚀 Before diving into algorithms and mathematical calculations we must first stop and ask ourselves the essential question: <br>
-<p style="text-align: center;">
-<em> Why should I study Reinforcement Learning?</em> 🤔
-</p>
-</div>
-</div>
-</div>
-<section id="advances-in-artificial-intelligence" class="level2">
-<h2 class="anchored" data-anchor-id="advances-in-artificial-intelligence">Advances in Artificial Intelligence</h2>
-<ul>
-<li><p><strong>June 2018</strong>: OpenAI introduces the Generative Pre-trained Transformer (GPT), laying the foundation for subsequent LLMs.</p></li>
-<li><p><strong>February 2019</strong>: OpenAI releases GPT-2, demonstrating significant improvements in text generation capabilities.</p></li>
-<li><p><strong>June 2020</strong>: GPT-3 is unveiled, featuring 175 billion parameters and showcasing advanced language understanding and generation.</p></li>
-<li><p><strong>January 2021</strong>: OpenAI announces DALL-E, a model capable of generating images from textual descriptions.</p></li>
-<li><p><strong>April 2022</strong>: DALL-E 2 is introduced, offering enhanced image resolution and greater realism in generated images.</p></li>
-<li><p><strong>November 2022</strong>: OpenAI releases ChatGPT, a conversational AI based on the GPT-3.5 architecture, enabling more interactive and contextually relevant dialogues.</p></li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div style="margin-right: 10px">
-<p><img src="images/diffusion.png" style="width:100.0%" height="300"></p>
-</div>
-</div><div class="column" style="width:50%;">
-<div style="margin-left: 10px">
-<p><img src="images/diffusion2.png" style="width:100.0%" height="300"></p>
-</div>
-</div>
-</div>
-<div class="grid" style="padding: 10px; background-color: #fff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; display: block;">
-<p>At GWU, where minds aspire, <br> Reinforcement learners never tire <br> In search of policies, bold and bright, <br> They train their agents, day and night. <br> <br> With Sutton, Barto as their guide, <br> They walk the path, rewards beside. <br> Exploring states with epsilon’s grace, <br> They find the optimal embrace. <br> <br> Gridworlds vast, mazes deep, <br> In code they sow, in dreams they reap. <br> The future’s theirs, they push, they strive– <br> GWU’s learners, alive, alive!</p>
-</div>
-<p><br></p>
-<figcaption style="text-align:center;">
-Poem and images generated by <strong>Large Language Model: ChatGPT 3.5</strong> &amp; <strong>Diffusion Models: DALL-E</strong>, correspondingly.
-</figcaption>
-<p><br></p>
-<p>In essence, the AI model’s behavior <u>closely mirrors human-like actions</u>. This is expected, given its training on extensive datasets derived from human behavior. However, continued training on the same datasets will likely result in models that perform at a human-equivalent level. To achieve significant breakthroughs, we must explore learning methods that <u>transcend typical human capabilities</u>.</p>
-</section>
-<section id="the-goal-of-reinforcement-learning" class="level2">
-<h2 class="anchored" data-anchor-id="the-goal-of-reinforcement-learning">The Goal of Reinforcement Learning</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Emergent Behavior
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Reinforcement Learning is concerned with seeking <em>emergent behavior</em>, or behavior that goes beyond what people might do or think of. <br></p>
-</div>
-</div>
-<p>Ultimately, as scientists, we want to discover new solutions for a task so that when an agent, or decision-maker, is placed in a novel situation it can respond intelligently <span class="citation" data-cites="levine2019deeprl">(<a href="../references.html#ref-levine2019deeprl" role="doc-biblioref">Levine 2019</a>)</span>.</p>
-<section id="example-alphago" class="level3">
-<h3 class="anchored" data-anchor-id="example-alphago">Example: AlphaGO</h3>
-<div class="columns" style="text-align:center;">
-<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/go.png" class="img-fluid figure-img"></p>
-<figcaption>AlphaGo Move 37</figcaption>
+<p><a href="https://colab.research.google.com/drive/1_j0UrCbTJbYjt6hgGjV0AsyJYCkghNIu?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img" alt="Open in Colab"></a></p>
+<figcaption>Open in Colab</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:50%;">
-<p>“<em>It’s not a human move. I’ve never seen a human play this move.</em>” – Commentator on Move 37, AlphaGo (2017)</p>
-</div>
-</div>
-</section>
-<section id="example-matrix-multiplication" class="level3">
-<h3 class="anchored" data-anchor-id="example-matrix-multiplication">Example: Matrix Multiplication</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.nature.com/articles/s41586-022-05172-4"><img src="images/MatrixMultiplication.png" class="img-fluid figure-img" alt="Discovering faster matrix multiplication algorithms with reinforcement learning"></a></p>
-<figcaption>Discovering faster matrix multiplication algorithms with reinforcement learning</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<p>“<em>Trained from scratch, AlphaTensor discovers matrix multiplication algorithms that are more efficient than existing human and computer-designed algorithms.</em>” - Discovering faster matrix multiplication algorithms with reinforcement learning</p>
-</div>
-</div>
-</section>
-</section>
-<section id="so-why-should-i-study-reinforcement-learning" class="level2">
-<h2 class="anchored" data-anchor-id="so-why-should-i-study-reinforcement-learning">So why should I study Reinforcement Learning?</h2>
-<p>Reinforcement Learning (RL) is not just another machine learning paradigm; it is a fundamental framework for decision-making, control, and optimizing sequential actions in uncertain environments. Studying RL enables us to: <br></p>
-<div style="text-align:center;">
-<p>✅ Understand Intelligence <br> ✅ Develop Cutting-Edge AI <br> ✅ Solve Real-World Problems <br> ✅ Push Beyond Human Limits <br></p>
-</div>
-<p>By studying RL, we gain the tools to create AI that learns, adapts, and innovates beyond predefined rules and static datasets. 🚀</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-levine2019deeprl" class="csl-entry" role="listitem">
-Levine, Sergey. 2019. <span>“Introduction to Deep Reinforcement Learning.”</span> Course Lecture Slides, Deep RL Course, UC Berkeley. <a href="https://rail.eecs.berkeley.edu/deeprlcourse/deeprlcourse/static/slides/lec-1.pdf">https://rail.eecs.berkeley.edu/deeprlcourse/deeprlcourse/static/slides/lec-1.pdf</a>.
-</div>
-</div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -754,13 +624,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="DATS 6450 – Reinforcement Learning">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">DATS 6450 – Reinforcement Learning</span></span>
+      <a href="../lecture1/lecture1-4.html" class="pagination-link" aria-label="1.4 How is Reinforcement Learning Structured?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1.4 How is Reinforcement Learning Structured?</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lecture1/lecture1-2.html" class="pagination-link" aria-label="1.2 What is Reinforcement Learning?">
-        <span class="nav-page-text"><span class="chapter-title">1.2 What is Reinforcement Learning?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

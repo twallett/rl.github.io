@@ -1,0 +1,8 @@
+---
+title: "2.1 Probability"
+format:
+  html:
+    number-sections: false
+---
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_j0UrCbTJbYjt6hgGjV0AsyJYCkghNIu?usp=sharing)
