@@ -192,14 +192,14 @@ $$
 
 viewof alpha = Inputs.range([0.1, 10], {
   step: 0.1,
-  value: 2,
+  value: 1,
   label: tex`\alpha`,
   width: 200
 })
 
 viewof beta = Inputs.range([0.1, 10], {
   step: 0.1,
-  value: 2,
+  value: 1,
   label: tex`\beta`,
   width: 200
 })
