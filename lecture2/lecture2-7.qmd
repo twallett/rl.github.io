@@ -1,0 +1,286 @@
+---
+title: "2.7 Probability Distributions"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A function that assigns probabilities to outcomes, defining the overall behavior of a random process. 🤓
+:::
+
+## Bernoulli Distribution
+
+$$
+p_{X}(x) =
+\begin{cases}
+    p & \text{if } x = 1, \\
+    q = 1-p & \text{if } x = 0.
+\end{cases}
+$$
+
+- The discrete random variable can take value $1$ with probability $p$ or value $0$ with probability $q = 1 - p$
+- Not to be confused with the binomial distribution, since only one trial is being conducted.
+- $\mathbb{E}[X] = p$
+- $Var[X] = pq$ <br>
+
+:::{#observable}
+```{ojs}
+//| echo: false
+//| layout-align: center
+
+import { Plot } from "@observablehq/plot-bernoulli"
+
+viewof p = Inputs.range([0, 1], {
+  step: 0.01,
+  value: 0.5,
+  label: tex`p`,
+  width: 200
+})
+
+data = {
+  return [
+    {outcome: "0", probability: 1 - p},
+    {outcome: "1", probability: p}
+  ];
+}
+
+Plot.plot({
+  style: "overflow: visible; display: block; margin: 0 auto;",
+  width: 600,
+  height: 400,
+  y: {
+    grid: true,
+    label: "Probability",
+    domain: [0, 1]
+  },
+  x: {
+    label: "Outcome",
+    padding: 0.2
+  },
+  marks: [
+    Plot.barY(data, {
+      x: "outcome",
+      y: "probability",
+      fill: "steelblue"
+    }),
+    Plot.ruleY([0])
+  ]
+})
+
+html`<div style="text-align: center; margin-top: 1em;">
+  <p>${tex`\mathbb{E}[X] =`} ${p.toFixed(3)}</p>
+  <p>${tex`\text{Var}(X) =`} ${(p * (1-p)).toFixed(3)}</p>
+</div>`
+```
+
+:::
+
+### Python Code: Bernoulli Distribution
+
+To create Bernoulli distributed data using `numpy`:
+
+```python
+import numpy as np
+
+interval = [0,1]
+size = (1000,1)
+p = [1-0.5, 0.5]
+
+data = np.random.choice(interval, size, p = p)
+```
+
+## Gaussian Distribution
+
+$$
+f_{X}(x)=\frac{1}{\sqrt{2\pi\sigma^{2} }}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}
+$$
+
+- Used frequently to represent real-valued random variables whose distributions are not known.
+- Its importance is derived from the **central limit theorem** that states, under some conditions, the average of many samples of a random variable is itself a random variable that converges to a Gaussian distribution as it increases.
+- $E[X] = \mu$
+- $Var[X] = \sigma^{2}$
+
+:::{#observable}
+```{ojs}
+//| echo: false
+//| layout-align: center
+
+import { Plot } from "@observablehq/plot-gaussian"
+
+viewof mu = Inputs.range([-1, 1], {
+  step: 0.1,
+  value: 0,
+  label: tex`\mu`,
+  width: 200
+})
+
+viewof sigma = Inputs.range([0.1, 2], {
+  step: 0.1,
+  value: 1,
+  label: tex`\sigma`,
+  width: 200
+})
+
+// Generate points for the normal distribution curve
+pointsGaussian = {
+  const x = d3.range(-5, 5, 0.1);
+  return x.map(x => ({
+    x,
+    y: (1 / (sigma * Math.sqrt(2 * Math.PI))) * 
+       Math.exp(-0.5 * Math.pow((x - mu) / sigma, 2))
+  }));
+}
+
+Plot.plot({
+  style: "overflow: visible; display: block; margin: 0 auto;",
+  width: 600,
+  height: 400,
+  y: {
+    grid: true,
+    label: "Density"
+  },
+  x: {
+    label: "x",
+    domain: [-5, 5]
+  },
+  marks: [
+    Plot.line(pointsGaussian, {x: "x", y: "y", stroke: "steelblue"}),
+    Plot.ruleY([0])
+  ]
+})
+
+html`<div style="text-align: center; margin-top: 1em;">
+  <p>${tex`\mathbb{E}[X] =`} ${mu.toFixed(3)}</p>
+  <p>${tex`\text{Var}(X) =`} ${(sigma * sigma).toFixed(3)}</p>
+</div>`
+```
+
+:::
+
+### Python Code: Gaussian Distribution
+
+To create Gaussian distributed data using `numpy`:
+
+```python
+import numpy as np
+
+mu = 0
+sigma = 1
+size = (1000,1)
+
+data = np.random.normal(mu, sigma, size)
+```
+
+## Beta Distribution
+
+$$
+f_{X}(x) = {\frac {\Gamma (\alpha +\beta )}{\Gamma (\alpha )\Gamma (\beta )}}\,x^{\alpha -1}(1-x)^{\beta -1}
+$$
+
+where $\Gamma$ is the gamma function defined as:
+
+$$
+\Gamma (z)=\int _{0}^{\infty}t^{z-1}e^{-t}\,dt
+$$
+
+- Gamma functions are used to model factorial functions of complex numbers $z$.
+- Beta functions are used to model behavior of random variables in intervals of finite length.
+- $E[X] = \frac{\alpha}{\alpha+\beta}$
+- $Var[X] = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$
+
+:::{#observable}
+```{ojs}
+//| echo: false
+//| layout-align: center
+
+viewof alpha = Inputs.range([0.1, 10], {
+  step: 0.1,
+  value: 2,
+  label: tex`\alpha`,
+  width: 200
+})
+
+viewof beta = Inputs.range([0.1, 10], {
+  step: 0.1,
+  value: 2,
+  label: tex`\beta`,
+  width: 200
+})
+
+// Gamma function approximation using Lanczos approximation
+function gamma(z) {
+    const p = [676.5203681218851, -1259.1392167224028, 771.32342877765313,
+        -176.61502916214059, 12.507343278686905, -0.13857109526572012,
+        9.9843695780195716e-6, 1.5056327351493116e-7];
+    
+    if (z < 0.5) {
+        return Math.PI / (Math.sin(Math.PI * z) * gamma(1 - z));
+    }
+    
+    z -= 1;
+    let x = 0.99999999999980993;
+    for (let i = 0; i < p.length; i++) {
+        x += p[i] / (z + i + 1);
+    }
+    
+    const t = z + p.length - 0.5;
+    return Math.sqrt(2 * Math.PI) * Math.pow(t, z + 0.5) * Math.exp(-t) * x;
+}
+
+// Beta function using gamma function
+function betaFunc(x, y) {
+    return (gamma(x) * gamma(y)) / gamma(x + y);
+}
+
+// Beta probability density function
+function betaPDF(x, a, b) {
+    if (x <= 0 || x >= 1) return 0;
+    return Math.pow(x, a - 1) * Math.pow(1 - x, b - 1) / betaFunc(a, b);
+}
+
+// Generate points for the beta distribution curve
+points = Array.from({length: 100}, (_, i) => {
+  let x = 0.001 + i * 0.01;
+  return { x, y: betaPDF(x, alpha, beta) };
+});
+
+Plot.plot({
+  style: "overflow: visible; display: block; margin: 0 auto;",
+  width: 600,
+  height: 400,
+  y: {
+    grid: true,
+    label: "Density"
+  },
+  x: {
+    label: "x",
+    domain: [0, 1]
+  },
+  marks: [
+    Plot.line(points, {x: "x", y: "y", stroke: "steelblue"}),
+    Plot.ruleY([0])
+  ]
+})
+
+html`<div style="text-align: center; margin-top: 1em;">
+  <p>${tex`\mathbb{E}[X] =`} ${(alpha/(alpha + beta)).toFixed(3)}</p>
+  <p>${tex`\text{Var}(X) =`} ${((alpha * beta)/((alpha + beta)**2 * (alpha + beta + 1))).toFixed(3)}</p>
+</div>`
+```
+
+:::
+
+### Python Code: Beta Distribution
+
+To create Beta distributed data using `numpy`:
+
+```python
+import numpy as np 
+
+alpha = 0.5
+beta = 0.5
+size = (1000,1)
+
+data = np.random.beta(alpha, beta, size)
+```

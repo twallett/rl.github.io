@@ -289,12 +289,1189 @@
   {
     "objectID": "lecture2/lecture2-1.html",
     "href": "lecture2/lecture2-1.html",
-    "title": "2.1 Probability",
+    "title": "2.1 Set Theory",
     "section": "",
-    "text": "Open in Colab",
+    "text": "Sets\nA set is a collection of things.  The things are called elements of a set.\n\\[\nColors = \\{Red, Blue, Green\\}\n\\]\n\\[\nNumbers = \\{1,2,3\\}\n\\]\nSets can be finite or infinite.\n\\[\nSome\\ Even\\ Integers = \\{2,4,6\\}\n\\]\n\\[\nAll\\ Even\\ Integers = \\{..., -4, -2, 0, 2, 4, ...\\}\n\\]\nThe number of elements in a set is called the cardinality.\n\\[\n|Colors| = 3\n\\]\nTwo sets are equal if they share exactly the same elements.\n\\[\nA = \\{2,4,6\\}, B = \\{4,2,6\\}, C = \\{4,2,7\\}\n\\]\n\\[\nA = B\n\\] \\[\nA \\neq C\n\\]\nTo express that \\(2\\) is an element of \\(A\\), we denote:\n\\[\n2 \\in A\n\\] \\[\n\\text{2 exists in A}\n\\]\n\\[\n5 \\notin A\n\\] \\[\n\\text{5 does not exist in A}\n\\]\nSome sets are so significant that we reserve special symbols for them:\n\\[\n\\emptyset = \\{\\} \\quad \\textbf{(empty set)}\n\\]\n\\[\n\\mathbb{N} = \\{1, 2, 3, ... \\} \\quad \\textbf{(natural numbers)}\n\\]\n\\[\n\\mathbb{Z} = \\{..., -2, -1, 0, 1, 2, ... \\} \\quad \\textbf{(integers)}\n\\]\n\\[\n\\mathbb{R} = \\{..., -0.22,...,0,...,1,..., \\pi, ... \\} \\quad \\textbf{(real numbers)}\n\\]\nWe visualize \\(\\mathbb{R}\\) as an infinitely long number line.",
     "crumbs": [
       "Lecture 2: Mathematical Foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Probability</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#sets",
+    "href": "lecture2/lecture2-1.html#sets",
+    "title": "2.1 Set Theory",
+    "section": "",
+    "text": "$$",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#sets-continued",
+    "href": "lecture2/lecture2-1.html#sets-continued",
+    "title": "2.1 Set Theory",
+    "section": "Sets (continued)",
+    "text": "Sets (continued)\n\nTwo sets are equal if they share exactly the same elements.\n\n\nExamples:\n\\[\nA = \\{2,4,6\\}, B = \\{4,2,6\\}, C = \\{4,2,7\\}\n\\]\n\\[\nA = B, A \\neq C\n\\]\n\nTo express that (2) is an element of (A), we denote:\n\n\\[\n2 \\in A \\quad \\text{\"2 exists in A\"}\n\\]\n\\[\n5 \\notin A \\quad \\text{\"5 does not exist in A\"}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#important-sets",
+    "href": "lecture2/lecture2-1.html#important-sets",
+    "title": "2.1 Set Theory",
+    "section": "Important Sets",
+    "text": "Important Sets\n\nSome sets are so significant that we reserve special symbols for them:\n\n\\[\n\\emptyset = \\{\\} \\quad \\text{(empty set)}\n\\]\n\\[\n\\mathbb{N} = \\{0, 1, 2, 3, ... \\} \\quad \\text{(natural numbers)}\n\\]\n\\[\n\\mathbb{Z} = \\{..., -2, -1, 0, 1, 2, ... \\} \\quad \\text{(integers)}\n\\]\n\\[\n\\mathbb{R} = \\{..., -0.22,...,0,...,1,..., \\pi, ... \\} \\quad \\text{(real numbers)}\n\\]\n\nWe visualize () as an infinitely long number line.",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#set-builder-notation",
+    "href": "lecture2/lecture2-1.html#set-builder-notation",
+    "title": "2.1 Set Theory",
+    "section": "Set-Builder Notation",
+    "text": "Set-Builder Notation\nA special notation called set-builder notation is used to describe sets that are too big or complex to list between braces.\n\\[\nAll\\ Even\\ Integers_{1} = \\{..., -4, -2, 0, 2, 4, ...\\}\n\\]\n\\[\nAll\\ Even\\ Integers_{2} = \\{2x: x \\in \\mathbb{Z} \\}\n\\]\n\\[\n\\text{The set of all numbers of the form } 2x \\text{ such that } x \\in \\mathbb{Z}\n\\]\n\\[\nAll\\ Even\\ Integers_{1} = All\\ Even\\ Integers_{2}\n\\]\n\nExercise\nWrite the following sets in set-builder notation:\n\n\\(\\{ 2, 4, 8, 16, 32, 64, ... \\}\\)\n\\(\\{ 0, 1, 4, 9, 16, 25, 36, ... \\}\\)\n\\(\\{ 3, 4, 5, 6, 7, 8 \\}\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\\(\\{ 2^x: x \\in \\mathbb{N} \\}\\)\n\\(\\{ x^2: x \\in \\mathbb{Z} \\}\\)\n\\(\\{ x \\in \\mathbb{Z}: 3 \\le x \\le 8 \\}\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#example-sets",
+    "href": "lecture2/lecture2-1.html#example-sets",
+    "title": "2.1 Set Theory",
+    "section": "Example: Sets",
+    "text": "Example: Sets\n\nSketch the following set of points in the x-y plane:\n\n\\[\n\\{(x,y) : x, y \\in \\mathbb{R}, \\ x^{2} + y^{2} \\leq 1 \\}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#subsets",
+    "href": "lecture2/lecture2-1.html#subsets",
+    "title": "2.1 Set Theory",
+    "section": "Subsets",
+    "text": "Subsets\nSuppose \\(A\\) and \\(B\\) are sets.  If every element of \\(A\\) is also an element of \\(B\\), then we say \\(A\\) is a subset of \\(B\\), denoted \\(A \\subseteq B\\).  We write \\(A \\not\\subseteq B\\) if \\(A\\) is not a subset of \\(B\\), that is, if it is not true that every element of \\(A\\) is also an element of \\(B\\). Thus \\(A \\not\\subseteq B\\) means that there is at least one element of \\(A\\) that is not an element of \\(B\\).\n\\[\n\\mathbb{N} \\subseteq \\mathbb{Z} \\subseteq \\mathbb{R}\n\\]\n\\[\nA = \\{1,2\\}, B = \\{2,3,4\\}\n\\] \\[\nA \\not\\subseteq B\n\\]\n\nExercise\nList all the subsets of the following sets:\n\n\\(\\{1,2,3\\}\\)\n\\(\\{1,\\{2,3\\}\\}\\)\n\\(\\{\\mathbb{N}, \\mathbb{Z}, \\mathbb{R}\\}\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\\(\\{\\}, \\{1\\}, \\{2\\}, \\{3\\}, \\{1,2\\}, \\{1,3\\}, \\{2,3\\}, \\{1,2,3\\}\\)\n\\(\\{\\}, \\{1\\}, \\{\\{2,3\\}\\}, \\{1,\\{2,3\\}\\}\\)\n\\(\\{\\}, \\{\\mathbb{N}\\}, \\{\\mathbb{Z}\\}, \\{\\mathbb{R}\\}, \\{\\mathbb{N},\\mathbb{Z}\\}, \\{\\mathbb{N},\\mathbb{R}\\}, \\{\\mathbb{Z},\\mathbb{R}\\}, \\{\\mathbb{N},\\mathbb{Z},\\mathbb{R}\\}\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#example-subsets",
+    "href": "lecture2/lecture2-1.html#example-subsets",
+    "title": "2.1 Set Theory",
+    "section": "Example: Subsets",
+    "text": "Example: Subsets\n\nList all the subsets of the following sets:\n\n({1,2,3})\n({1,{2,3}})\n({, , })",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#union-intersection-and-difference",
+    "href": "lecture2/lecture2-1.html#union-intersection-and-difference",
+    "title": "2.1 Set Theory",
+    "section": "Union, Intersection, and Difference",
+    "text": "Union, Intersection, and Difference\nSuppose \\(A\\) and \\(B\\) are sets.\nA union of \\(A\\) and \\(B\\) is the set: \\[\nA \\cup B = \\{x: x \\in A \\text{ or } x \\in B \\}\n\\]\nA intersection of \\(A\\) and \\(B\\) is the set: \\[\nA \\cap B = \\{x: x \\in A \\text{ and } x \\in B \\}\n\\]\nA difference of \\(A\\) and \\(B\\) is the set: \\[\nA - B = \\{x: x \\in A \\text{ and } x \\notin B \\}\n\\]\n\n\n\n\nExercise\nShade in the region matching the expression:\n\n\\((A \\cap B) \\cap C\\)\n\\((A \\cup B) \\cap C\\)\n\\((A \\cup B) - C\\)\n\n\n\n\n\n\n\n\n\n\nSolution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#example-union-intersection-and-difference",
+    "href": "lecture2/lecture2-1.html#example-union-intersection-and-difference",
+    "title": "2.1 Set Theory",
+    "section": "Example: Union, Intersection, and Difference",
+    "text": "Example: Union, Intersection, and Difference\n\nShade in the region matching the expression:\n\n((A B) C)\n((A B) C)\n((A B) - C)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#complements",
+    "href": "lecture2/lecture2-1.html#complements",
+    "title": "2.1 Set Theory",
+    "section": "Complements",
+    "text": "Complements\nSuppose \\(A\\) is a set.  A universal set is a larger set that encompasses other sets.  The complement of \\(A\\), denoted \\(\\bar{A}\\), is the set \\(\\bar{A} = U - A\\).\n\\[\nP = \\{2, 3, 5, 7, ...\\} \\quad \\textbf{(prime numbers)}\n\\]\n\\[\n\\bar{P} = \\mathbb{N} - P = \\{1, 4, 6, ...\\}\n\\]\n\nExercise\nFind \\(\\bar{A}\\):\n\\[\nA = \\{1,2,3\\}, U = \\{0,1,2,3,4,5\\}\n\\]\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\[\n\\bar{A} = \\{0, 4, 5\\}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#example-complements",
+    "href": "lecture2/lecture2-1.html#example-complements",
+    "title": "2.1 Set Theory",
+    "section": "Example: Complements",
+    "text": "Example: Complements\n\nFind the complement of the following set:\n\n\\[\n\\{(x,y) : x, y \\in \\mathbb{R}, \\ x^{2} + y^{2} \\leq 1 \\}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#homework-lecture-2",
+    "href": "lecture2/lecture2-1.html#homework-lecture-2",
+    "title": "2.1 Set Theory",
+    "section": "Homework: Lecture 2",
+    "text": "Homework: Lecture 2\n\nQuestion 1.\nLink to GitHub Homework.",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html",
+    "href": "lecture2/lecture2-2.html",
+    "title": "2.2 Axiomatic Probability",
+    "section": "",
+    "text": "Methodology\nSteps to perform a probabilistic model:",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-3.html",
+    "href": "lecture2/lecture2-3.html",
+    "title": "2.3 Conditioning",
+    "section": "",
+    "text": "Conditional Probability\nSuppose \\(A\\) and \\(B\\) are events.  Conditional probability is the likelihood of an event occurring given that we know another event has occurred.\n\\[\nP(A|B) = \\frac{P(A \\cap B)}{P(B)}\n\\]\nIntuition: conditioned event becomes the new sample space.  If \\(P(B) \\neq 0\\), then the probability of the intersection normalized by the conditioned space.  Else \\(P(B) = 0\\), then \\(P(A|B)\\) is undefined.",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>2.3 Conditioning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-3.html#conditional-probability",
+    "href": "lecture2/lecture2-3.html#conditional-probability",
+    "title": "2.3 Conditioning",
+    "section": "",
+    "text": "Intuition: conditioned event becomes the new sample space.",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>2.3 Conditioning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-3.html#conditional-probability-definition",
+    "href": "lecture2/lecture2-3.html#conditional-probability-definition",
+    "title": "2.3 Conditioning",
+    "section": "Conditional Probability Definition",
+    "text": "Conditional Probability Definition\nIf \\(P(B) \\neq 0\\), then:\n\\[\nP(A|B) = \\frac{P(A \\cap B)}{P(B)}\n\\]\n“The Probability of the intersection normalized by the conditioned space.”\nElse \\(P(B) = 0\\), then \\(P(A|B)\\) is undefined.\nMultiplication Rule:\n\\[\nP(A \\cap B) = P(A|B) P(B) = P(B|A) P(A)\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>2.3 Conditioning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-3.html#total-probability-theorem",
+    "href": "lecture2/lecture2-3.html#total-probability-theorem",
+    "title": "2.3 Conditioning",
+    "section": "Total Probability Theorem",
+    "text": "Total Probability Theorem\nSuppose \\(A_{1,...,n}\\) and \\(B\\) are sets.  The total probability theorem allows us to compute the likelihood of an event by summing over conditional probabilities of different partitions of the sample space.\n\\[\nP(B) = P(B|A_1) P(A_1) + P(B|A_2) P(A_2) + P(B|A_3) P(A_3)\n\\]\n\n\n\nIn general terms:\n\\[\nP(B) = P(B|A_1) P(A_1) + ... + P(B|A_n) P(A_n)\n\\]\n\nExercise\nExperiment: Classifying emails as spam \\(S\\) or not spam \\(NS\\) based on the word \\(W\\) or not the word \\(NW\\) “free”.\n\\[\nP(S) = 0.4\n\\]\n\\[\nP(NS) = 0.6\n\\]\n\\[\nP(W|S) = 0.7\n\\]\n\\[\nP(W|NS) = 0.1\n\\]\nFind the probability of \\(P(S|W)\\):\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\[\nP(S|W) = \\frac{P(S \\cap W)}{P(W)} = \\underbrace{\\frac{P(W|S)P(S)}{P(W|S)P(S) + P(W|NS)P(NS)}}_{Bayes' \\ Theorem} = \\frac{0.7 * 0.4}{0.7 * 0.4 + 0.1 * 0.6} = 0.82\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>2.3 Conditioning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-3.html#example-conditional-probability",
+    "href": "lecture2/lecture2-3.html#example-conditional-probability",
+    "title": "2.3 Conditioning",
+    "section": "Example: Conditional Probability",
+    "text": "Example: Conditional Probability\n\nExperiment: Diagnosing a rare disease\nFind the following probabilities:\n\n\\(P(Disease \\cap Pos)\\)\n\\(P(Pos)\\)\n\\(P(Disease | Pos)\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>2.3 Conditioning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-4.html",
+    "href": "lecture2/lecture2-4.html",
+    "title": "2.4 Independence",
+    "section": "",
+    "text": "Independent Events\nSuppose \\(A\\) and \\(B\\) are two events.  Two events are independent if the occurrence of event \\(B\\) provides no information about the occurrence of event \\(A\\):\n\\[\nP(A|B) = P(A)\n\\]\nAnother definition of independence:\n\\[\nP(A \\cap B) = P(A) P(B)\n\\]\nFor multiple events:\n\\[\nP(A_{1} \\cap A_{2} \\cap ... A_{n}) = P(A_{1}) P(A_{2}) ... P(A_{n})\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2.4 Independence</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-4.html#definition-of-independence",
+    "href": "lecture2/lecture2-4.html#definition-of-independence",
+    "title": "2.4 Independence",
+    "section": "Definition of Independence",
+    "text": "Definition of Independence\n\nSuppose \\(A\\) and \\(B\\) are two events. They are independent if:\n\\[ P(A|B) = P(A) \\]\n“The occurrence of event \\(B\\) provides no information about the occurrence of event \\(A\\).”\nAnother definition:\n\\[ P(A \\cap B) = P(A) P(B) \\]\nFor multiple events:\n\\[ P(A_{1} \\cap A_{2} \\cap ... A_{n}) = P(A_{1}) P(A_{2}) ... P(A_{n}) \\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2.4 Independence</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-4.html#example-independence",
+    "href": "lecture2/lecture2-4.html#example-independence",
+    "title": "2.4 Independence",
+    "section": "Example: Independence",
+    "text": "Example: Independence\n\nWhich of the Venn diagrams shows 2 independent events?",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2.4 Independence</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-4.html#conditioning-and-independence",
+    "href": "lecture2/lecture2-4.html#conditioning-and-independence",
+    "title": "2.4 Independence",
+    "section": "Conditioning and Independence",
+    "text": "Conditioning and Independence\nSuppose \\(A\\), \\(B\\), and \\(C\\) are events.  If \\(A\\) and \\(B\\) are independent, conditioning on \\(C\\) may remove that independence.  When we condition on \\(C\\), events \\(A\\) and \\(B\\) may no longer be independent.\n\n\n\n\nExercise\nThe king comes from a family of two children. What is the probability that his sibling is female \\(F\\) and not male \\(M\\)?\nLet all outcomes be equally likely.\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\[\nSample \\ Space = \\{(FF), (FM), (MF), (MM)\\} = \\{(\\not F \\not F), (FM), (MF), (MM)\\}\n\\]\n\\[\nP(F|M) = \\frac{P(F \\cap M)}{M} = \\frac{2}{3} \\approx 0.6\\bar{6}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2.4 Independence</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-4.html#example-conditioning-and-independence",
+    "href": "lecture2/lecture2-4.html#example-conditioning-and-independence",
+    "title": "2.4 Independence",
+    "section": "Example: Conditioning and Independence",
+    "text": "Example: Conditioning and Independence\n\nThe king comes from a family of two children. What is the probability that his sibling is female?",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2.4 Independence</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html",
+    "href": "lecture2/lecture2-5.html",
+    "title": "2.5 Discrete Random Variables",
+    "section": "",
+    "text": "Discrete Random Variable\nA discrete random variable is a mapping \\(X\\) of all of the outcomes of a sample space to numerical values \\(x \\in \\mathbb{Z}\\).\n\\[\nX: Outcome \\in Sample \\ Space \\to x \\in \\mathbb{Z}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#definition",
+    "href": "lecture2/lecture2-5.html#definition",
+    "title": "2.5 Random Variables",
+    "section": "Definition",
+    "text": "Definition\nA continuous random variable is a mapping \\(X\\) of all the events of a sample space to numerical values \\(\\lambda\\) in \\(\\mathbb{R}\\).\n\nNotation\n\\[ X: event \\in Sample \\ Space \\to \\lambda \\in \\mathbb{R} \\]\n\n\nProbability Density Function (PDF)\nA probability density function (PDF) is a mapping of values \\(\\lambda\\) of intervals of continuous random variables \\(X\\) to probabilities \\([0,1]\\).\n\nNotation\n\\[ P(a \\leq X \\leq b) = \\int_{a}^{b} f_{X}(\\lambda) \\ d\\lambda \\]\n\n\nProperties\n\n$ f_{X}() $\n$ {-}^{} f{X}()  d= 1 $\n\n\n\n\nCumulative Distribution Function (CDF)\nThe cumulative distribution function (CDF) for continuous random variables is defined as:\n\\[ F_{X}(\\lambda) = P(X \\leq \\lambda) = \\int_{-\\infty}^{\\lambda} f_{X}(u) \\ du \\]\n\nRelationship between CDF and PDF:\n\n$ f_{X}() = $\n$ F_{X}() = {-}^{} f{X}(u)  du $\n\n\n\n\nExpectation and Variance\n\nExpectation (Mean)\n\\[ E[X] = \\int_{-\\infty}^{\\infty} \\lambda \\ f_{X}(\\lambda) d\\lambda \\]\n\n\nVariance\n\\[ \\text{Var}[X] = E[(X - E[X])^{2}] = \\int_{-\\infty}^{\\infty} (\\lambda - E[X])^2 \\ f_{X}(\\lambda) d\\lambda \\]\n\n\n\nJoint Probability Density Function (Joint PDF)\nFor two continuous random variables: \\[ P((X,Y) \\in A) = \\int \\int_{A} f_{X,Y}(\\lambda_{1}, \\lambda_{2}) d\\lambda_{1} \\ d\\lambda_{2} \\]\n\nMarginal PDFs\n\n$ f_{X}({1}) = {-}^{} f_{X,Y}({1}, {2}) d_{2} $\n$ f_{Y}({2}) = {-}^{} f_{X,Y}({1},{2}) d_{1} $\n\n\n\n\nConditional PDFs\nThe conditional probability density function: \\[ f_{X|Y}(\\lambda_{1}| \\lambda_{2}) = \\frac{f_{X,Y}(\\lambda_{1}, \\lambda_{2})}{f_{Y}(\\lambda_{2})} \\]\n\nConditional Expectation\n\\[ \\mathbb{E}[X| Y = \\lambda_{2}] = \\int_{\\lambda_{1} \\in X} \\lambda_{1} \\frac{f_{X,Y}(\\lambda_{1}, \\lambda_{2})}{f_{Y}(\\lambda_{2})} d\\lambda_{1} \\]\n\n\n\nIndependence\nTwo continuous random variables are independent if: \\[ f_{X,Y}(\\lambda_{1}, \\lambda_{2}) = f_{X}(\\lambda_{1}) f_{Y}(\\lambda_{2}) \\]\nThis can be extended to multiple random variables: \\[ f_{X_{1},...,X{n}}(\\lambda_{1}, ..., \\lambda_{n}) = f_{X_{1}}(\\lambda_{1}) ... \\ f_{X_{n}}(\\lambda_{n}) \\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#probability-mass-function-pmf",
+    "href": "lecture2/lecture2-5.html#probability-mass-function-pmf",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Probability Mass Function (PMF)",
+    "text": "Probability Mass Function (PMF)\nA probability mass function (PMF) is a mapping of values \\(x\\) of discrete random variables \\(X\\) to probabilities \\([0,1]\\).\n\\[\np_{X}(x) = P(X = x)\n\\]\nPMF has properties: \\[\np_{X}(x) \\geq 0, \\quad \\sum_{x} p_{X}(x) = 1\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#cumulative-distribution-function-cdf",
+    "href": "lecture2/lecture2-5.html#cumulative-distribution-function-cdf",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Cumulative Distribution Function (CDF)",
+    "text": "Cumulative Distribution Function (CDF)\nThe cumulative distribution function (CDF) for discrete random variables is defined as:\n\\[\nF_{X}(x) = P(X \\leq x) = \\sum_{k \\leq x} p_{X}(k)\n\\]\nRelation to PMF: \\[\np_{X}(x) = \\frac{dF_{X}(x)}{dx}\n\\]\n\\[\nF_{X}(x) = \\sum_{k \\leq x}p_{X}(k)\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#expectation-and-variance",
+    "href": "lecture2/lecture2-5.html#expectation-and-variance",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Expectation and Variance",
+    "text": "Expectation and Variance\nThe expectation of a discrete random variable is the sum of all possible values weighted by their probabilities, representing the long-term average outcome.\n\\[\nE[X] = \\sum_{x} x \\ p_{X}(x)\n\\]\nThe variance of a discrete random variable quantifies the spread of its values around the mean by calculating the expected squared deviation from the mean. \\[\nVar[X] = E[(X - E[X])^{2}] = \\sum_{x}(x - E[X])^2 p_{X}(x)\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#joint-and-marginal-distributions",
+    "href": "lecture2/lecture2-5.html#joint-and-marginal-distributions",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Joint and Marginal Distributions",
+    "text": "Joint and Marginal Distributions\nThe joint PMF gives the probability that two discrete random variables take on specific values simultaneously. \\[\np_{X,Y}(x_{1},x_{2}) = P(X = x_{1}, Y = x_{2})\n\\]\nThe marginal PMF of a discrete random variable is found by summing the joint PMF over all possible values of the other variable, giving the probability of a single variable. \\[\np_{X}(x_{1}) = \\sum_{x_{2}} p_{X,Y}(X = x_{1},Y = x_{2})\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#conditional-expectation",
+    "href": "lecture2/lecture2-5.html#conditional-expectation",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Conditional Expectation",
+    "text": "Conditional Expectation\nThe conditional PMF gives the probability distribution of a discrete random variable given that another variable has a specific value. \\[\np_{X|Y}(x_{1}| x_{2}) = \\frac{p_{X,Y}(x_{1}, x_{2})}{p_{Y}(x_{2})}\n\\]\nThe conditional expectation is the expected value of a discrete random variable given that another variable is fixed at a specific value. \\[\nE[X| Y = x_{2}] = \\sum_{x_{1}} x_{1} \\frac{p_{X,Y}(x_{1}, x_{2})}{p_{Y}(x_{2})}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#independence",
+    "href": "lecture2/lecture2-5.html#independence",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Independence",
+    "text": "Independence\nTwo discrete random variables are independent if:\n\\[\np_{X,Y}(x_{1}, x_{2}) = p_{X}(x_{1}) p_{Y}(x_{2})\n\\]\nFor multiple discrete random variables: \\[\np_{X_{1},...,X_{n}}(x_{1}, ..., x_{n}) = p_{X_{1}}(x_{1}) ... \\ p_{X_{n}}(x_{n})\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#example-problems",
+    "href": "lecture2/lecture2-5.html#example-problems",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Example Problems",
+    "text": "Example Problems\n\nCompute the expectation and variance of a fair die roll.\nShow that two independent fair die rolls satisfy the independence property.\nCompute the joint and marginal PMFs for two unfair dice.",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#continuous-random-variables",
+    "href": "lecture2/lecture2-5.html#continuous-random-variables",
+    "title": "2.5 Random Variables",
+    "section": "Continuous Random Variables",
+    "text": "Continuous Random Variables\n\nDefinition\nA continuous random variable is a mapping \\(X\\) of all the events of a sample space to numerical values \\(\\lambda\\) in \\(\\mathbb{R}\\).\n\nNotation\n\\[ X: event \\in Sample \\ Space \\to \\lambda \\in \\mathbb{R} \\]\n\n\n\nProbability Density Function (PDF)\nA probability density function (PDF) is a mapping of values \\(\\lambda\\) of intervals of continuous random variables \\(X\\) to probabilities \\([0,1]\\).\n\nNotation\n\\[ P(a \\leq X \\leq b) = \\int_{a}^{b} f_{X}(\\lambda) \\ d\\lambda \\]\n\n\nProperties\n\n$ f_{X}() $\n$ {-}^{} f{X}()  d= 1 $\n\n\n\n\nCumulative Distribution Function (CDF)\nThe cumulative distribution function (CDF) for continuous random variables is defined as:\n\\[ F_{X}(\\lambda) = P(X \\leq \\lambda) = \\int_{-\\infty}^{\\lambda} f_{X}(u) \\ du \\]\n\nRelationship between CDF and PDF:\n\n$ f_{X}() = $\n$ F_{X}() = {-}^{} f{X}(u)  du $\n\n\n\n\nExpectation and Variance\n\nExpectation (Mean)\n\\[ E[X] = \\int_{-\\infty}^{\\infty} \\lambda \\ f_{X}(\\lambda) d\\lambda \\]\n\n\nVariance\n\\[ \\text{Var}[X] = E[(X - E[X])^{2}] = \\int_{-\\infty}^{\\infty} (\\lambda - E[X])^2 \\ f_{X}(\\lambda) d\\lambda \\]\n\n\n\nJoint Probability Density Function (Joint PDF)\nFor two continuous random variables: \\[ P((X,Y) \\in A) = \\int \\int_{A} f_{X,Y}(\\lambda_{1}, \\lambda_{2}) d\\lambda_{1} \\ d\\lambda_{2} \\]\n\nMarginal PDFs\n\n$ f_{X}({1}) = {-}^{} f_{X,Y}({1}, {2}) d_{2} $\n$ f_{Y}({2}) = {-}^{} f_{X,Y}({1},{2}) d_{1} $\n\n\n\n\nConditional PDFs\nThe conditional probability density function: \\[ f_{X|Y}(\\lambda_{1}| \\lambda_{2}) = \\frac{f_{X,Y}(\\lambda_{1}, \\lambda_{2})}{f_{Y}(\\lambda_{2})} \\]\n\nConditional Expectation\n\\[ \\mathbb{E}[X| Y = \\lambda_{2}] = \\int_{\\lambda_{1} \\in X} \\lambda_{1} \\frac{f_{X,Y}(\\lambda_{1}, \\lambda_{2})}{f_{Y}(\\lambda_{2})} d\\lambda_{1} \\]\n\n\n\nIndependence\nTwo continuous random variables are independent if: \\[ f_{X,Y}(\\lambda_{1}, \\lambda_{2}) = f_{X}(\\lambda_{1}) f_{Y}(\\lambda_{2}) \\]\nThis can be extended to multiple random variables: \\[ f_{X_{1},...,X{n}}(\\lambda_{1}, ..., \\lambda_{n}) = f_{X_{1}}(\\lambda_{1}) ... \\ f_{X_{n}}(\\lambda_{n}) \\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html",
+    "href": "lecture2/lecture2-6.html",
+    "title": "2.6 Continuous Random Variables",
+    "section": "",
+    "text": "Continuous Random Variable\nA continuous random variable is a mapping \\(X\\) of all the events of a sample space to numerical values \\(x \\in \\mathbb{R}\\). \\[\nX: Event \\in Sample \\ Space \\to x \\in \\mathbb{R}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#bernoulli-distribution",
+    "href": "lecture2/lecture2-6.html#bernoulli-distribution",
+    "title": "2.6 Probability Distributions",
+    "section": "Bernoulli Distribution",
+    "text": "Bernoulli Distribution\n\nBernoulli Distribution PMF\n\\[\np_{X}(\\lambda) =\n\\begin{cases}\n    p & \\text{if } \\lambda = 1, \\\\\n    q = 1-p & \\text{if } \\lambda = 0.\n\\end{cases}\n\\]\n\nThe discrete random variable can take value \\(1\\) with probability \\(p\\) or value \\(0\\) with probability \\(q = 1 - p\\)\nNot to be confused with the binomial distribution, since only one trial is being conducted.\n\\(\\mathbb{E}[X] = p\\)\n\\(Var[X] = pq\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#plot-bernoulli-distribution",
+    "href": "lecture2/lecture2-6.html#plot-bernoulli-distribution",
+    "title": "2.6 Probability Distributions",
+    "section": "Plot: Bernoulli Distribution",
+    "text": "Plot: Bernoulli Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#code-bernoulli-distribution",
+    "href": "lecture2/lecture2-6.html#code-bernoulli-distribution",
+    "title": "2.6 Probability Distributions",
+    "section": "Code: Bernoulli Distribution",
+    "text": "Code: Bernoulli Distribution\nTo create Bernoulli distributed data:\n# Bernoulli distribution example\nimport numpy as np\nnp.random.binomial(1, p, size=1000)\nTo calculate the PMF:\nfrom scipy.stats import bernoulli\np = 0.5  # Example probability\nx = [0, 1]\npmf = bernoulli.pmf(x, p)\nprint(pmf)\n\n\n# Gaussian Distribution\n\n## Gaussian Distribution PDF\n\n$$\nf_{X}(\\lambda)=\\frac{1}{\\sqrt{2\\pi\\sigma^{2} }}e^{-\\frac{(\\lambda-\\mu)^{2}}{2\\sigma^{2}}}\n$$\n\n- Used frequently to represent real-valued random variables whose distributions are not known.\n- Its importance is derived from the **central limit theorem** that states, under some conditions, the average of many samples of a random variable is itself a random variable that converges to a Gaussian distribution as it increases.\n- $E[X] = \\mu$\n- $Var[X] = \\sigma^{2}$\n\n## Plot: Gaussian Distribution\n\n![](Math/imgs/Gaussian_distribution.pdf)\n\n## Code: Gaussian Distribution\n\nTo create Gaussian distributed data:\n\n```python\n# Gaussian distribution data generation\n# Lines 8-10 from Math/python_files/Gaussian.py\nTo calculate the PDF:\n# Gaussian distribution PDF calculation\n# Lines 11-23 from Math/python_files/Gaussian.py",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#beta-distribution-pdf",
+    "href": "lecture2/lecture2-6.html#beta-distribution-pdf",
+    "title": "2.6 Probability Distributions",
+    "section": "Beta Distribution PDF",
+    "text": "Beta Distribution PDF\n\\[\nf_{X}(\\lambda) = {\\frac {\\Gamma (\\alpha +\\beta )}{\\Gamma (\\alpha )\\Gamma (\\beta )}}\\,\\lambda^{\\alpha -1}(1-\\lambda)^{\\beta -1}\n\\]\nwhere \\(\\Gamma\\) is the gamma function defined as:\n\\[\n\\Gamma (z)=\\int _{0}^{\\infty}t^{z-1}e^{-t}\\,dt\n\\]\n\nGamma functions are used to model factorial functions of complex numbers \\(z\\).\nBeta functions are used to model behavior of random variables in intervals of finite length.\n\\(E[X] = \\frac{\\alpha}{\\alpha+\\beta}\\)\n\\(Var[X] = \\frac{\\alpha\\beta}{(\\alpha+\\beta)^2(\\alpha+\\beta+1)}\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#plot-uniform-beta-distribution",
+    "href": "lecture2/lecture2-6.html#plot-uniform-beta-distribution",
+    "title": "2.6 Probability Distributions",
+    "section": "Plot: Uniform Beta Distribution",
+    "text": "Plot: Uniform Beta Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#plot-alpha-weighted-beta-distribution",
+    "href": "lecture2/lecture2-6.html#plot-alpha-weighted-beta-distribution",
+    "title": "2.6 Probability Distributions",
+    "section": "Plot: Alpha Weighted Beta Distribution",
+    "text": "Plot: Alpha Weighted Beta Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#plot-beta-weighted-beta-distribution",
+    "href": "lecture2/lecture2-6.html#plot-beta-weighted-beta-distribution",
+    "title": "2.6 Probability Distributions",
+    "section": "Plot: Beta Weighted Beta Distribution",
+    "text": "Plot: Beta Weighted Beta Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#code-beta-distribution",
+    "href": "lecture2/lecture2-6.html#code-beta-distribution",
+    "title": "2.6 Probability Distributions",
+    "section": "Code: Beta Distribution",
+    "text": "Code: Beta Distribution\nTo create Beta distributed data:\n# Beta distribution data generation\n# Lines 9-10 from Math/python_files/Beta.py\nTo calculate the PDF:\n# Beta distribution PDF calculation\n# Lines 12-28 from Math/python_files/Beta.py",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html",
+    "href": "homework/homework1.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "Question 1\nWrite some of the elements of the following sets:\nWrite the following sets in set notation:",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#q1",
+    "href": "homework/homework1.html#q1",
+    "title": "Homework 1",
+    "section": "",
+    "text": "\\(\\{ 5x-1: x \\in \\mathbb{Z} \\}\\)\n\\(\\{ x \\in \\mathbb{R}: \\sin \\pi x = 0 \\}\\)\n\\(\\{X : X \\subseteq \\{3,2,a\\} \\text{ and } |X|=2 \\}\\)\n\\(\\{ 2, 4, 8, 16, 32, 64, ...\\}\\)\n\\(\\{0,1,4,9,16,25,36, ...\\}\\)\n\\(\\{..., \\frac{1}{8},\\frac{1}{4},\\frac{1}{2},1,2,4,8,... \\}\\)",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#q2",
+    "href": "homework/homework1.html#q2",
+    "title": "Homework 1",
+    "section": "Q2",
+    "text": "Q2\nA retail store accepts either American Express or VISA. The percentages of customers carrying each card are: - American Express: 24% - VISA: 61% - Both: 11%\nWhat percentage of customers carry a card accepted by the store?",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#q3",
+    "href": "homework/homework1.html#q3",
+    "title": "Homework 1",
+    "section": "Q3",
+    "text": "Q3\nSixty percent of students wear neither a ring nor a necklace. Given: - 20% wear a ring - 30% wear a necklace\nFind the probability that a randomly chosen student wears:\n\nA ring or a necklace\nBoth a ring and a necklace",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#q4",
+    "href": "homework/homework1.html#q4",
+    "title": "Homework 1",
+    "section": "Q4",
+    "text": "Q4\nTwo fair dice are rolled. Find the conditional probability that at least one die lands on 6, given that they land on different numbers.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#q5",
+    "href": "homework/homework1.html#q5",
+    "title": "Homework 1",
+    "section": "Q5",
+    "text": "Q5\nAn urn contains 6 white and 9 black balls. If 4 balls are selected without replacement, what is the probability that the first 2 are white and the last 2 are black?",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#q6",
+    "href": "homework/homework1.html#q6",
+    "title": "Homework 1",
+    "section": "Q6",
+    "text": "Q6\nA defendant is judged guilty if at least 2 out of 3 judges vote guilty. Given: - Probability of a guilty vote when defendant is guilty: 0.7 - Probability of a guilty vote when defendant is innocent: 0.2 - 70% of defendants are guilty\nCompute the conditional probability that judge 3 votes guilty given: 1. Judges 1 and 2 vote guilty. 2. Judges 1 and 2 split votes. 3. Judges 1 and 2 vote not guilty.\nAre the judges’ votes independent? Conditionally independent? Explain.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#q7",
+    "href": "homework/homework1.html#q7",
+    "title": "Homework 1",
+    "section": "Q7",
+    "text": "Q7\nGiven the distribution function of \\(X\\):\n[ F_{X}() =\n\\[\\begin{cases}\n0, & \\lambda &lt; 0 \\\\\n\\frac{1}{2}, & 0 \\leq \\lambda &lt; 1 \\\\\n\\frac{3}{5}, & 1 \\leq \\lambda &lt; 2 \\\\\n\\frac{4}{5}, & 2 \\leq \\lambda &lt; 3 \\\\\n\\frac{9}{10}, & 3 \\leq \\lambda &lt; 3.5 \\\\\n1, & \\lambda \\geq 3.5 \\\\\n\\end{cases}\\]\n]\nFind \\(p_X(\\lambda)\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#q8",
+    "href": "homework/homework1.html#q8",
+    "title": "Homework 1",
+    "section": "Q8",
+    "text": "Q8\nA player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#e1",
+    "href": "homework/homework1.html#e1",
+    "title": "Homework 1",
+    "section": "E1",
+    "text": "E1\nThe binomial distribution PMF is:\n[ p_X() = {n k} ^n (1-)^{n-k} ]\nUsing Python, generate binomial data and create visualizations for \\(p_X(\\lambda)\\) and \\(F_X(\\lambda)\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#question-1",
+    "href": "homework/homework1.html#question-1",
+    "title": "Homework 1",
+    "section": "",
+    "text": "\\(\\{ 5x-1: x \\in \\mathbb{Z} \\}\\)\n\\(\\{ x \\in \\mathbb{R}: \\sin \\pi x = 0 \\}\\)\n\\(\\{X : X \\subseteq \\{3,2,a\\} \\text{ and } |X|=2 \\}\\)\n\n\n\n\\(\\{ 2, 4, 8, 16, 32, 64, ...\\}\\)\n\\(\\{0,1,4,9,16,25,36, ...\\}\\)\n\\(\\{..., \\frac{1}{8},\\frac{1}{4},\\frac{1}{2},1,2,4,8,... \\}\\)",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#question-2",
+    "href": "homework/homework1.html#question-2",
+    "title": "Homework 1",
+    "section": "Question 2",
+    "text": "Question 2\nA retail store accepts either American Express or VISA. The percentages of customers carrying each card are: \n\nAmerican Express: \\(24%\\)\nVISA: \\(61%\\)\nBoth: \\(11%\\)\n\nWhat percentage of customers carry a card accepted by the store?",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#question-3",
+    "href": "homework/homework1.html#question-3",
+    "title": "Homework 1",
+    "section": "Question 3",
+    "text": "Question 3\nSixty percent of students wear neither a ring nor a necklace. Given: \n\n\\(20%\\) wear a ring\n\\(30%\\) wear a necklace\n\nFind the probability that a randomly chosen student wears:\n\nA ring or a necklace\nBoth a ring and a necklace",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#question-4",
+    "href": "homework/homework1.html#question-4",
+    "title": "Homework 1",
+    "section": "Question 4",
+    "text": "Question 4\nTwo fair dice are rolled. Find the conditional probability that at least one die lands on \\(6\\), given that they land on different numbers.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#question-5",
+    "href": "homework/homework1.html#question-5",
+    "title": "Homework 1",
+    "section": "Question 5",
+    "text": "Question 5\nAn urn contains \\(6\\) white and \\(9\\) black balls. If \\(4\\) balls are selected without replacement, what is the probability that the first \\(2\\) are white and the last \\(2\\) are black?",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#question-6",
+    "href": "homework/homework1.html#question-6",
+    "title": "Homework 1",
+    "section": "Question 6",
+    "text": "Question 6\nA defendant is judged guilty if at least \\(2\\) out of \\(3\\) judges vote guilty. Given:\n\nProbability of a guilty vote when defendant is guilty: \\(0.7\\) \nProbability of a guilty vote when defendant is innocent: \\(0.2\\) \n\\(70%\\) of defendants are guilty\n\nCompute the conditional probability that judge \\(3\\) votes guilty given:\n\nJudges \\(1\\) and \\(2\\) vote guilty. \nJudges \\(1\\) and \\(2\\) split votes. \nJudges \\(1\\) and \\(2\\) vote not guilty.\n\nAre the judges’ votes independent? Conditionally independent? Explain.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#question-7",
+    "href": "homework/homework1.html#question-7",
+    "title": "Homework 1",
+    "section": "Question 7",
+    "text": "Question 7\nGiven the distribution function of \\(X\\):\n\\[\nF_{X}(\\lambda) =\n\\begin{cases}\n0, & \\lambda &lt; 0 \\\\\n\\frac{1}{2}, & 0 \\leq \\lambda &lt; 1 \\\\\n\\frac{3}{5}, & 1 \\leq \\lambda &lt; 2 \\\\\n\\frac{4}{5}, & 2 \\leq \\lambda &lt; 3 \\\\\n\\frac{9}{10}, & 3 \\leq \\lambda &lt; 3.5 \\\\\n1, & \\lambda \\geq 3.5 \\\\\n\\end{cases}\n\\]\nFind \\(p_X(\\lambda)\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#question-8",
+    "href": "homework/homework1.html#question-8",
+    "title": "Homework 1",
+    "section": "Question 8",
+    "text": "Question 8\nA player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework1.html#coding-exercise-1",
+    "href": "homework/homework1.html#coding-exercise-1",
+    "title": "Homework 1",
+    "section": "Coding Exercise 1",
+    "text": "Coding Exercise 1\nThe binomial distribution PMF is:\n\\[\np_X(\\lambda) = {n \\choose k} \\lambda^n (1-\\lambda)^{n-k}\n\\]\nUsing Python, generate binomial data and create visualizations for \\(p_X(\\lambda)\\) and \\(F_X(\\lambda)\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Homework 1</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#exercise",
+    "href": "lecture2/lecture2-1.html#exercise",
+    "title": "2.1 Set Theory",
+    "section": "Exercise",
+    "text": "Exercise\n\n\n\n\n\n\nQuestion\n\n\n\nWhat is (2 + 2)?\n\n\nWrite your answer below:",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-1.html#solution",
+    "href": "lecture2/lecture2-1.html#solution",
+    "title": "2.1 Set Theory",
+    "section": "Solution",
+    "text": "Solution\n\n\nClick to reveal the solution\n\nThe answer is 4.",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>2.1 Set Theory</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html#methodology",
+    "href": "lecture2/lecture2-2.html#methodology",
+    "title": "2.2 Axiomatic Probability",
+    "section": "",
+    "text": "Specify sample space.\nDefine probability law (must align with probability axioms).\nIdentify event of interest.\nCalculate…",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html#sample-space",
+    "href": "lecture2/lecture2-2.html#sample-space",
+    "title": "2.2 Axiomatic Probability",
+    "section": "Sample Space",
+    "text": "Sample Space\nA sample space is a set of all possible outcomes from an experiment. \n\\[\nSample \\ Space = \\{Heads, Tails\\}\n\\]\nAn experiment is any procedure that can be repeated and has a well-defined set of outcomes. \n\\[\nFlipping \\ a \\ fair \\ coin\n\\]\nAn outcome is the end result of an experiment, or an element in the sample space.\n\\[\nHeads  \n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html#illustration-discrete-sample-space",
+    "href": "lecture2/lecture2-2.html#illustration-discrete-sample-space",
+    "title": "2.2 Axiomatic Probability",
+    "section": "Illustration: Discrete Sample Space",
+    "text": "Illustration: Discrete Sample Space\nExperiment: Rolling two fair die at the same time.\n\\[\nSample \\ Space = \\{ (x, y) : x,y \\in \\mathbb{N}, 1 \\leq x, y \\leq 6  \\}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html#illustration-continuous-sample-space",
+    "href": "lecture2/lecture2-2.html#illustration-continuous-sample-space",
+    "title": "2.2 Axiomatic Probability",
+    "section": "Illustration: Continuous Sample Space",
+    "text": "Illustration: Continuous Sample Space\nExperiment: Measure two continuous variables in the range \\([0,1]\\)\n\\[ Sample\\ Space = \\{ (x, y) : x,y \\in \\mathbb{R}, 0 \\leq x, y \\leq 1  \\} \\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html#events-and-experiment",
+    "href": "lecture2/lecture2-2.html#events-and-experiment",
+    "title": "2.2 Axiomatic Probability",
+    "section": "Events and Experiment",
+    "text": "Events and Experiment\nAn event is a subset of the sample space.  Events are important because they ultimately get assigned probabilities.\nExperiment: Rolling a die once.\n\\[\nSample \\ Space = \\{1,2,3,4,5,6\\}\n\\]\nWhat is the event of rolling a \\(1\\)?\n\\[\n\\{1\\} \\subseteq \\{1,2,3,4,5,6\\}\n\\]\nWhat is the event of rolling an odd number?\n\\[\n\\{1, 3, 5\\} \\subseteq \\{1,2,3,4,5,6\\}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html#probability-axioms-and-probability-law",
+    "href": "lecture2/lecture2-2.html#probability-axioms-and-probability-law",
+    "title": "2.2 Axiomatic Probability",
+    "section": "Probability Axioms and Probability Law",
+    "text": "Probability Axioms and Probability Law\nKolmogorov probability axioms are the foundations of axiomatic probability theory:\n\nNonnegativity: \\(P(Event) \\geq 0\\)\nNormalization: \\(P(Sample\\ Space) = 1\\)\nAdditivity: If \\(A \\cap B = \\emptyset, P(A \\cup B) = P(A) + P(B)\\)\n\nProbability laws are additional axioms mathematically derived from Kolmogorov probability axioms.\n\nExercise\nExperiment: Rolling two fair die at the same time.\nLet all outcomes be equally likely.\n\\[\nP(A) = \\frac{|A|}{|Sample\\ Space|}\n\\]\n\n\n\nFind the following probabilities:\n\n\\(P(die_1 = 1)\\)\n\\(P(max(die_1, die_2) = 2)\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\\(P(die_1 = 1) = \\frac{6}{36} \\approx 0.1\\bar{6}\\)\n\\(P(max(die_1, die_2) = 2) = \\frac{2}{36} \\approx 0.0\\bar{5}\\)\n\n\n\n\n\n\nExercise\nExperiment: Measure two continuous variables in the range \\([0,1]\\)\n\\[\nSample\\ Space = \\{ (x, y) : x,y \\in \\mathbb{R}, 0 \\leq x, y \\leq 1  \\}\n\\]\n\n\n\nFind the following probabilities:\n\n\\(P(x = 0.5 , y = 0.5)\\)\n\\(P(x+y \\geq 1)\\)\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\\(P(x = 0.5 , y = 0.5) = 0\\)\n\\(P(x+y \\geq 1) = 0.5\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html#example-discrete-uniform-law",
+    "href": "lecture2/lecture2-2.html#example-discrete-uniform-law",
+    "title": "2.2 Axiomatic Probability",
+    "section": "Example: Discrete Uniform Law",
+    "text": "Example: Discrete Uniform Law\nExperiment: Rolling two fair die at the same time\n\nLet all outcomes be equally likely\n\n\\[\nP(A) = \\frac{|A|}{|Sample\\ Space|}\n\\]\n\n\n\nFind the following probabilities:\n\n\\(P(die_1 = 1)\\)\n\\(P(Max(die_1, die_2) = 2)\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-2.html#example-continuous-uniform-law",
+    "href": "lecture2/lecture2-2.html#example-continuous-uniform-law",
+    "title": "2.2 Axiomatic Probability",
+    "section": "Example: Continuous Uniform Law",
+    "text": "Example: Continuous Uniform Law\nExperiment: Measure two continuous variables in the range \\([0,1]\\)\n\\[\nSample\\ Space = \\{ (x, y) : x,y \\in \\mathbb{R}, 0 \\leq x, y \\leq 1  \\}\n\\]\n\n\n\nFind the following probabilities:\n\n\\(P((x,y) = (0.5 , 0.5))\\)\n\\(P(x+y \\geq 0.5)\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2.2 Axiomatic Probability</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-4.html#independence",
+    "href": "lecture2/lecture2-4.html#independence",
+    "title": "2.4 Independence",
+    "section": "",
+    "text": "Exercise\nWhich of the Venn diagrams shows 2 independent events?\n\n\n\n\n\n\nSolution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2.4 Independence</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-4.html#definition",
+    "href": "lecture2/lecture2-4.html#definition",
+    "title": "2.4 Independence",
+    "section": "",
+    "text": "Exercise\nWhich of the Venn diagrams shows 2 independent events?\n\n\n\n\n\n\nSolution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2.4 Independence</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-3.html#multiplication-rule",
+    "href": "lecture2/lecture2-3.html#multiplication-rule",
+    "title": "2.3 Conditioning",
+    "section": "Multiplication Rule",
+    "text": "Multiplication Rule\nThe Multiplication Rule states that the probability of two events \\(A\\) and \\(B\\) occurring together (\\(A \\cap B\\)) is given by the probability of one event occurring given the other (\\(P(A|B)\\) or \\(P(B|A)\\)) multiplied by the probability of the other event.\n\\[\nP(A \\cap B) = P(A|B) P(B) = P(B|A) P(A)\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>2.3 Conditioning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-3.html#product-rule",
+    "href": "lecture2/lecture2-3.html#product-rule",
+    "title": "2.3 Conditioning",
+    "section": "Product Rule",
+    "text": "Product Rule\nSuppose \\(A\\) and \\(B\\) are events.  The product rule states that the probability of two events \\(A\\) and \\(B\\) occurring together \\(A \\cap B\\) is given by the probability of one event occurring given the other \\(P(A|B)\\) or \\(P(B|A)\\) multiplied by the probability of the other event.\n\\[\nP(A \\cap B) = P(A|B) P(B) = P(B|A) P(A)\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>2.3 Conditioning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#probability-mass-function",
+    "href": "lecture2/lecture2-5.html#probability-mass-function",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Probability Mass Function",
+    "text": "Probability Mass Function\nA probability mass function (PMF) is a mapping of values \\(x\\) of discrete random variables \\(X\\) to probabilities \\([0,1]\\).\n\\[\np_{X}(x) = P(X = x)\n\\]\nPMF has properties: \\[\np_{X}(x) \\geq 0, \\quad \\sum_{x} p_{X}(x) = 1\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#cumulative-distribution-function",
+    "href": "lecture2/lecture2-5.html#cumulative-distribution-function",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Cumulative Distribution Function",
+    "text": "Cumulative Distribution Function\nThe cumulative distribution function (CDF) is defined as:\n\\[\nF_{X}(x) = P(X \\leq x) = \\sum_{k \\leq x} p_{X}(k)\n\\]\nRelation to PMF: \\[\np_{X}(x) = \\frac{dF_{X}(x)}{dx}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#definition",
+    "href": "lecture2/lecture2-6.html#definition",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Definition",
+    "text": "Definition\nA continuous random variable is a mapping \\(X\\) of all the events of a sample space to numerical values \\(\\lambda\\) in \\(\\mathbb{R}\\).\n\nNotation\n\\[ X: event \\in Sample \\ Space \\to \\lambda \\in \\mathbb{R} \\]\n\n\nProbability Density Function (PDF)\nA probability density function (PDF) is a mapping of values \\(\\lambda\\) of intervals of continuous random variables \\(X\\) to probabilities \\([0,1]\\).\n\nNotation\n\\[ P(a \\leq X \\leq b) = \\int_{a}^{b} f_{X}(\\lambda) \\ d\\lambda \\]\n\n\nProperties\n\n$ f_{X}() $\n$ {-}^{} f{X}()  d= 1 $\n\n\n\n\nCumulative Distribution Function (CDF)\nThe cumulative distribution function (CDF) for continuous random variables is defined as:\n\\[ F_{X}(\\lambda) = P(X \\leq \\lambda) = \\int_{-\\infty}^{\\lambda} f_{X}(u) \\ du \\]\n\nRelationship between CDF and PDF:\n\n$ f_{X}() = $\n$ F_{X}() = {-}^{} f{X}(u)  du $\n\n\n\n\nExpectation and Variance\n\nExpectation (Mean)\n\\[ E[X] = \\int_{-\\infty}^{\\infty} \\lambda \\ f_{X}(\\lambda) d\\lambda \\]\n\n\nVariance\n\\[ \\text{Var}[X] = E[(X - E[X])^{2}] = \\int_{-\\infty}^{\\infty} (\\lambda - E[X])^2 \\ f_{X}(\\lambda) d\\lambda \\]\n\n\n\nJoint Probability Density Function (Joint PDF)\nFor two continuous random variables: \\[ P((X,Y) \\in A) = \\int \\int_{A} f_{X,Y}(\\lambda_{1}, \\lambda_{2}) d\\lambda_{1} \\ d\\lambda_{2} \\]\n\nMarginal PDFs\n\n$ f_{X}({1}) = {-}^{} f_{X,Y}({1}, {2}) d_{2} $\n$ f_{Y}({2}) = {-}^{} f_{X,Y}({1},{2}) d_{1} $\n\n\n\n\nConditional PDFs\nThe conditional probability density function: \\[ f_{X|Y}(\\lambda_{1}| \\lambda_{2}) = \\frac{f_{X,Y}(\\lambda_{1}, \\lambda_{2})}{f_{Y}(\\lambda_{2})} \\]\n\nConditional Expectation\n\\[ \\mathbb{E}[X| Y = \\lambda_{2}] = \\int_{\\lambda_{1} \\in X} \\lambda_{1} \\frac{f_{X,Y}(\\lambda_{1}, \\lambda_{2})}{f_{Y}(\\lambda_{2})} d\\lambda_{1} \\]\n\n\n\nIndependence\nTwo continuous random variables are independent if: \\[ f_{X,Y}(\\lambda_{1}, \\lambda_{2}) = f_{X}(\\lambda_{1}) f_{Y}(\\lambda_{2}) \\]\nThis can be extended to multiple random variables: \\[ f_{X_{1},...,X{n}}(\\lambda_{1}, ..., \\lambda_{n}) = f_{X_{1}}(\\lambda_{1}) ... \\ f_{X_{n}}(\\lambda_{n}) \\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html",
+    "href": "lecture2/lecture2-7.html",
+    "title": "2.7 Probability Distributions",
+    "section": "",
+    "text": "Bernoulli Distribution\n\\[\np_{X}(x) =\n\\begin{cases}\n    p & \\text{if } x = 1, \\\\\n    q = 1-p & \\text{if } x = 0.\n\\end{cases}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#bernoulli-distribution",
+    "href": "lecture2/lecture2-7.html#bernoulli-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "",
+    "text": "The discrete random variable can take value \\(1\\) with probability \\(p\\) or value \\(0\\) with probability \\(q = 1 - p\\)\nNot to be confused with the binomial distribution, since only one trial is being conducted.\n\\(\\mathbb{E}[X] = p\\)\n\\(Var[X] = pq\\) \n\n\n\nimport { Plot } from \"@observablehq/plot-bernoulli\"\n\nviewof p = Inputs.range([0, 1], {\n  step: 0.01,\n  value: 0.5,\n  label: tex`p`,\n  width: 200\n})\n\ndata = {\n  return [\n    {outcome: \"0\", probability: 1 - p},\n    {outcome: \"1\", probability: p}\n  ];\n}\n\nPlot.plot({\n  style: \"overflow: visible; display: block; margin: 0 auto;\",\n  width: 600,\n  height: 400,\n  y: {\n    grid: true,\n    label: \"Probability\",\n    domain: [0, 1]\n  },\n  x: {\n    label: \"Outcome\",\n    padding: 0.2\n  },\n  marks: [\n    Plot.barY(data, {\n      x: \"outcome\",\n      y: \"probability\",\n      fill: \"steelblue\"\n    }),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhtml`&lt;div style=\"text-align: center; margin-top: 1em;\"&gt;\n  &lt;p&gt;${tex`\\mathbb{E}[X] =`} ${p.toFixed(3)}&lt;/p&gt;\n  &lt;p&gt;${tex`\\text{Var}(X) =`} ${(p * (1-p)).toFixed(3)}&lt;/p&gt;\n&lt;/div&gt;`\n\n\n\n\n\n\n\n\n\n\nPython Code: Bernoulli Distribution\nTo create Bernoulli distributed data using numpy:\nimport numpy as np\n\ninterval = [0,1]\nsize = (1000,1)\np = [1-0.5, 0.5]\n\ndata = np.random.choice(interval, size, p = p)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#plot-bernoulli-distribution",
+    "href": "lecture2/lecture2-7.html#plot-bernoulli-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Plot: Bernoulli Distribution",
+    "text": "Plot: Bernoulli Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#code-bernoulli-distribution",
+    "href": "lecture2/lecture2-7.html#code-bernoulli-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Code: Bernoulli Distribution",
+    "text": "Code: Bernoulli Distribution\nTo create Bernoulli distributed data:\n# Bernoulli distribution example\nimport numpy as np\nnp.random.binomial(1, p, size=1000)\nTo calculate the PMF:\nfrom scipy.stats import bernoulli\np = 0.5  # Example probability\nx = [0, 1]\npmf = bernoulli.pmf(x, p)\nprint(pmf)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#beta-distribution-pdf",
+    "href": "lecture2/lecture2-7.html#beta-distribution-pdf",
+    "title": "2.7 Probability Distributions",
+    "section": "Beta Distribution PDF",
+    "text": "Beta Distribution PDF\n\\[\nf_{X}(\\lambda) = {\\frac {\\Gamma (\\alpha +\\beta )}{\\Gamma (\\alpha )\\Gamma (\\beta )}}\\,\\lambda^{\\alpha -1}(1-\\lambda)^{\\beta -1}\n\\]\nwhere \\(\\Gamma\\) is the gamma function defined as:\n\\[\n\\Gamma (z)=\\int _{0}^{\\infty}t^{z-1}e^{-t}\\,dt\n\\]\n\nGamma functions are used to model factorial functions of complex numbers \\(z\\).\nBeta functions are used to model behavior of random variables in intervals of finite length.\n\\(E[X] = \\frac{\\alpha}{\\alpha+\\beta}\\)\n\\(Var[X] = \\frac{\\alpha\\beta}{(\\alpha+\\beta)^2(\\alpha+\\beta+1)}\\)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#plot-uniform-beta-distribution",
+    "href": "lecture2/lecture2-7.html#plot-uniform-beta-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Plot: Uniform Beta Distribution",
+    "text": "Plot: Uniform Beta Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#plot-alpha-weighted-beta-distribution",
+    "href": "lecture2/lecture2-7.html#plot-alpha-weighted-beta-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Plot: Alpha Weighted Beta Distribution",
+    "text": "Plot: Alpha Weighted Beta Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#plot-beta-weighted-beta-distribution",
+    "href": "lecture2/lecture2-7.html#plot-beta-weighted-beta-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Plot: Beta Weighted Beta Distribution",
+    "text": "Plot: Beta Weighted Beta Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#code-beta-distribution",
+    "href": "lecture2/lecture2-7.html#code-beta-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Code: Beta Distribution",
+    "text": "Code: Beta Distribution\nTo create Beta distributed data:\n# Beta distribution data generation\n# Lines 9-10 from Math/python_files/Beta.py\nTo calculate the PDF:\n# Beta distribution PDF calculation\n# Lines 12-28 from Math/python_files/Beta.py",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#gaussian-distribution",
+    "href": "lecture2/lecture2-7.html#gaussian-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Gaussian Distribution",
+    "text": "Gaussian Distribution\n\\[\nf_{X}(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^{2} }}e^{-\\frac{(x-\\mu)^{2}}{2\\sigma^{2}}}\n\\]\n\nUsed frequently to represent real-valued random variables whose distributions are not known.\nIts importance is derived from the central limit theorem that states, under some conditions, the average of many samples of a random variable is itself a random variable that converges to a Gaussian distribution as it increases.\n\\(E[X] = \\mu\\)\n\\(Var[X] = \\sigma^{2}\\)\n\n\n\nimport { Plot } from \"@observablehq/plot-gaussian\"\n\nviewof mu = Inputs.range([-1, 1], {\n  step: 0.1,\n  value: 0,\n  label: tex`\\mu`,\n  width: 200\n})\n\nviewof sigma = Inputs.range([0.1, 2], {\n  step: 0.1,\n  value: 1,\n  label: tex`\\sigma`,\n  width: 200\n})\n\n// Generate points for the normal distribution curve\npointsGaussian = {\n  const x = d3.range(-5, 5, 0.1);\n  return x.map(x =&gt; ({\n    x,\n    y: (1 / (sigma * Math.sqrt(2 * Math.PI))) * \n       Math.exp(-0.5 * Math.pow((x - mu) / sigma, 2))\n  }));\n}\n\nPlot.plot({\n  style: \"overflow: visible; display: block; margin: 0 auto;\",\n  width: 600,\n  height: 400,\n  y: {\n    grid: true,\n    label: \"Density\"\n  },\n  x: {\n    label: \"x\",\n    domain: [-5, 5]\n  },\n  marks: [\n    Plot.line(pointsGaussian, {x: \"x\", y: \"y\", stroke: \"steelblue\"}),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhtml`&lt;div style=\"text-align: center; margin-top: 1em;\"&gt;\n  &lt;p&gt;${tex`\\mathbb{E}[X] =`} ${mu.toFixed(3)}&lt;/p&gt;\n  &lt;p&gt;${tex`\\text{Var}(X) =`} ${(sigma * sigma).toFixed(3)}&lt;/p&gt;\n&lt;/div&gt;`\n\n\n\n\n\n\n\n\n\n\nPython Code: Gaussian Distribution\nTo create Gaussian distributed data using numpy:\nimport numpy as np\n\nmu = 0\nsigma = 1\nsize = (1000,1)\n\ndata = np.random.normal(mu, sigma, size)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#plot-gaussian-distribution",
+    "href": "lecture2/lecture2-7.html#plot-gaussian-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Plot: Gaussian Distribution",
+    "text": "Plot: Gaussian Distribution",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#code-gaussian-distribution",
+    "href": "lecture2/lecture2-7.html#code-gaussian-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Code: Gaussian Distribution",
+    "text": "Code: Gaussian Distribution\nTo create Gaussian distributed data:\n# Gaussian distribution data generation\n# Lines 8-10 from Math/python_files/Gaussian.py\nTo calculate the PDF:\n# Gaussian distribution PDF calculation\n# Lines 11-23 from Math/python_files/Gaussian.py",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-7.html#beta-distribution",
+    "href": "lecture2/lecture2-7.html#beta-distribution",
+    "title": "2.7 Probability Distributions",
+    "section": "Beta Distribution",
+    "text": "Beta Distribution\n\\[\nf_{X}(x) = {\\frac {\\Gamma (\\alpha +\\beta )}{\\Gamma (\\alpha )\\Gamma (\\beta )}}\\,x^{\\alpha -1}(1-x)^{\\beta -1}\n\\]\nwhere \\(\\Gamma\\) is the gamma function defined as:\n\\[\n\\Gamma (z)=\\int _{0}^{\\infty}t^{z-1}e^{-t}\\,dt\n\\]\n\nGamma functions are used to model factorial functions of complex numbers \\(z\\).\nBeta functions are used to model behavior of random variables in intervals of finite length.\n\\(E[X] = \\frac{\\alpha}{\\alpha+\\beta}\\)\n\\(Var[X] = \\frac{\\alpha\\beta}{(\\alpha+\\beta)^2(\\alpha+\\beta+1)}\\)\n\n\n\nviewof alpha = Inputs.range([0.1, 10], {\n  step: 0.1,\n  value: 2,\n  label: tex`\\alpha`,\n  width: 200\n})\n\nviewof beta = Inputs.range([0.1, 10], {\n  step: 0.1,\n  value: 2,\n  label: tex`\\beta`,\n  width: 200\n})\n\n// Gamma function approximation using Lanczos approximation\nfunction gamma(z) {\n    const p = [676.5203681218851, -1259.1392167224028, 771.32342877765313,\n        -176.61502916214059, 12.507343278686905, -0.13857109526572012,\n        9.9843695780195716e-6, 1.5056327351493116e-7];\n    \n    if (z &lt; 0.5) {\n        return Math.PI / (Math.sin(Math.PI * z) * gamma(1 - z));\n    }\n    \n    z -= 1;\n    let x = 0.99999999999980993;\n    for (let i = 0; i &lt; p.length; i++) {\n        x += p[i] / (z + i + 1);\n    }\n    \n    const t = z + p.length - 0.5;\n    return Math.sqrt(2 * Math.PI) * Math.pow(t, z + 0.5) * Math.exp(-t) * x;\n}\n\n// Beta function using gamma function\nfunction betaFunc(x, y) {\n    return (gamma(x) * gamma(y)) / gamma(x + y);\n}\n\n// Beta probability density function\nfunction betaPDF(x, a, b) {\n    if (x &lt;= 0 || x &gt;= 1) return 0;\n    return Math.pow(x, a - 1) * Math.pow(1 - x, b - 1) / betaFunc(a, b);\n}\n\n// Generate points for the beta distribution curve\npoints = Array.from({length: 100}, (_, i) =&gt; {\n  let x = 0.001 + i * 0.01;\n  return { x, y: betaPDF(x, alpha, beta) };\n});\n\nPlot.plot({\n  style: \"overflow: visible; display: block; margin: 0 auto;\",\n  width: 600,\n  height: 400,\n  y: {\n    grid: true,\n    label: \"Density\"\n  },\n  x: {\n    label: \"x\",\n    domain: [0, 1]\n  },\n  marks: [\n    Plot.line(points, {x: \"x\", y: \"y\", stroke: \"steelblue\"}),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhtml`&lt;div style=\"text-align: center; margin-top: 1em;\"&gt;\n  &lt;p&gt;${tex`\\mathbb{E}[X] =`} ${(alpha/(alpha + beta)).toFixed(3)}&lt;/p&gt;\n  &lt;p&gt;${tex`\\text{Var}(X) =`} ${((alpha * beta)/((alpha + beta)**2 * (alpha + beta + 1))).toFixed(3)}&lt;/p&gt;\n&lt;/div&gt;`\n\n\n\n\n\n\n\n\n\n\nPython Code: Beta Distribution\nTo create Beta distributed data using numpy:\nimport numpy as np \n\nalpha = 0.5\nbeta = 0.5\nsize = (1000,1)\n\ndata = np.random.beta(alpha, beta, size)",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>2.7 Probability Distributions</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#illustration-pmf-and-cdf",
+    "href": "lecture2/lecture2-5.html#illustration-pmf-and-cdf",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Illustration: PMF and CDF",
+    "text": "Illustration: PMF and CDF",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#expectation-and-variance-of-pmf",
+    "href": "lecture2/lecture2-5.html#expectation-and-variance-of-pmf",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Expectation and Variance of PMF",
+    "text": "Expectation and Variance of PMF\nThe expectation of a discrete random variable is the sum of all possible values weighted by their probabilities, representing the long-term average outcome.\n\\[\nE[X] = \\sum_{x} x \\ p_{X}(x)\n\\]\nThe variance of a discrete random variable quantifies the spread of its values around the mean by calculating the expected squared deviation from the mean. \\[\nVar[X] = E[(X - E[X])^{2}] = \\sum_{x}(x - E[X])^2 p_{X}(x)\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#joint-and-marginal-pmfs",
+    "href": "lecture2/lecture2-5.html#joint-and-marginal-pmfs",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Joint and Marginal PMFs",
+    "text": "Joint and Marginal PMFs\nThe joint PMF calculates the intersection of two discrete random variables: \\[\np_{X,Y}(x_{1},x_{2}) = P(X = x_{1}, Y = x_{2})\n\\]\nFrom the previous definition we can also compute the marginal PMF for a particular random variable: \\[\np_{X}(x_{1}) = \\sum_{x_{2}} p_{X,Y}(X = x_{1},Y = x_{2})\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#conditional-expectation-of-pmf",
+    "href": "lecture2/lecture2-5.html#conditional-expectation-of-pmf",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Conditional Expectation of PMF",
+    "text": "Conditional Expectation of PMF\nThe conditional PMF gives the probability distribution of a discrete random variable given that another variable has a specific value. \\[\np_{X|Y}(x_{1}| x_{2}) = \\frac{p_{X,Y}(x_{1}, x_{2})}{p_{Y}(x_{2})}\n\\]\nThe conditional expectation is the expected value of a discrete random variable given that another variable is fixed at a specific value. \\[\nE[X| Y = x_{2}] = \\sum_{x_{1}} x_{1} \\frac{p_{X,Y}(x_{1}, x_{2})}{p_{Y}(x_{2})}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#independence-of-pmf",
+    "href": "lecture2/lecture2-5.html#independence-of-pmf",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Independence of PMF",
+    "text": "Independence of PMF\nTwo discrete random variables are independent if:\n\\[\np_{X,Y}(x_{1}, x_{2}) = p_{X}(x_{1}) p_{Y}(x_{2})\n\\]\nFor multiple discrete random variables: \\[\np_{X_{1},...,X_{n}}(x_{1}, ..., x_{n}) = p_{X_{1}}(x_{1}) ... \\ p_{X_{n}}(x_{n})\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#probability-density-function-pdf",
+    "href": "lecture2/lecture2-6.html#probability-density-function-pdf",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Probability Density Function (PDF)",
+    "text": "Probability Density Function (PDF)\nA probability density function (PDF) is a mapping of values \\(x\\) of intervals of continuous random variables \\(X\\) to probabilities \\([0,1]\\).\n\\[\nP(a \\leq X \\leq b) = \\int_{a}^{b} f_{X}(x) \\ dx\n\\]\nPDF has properties: \\[\nf_{X}(x) \\geq 0, \\ \\int_{-\\infty}^{\\infty} f_{X}(x) \\ dx = 1\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#cumulative-distribution-function-cdf",
+    "href": "lecture2/lecture2-6.html#cumulative-distribution-function-cdf",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Cumulative Distribution Function (CDF)",
+    "text": "Cumulative Distribution Function (CDF)\nThe cumulative distribution function (CDF) for continuous random variables is defined as:\n\\[ F_{X}(x) = P(X \\leq x) = \\int_{-\\infty}^{x} f_{X}(u) \\ du \\]\nRelation to PDF:\n\\[\nf_{X}(x) = \\frac{dF_{X}(x)}{dx}\n\\] \\[\nF_{X}(x) = \\int_{-\\infty}^{x} f_{X}(u) \\ du\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#relationship-between-cdf-and-pdf",
+    "href": "lecture2/lecture2-6.html#relationship-between-cdf-and-pdf",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Relationship between CDF and PDF:",
+    "text": "Relationship between CDF and PDF:\n\\(f_{X}(x) = \\frac{dF_{X}(x)}{dx}\\) \\(F_{X}(x) = \\int_{-\\infty}^{x} f_{X}(u) \\ du\\)\n\nExpectation and Variance\n\\[\nE[X] = \\int_{-\\infty}^{\\infty} x \\ f_{X}(x) dx\n\\]\n\\[\n\\text{Var}[X] = E[(X - E[X])^{2}] = \\int_{-\\infty}^{\\infty} (x - E[X])^2 \\ f_{X}(x) dx\n\\]\n\n\nJoint Probability Density Function (Joint PDF)\nFor two continuous random variables: \\[ P((X,Y) \\in A) = \\int \\int_{A} f_{X,Y}(x_{1}, x_{2}) dx_{1} \\ dx_{2} \\]\n\nMarginal PDFs\n\n$ f_{X}(x_{1}) = {-}^{} f{X,Y}(x_{1}, x_{2}) dx_{2} $\n$ f_{Y}(x_{2}) = {-}^{} f{X,Y}(x_{1},x_{2}) dx_{1} $\n\n\n\n\nConditional PDFs\nThe conditional probability density function: \\[ f_{X|Y}(x_{1}| x_{2}) = \\frac{f_{X,Y}(x_{1}, x_{2})}{f_{Y}(x_{2})} \\]\n\nConditional Expectation\n\\[ \\mathbb{E}[X| Y = x_{2}] = \\int_{x_{1} \\in X} x_{1} \\frac{f_{X,Y}(x_{1}, x_{2})}{f_{Y}(x_{2})} dx_{1} \\]\n\n\n\nIndependence\nTwo continuous random variables are independent if: \\[ f_{X,Y}(x_{1}, x_{2}) = f_{X}(x_{1}) f_{Y}(x_{2}) \\]\nThis can be extended to multiple random variables: \\[ f_{X_{1},...,X{n}}(x_{1}, ..., x_{n}) = f_{X_{1}}(x_{1}) ... \\ f_{X_{n}}(x_{n}) \\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#joint-and-marginal",
+    "href": "lecture2/lecture2-5.html#joint-and-marginal",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Joint and Marginal",
+    "text": "Joint and Marginal\nThe joint PMF gives the probability that two discrete random variables take on specific values simultaneously. \\[\np_{X,Y}(x_{1},x_{2}) = P(X = x_{1}, Y = x_{2})\n\\]\nThe marginal PMF of a discrete random variable is found by summing the joint PMF over all possible values of the other variable, giving the probability of a single variable. \\[\np_{X}(x_{1}) = \\sum_{x_{2}} p_{X,Y}(X = x_{1},Y = x_{2})\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#expectation-and-variance-of-pmfs",
+    "href": "lecture2/lecture2-5.html#expectation-and-variance-of-pmfs",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Expectation and Variance of PMFs",
+    "text": "Expectation and Variance of PMFs\nDiscrete expectation, or mean, is the average numerical value that the discrete random variable takes over the PMF. \\[\nE[X] = \\sum_{x} x \\ p_{X}(x)\n\\]\nDiscrete variance is the expected squared difference from the mean of a PMF. \\[\nVar[X] = E[(X - E[X])^{2}] = \\sum_{x}(x - E[X])^2 p_{X}(x)\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-5.html#conditional-expectation-of-pmfs",
+    "href": "lecture2/lecture2-5.html#conditional-expectation-of-pmfs",
+    "title": "2.5 Discrete Random Variables",
+    "section": "Conditional Expectation of PMFs",
+    "text": "Conditional Expectation of PMFs\nThe conditional PMF gives the probability distribution of a discrete random variable given that another variable has a specific value. \\[\np_{X|Y}(x_{1}| x_{2}) = \\frac{p_{X,Y}(x_{1}, x_{2})}{p_{Y}(x_{2})}\n\\]\nThe conditional expectation is the expected value of a discrete random variable given that another variable is fixed at a specific value. \\[\nE[X| Y = x_{2}] = \\sum_{x_{1}} x_{1} \\frac{p_{X,Y}(x_{1}, x_{2})}{p_{Y}(x_{2})}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>2.5 Discrete Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#expectation-and-variance-of-pdfs",
+    "href": "lecture2/lecture2-6.html#expectation-and-variance-of-pdfs",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Expectation and Variance of PDFs",
+    "text": "Expectation and Variance of PDFs\nContinuous expectation, or mean, is the average numerical value that the continuous random variable takes over the PDF. \\[\nE[X] = \\int_{-\\infty}^{\\infty} x \\ f_{X}(x) dx\n\\]\nContinuous variance is the expected squared difference from the mean of a PDF. \\[\n\\text{Var}[X] = E[(X - E[X])^{2}] = \\int_{-\\infty}^{\\infty} (x - E[X])^2 \\ f_{X}(x) dx\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#joint-and-marginal-pdfs",
+    "href": "lecture2/lecture2-6.html#joint-and-marginal-pdfs",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Joint and Marginal PDFs",
+    "text": "Joint and Marginal PDFs\nThe joint PDF calculates the intersection of two continuous random variables: \\[\nP((X,Y) \\in A) = \\int \\int_{A} f_{X,Y}(x_{1}, x_{2}) dx_{1} \\ dx_{2}\n\\]\nFrom the previous definition we can also compute the marginal PDF for a particular random variable:\n\\[\nf_{X}(x_{1}) = \\int_{-\\infty}^{\\infty} f_{X,Y}(x_{1}, x_{2}) dx_{2}\n\\]\n\\[\nf_{Y}(x_{2}) = \\int_{-\\infty}^{\\infty} f_{X,Y}(x_{1},x_{2}) dx_{1}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#conditional-expectation-of-pdfs",
+    "href": "lecture2/lecture2-6.html#conditional-expectation-of-pdfs",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Conditional Expectation of PDFs",
+    "text": "Conditional Expectation of PDFs\nThe conditional PDF gives the probability distribution of a continuous random variable given that another variable has a specific value. \\[\nf_{X|Y}(x_{1}| x_{2}) = \\frac{f_{X,Y}(x_{1}, x_{2})}{f_{Y}(x_{2})}\n\\]\nThe conditional expectation is the expected value of a continuous random variable given that another variable is fixed at a specific value. \\[\n\\mathbb{E}[X| Y = x_{2}] = \\int_{x_{1} \\in X} x_{1} \\frac{f_{X,Y}(x_{1}, x_{2})}{f_{Y}(x_{2})} dx_{1}\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#independence",
+    "href": "lecture2/lecture2-6.html#independence",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Independence",
+    "text": "Independence\nTwo continuous random variables are independent if: \\[\nf_{X,Y}(x_{1}, x_{2}) = f_{X}(x_{1}) f_{Y}(x_{2})\n\\]\nThis can be extended to multiple random variables: \\[\nf_{X_{1},...,X{n}}(x_{1}, ..., x_{n}) = f_{X_{1}}(x_{1}) ... \\ f_{X_{n}}(x_{n})\n\\]",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lecture2-6.html#illustration-pdf-and-cdf",
+    "href": "lecture2/lecture2-6.html#illustration-pdf-and-cdf",
+    "title": "2.6 Continuous Random Variables",
+    "section": "Illustration: PDF and CDF",
+    "text": "Illustration: PDF and CDF",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>2.6 Continuous Random Variables</span>"
     ]
   }
 ]

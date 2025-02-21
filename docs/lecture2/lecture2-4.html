@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1.3 Where is Reinforcement Learning Applied?</title>
+<title>2.4 Independence</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lecture1/lecture1-4.html" rel="next">
-<link href="../lecture1/lecture1-2.html" rel="prev">
+<link href="../lecture2/lecture2-5.html" rel="next">
+<link href="../lecture2/lecture2-3.html" rel="prev">
 <link href="../data/images/rl-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">1.3 Where is Reinforcement Learning Applied?</span></h1>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">2.4 Independence</span></h1>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,13 +143,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Lecture 1: Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lecture1/lecture1-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.1 Why should I study Reinforcement Learning?</span></a>
@@ -133,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture1/lecture1-3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">1.3 Where is Reinforcement Learning Applied?</span></a>
+  <a href="../lecture1/lecture1-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1.3 Where is Reinforcement Learning Applied?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -145,13 +174,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Lecture 2: Mathematical Foundations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lecture2/lecture2-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2.1 Set Theory</span></a>
@@ -169,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture2/lecture2-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2.4 Independence</span></a>
+  <a href="../lecture2/lecture2-4.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2.4 Independence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -221,12 +250,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#recommendation-systems" id="toc-recommendation-systems" class="nav-link active" data-scroll-target="#recommendation-systems">Recommendation Systems</a></li>
-  <li><a href="#games" id="toc-games" class="nav-link" data-scroll-target="#games">Games</a></li>
-  <li><a href="#robotics" id="toc-robotics" class="nav-link" data-scroll-target="#robotics">Robotics</a></li>
-  <li><a href="#autonomous-vehicles" id="toc-autonomous-vehicles" class="nav-link" data-scroll-target="#autonomous-vehicles">Autonomous Vehicles</a></li>
-  <li><a href="#natural-language-processing" id="toc-natural-language-processing" class="nav-link" data-scroll-target="#natural-language-processing">Natural Language Processing</a></li>
-  <li><a href="#finance" id="toc-finance" class="nav-link" data-scroll-target="#finance">Finance</a></li>
+  <li><a href="#independent-events" id="toc-independent-events" class="nav-link active" data-scroll-target="#independent-events">Independent Events</a></li>
+  <li><a href="#conditioning-and-independence" id="toc-conditioning-and-independence" class="nav-link" data-scroll-target="#conditioning-and-independence">Conditioning and Independence</a></li>
   </ul>
 </nav>
     </div>
@@ -235,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">1.3 Where is Reinforcement Learning Applied?</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">2.4 Independence</span></h1>
 </div>
 
 
@@ -258,66 +283,59 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-We know why it matters and what it’s all about. Now, let’s dive into:
-<p style="text-align: center;">
-<em> Where is Reinforcement Learning Applied?</em> 🤔
-</p>
+<p>A property where two events do not influence each other, meaning the occurrence of one tells us nothing about the other. 🔗</p>
 </div>
 </div>
 </div>
-<section id="recommendation-systems" class="level2">
-<h2 class="anchored" data-anchor-id="recommendation-systems">Recommendation Systems</h2>
-<p>Reinforcement Learning powers modern recommendation systems by dynamically adapting to user preferences, optimizing content suggestions in platforms like Netflix, YouTube, and Spotify using techniques such as Multi-Armed Bandits (MAB).</p>
-<div class="text-center">
-<p><img src="images/Neflix.png" class="img-fluid" style="width:50.0%" alt="Netflix: Recommendation Systems"><br>
-Trained using MAB (Lecture 2)<br>
-<a href="https://netflixtechblog.com/artwork-personalization-c589f074ad76">Link to Online Article</a></p>
-</div>
+<section id="independent-events" class="level2">
+<h2 class="anchored" data-anchor-id="independent-events">Independent Events</h2>
+<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two events. <br> Two events are <strong>independent</strong> if the occurrence of event <span class="math inline">\(B\)</span> provides no information about the occurrence of event <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[
+P(A|B) = P(A)
+\]</span></p>
+<p>Another definition of independence:</p>
+<p><span class="math display">\[
+P(A \cap B) = P(A) P(B)
+\]</span></p>
+<p>For multiple events:</p>
+<p><span class="math display">\[
+P(A_{1} \cap A_{2} \cap ... A_{n}) = P(A_{1}) P(A_{2}) ... P(A_{n})
+\]</span></p>
 </section>
-<section id="games" class="level2">
-<h2 class="anchored" data-anchor-id="games">Games</h2>
-<p>Reinforcement Learning has revolutionized gaming by enabling AI to master complex environments, from Atari classics to advanced strategy games, using deep learning techniques like Deep Q-Networks (DQN) to achieve superhuman performance.</p>
-<div class="text-center">
-<p><img src="images/breakout.gif" style="height:70.0%" alt="Atari: Breakout"><br>
-Trained using DQN (Lecture 9)<br>
-<a href="https://arxiv.org/pdf/1312.5602">Link to Research Paper</a></p>
+<section id="conditioning-and-independence" class="level2">
+<h2 class="anchored" data-anchor-id="conditioning-and-independence">Conditioning and Independence</h2>
+<p>Suppose <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are events. <br> If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, conditioning on <span class="math inline">\(C\)</span> may remove that independence. <br> When we condition on <span class="math inline">\(C\)</span>, events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> may no longer be independent.</p>
+<div style="text-align: center;">
+<p><img src="images/condind.png" class="img-fluid" style="width:30.0%"></p>
 </div>
-</section>
-<section id="robotics" class="level2">
-<h2 class="anchored" data-anchor-id="robotics">Robotics</h2>
-<p>In robotics, Reinforcement Learning enables autonomous agents to learn complex motor skills, such as dexterous manipulation and locomotion, through continuous interaction and training with Proximal Policy Optimization (PPO).</p>
-<div class="text-center">
-<p><img src="images/openaidactyl.png" class="img-fluid" style="width:55.0%" alt="OpenAI’s Dactyl"><br>
-Trained using PPO (Lecture 11)<br>
-<a href="https://openai.com/index/solving-rubiks-cube/">Link to Blog</a></p>
+<section id="exercise" class="level4">
+<h4 class="anchored" data-anchor-id="exercise"><u>Exercise</u></h4>
+<p>The king comes from a family of two children. What is the probability that his sibling is female <span class="math inline">\(F\)</span> and not male <span class="math inline">\(M\)</span>?</p>
+<p>Let all outcomes be equally likely.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</section>
-<section id="autonomous-vehicles" class="level2">
-<h2 class="anchored" data-anchor-id="autonomous-vehicles">Autonomous Vehicles</h2>
-<p>Self-driving cars rely on Reinforcement Learning to navigate complex environments, optimize decision-making, and improve safety, often incorporating PPO and deep learning to refine real-time control strategies.</p>
-<div class="text-center">
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/hubWIuuz-e4" frameborder="0" allowfullscreen=""> </iframe> <br> Partly trained using PPO (Lecture 11)</p>
+<div class="callout-title-container flex-fill">
+Solution
 </div>
-</section>
-<section id="natural-language-processing" class="level2">
-<h2 class="anchored" data-anchor-id="natural-language-processing">Natural Language Processing</h2>
-<p>Reinforcement Learning from Human Feedback (RLHF) enhances AI language models like ChatGPT, allowing them to refine responses based on user interactions and align better with human preferences.</p>
-<div class="text-center">
-<p><img src="images/rlhf.png" class="img-fluid" style="width:70.0%" alt="ChatGPT: RLHF"><br>
-Trained using PPO (Lecture 11)<br>
-<a href="https://arxiv.org/pdf/2203.02155">Link to Research Paper</a></p>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-</section>
-<section id="finance" class="level2">
-<h2 class="anchored" data-anchor-id="finance">Finance</h2>
-<p>In financial markets, RL is applied to portfolio optimization, algorithmic trading, and risk management, leveraging techniques like PPO to make data-driven investment decisions.</p>
-<div class="text-center">
-<p><img src="images/jpmorgan.png" class="img-fluid" style="width:70.0%" alt="J.P. Morgan Chase: Portfolio Optimization"><br>
-Trained using PPO (Lecture 11)<br>
-<a href="https://arxiv.org/pdf/2403.16667">Link to Research Paper</a></p>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+Sample \ Space = \{(FF), (FM), (MF), (MM)\} = \{(\not F \not F), (FM), (MF), (MM)\}
+\]</span></p>
+<p><span class="math display">\[
+P(F|M) = \frac{P(F \cap M)}{M} = \frac{2}{3} \approx 0.6\bar{6}
+\]</span></p>
+</div>
+</div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -740,13 +758,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lecture1/lecture1-2.html" class="pagination-link" aria-label="1.2 What is Reinforcement Learning?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1.2 What is Reinforcement Learning?</span></span>
+      <a href="../lecture2/lecture2-3.html" class="pagination-link" aria-label="2.3 Conditioning">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">2.3 Conditioning</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lecture1/lecture1-4.html" class="pagination-link" aria-label="1.4 How is Reinforcement Learning Structured?">
-        <span class="nav-page-text"><span class="chapter-title">1.4 How is Reinforcement Learning Structured?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lecture2/lecture2-5.html" class="pagination-link" aria-label="2.5 Discrete Random Variables">
+        <span class="nav-page-text"><span class="chapter-title">2.5 Discrete Random Variables</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

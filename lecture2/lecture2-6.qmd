@@ -1,0 +1,104 @@
+---
+title: "2.6 Continuous Random Variables"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A variable that can take any value within a range, requiring calculus to describe its probabilities. 📈
+:::
+
+## Continuous Random Variable
+
+A **continuous random variable** is a mapping $X$ of all the events of a sample space to numerical values $x \in \mathbb{R}$.
+$$ 
+X: Event \in Sample \ Space \to x \in \mathbb{R} 
+$$
+
+## Probability Density Function (PDF)
+
+A **probability density function (PDF)** is a mapping of values $x$ of intervals of continuous random variables $X$ to probabilities $[0,1]$.
+
+$$ 
+P(a \leq X \leq b) = \int_{a}^{b} f_{X}(x) \ dx 
+$$
+
+PDF has properties:
+$$
+f_{X}(x) \geq 0, \ \int_{-\infty}^{\infty} f_{X}(x) \ dx = 1
+$$
+
+## Cumulative Distribution Function (CDF)
+
+The **cumulative distribution function (CDF)** for continuous random variables is defined as:
+
+$$ F_{X}(x) = P(X \leq x) = \int_{-\infty}^{x} f_{X}(u) \ du $$
+
+Relation to PDF:
+
+$$
+f_{X}(x) = \frac{dF_{X}(x)}{dx}
+$$
+$$
+F_{X}(x) = \int_{-\infty}^{x} f_{X}(u) \ du
+$$
+
+## Illustration: PDF and CDF
+
+<div style="text-align: center;">
+  ![](images/pdfcdf.drawio.svg){width=75%}
+</div>
+
+## Expectation and Variance of PDFs
+
+Continuous **expectation**, or mean, is the average numerical value that the continuous random variable takes over the PDF.
+$$ 
+E[X] = \int_{-\infty}^{\infty} x \ f_{X}(x) dx 
+$$
+
+Continuous **variance** is the expected squared difference from the mean of a PDF.
+$$ 
+\text{Var}[X] = E[(X - E[X])^{2}] = \int_{-\infty}^{\infty} (x - E[X])^2 \ f_{X}(x) dx 
+$$
+
+## Joint and Marginal PDFs
+
+The **joint PDF** calculates the intersection of two continuous random variables:
+$$ 
+P((X,Y) \in A) = \int \int_{A} f_{X,Y}(x_{1}, x_{2}) dx_{1} \ dx_{2} 
+$$
+
+From the previous definition we can also compute the **marginal PDF** for a particular random variable:
+
+$$
+f_{X}(x_{1}) = \int_{-\infty}^{\infty} f_{X,Y}(x_{1}, x_{2}) dx_{2}
+$$
+
+$$
+f_{Y}(x_{2}) = \int_{-\infty}^{\infty} f_{X,Y}(x_{1},x_{2}) dx_{1}
+$$
+
+## Conditional Expectation of PDFs
+
+The **conditional PDF** gives the probability distribution of a continuous random variable given that another variable has a specific value.
+$$ 
+f_{X|Y}(x_{1}| x_{2}) = \frac{f_{X,Y}(x_{1}, x_{2})}{f_{Y}(x_{2})} 
+$$
+
+The **conditional expectation** is the expected value of a continuous random variable given that another variable is fixed at a specific value.
+$$ 
+\mathbb{E}[X| Y = x_{2}] = \int_{x_{1} \in X} x_{1} \frac{f_{X,Y}(x_{1}, x_{2})}{f_{Y}(x_{2})} dx_{1} 
+$$
+
+## Independence
+
+Two continuous random variables are **independent** if:
+$$ 
+f_{X,Y}(x_{1}, x_{2}) = f_{X}(x_{1}) f_{Y}(x_{2}) 
+$$
+
+This can be extended to multiple random variables:
+$$ 
+f_{X_{1},...,X{n}}(x_{1}, ..., x_{n}) = f_{X_{1}}(x_{1}) ... \ f_{X_{n}}(x_{n}) 
+$$

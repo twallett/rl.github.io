@@ -20,10 +20,26 @@ book:
           file: lecture1/lecture1-3.qmd
         - text: "1.4 How is Reinforcement Learning Structured?"
           file: lecture1/lecture1-4.qmd
-    # - part: "Lecture 2: Mathematical Foundations"
-    #   chapters:
-    #     - text: "2.1 Probability"
-    #       file: lecture2/lecture2-1.qmd
+    - part: "Lecture 2: Mathematical Foundations"
+      chapters:
+        - text: "2.1 Set Theory"
+          file: lecture2/lecture2-1.qmd
+        - text: "2.2 Axiomatic Probability"
+          file: lecture2/lecture2-2.qmd
+        - text: "2.3 Conditioning"
+          file: lecture2/lecture2-3.qmd
+        - text: "2.4 Independence"
+          file: lecture2/lecture2-4.qmd
+        - text: "2.5 Discrete Random Variables"
+          file: lecture2/lecture2-5.qmd
+        - text: "2.6 Continuous Random Variables"
+          file: lecture2/lecture2-6.qmd
+        - text: "2.7 Probability Distributions"
+          file: lecture2/lecture2-7.qmd
+    - part: "Homeworks"
+      chapters:
+        - text: "Homework 1"
+          file: homework/homework1.qmd
     - references.qmd
     # - part: "Lecture 3: Multi-Armed Bandits"
     #   chapters:

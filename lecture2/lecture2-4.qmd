@@ -1,0 +1,60 @@
+---
+title: "2.4 Independence"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A property where two events do not influence each other, meaning the occurrence of one tells us nothing about the other. 🔗
+:::
+
+## Independent Events
+
+Suppose $A$ and $B$ are two events. <br>
+Two events are **independent** if the occurrence of event $B$ provides no information about the occurrence of event $A$:
+  
+$$ 
+P(A|B) = P(A) 
+$$  
+
+Another definition of independence:
+  
+$$ 
+P(A \cap B) = P(A) P(B)
+$$
+
+For multiple events:
+
+$$ 
+P(A_{1} \cap A_{2} \cap ... A_{n}) = P(A_{1}) P(A_{2}) ... P(A_{n})
+$$
+
+## Conditioning and Independence
+
+Suppose $A$, $B$, and $C$ are events. <br>
+If $A$ and $B$ are independent, conditioning on $C$ may remove that independence. <br>
+When we condition on $C$, events $A$ and $B$ may no longer be independent.
+
+<div style="text-align: center;">
+  ![](images/condind.png){width=30%}
+</div>
+
+#### <u>Exercise</u>
+
+The king comes from a family of two children. What is the probability that his sibling is female $F$ and not male $M$?
+
+Let all outcomes be equally likely.
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+$$
+Sample \ Space = \{(FF), (FM), (MF), (MM)\} = \{(\not F \not F), (FM), (MF), (MM)\}
+$$
+
+$$
+P(F|M) = \frac{P(F \cap M)}{M} = \frac{2}{3} \approx 0.6\bar{6}
+$$
+
+:::
