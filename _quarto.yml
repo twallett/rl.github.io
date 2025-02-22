@@ -34,8 +34,8 @@ book:
           file: lecture2/lecture2-5.qmd
         - text: "2.6 Continuous Random Variables"
           file: lecture2/lecture2-6.qmd
-        # - text: "2.7 Probability Distributions"
-          # file: lecture2/lecture2-7.qmd
+        - text: "2.7 Probability Distributions"
+          file: lecture2/lecture2-7.qmd
     - part: "Homeworks"
       chapters:
         - text: "Homework 1"
