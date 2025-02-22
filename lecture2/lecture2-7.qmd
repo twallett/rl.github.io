@@ -24,7 +24,7 @@ $$
 - $\mathbb{E}[X] = p$
 - $Var[X] = pq$ <br>
 
-<!-- :::{#observable}
+:::{#observable}
 ```{ojs}
 //| echo: false
 //| layout-align: center
@@ -72,7 +72,7 @@ html`<div style="text-align: center; margin-top: 1em;">
 </div>`
 ```
 
-::: -->
+:::
 
 ### Python Code: Bernoulli Distribution
 
@@ -99,7 +99,7 @@ $$
 - $E[X] = \mu$
 - $Var[X] = \sigma^{2}$
 
-<!-- :::{#observable}
+:::{#observable}
 ```{ojs}
 //| echo: false
 //| layout-align: center
@@ -152,7 +152,7 @@ html`<div style="text-align: center; margin-top: 1em;">
 </div>`
 ```
 
-::: -->
+:::
 
 ### Python Code: Gaussian Distribution
 
