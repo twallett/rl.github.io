@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homework 1</title>
+<title>Homework 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../references.html" rel="next">
-<link href="../lecture2/lecture2-7.html" rel="prev">
+<link href="../homework/homework1.html" rel="prev">
 <link href="../data/images/rl-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -113,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">Homework 1</span></h1>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">Homework 2</span></h1>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -222,16 +222,57 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Homeworks</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lecture 3: Multi-Armed Bandits</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Homework 1</span></a>
+  <a href="../lecture3/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture3/lecture3-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.1 Multi-Armed Bandit Framework</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.2 ε Greedy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture3/lecture3-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.3 Upper Confidence Boundary (UCB)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture3/lecture3-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.4 Thompson Sampling</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Homeworks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Homework 2</span></a>
   </div>
 </li>
       </ul>
@@ -252,15 +293,27 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
-  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
-  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
-  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
-  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
-  <li><a href="#coding-exercise-1" id="toc-coding-exercise-1" class="nav-link" data-scroll-target="#coding-exercise-1">Coding Exercise 1</a></li>
+  <li><a href="#coding-exercise-1-load-environments" id="toc-coding-exercise-1-load-environments" class="nav-link active" data-scroll-target="#coding-exercise-1-load-environments">Coding Exercise 1: Load Environments</a></li>
+  <li><a href="#coding-exercise-2-epsilon-greedy-recommendation-system" id="toc-coding-exercise-2-epsilon-greedy-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-2-epsilon-greedy-recommendation-system">Coding Exercise 2: Epsilon-Greedy Recommendation System</a></li>
+  <li><a href="#coding-exercise-3-ucb-algorithm-and-recommendation-system" id="toc-coding-exercise-3-ucb-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-3-ucb-algorithm-and-recommendation-system">Coding Exercise 3: UCB Algorithm and Recommendation System</a>
+  <ul class="collapse">
+  <li><a href="#algorithm-upper-confidence-boundary-ucb" id="toc-algorithm-upper-confidence-boundary-ucb" class="nav-link" data-scroll-target="#algorithm-upper-confidence-boundary-ucb">Algorithm: Upper Confidence Boundary (UCB)</a></li>
+  </ul></li>
+  <li><a href="#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" id="toc-coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system">Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System</a>
+  <ul class="collapse">
+  <li><a href="#algorithm-thompson-sampling" id="toc-algorithm-thompson-sampling" class="nav-link" data-scroll-target="#algorithm-thompson-sampling">Algorithm: Thompson Sampling</a></li>
+  </ul></li>
+  <li><a href="#coding-exercise-5-algorithm-performance-comparison" id="toc-coding-exercise-5-algorithm-performance-comparison" class="nav-link" data-scroll-target="#coding-exercise-5-algorithm-performance-comparison">Coding Exercise 5: Algorithm Performance Comparison</a></li>
+  <li><a href="#coding-exercise-6-random-seed-analysis" id="toc-coding-exercise-6-random-seed-analysis" class="nav-link" data-scroll-target="#coding-exercise-6-random-seed-analysis">Coding Exercise 6: Random Seed Analysis</a></li>
+  <li><a href="#coding-exercise-7-amazon-dataset-analysis" id="toc-coding-exercise-7-amazon-dataset-analysis" class="nav-link" data-scroll-target="#coding-exercise-7-amazon-dataset-analysis">Coding Exercise 7: Amazon Dataset Analysis</a></li>
+  <li><a href="#coding-exercise-8-exp3-algorithm-and-recommendation-system" id="toc-coding-exercise-8-exp3-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-8-exp3-algorithm-and-recommendation-system">Coding Exercise 8: EXP3 Algorithm and Recommendation System</a>
+  <ul class="collapse">
+  <li><a href="#algorithm-exp3" id="toc-algorithm-exp3" class="nav-link" data-scroll-target="#algorithm-exp3">Algorithm: EXP3</a></li>
+  </ul></li>
+  <li><a href="#coding-exercise-9-gradient-method-algorithm-and-recommendation-system" id="toc-coding-exercise-9-gradient-method-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-9-gradient-method-algorithm-and-recommendation-system">Coding Exercise 9: Gradient Method Algorithm and Recommendation System</a>
+  <ul class="collapse">
+  <li><a href="#algorithm-gradient-method" id="toc-algorithm-gradient-method" class="nav-link" data-scroll-target="#algorithm-gradient-method">Algorithm: Gradient Method</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -269,7 +322,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">Homework 1</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">Homework 2</span></h1>
 </div>
 
 
@@ -292,7 +345,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Homework for Lecture 2: Mathematical Foundations 📝</p>
+<p>Homework for Lecture 3: Multi-Armed Bandits 📝</p>
 </div>
 </div>
 </div>
@@ -309,101 +362,126 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For this homework, you only need <code>numpy</code> and <code>matplotlib</code>.</p>
+<p>For this homework, you only need <code>numpy</code>, <code>pandas</code>, and <code>sklearn</code>’s <code>MinMaxScaler</code> function.</p>
 </div>
 </div>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Write some of the elements of the following sets:</p>
+<section id="coding-exercise-1-load-environments" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-1-load-environments">Coding Exercise 1: Load Environments</h2>
+<p>Load existing Bernoulli and Gaussian environments from <code>Utils.env</code> using the default options and a random seed of 123.</p>
+</section>
+<section id="coding-exercise-2-epsilon-greedy-recommendation-system" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-2-epsilon-greedy-recommendation-system">Coding Exercise 2: Epsilon-Greedy Recommendation System</h2>
+<p>Using the existing Epsilon-Greedy (<span class="math inline">\(\epsilon = 0.10\)</span>) code, create a recommendation system.</p>
+</section>
+<section id="coding-exercise-3-ucb-algorithm-and-recommendation-system" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-3-ucb-algorithm-and-recommendation-system">Coding Exercise 3: UCB Algorithm and Recommendation System</h2>
+<section id="algorithm-upper-confidence-boundary-ucb" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm-upper-confidence-boundary-ucb">Algorithm: Upper Confidence Boundary (UCB)</h3>
+<!-- ```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\captionsetup{labelformat=empty}
+\caption{\textbf{Algorithm 3-2} MAB Upper Confidence Boundary (UCB)}
+\begin{algorithmic}
+
+\STATE Initialize, for $a = 1$ to $k$:
+\STATE $Q(a) \gets 0$ 
+\STATE $N(a) \gets 0$ \\~\\
+\FOR{$t$ in range($len(data)$)}
+    \STATE $A_t \gets argmax_a[Q(a) + \sqrt{(\frac{2 ln(t)}{N(a)})}]$
+    \STATE $R_t \gets \text{bandit}(A_t)$
+    \STATE $N(A_t) \gets N(A_t) + 1$
+    \STATE $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}
+``` -->
+<div class="pseudocode-container quarto-float" data-indent-size="1.2em" data-line-number-punc=":" data-line-number="true" data-no-end="false" data-pseudocode-number="1" data-comment-delimiter="//" data-caption-prefix="Algorithm">
+<div class="pseudocode">
+\begin{algorithm} \caption{Quicksort} \begin{algorithmic} \Procedure{Quicksort}{$A, p, r$} \If{$p &lt; r$} \State $q = $ \Call{Partition}{$A, p, r$} \State \Call{Quicksort}{$A, p, q - 1$} \State \Call{Quicksort}{$A, q + 1, r$} \EndIf \EndProcedure \Procedure{Partition}{$A, p, r$} \State $x = A[r]$ \State $i = p - 1$ \For{$j = p$ \To $r - 1$} \If{$A[j] &lt; x$} \State $i = i + 1$ \State exchange $A[i]$ with $A[j]$ \EndIf \State exchange $A[i]$ with $A[r]$ \EndFor \EndProcedure \end{algorithmic} \end{algorithm}
+</div>
+</div>
+</section>
+</section>
+<section id="coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system">Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System</h2>
+<section id="algorithm-thompson-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm-thompson-sampling">Algorithm: Thompson Sampling</h3>
+<pre class="pseudo"><code>Initialize, for a = 1 to k:
+  α(a) ← 1
+  β(a) ← 1
+
+For t in range(len(data)):
+  Q(a) ← beta(α(a), β(a))
+  A_t ← argmax_a Q(a)
+  R_t ← bandit(A_t)
+  α(A_t) ← α(A_t) + R_t
+  β(A_t) ← β(A_t) + (1 - R_t)</code></pre>
+</section>
+</section>
+<section id="coding-exercise-5-algorithm-performance-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-5-algorithm-performance-comparison">Coding Exercise 5: Algorithm Performance Comparison</h2>
+<p>For 10,000 recommendations:</p>
 <ol type="1">
-<li><span class="math inline">\(\{ 5x-1: x \in \mathbb{Z} \}\)</span></li>
-<li><span class="math inline">\(\{ x \in \mathbb{R}: \sin \pi x = 0 \}\)</span></li>
-<li><span class="math inline">\(\{X : X \subseteq \{3,2,a\} \text{ and } |X|=2 \}\)</span></li>
+<li>Does Epsilon-Greedy (<span class="math inline">\(\epsilon = 0.10\)</span>) perform better in the Bernoulli or Gaussian environment?</li>
+<li>Does UCB perform better in the Bernoulli or Gaussian environment?</li>
+<li>Does Thompson Sampling perform better in the Bernoulli or Gaussian environment?</li>
+<li>Which algorithm performs best in the Bernoulli environment?</li>
+<li>Which algorithm performs best in the Gaussian environment?</li>
 </ol>
-<p>Write the following sets in set notation:</p>
-<ol start="4" type="1">
-<li><span class="math inline">\(\{ 2, 4, 8, 16, 32, 64, ...\}\)</span></li>
-<li><span class="math inline">\(\{0,1,4,9,16,25,36, ...\}\)</span></li>
-<li><span class="math inline">\(\{..., \frac{1}{8},\frac{1}{4},\frac{1}{2},1,2,4,8,... \}\)</span></li>
-</ol>
+<p><em>Hint: Check the performance of each MAB by observing the most frequently recommended arm.</em></p>
 </section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>A retail store accepts either American Express or VISA. The percentages of customers carrying each card are: <br></p>
-<ul>
-<li>American Express: <span class="math inline">\(24%\)</span></li>
-<li>VISA: <span class="math inline">\(61%\)</span></li>
-<li>Both: <span class="math inline">\(11%\)</span></li>
-</ul>
-<p>What percentage of customers carry a card accepted by the store?</p>
+<section id="coding-exercise-6-random-seed-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-6-random-seed-analysis">Coding Exercise 6: Random Seed Analysis</h2>
+<p>Using random seeds 0-50, for 10,000 recommendations, do the algorithms perform the same?</p>
 </section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>Sixty percent of students wear neither a ring nor a necklace. Given: <br></p>
-<ul>
-<li><span class="math inline">\(20%\)</span> wear a ring</li>
-<li><span class="math inline">\(30%\)</span> wear a necklace</li>
-</ul>
-<p>Find the probability that a randomly chosen student wears:</p>
-<ol type="1">
-<li>A ring or a necklace</li>
-<li>Both a ring and a necklace</li>
-</ol>
+<section id="coding-exercise-7-amazon-dataset-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-7-amazon-dataset-analysis">Coding Exercise 7: Amazon Dataset Analysis</h2>
+<p>For the <code>Amazon.csv</code> dataset, repeat exercise Coding Exercise 6 and find the most frequently recommended arm.</p>
 </section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Two fair dice are rolled. Find the conditional probability that at least one die lands on <span class="math inline">\(6\)</span>, given that they land on different numbers.</p>
+<section id="coding-exercise-8-exp3-algorithm-and-recommendation-system" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-8-exp3-algorithm-and-recommendation-system">Coding Exercise 8: EXP3 Algorithm and Recommendation System</h2>
+<section id="algorithm-exp3" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm-exp3">Algorithm: EXP3</h3>
+<pre class="pseudo"><code>Initialize, for a = 1 to k:
+  Q(a) ← 1/k
+  W(a) ← 1
+
+For t in range(len(data)):
+  Q(a) ← (1 - γ) * (W(a) / sum(W)) + (γ / k)
+  A_t ← random choice with probabilities Q(a)
+  R_t ← bandit(A_t)
+  R̂_t(a) ← (R_t / Q(A_t)) if A_t = a else 0
+  W(a) ← W(a) * exp(γ * R̂_t(a) / k)</code></pre>
 </section>
-<section id="question-5" class="level2">
-<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
-<p>An urn contains <span class="math inline">\(6\)</span> white and <span class="math inline">\(9\)</span> black balls. If <span class="math inline">\(4\)</span> balls are selected without replacement, what is the probability that the first <span class="math inline">\(2\)</span> are white and the last <span class="math inline">\(2\)</span> are black?</p>
 </section>
-<section id="question-6" class="level2">
-<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
-<p>A defendant is judged guilty if at least <span class="math inline">\(2\)</span> out of <span class="math inline">\(3\)</span> judges vote guilty. Given:</p>
-<ul>
-<li>Probability of a guilty vote when defendant is guilty: <span class="math inline">\(0.7\)</span> <br></li>
-<li>Probability of a guilty vote when defendant is innocent: <span class="math inline">\(0.2\)</span> <br></li>
-<li><span class="math inline">\(70%\)</span> of defendants are guilty</li>
-</ul>
-<p>Compute the conditional probability that judge <span class="math inline">\(3\)</span> votes guilty given:</p>
-<ol type="1">
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> vote guilty. <br></li>
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> split votes. <br></li>
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> vote not guilty.</li>
-</ol>
-<p>Are the judges’ votes independent? Conditionally independent? Explain.</p>
-</section>
-<section id="question-7" class="level2">
-<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
-<p>Given the distribution function of <span class="math inline">\(X\)</span>:</p>
-<p><span class="math display">\[
-F_{X}(\lambda) =
-\begin{cases}
-0, &amp; \lambda &lt; 0 \\
-\frac{1}{2}, &amp; 0 \leq \lambda &lt; 1 \\
-\frac{3}{5}, &amp; 1 \leq \lambda &lt; 2 \\
-\frac{4}{5}, &amp; 2 \leq \lambda &lt; 3 \\
-\frac{9}{10}, &amp; 3 \leq \lambda &lt; 3.5 \\
-1, &amp; \lambda \geq 3.5 \\
-\end{cases}
-\]</span></p>
-<p>Find <span class="math inline">\(p_X(\lambda)\)</span>.</p>
-</section>
-<section id="question-8" class="level2">
-<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
-<p>A player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.</p>
-</section>
-<section id="coding-exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-1">Coding Exercise 1</h2>
-<p>The binomial distribution PMF is:</p>
-<p><span class="math display">\[
-p_X(\lambda) = {n \choose k} \lambda^n (1-\lambda)^{n-k}
-\]</span></p>
-<p>Using Python, generate binomial data and create visualizations for <span class="math inline">\(p_X(\lambda)\)</span> and <span class="math inline">\(F_X(\lambda)\)</span>.</p>
-<p><a href="https://colab.research.google.com/drive/1aA2D9X1oTxvi1BPl5TqSZ_2rKDOUIIHD?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<section id="coding-exercise-9-gradient-method-algorithm-and-recommendation-system" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-9-gradient-method-algorithm-and-recommendation-system">Coding Exercise 9: Gradient Method Algorithm and Recommendation System</h2>
+<section id="algorithm-gradient-method" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm-gradient-method">Algorithm: Gradient Method</h3>
+<pre class="pseudo"><code>Initialize, for a = 1 to k:
+  Q(a) ← 0
+  N(a) ← 0
+  H(a) ← 0
+
+For t in range(len(data)):
+  π(a) ← softmax(H(a))
+  A_t ← argmax_a(π(a))
+  R_t ← bandit(A_t)
+  N(A_t) ← N(A_t) + 1
+  Q(A_t) ← Q(A_t) + (1 / N(A_t)) [R_t - Q(A_t)]
+  H(a) ← update using softmax gradient update rule</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -826,8 +904,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lecture2/lecture2-7.html" class="pagination-link" aria-label="2.7 Probability Distributions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">2.7 Probability Distributions</span></span>
+      <a href="../homework/homework1.html" class="pagination-link" aria-label="Homework 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Homework 1</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

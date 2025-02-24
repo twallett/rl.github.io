@@ -1,0 +1,44 @@
+---
+title: "3.4 Thompson Sampling"
+format:
+  html:
+    number-sections: false
+---
+
+## Thompson Sampling
+
+- **Thompson sampling** is an algorithm that leverages the beta distribution for its action value method and action selections.
+
+- Initialize beta distributed with parameters:
+
+  $$
+  \alpha(a) = (\alpha_{1}, . . . , \alpha_{k}) = 1
+  $$
+  $$
+  \beta(a) = (\beta_{1}, . . . , \beta_{k}) = 1
+  $$
+
+- Now for each action $a$, the prior probability density function of our action value method $Q(a)$ is:
+
+  $$
+  Q(a) = \frac{\Gamma(\alpha(a) + \beta(a))}{\Gamma(\alpha(a)) \ \Gamma(\beta(a))} a^{\alpha(a)-1} (1 - a)^{\beta(a)-1}
+  $$
+
+## Action Value Method Update
+
+- The agent updates its prior belief using the following action value method:
+
+  $$
+  \alpha(A_{t}) \gets \alpha(A_{t}) + R_{t}
+  $$
+  $$
+  \beta(A_{t}) \gets \beta(A_{t}) + 1 - R_{t}
+  $$
+
+- Notice that for those actions selected $A_t$, we increase its corresponding $\alpha$ parameter ($R_t = 1$) and maintain its $\beta$ parameter the same as before ($1 - R_t = 1 - 1 = 0$).
+
+- This update allows the algorithm to draw accurate samples and strike a balance between exploring and exploiting.
+
+## Thompson Sampling Pseudocode
+
+![Thompson Sampling Pseudocode](MAB/imgs/1-3MAB.pdf)

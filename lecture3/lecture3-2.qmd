@@ -1,0 +1,46 @@
+---
+title: "3.2 &epsilon; Greedy"
+format:
+  html:
+    number-sections: false
+---
+
+## Exploring vs. Exploiting
+
+- We are **exploring** when we randomly select an action.  
+  
+  **Intuition:** _Acting randomly._
+
+- We are **exploiting** when an action is selected based on its expected value. When we act this way, we are said to be acting in a _greedy_ manner.
+  
+  **Intuition:** _Acting systematically._
+
+## Conflict of Exploring vs. Exploiting
+
+- **Exploring all of the time** does not permit you to exploit your knowledge of expected values.
+
+  **Question:** How do you maximize your expected value if you randomly pull bandit levers?
+
+- **Exploiting all of the time** does not permit you to explore all of the options.
+
+  **Question:** How do you know which bandit has the highest expected value if you only pull one bandit's lever?
+
+- Thus, our decision-making must encompass a balance of exploring and exploiting actions.
+
+## The Role of Epsilon
+
+- Epsilon ($\epsilon$) is a fixed proportion that decides whether we explore or exploit our actions.
+
+  \[
+  A_t \gets 
+  \begin{cases}
+      \text{a random action with probability } \epsilon \\
+      \arg\max_a Q(a) \text{ with probability } 1 - \epsilon
+  \end{cases}
+  \]
+
+- Hence, **Epsilon Greedy** is an algorithm that allows us to balance our decision-making in this simple manner.
+
+## Epsilon Greedy Pseudocode
+
+![](MAB/imgs/1-1MAB.pdf){width=100%}

@@ -1,0 +1,17 @@
+---
+title: "Learning Objectives"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Learning Objectives for Lecture 3: Multi-Armed Bandits 🎯
+:::
+
+- Multi-Amed Bandits Framework.
+- $\epsilon$-greedy.
+- Upper Confidence Boundary (UCB).
+- Thompson Sampling.
+- Bernoulli & Gaussian generated environment using `numpy`.
+

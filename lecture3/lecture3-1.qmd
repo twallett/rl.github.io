@@ -1,0 +1,97 @@
+---
+title: "3.1 Multi-Armed Bandit Framework"
+format:
+  html:
+    number-sections: false
+---
+
+---
+title: "Multi-Armed Bandit"
+format: beamer
+---
+
+## Bandit
+
+- A **bandit** is a slot machine.  
+- It is used as an analogy to represent the _action_ an agent can make in _one state_.  
+- Each action selection is like a play of one of the slot machine’s levers, and the _rewards_ are the payoffs for hitting the jackpot, according to its underlying probability distribution.
+
+::: columns
+::: column
+![](MAB/imgs/Bandit.png){width=40%}
+:::
+
+::: column
+\Huge $\to$ \newline
+\small Rewards
+![](MAB/imgs/Gaussian_bandit.pdf){width=60%}
+:::
+:::
+
+## Multi-Armed Bandit
+
+- A **Multi-Armed Bandit** can be interpreted as _k-actions_, or k-arms of the slot machines, to decide from.
+- Through repeated action selections, you maximize your winnings by concentrating actions on the best levers.
+
+::: columns
+::: column
+![](MAB/imgs/Bandit.png){width=15%}
+![](MAB/imgs/Bandit.png){width=15%}
+![](MAB/imgs/Bandit.png){width=15%}
+![](MAB/imgs/Bandit.png){width=15%}
+![](MAB/imgs/Bandit.png){width=15%}
+:::
+
+::: column
+![](MAB/imgs/Gaussian_2.pdf){width=15%}
+![](MAB/imgs/Gaussian_bandit.pdf){width=15%}
+![](MAB/imgs/Gaussian_1.pdf){width=15%}
+![](MAB/imgs/Gaussian_bandit.pdf){width=15%}
+![](MAB/imgs/Gaussian_2.pdf){width=15%}
+:::
+:::
+
+**Question:** How do we decide the most appropriate action?
+
+## Expectation of a Bandit
+
+- Each bandit has an expected reward given a particular action is selected, called the **action value**.
+
+\[
+Q_t(a) = \mathbb{E}[R_t | A_t = a]
+\]
+
+Where:
+
+- $Q_t(a)$ is the _conditional expectation_ of the rewards $R_t$ given the selection of an action $A_t$.
+- $R_t$ is the _random variable_ for the reward at time step $t$.
+- $A_t$ is the _random variable_ for the action selected at time step $t$.
+
+## Action Value Method
+
+- To compute expectations of action values and select actions, we use **action value methods**.
+
+\[
+Q_t(a) = \frac{\sum_{i=1}^{t-1} R_i * \mathbf{1}_{A_i = a}}{\sum_{i=1}^{t-1} \mathbf{1}_{A_i = a}}
+\]
+
+Where:
+
+- $Q_t(a)$ is the action value for a particular action $a$.
+- $\mathbf{1}$ is a predicate, which denotes whether $A_i = a$ is true or false.
+
+_Note_: If the denominator is $0$, then we denote $Q_t(a)$ as $0$.
+
+## Action Value Method Update
+
+\[
+Q_{t+1} = Q_t + \frac{1}{t} (R_t - Q_t)
+\]
+
+or
+
+\[
+NewEstimate \gets OldEstimate + StepSize [Target - OldEstimate]
+\]
+
+**Question:** Do we always pick actions with the highest expected value?

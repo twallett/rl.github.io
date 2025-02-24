@@ -17,6 +17,10 @@ Homework for Lecture 2: Mathematical Foundations 📝
 > - **DO NOT** submit individual files or images. <br>
 > - For coding questions, submit **ONE** `.py` file with comments. <br>
 
+::: {.callout-note}
+For this homework, you only need `numpy` and `matplotlib`.
+:::
+
 ## Question 1
 Write some of the elements of the following sets:
 

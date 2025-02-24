@@ -1,0 +1,36 @@
+---
+title: "3.3 Upper Confidence Boundary (UCB)"
+format:
+  html:
+    number-sections: false
+---
+
+## Upper Confidence Boundaries
+
+- **Upper Confidence Boundaries** allow us to select among the non-greedy actions according to their potential for actually being optimal.
+
+  \[
+  A_t \gets \arg\max_a \left[ Q(a) + \sqrt{\frac{2 \ln(t)}{N(a)}} \right]
+  \]
+
+  **Where:**
+  - $\sqrt{\frac{2 \ln(t)}{N(a)}}$ is the measure of variance of the action $a$.
+  - The natural logarithm increases get smaller over time but are unbounded, so all actions will be selected.
+
+## UCB Exploring vs. Exploiting
+
+- Each time $a$ is selected, the uncertainty is presumably reduced: $N(a)$ increments, and as it appears in the denominator, the uncertainty term decreases.
+
+  \[
+  VAR \downarrow = \sqrt{\frac{2 \ln(t)}{N(a)\uparrow}}
+  \]
+
+- Each time an action other than $a$ is selected, $t$ increases but $N(a)$ does not; because $t$ appears in the numerator, the uncertainty estimate increases.
+
+  \[
+  VAR \uparrow = \sqrt{\frac{2 \ln(t) \uparrow}{N(a)}}
+  \]
+
+## UCB Pseudocode
+
+![](MAB/imgs/1-2MAB.pdf){width=100%}

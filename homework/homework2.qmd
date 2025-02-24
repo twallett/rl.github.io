@@ -1,0 +1,165 @@
+---
+title: "Homework 2"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Homework for Lecture 3: Multi-Armed Bandits 📝
+:::
+
+> **Instructions:** <br> 
+> <br>
+> - **Show ALL Work, Neatly and in Order.** <br>
+> - **No** credit for Answers Without Work. <br>
+> - Submit a single PDF file including all solutions. <br>
+> - **DO NOT** submit individual files or images. <br>
+> - For coding questions, submit **ONE** `.py` file with comments. <br>
+
+::: {.callout-note}
+For this homework, you only need `numpy`, `pandas`, and `sklearn`'s `MinMaxScaler` function.
+:::
+
+## Coding Exercise 1: Load Environments
+Load existing Bernoulli and Gaussian environments from `Utils.env` using the default options and a random seed of 123.
+
+## Coding Exercise 2: Epsilon-Greedy Recommendation System
+Using the existing Epsilon-Greedy ($\epsilon = 0.10$) code, create a recommendation system.
+
+## Coding Exercise 3: UCB Algorithm and Recommendation System
+
+### Algorithm: Upper Confidence Boundary (UCB)
+
+<!-- ```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\captionsetup{labelformat=empty}
+\caption{\textbf{Algorithm 3-2} MAB Upper Confidence Boundary (UCB)}
+\begin{algorithmic}
+
+\STATE Initialize, for $a = 1$ to $k$:
+\STATE $Q(a) \gets 0$ 
+\STATE $N(a) \gets 0$ \\~\\
+\FOR{$t$ in range($len(data)$)}
+    \STATE $A_t \gets argmax_a[Q(a) + \sqrt{(\frac{2 ln(t)}{N(a)})}]$
+    \STATE $R_t \gets \text{bandit}(A_t)$
+    \STATE $N(A_t) \gets N(A_t) + 1$
+    \STATE $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}
+``` -->
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{Quicksort}
+\begin{algorithmic}
+\Procedure{Quicksort}{$A, p, r$}
+  \If{$p < r$}
+    \State $q = $ \Call{Partition}{$A, p, r$}
+    \State \Call{Quicksort}{$A, p, q - 1$}
+    \State \Call{Quicksort}{$A, q + 1, r$}
+  \EndIf
+\EndProcedure
+\Procedure{Partition}{$A, p, r$}
+  \State $x = A[r]$
+  \State $i = p - 1$
+  \For{$j = p$ \To $r - 1$}
+    \If{$A[j] < x$}
+      \State $i = i + 1$
+      \State exchange
+      $A[i]$ with     $A[j]$
+    \EndIf
+    \State exchange $A[i]$ with $A[r]$
+  \EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+```
+
+## Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System
+
+### Algorithm: Thompson Sampling
+
+```{.pseudo}
+Initialize, for a = 1 to k:
+  α(a) ← 1
+  β(a) ← 1
+
+For t in range(len(data)):
+  Q(a) ← beta(α(a), β(a))
+  A_t ← argmax_a Q(a)
+  R_t ← bandit(A_t)
+  α(A_t) ← α(A_t) + R_t
+  β(A_t) ← β(A_t) + (1 - R_t)
+```
+
+## Coding Exercise 5: Algorithm Performance Comparison
+For 10,000 recommendations:
+
+1. Does Epsilon-Greedy ($\epsilon = 0.10$) perform better in the Bernoulli or Gaussian environment?
+2. Does UCB perform better in the Bernoulli or Gaussian environment?
+3. Does Thompson Sampling perform better in the Bernoulli or Gaussian environment?
+4. Which algorithm performs best in the Bernoulli environment?
+5. Which algorithm performs best in the Gaussian environment?
+
+*Hint: Check the performance of each MAB by observing the most frequently recommended arm.*
+
+## Coding Exercise 6: Random Seed Analysis
+Using random seeds 0-50, for 10,000 recommendations, do the algorithms perform the same?
+
+## Coding Exercise 7: Amazon Dataset Analysis
+For the `Amazon.csv` dataset, repeat exercise Coding Exercise 6 and find the most frequently recommended arm.
+
+## Coding Exercise 8: EXP3 Algorithm and Recommendation System
+
+### Algorithm: EXP3
+
+```{.pseudo}
+Initialize, for a = 1 to k:
+  Q(a) ← 1/k
+  W(a) ← 1
+
+For t in range(len(data)):
+  Q(a) ← (1 - γ) * (W(a) / sum(W)) + (γ / k)
+  A_t ← random choice with probabilities Q(a)
+  R_t ← bandit(A_t)
+  R̂_t(a) ← (R_t / Q(A_t)) if A_t = a else 0
+  W(a) ← W(a) * exp(γ * R̂_t(a) / k)
+```
+
+## Coding Exercise 9: Gradient Method Algorithm and Recommendation System
+
+### Algorithm: Gradient Method
+
+```{.pseudo}
+Initialize, for a = 1 to k:
+  Q(a) ← 0
+  N(a) ← 0
+  H(a) ← 0
+
+For t in range(len(data)):
+  π(a) ← softmax(H(a))
+  A_t ← argmax_a(π(a))
+  R_t ← bandit(A_t)
+  N(A_t) ← N(A_t) + 1
+  Q(A_t) ← Q(A_t) + (1 / N(A_t)) [R_t - Q(A_t)]
+  H(a) ← update using softmax gradient update rule
+```

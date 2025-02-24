@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homework 1</title>
+<title>3.2 ε Greedy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../references.html" rel="next">
-<link href="../lecture2/lecture2-7.html" rel="prev">
+<link href="../lecture3/lecture3-3.html" rel="next">
+<link href="../lecture3/lecture3-1.html" rel="prev">
 <link href="../data/images/rl-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -42,8 +42,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
-<link href="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -113,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">Homework 1</span></h1>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">3.2 ε Greedy</span></h1>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -223,7 +221,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Homeworks</span></a>
+ <span class="menu-text">Lecture 3: Multi-Armed Bandits</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -231,7 +229,48 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Homework 1</span></a>
+  <a href="../lecture3/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture3/lecture3-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.1 Multi-Armed Bandit Framework</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">3.2 ε Greedy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture3/lecture3-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.3 Upper Confidence Boundary (UCB)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture3/lecture3-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.4 Thompson Sampling</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homeworks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 2</span></a>
   </div>
 </li>
       </ul>
@@ -252,15 +291,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
-  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
-  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
-  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
-  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
-  <li><a href="#coding-exercise-1" id="toc-coding-exercise-1" class="nav-link" data-scroll-target="#coding-exercise-1">Coding Exercise 1</a></li>
+  <li><a href="#exploring-vs.-exploiting" id="toc-exploring-vs.-exploiting" class="nav-link active" data-scroll-target="#exploring-vs.-exploiting">Exploring vs.&nbsp;Exploiting</a></li>
+  <li><a href="#conflict-of-exploring-vs.-exploiting" id="toc-conflict-of-exploring-vs.-exploiting" class="nav-link" data-scroll-target="#conflict-of-exploring-vs.-exploiting">Conflict of Exploring vs.&nbsp;Exploiting</a></li>
+  <li><a href="#the-role-of-epsilon" id="toc-the-role-of-epsilon" class="nav-link" data-scroll-target="#the-role-of-epsilon">The Role of Epsilon</a></li>
+  <li><a href="#epsilon-greedy-pseudocode" id="toc-epsilon-greedy-pseudocode" class="nav-link" data-scroll-target="#epsilon-greedy-pseudocode">Epsilon Greedy Pseudocode</a></li>
   </ul>
 </nav>
     </div>
@@ -269,7 +303,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">Homework 1</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">3.2 ε Greedy</span></h1>
 </div>
 
 
@@ -286,122 +320,41 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Homework for Lecture 2: Mathematical Foundations 📝</p>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><strong>Instructions:</strong> <br> <br> - <strong>Show ALL Work, Neatly and in Order.</strong> <br> - <strong>No</strong> credit for Answers Without Work. <br> - Submit a single PDF file including all solutions. <br> - <strong>DO NOT</strong> submit individual files or images. <br> - For coding questions, submit <strong>ONE</strong> <code>.py</code> file with comments. <br></p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For this homework, you only need <code>numpy</code> and <code>matplotlib</code>.</p>
-</div>
-</div>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Write some of the elements of the following sets:</p>
-<ol type="1">
-<li><span class="math inline">\(\{ 5x-1: x \in \mathbb{Z} \}\)</span></li>
-<li><span class="math inline">\(\{ x \in \mathbb{R}: \sin \pi x = 0 \}\)</span></li>
-<li><span class="math inline">\(\{X : X \subseteq \{3,2,a\} \text{ and } |X|=2 \}\)</span></li>
-</ol>
-<p>Write the following sets in set notation:</p>
-<ol start="4" type="1">
-<li><span class="math inline">\(\{ 2, 4, 8, 16, 32, 64, ...\}\)</span></li>
-<li><span class="math inline">\(\{0,1,4,9,16,25,36, ...\}\)</span></li>
-<li><span class="math inline">\(\{..., \frac{1}{8},\frac{1}{4},\frac{1}{2},1,2,4,8,... \}\)</span></li>
-</ol>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>A retail store accepts either American Express or VISA. The percentages of customers carrying each card are: <br></p>
+<section id="exploring-vs.-exploiting" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-vs.-exploiting">Exploring vs.&nbsp;Exploiting</h2>
 <ul>
-<li>American Express: <span class="math inline">\(24%\)</span></li>
-<li>VISA: <span class="math inline">\(61%\)</span></li>
-<li>Both: <span class="math inline">\(11%\)</span></li>
+<li><p>We are <strong>exploring</strong> when we randomly select an action.</p>
+<p><strong>Intuition:</strong> <em>Acting randomly.</em></p></li>
+<li><p>We are <strong>exploiting</strong> when an action is selected based on its expected value. When we act this way, we are said to be acting in a <em>greedy</em> manner.</p>
+<p><strong>Intuition:</strong> <em>Acting systematically.</em></p></li>
 </ul>
-<p>What percentage of customers carry a card accepted by the store?</p>
 </section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>Sixty percent of students wear neither a ring nor a necklace. Given: <br></p>
+<section id="conflict-of-exploring-vs.-exploiting" class="level2">
+<h2 class="anchored" data-anchor-id="conflict-of-exploring-vs.-exploiting">Conflict of Exploring vs.&nbsp;Exploiting</h2>
 <ul>
-<li><span class="math inline">\(20%\)</span> wear a ring</li>
-<li><span class="math inline">\(30%\)</span> wear a necklace</li>
+<li><p><strong>Exploring all of the time</strong> does not permit you to exploit your knowledge of expected values.</p>
+<p><strong>Question:</strong> How do you maximize your expected value if you randomly pull bandit levers?</p></li>
+<li><p><strong>Exploiting all of the time</strong> does not permit you to explore all of the options.</p>
+<p><strong>Question:</strong> How do you know which bandit has the highest expected value if you only pull one bandit’s lever?</p></li>
+<li><p>Thus, our decision-making must encompass a balance of exploring and exploiting actions.</p></li>
 </ul>
-<p>Find the probability that a randomly chosen student wears:</p>
-<ol type="1">
-<li>A ring or a necklace</li>
-<li>Both a ring and a necklace</li>
-</ol>
 </section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Two fair dice are rolled. Find the conditional probability that at least one die lands on <span class="math inline">\(6\)</span>, given that they land on different numbers.</p>
-</section>
-<section id="question-5" class="level2">
-<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
-<p>An urn contains <span class="math inline">\(6\)</span> white and <span class="math inline">\(9\)</span> black balls. If <span class="math inline">\(4\)</span> balls are selected without replacement, what is the probability that the first <span class="math inline">\(2\)</span> are white and the last <span class="math inline">\(2\)</span> are black?</p>
-</section>
-<section id="question-6" class="level2">
-<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
-<p>A defendant is judged guilty if at least <span class="math inline">\(2\)</span> out of <span class="math inline">\(3\)</span> judges vote guilty. Given:</p>
+<section id="the-role-of-epsilon" class="level2">
+<h2 class="anchored" data-anchor-id="the-role-of-epsilon">The Role of Epsilon</h2>
 <ul>
-<li>Probability of a guilty vote when defendant is guilty: <span class="math inline">\(0.7\)</span> <br></li>
-<li>Probability of a guilty vote when defendant is innocent: <span class="math inline">\(0.2\)</span> <br></li>
-<li><span class="math inline">\(70%\)</span> of defendants are guilty</li>
+<li><p>Epsilon (<span class="math inline">\(\epsilon\)</span>) is a fixed proportion that decides whether we explore or exploit our actions.</p>
+<p>[ A_t </p>
+<span class="math display">\[\begin{cases}
+    \text{a random action with probability } \epsilon \\
+    \arg\max_a Q(a) \text{ with probability } 1 - \epsilon
+\end{cases}\]</span>
+<p>]</p></li>
+<li><p>Hence, <strong>Epsilon Greedy</strong> is an algorithm that allows us to balance our decision-making in this simple manner.</p></li>
 </ul>
-<p>Compute the conditional probability that judge <span class="math inline">\(3\)</span> votes guilty given:</p>
-<ol type="1">
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> vote guilty. <br></li>
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> split votes. <br></li>
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> vote not guilty.</li>
-</ol>
-<p>Are the judges’ votes independent? Conditionally independent? Explain.</p>
 </section>
-<section id="question-7" class="level2">
-<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
-<p>Given the distribution function of <span class="math inline">\(X\)</span>:</p>
-<p><span class="math display">\[
-F_{X}(\lambda) =
-\begin{cases}
-0, &amp; \lambda &lt; 0 \\
-\frac{1}{2}, &amp; 0 \leq \lambda &lt; 1 \\
-\frac{3}{5}, &amp; 1 \leq \lambda &lt; 2 \\
-\frac{4}{5}, &amp; 2 \leq \lambda &lt; 3 \\
-\frac{9}{10}, &amp; 3 \leq \lambda &lt; 3.5 \\
-1, &amp; \lambda \geq 3.5 \\
-\end{cases}
-\]</span></p>
-<p>Find <span class="math inline">\(p_X(\lambda)\)</span>.</p>
-</section>
-<section id="question-8" class="level2">
-<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
-<p>A player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.</p>
-</section>
-<section id="coding-exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-1">Coding Exercise 1</h2>
-<p>The binomial distribution PMF is:</p>
-<p><span class="math display">\[
-p_X(\lambda) = {n \choose k} \lambda^n (1-\lambda)^{n-k}
-\]</span></p>
-<p>Using Python, generate binomial data and create visualizations for <span class="math inline">\(p_X(\lambda)\)</span> and <span class="math inline">\(F_X(\lambda)\)</span>.</p>
-<p><a href="https://colab.research.google.com/drive/1aA2D9X1oTxvi1BPl5TqSZ_2rKDOUIIHD?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<section id="epsilon-greedy-pseudocode" class="level2">
+<h2 class="anchored" data-anchor-id="epsilon-greedy-pseudocode">Epsilon Greedy Pseudocode</h2>
+<p><embed src="MAB/imgs/1-1MAB.pdf" class="img-fluid" style="width:100.0%"></p>
 
 
 </section>
@@ -826,49 +779,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lecture2/lecture2-7.html" class="pagination-link" aria-label="2.7 Probability Distributions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">2.7 Probability Distributions</span></span>
+      <a href="../lecture3/lecture3-1.html" class="pagination-link" aria-label="3.1 Multi-Armed Bandit Framework">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">3.1 Multi-Armed Bandit Framework</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lecture3/lecture3-3.html" class="pagination-link" aria-label="3.3 Upper Confidence Boundary (UCB)">
+        <span class="nav-page-text"><span class="chapter-title">3.3 Upper Confidence Boundary (UCB)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-    <script type="text/javascript">
-    (function(d) {
-      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
-        let pseudocodeOptions = {
-          indentSize: el.dataset.indentSize || "1.2em",
-          commentDelimiter: el.dataset.commentDelimiter || "//",
-          lineNumber: el.dataset.lineNumber === "true" ? true : false,
-          lineNumberPunc: el.dataset.lineNumberPunc || ":",
-          noEnd: el.dataset.noEnd === "true" ? true : false,
-          titlePrefix: el.dataset.captionPrefix || "Algorithm"
-        };
-        pseudocode.renderElement(el.querySelector(".pseudocode"), pseudocodeOptions);
-      });
-    })(document);
-    (function(d) {
-      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
-        let captionSpan = el.querySelector(".ps-root > .ps-algorithm > .ps-line > .ps-keyword")
-        if (captionSpan !== null) {
-          let captionPrefix = el.dataset.captionPrefix + " ";
-          let captionNumber = "";
-          if (el.dataset.pseudocodeNumber) {
-            captionNumber = el.dataset.pseudocodeNumber + " ";
-            if (el.dataset.chapterLevel) {
-              captionNumber = el.dataset.chapterLevel + "." + captionNumber;
-            }
-          }
-          captionSpan.innerHTML = captionPrefix + captionNumber;
-        }
-      });
-    })(document);
-    </script>
-  
 
 
 
