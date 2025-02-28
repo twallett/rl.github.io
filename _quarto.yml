@@ -36,31 +36,37 @@ book:
           file: lecture2/lecture2-6.qmd
         - text: "2.7 Probability Distributions"
           file: lecture2/lecture2-7.qmd
-    # - part: "Lecture 3: Multi-Armed Bandits"
+    - part: "Lecture 3: Multi-Armed Bandits"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture3/lo.qmd
+        - text: "3.1 Multi-Armed Bandit Framework"
+          file: lecture3/lecture3-1.qmd
+        - text: "3.2 &epsilon;-Greedy"
+          file: lecture3/lecture3-2.qmd
+        - text: "3.3 Upper Confidence Boundary (UCB)"
+          file: lecture3/lecture3-3.qmd
+        - text: "3.4 Thompson Sampling"
+          file: lecture3/lecture3-4.qmd
+    # - part: "Lecture 4: Dynamic Programming"
     #   chapters:
     #     - text: "Learning Objectives"
-    #       file: lecture3/lo.qmd
-    #     - text: "3.1 Multi-Armed Bandit Framework"
-    #       file: lecture3/lecture3-1.qmd
-    #     - text: "3.2 &epsilon; Greedy"
-    #       file: lecture3/lecture3-2.qmd
-    #     - text: "3.3 Upper Confidence Boundary (UCB)"
-    #       file: lecture3/lecture3-3.qmd
-    #     - text: "3.4 Thompson Sampling"
-    #       file: lecture3/lecture3-4.qmd
+    #       file: lecture4/lo.qmd
+    #     - text: "4.1 Markov Chain"
+    #       file: lecture4/lecture4-1.qmd
+    #     - text: "4.2 Markov Decision Process (MDPs)"
+    #       file: lecture4/lecture4-2.qmd
+    #     - text: "4.3 Dynamic Programming"
+    #       file: lecture4/lecture4-3.qmd
     - part: "Homeworks"
       chapters:
         - text: "Homework 1"
           file: homework/homework1.qmd
-        # - text: "Homework 2"
-        #   file: homework/homework2.qmd
+        - text: "Homework 2"
+          file: homework/homework2.qmd
+        # - text: "Homework 3"
+        #   file: homework/homework3.qmd
     - references.qmd
-    # - part: "Lecture 4: Dynamic Programming"
-    #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd
     # - part: "Lecture 5: Monte Carlo"
     #   chapters:
     #     - text: "2.1 Introduction to ML"

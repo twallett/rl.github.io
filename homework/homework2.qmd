@@ -28,90 +28,12 @@ Load existing Bernoulli and Gaussian environments from `Utils.env` using the def
 Using the existing Epsilon-Greedy ($\epsilon = 0.10$) code, create a recommendation system.
 
 ## Coding Exercise 3: UCB Algorithm and Recommendation System
-
-### Algorithm: Upper Confidence Boundary (UCB)
-
-<!-- ```pseudocode
-#| html-indent-size: "1.2em"
-#| html-comment-delimiter: "//"
-#| html-line-number: true
-#| html-line-number-punc: ":"
-#| html-no-end: false
-#| pdf-placement: "htb!"
-#| pdf-line-number: true
-
-\begin{algorithm}
-\captionsetup{labelformat=empty}
-\caption{\textbf{Algorithm 3-2} MAB Upper Confidence Boundary (UCB)}
-\begin{algorithmic}
-
-\STATE Initialize, for $a = 1$ to $k$:
-\STATE $Q(a) \gets 0$ 
-\STATE $N(a) \gets 0$ \\~\\
-\FOR{$t$ in range($len(data)$)}
-    \STATE $A_t \gets argmax_a[Q(a) + \sqrt{(\frac{2 ln(t)}{N(a)})}]$
-    \STATE $R_t \gets \text{bandit}(A_t)$
-    \STATE $N(A_t) \gets N(A_t) + 1$
-    \STATE $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
-\ENDFOR
-
-\end{algorithmic}
-\end{algorithm}
-``` -->
-
-```pseudocode
-#| html-indent-size: "1.2em"
-#| html-comment-delimiter: "//"
-#| html-line-number: true
-#| html-line-number-punc: ":"
-#| html-no-end: false
-#| pdf-placement: "htb!"
-#| pdf-line-number: true
-
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\Procedure{Quicksort}{$A, p, r$}
-  \If{$p < r$}
-    \State $q = $ \Call{Partition}{$A, p, r$}
-    \State \Call{Quicksort}{$A, p, q - 1$}
-    \State \Call{Quicksort}{$A, q + 1, r$}
-  \EndIf
-\EndProcedure
-\Procedure{Partition}{$A, p, r$}
-  \State $x = A[r]$
-  \State $i = p - 1$
-  \For{$j = p$ \To $r - 1$}
-    \If{$A[j] < x$}
-      \State $i = i + 1$
-      \State exchange
-      $A[i]$ with     $A[j]$
-    \EndIf
-    \State exchange $A[i]$ with $A[r]$
-  \EndFor
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-```
+Code the Upper Confidence Boundary (UCB) algorithm and create a recommendation system.
 
 ## Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System
+Code the Thompson Sampling algorithm and create a recommendation system.
 
-### Algorithm: Thompson Sampling
-
-```{.pseudo}
-Initialize, for a = 1 to k:
-  α(a) ← 1
-  β(a) ← 1
-
-For t in range(len(data)):
-  Q(a) ← beta(α(a), β(a))
-  A_t ← argmax_a Q(a)
-  R_t ← bandit(A_t)
-  α(A_t) ← α(A_t) + R_t
-  β(A_t) ← β(A_t) + (1 - R_t)
-```
-
-## Coding Exercise 5: Algorithm Performance Comparison
+## Coding Exercise 5: MAB Algorithm Performance Comparison
 For 10,000 recommendations:
 
 1. Does Epsilon-Greedy ($\epsilon = 0.10$) perform better in the Bernoulli or Gaussian environment?
@@ -130,36 +52,68 @@ For the `Amazon.csv` dataset, repeat exercise Coding Exercise 6 and find the mos
 
 ## Coding Exercise 8: EXP3 Algorithm and Recommendation System
 
-### Algorithm: EXP3
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
 
-```{.pseudo}
-Initialize, for a = 1 to k:
-  Q(a) ← 1/k
-  W(a) ← 1
-
-For t in range(len(data)):
-  Q(a) ← (1 - γ) * (W(a) / sum(W)) + (γ / k)
-  A_t ← random choice with probabilities Q(a)
-  R_t ← bandit(A_t)
-  R̂_t(a) ← (R_t / Q(A_t)) if A_t = a else 0
-  W(a) ← W(a) * exp(γ * R̂_t(a) / k)
+\begin{algorithm}
+\caption{MAB EXP3}
+\begin{algorithmic}
+\State Initialize, for $a = 1$ to $k$:
+\State $Q(a) \gets \frac{1}{k}$
+\State $W(a) \gets 1$ \\
+\For{$t$ in range($len(data)$)}
+    \State $Q(a) \gets (1 - \gamma) \frac{W(a)}{\sum_{i=1}^{k} W(a_{i})} + \frac{\gamma}{k}$ \\
+    \State $A_t \gets$ random choice with probabilities $Q(a)$ \\
+    \State $R_t \gets \text{bandit}(A_t)$
+    \State $\hat{R_t} \gets
+        \begin{cases}
+            \frac{R_t}{Q(A_t)} & \text{if } A_t = a\\
+            0 & \text{else}
+        \end{cases}$
+    \State $W(a) \gets W(a) e^{\frac{\gamma \hat{R_t}}{k}}$
+\Endfor
+\end{algorithmic}
+\end{algorithm}
 ```
 
 ## Coding Exercise 9: Gradient Method Algorithm and Recommendation System
 
-### Algorithm: Gradient Method
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
 
-```{.pseudo}
-Initialize, for a = 1 to k:
-  Q(a) ← 0
-  N(a) ← 0
-  H(a) ← 0
-
-For t in range(len(data)):
-  π(a) ← softmax(H(a))
-  A_t ← argmax_a(π(a))
-  R_t ← bandit(A_t)
-  N(A_t) ← N(A_t) + 1
-  Q(A_t) ← Q(A_t) + (1 / N(A_t)) [R_t - Q(A_t)]
-  H(a) ← update using softmax gradient update rule
+\begin{algorithm}
+\caption{MAB Gradient Method}
+\begin{algorithmic}
+\State Initialize, for $a = 1$ to $k$:
+\State $Q(a) \gets 0$
+\State $N(a) \gets 0$
+\State $H(a) \gets 0$ \\
+\For{$t$ in range($len(data)$)}
+\State $\pi(a) \gets \text{softmax}(H(a))$
+\State $A_t \gets \text{argmax}_a(\pi(a))$
+\State $R_t \gets \text{bandit}(A_t)$
+\State $N(A_t) \gets N(A_t) + 1$
+\State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
+\State $H(a) \gets
+    \begin{cases}
+        H(A_t) + \alpha (R_t - Q(A_t)) (1 - \pi(A_t)) & \text{if } A_t = a\\
+        H(a) - \alpha (R_t - Q(a)) \pi(a) & \text{else}
+    \end{cases}$
+\Endfor
+\end{algorithmic}
+\end{algorithm}
 ```
+
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1B9ko8fJaSFJRbbK493zTUCjI-uBFGla7#scrollTo=sp5yXpnFeSrp)

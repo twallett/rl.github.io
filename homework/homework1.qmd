@@ -105,4 +105,4 @@ $$
 
 Using Python, generate binomial data and create visualizations for $p_X(\lambda)$ and $F_X(\lambda)$.
 
-[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1aA2D9X1oTxvi1BPl5TqSZ_2rKDOUIIHD?usp=sharing)
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1aA2D9X1oTxvi1BPl5TqSZ_2rKDOUIIHD?usp=sharing)

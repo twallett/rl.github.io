@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Multi-Armed Bandit</title>
+<title>3.1 Multi-Armed Bandit Framework</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,6 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
+<link href="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -111,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs">Multi-Armed Bandit</h1>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">3.1 Multi-Armed Bandit Framework</span></h1>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -239,7 +241,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.2 ε Greedy</span></a>
+  <a href="../lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.2 ε-Greedy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -257,12 +259,43 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Homeworks</span></a>
+ <span class="menu-text">Lecture 4: Dynamic Programming</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture4/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture4/lecture4-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4.1 Markov Chain</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture4/lecture4-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4.2 Markov Decision Process (MDPs)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture4/lecture4-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4.3 Dynamic Programming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homeworks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 1</span></a>
@@ -271,6 +304,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 3</span></a>
   </div>
 </li>
       </ul>
@@ -304,7 +342,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Multi-Armed Bandit</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">3.1 Multi-Armed Bandit Framework</span></h1>
 </div>
 
 
@@ -321,44 +359,89 @@ window.Quarto = {
 </header>
 
 
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲</p>
+</div>
+</div>
+</div>
 <section id="bandit" class="level2">
 <h2 class="anchored" data-anchor-id="bandit">Bandit</h2>
-<ul>
-<li>A <strong>bandit</strong> is a slot machine.<br>
-</li>
-<li>It is used as an analogy to represent the <em>action</em> an agent can make in <em>one state</em>.<br>
-</li>
-<li>Each action selection is like a play of one of the slot machine’s levers, and the <em>rewards</em> are the payoffs for hitting the jackpot, according to its underlying probability distribution.</li>
-</ul>
-<div class="columns">
-<div class="column">
-<p><img src="MAB/imgs/Bandit.png" class="img-fluid" style="width:40.0%"></p>
-</div><div class="column">
-<p><span class="math inline">\(\to\)</span> Rewards <embed src="MAB/imgs/Gaussian_bandit.pdf" class="img-fluid" style="width:60.0%"></p>
+<p>A <strong>bandit</strong> is a slot machine.<br>
+It is used as an analogy to represent the <em>action</em> an agent can make in <em>one state</em>.<br>
+Each action selection is like a play of one of the slot machine’s levers, and the <em>rewards</em> are the payoffs for hitting the jackpot, according to its underlying probability distribution.</p>
+<div class="grid">
+<div class="g-col-5" style="padding-left: 20%;">
+<p><img src="images/Bandit.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="g-col-2 text-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+<p><span class="math inline">\(\Huge{\to}\)</span></p>
+<p>Rewards</p>
+</div>
+<div class="g-col-3">
+<p><img src="images/Gaussian_1.svg" width="300" height="300"></p>
 </div>
 </div>
 </section>
 <section id="multi-armed-bandit" class="level2">
 <h2 class="anchored" data-anchor-id="multi-armed-bandit">Multi-Armed Bandit</h2>
-<ul>
-<li>A <strong>Multi-Armed Bandit</strong> can be interpreted as <em>k-actions</em>, or k-arms of the slot machines, to decide from.</li>
-<li>Through repeated action selections, you maximize your winnings by concentrating actions on the best levers.</li>
-</ul>
-<div class="columns">
-<div class="column">
-<p><img src="MAB/imgs/Bandit.png" class="img-fluid" style="width:15.0%"> <img src="MAB/imgs/Bandit.png" class="img-fluid" style="width:15.0%"> <img src="MAB/imgs/Bandit.png" class="img-fluid" style="width:15.0%"> <img src="MAB/imgs/Bandit.png" class="img-fluid" style="width:15.0%"> <img src="MAB/imgs/Bandit.png" class="img-fluid" style="width:15.0%"></p>
-</div><div class="column">
-<p><embed src="MAB/imgs/Gaussian_2.pdf" class="img-fluid" style="width:15.0%"> <embed src="MAB/imgs/Gaussian_bandit.pdf" class="img-fluid" style="width:15.0%"> <embed src="MAB/imgs/Gaussian_1.pdf" class="img-fluid" style="width:15.0%"> <embed src="MAB/imgs/Gaussian_bandit.pdf" class="img-fluid" style="width:15.0%"> <embed src="MAB/imgs/Gaussian_2.pdf" class="img-fluid" style="width:15.0%"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nonassociative Environments
 </div>
 </div>
-<p><strong>Question:</strong> How do we decide the most appropriate action?</p>
+<div class="callout-body-container callout-body">
+<p>A <em>nonassociative environment</em> is a setting that involves learning how to act in one state. The best example of a nonassociative environment is Multi-Armed Bandit’s.</p>
+</div>
+</div>
+<p>A <strong>Multi-Armed Bandit</strong> can be interpreted as <em>k-actions</em>, or <em>k-arms</em> of the slot machines, to decide from. <br> Through repeated action selections, you maximize your winnings by concentrating actions on the best levers.</p>
+<div class="grid">
+<div class="g-col-2">
+<p><img src="images/Bandit.png" width="175" height="175"><br>
+<img src="images/Gaussian_1.svg" width="200" height="200"></p>
+</div>
+<div class="g-col-2">
+<p><img src="images/Bandit.png" width="175" height="175"><br>
+<img src="images/Gaussian_2.svg" width="200" height="200"></p>
+</div>
+<div class="g-col-2">
+<p><img src="images/Bandit.png" width="175" height="175"><br>
+<img src="images/Gaussian_1.svg" width="200" height="200"></p>
+</div>
+<div class="g-col-2">
+<p><img src="images/Bandit.png" width="175" height="175"><br>
+<img src="images/Gaussian_3.svg" width="200" height="200"></p>
+</div>
+<div class="g-col-2">
+<p><img src="images/Bandit.png" width="175" height="175"><br>
+<img src="images/Gaussian_1.svg" width="200" height="200"></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>How do we decide the most appropriate action? 🤔</p>
+</div>
+</div>
+</div>
 </section>
 <section id="expectation-of-a-bandit" class="level2">
 <h2 class="anchored" data-anchor-id="expectation-of-a-bandit">Expectation of a Bandit</h2>
-<ul>
-<li>Each bandit has an expected reward given a particular action is selected, called the <strong>action value</strong>.</li>
-</ul>
-<p>[ Q_t(a) = [R_t | A_t = a] ]</p>
+<p>Each bandit has an expected reward given a particular action is selected, called the <strong>action value</strong>.</p>
+<p><span class="math display">\[
+Q_t(a) = \mathbb{E}[R_t | A_t = a]
+\]</span></p>
 <p>Where:</p>
 <ul>
 <li><span class="math inline">\(Q_t(a)\)</span> is the <em>conditional expectation</em> of the rewards <span class="math inline">\(R_t\)</span> given the selection of an action <span class="math inline">\(A_t\)</span>.</li>
@@ -368,23 +451,37 @@ window.Quarto = {
 </section>
 <section id="action-value-method" class="level2">
 <h2 class="anchored" data-anchor-id="action-value-method">Action Value Method</h2>
-<ul>
-<li>To compute expectations of action values and select actions, we use <strong>action value methods</strong>.</li>
-</ul>
-<p>[ Q_t(a) = ]</p>
+<p>To compute expectations of action values and select actions, we use <strong>action value methods</strong>.</p>
+<p><span class="math display">\[
+Q_t(a) = \frac{\sum_{i=1}^{t-1} R_i * \mathbf{1}_{A_i = a}}{\sum_{i=1}^{t-1} \mathbf{1}_{A_i = a}}
+\]</span></p>
 <p>Where:</p>
 <ul>
 <li><span class="math inline">\(Q_t(a)\)</span> is the action value for a particular action <span class="math inline">\(a\)</span>.</li>
 <li><span class="math inline">\(\mathbf{1}\)</span> is a predicate, which denotes whether <span class="math inline">\(A_i = a\)</span> is true or false.</li>
 </ul>
-<p><em>Note</em>: If the denominator is <span class="math inline">\(0\)</span>, then we denote <span class="math inline">\(Q_t(a)\)</span> as <span class="math inline">\(0\)</span>.</p>
+<p>If the denominator is <span class="math inline">\(0\)</span>, then we denote <span class="math inline">\(Q_t(a)\)</span> as <span class="math inline">\(0\)</span>.</p>
 </section>
 <section id="action-value-method-update" class="level2">
 <h2 class="anchored" data-anchor-id="action-value-method-update">Action Value Method Update</h2>
-<p>[ Q_{t+1} = Q_t + (R_t - Q_t) ]</p>
+<p>To avoid computationally expensive updates using the predicate method, we can update action values in an incremental fashion:</p>
+<p><span class="math display">\[
+Q_{t+1} = Q_t + \frac{1}{t} (R_t - Q_t)
+\]</span></p>
 <p>or</p>
-<p>[ NewEstimate OldEstimate + StepSize [Target - OldEstimate] ]</p>
-<p><strong>Question:</strong> Do we always pick actions with the highest expected value?</p>
+<p><span class="math display">\[
+NewEstimate \gets OldEstimate + StepSize [Target - OldEstimate]
+\]</span></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Should we always pick actions with the highest expected value? 🤔</p>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -814,12 +911,44 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lecture3/lecture3-2.html" class="pagination-link" aria-label="3.2 &amp;epsilon; Greedy">
-        <span class="nav-page-text"><span class="chapter-title">3.2 ε Greedy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lecture3/lecture3-2.html" class="pagination-link" aria-label="3.2 &amp;epsilon;-Greedy">
+        <span class="nav-page-text"><span class="chapter-title">3.2 ε-Greedy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+    <script type="text/javascript">
+    (function(d) {
+      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
+        let pseudocodeOptions = {
+          indentSize: el.dataset.indentSize || "1.2em",
+          commentDelimiter: el.dataset.commentDelimiter || "//",
+          lineNumber: el.dataset.lineNumber === "true" ? true : false,
+          lineNumberPunc: el.dataset.lineNumberPunc || ":",
+          noEnd: el.dataset.noEnd === "true" ? true : false,
+          titlePrefix: el.dataset.captionPrefix || "Algorithm"
+        };
+        pseudocode.renderElement(el.querySelector(".pseudocode"), pseudocodeOptions);
+      });
+    })(document);
+    (function(d) {
+      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
+        let captionSpan = el.querySelector(".ps-root > .ps-algorithm > .ps-line > .ps-keyword")
+        if (captionSpan !== null) {
+          let captionPrefix = el.dataset.captionPrefix + " ";
+          let captionNumber = "";
+          if (el.dataset.pseudocodeNumber) {
+            captionNumber = el.dataset.pseudocodeNumber + " ";
+            if (el.dataset.chapterLevel) {
+              captionNumber = el.dataset.chapterLevel + "." + captionNumber;
+            }
+          }
+          captionSpan.innerHTML = captionPrefix + captionNumber;
+        }
+      });
+    })(document);
+    </script>
+  
 
 
 

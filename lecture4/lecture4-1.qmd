@@ -1,0 +1,132 @@
+---
+title: "Markov Chain"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+::: {.callout-tip}
+## Associative Environments
+A _associative environment_ is a setting that involves learning how to act in multiple states.
+The best frameworks to generalize associative environments are Markov models.
+:::
+
+## Markov Models
+
+All Markov models assume the **Markov Property**, meaning that _future states depend only on current states and not previous states_.
+
+$$
+P(s’ | s, s_{t-1}, s_{t-2}, \dots) = P(s’ | s)
+$$
+
+Markov models differ based on whether every sequential state is observable and whether the system is adjusted based on observations:
+
+| | States are fully observable | States are partially observable |
+|---|---|---|
+| Decision-making is not controlled | **Markov Chain** | Hidden Markov Model |
+| Decision-making is controlled | **Markov Decision Process** | Partially Observable Markov Decision Process |
+  
+## Markov Chain
+
+A **Markov Chain** is a model for transitions that are _not controlled_ between _fully observable states_. <br>
+A **State** is a node. <br>
+A **State Transition** is one outward-going arrow. <br>
+State transitions are conditional probabilities of going to the next state given the current state.
+
+<div style="text-align: center;">
+  ![](images/markovchain-ex.png){width=75%}
+</div>
+
+## Probability Matrix
+
+Suppose a frog jumps from one lily pad to another with state transition probabilities:
+
+<div style="text-align: center;">
+  ![](images/markovchain-ex-prob.png){width=50%}
+</div>
+
+$$
+\mathbf{P} = \begin{bmatrix} 0.2 & 0.6 \\ 0.8 & 0.4 \end{bmatrix}
+$$
+
+## Rewards Matrix
+
+Suppose the frog has associated rewards:
+
+<div style="text-align: center;">
+  ![](images/markovchain-ex-prob-rew.png){width=50%}
+</div>
+
+$$
+\mathbf{R} = \begin{bmatrix} 6 & 1 \\ 1 & -2 \end{bmatrix}
+$$
+
+## Value Function
+
+We want to calculate the expected value of moving from state $i$ to state $j$ for all situations $s \in \{1,2,...,S\}$:
+
+MATH DERIVATION FORMULA MISSING HERE 
+
+$$
+\mathbf{v}(t) = \mathbf{q} + \mathbf{v}(t-1) \mathbf{P}
+$$
+
+Where:
+$$
+\mathbf{q} = \sum_{i=1}^{S} p_{i,j} r_{i,j}
+$$
+
+At $t=100$:
+$$
+\mathbf{v}(100) = \begin{bmatrix} 75.2 & 73.6 \end{bmatrix}
+$$
+
+# Code Implementation
+
+```python
+import numpy as np
+
+P = np.array([[0.2, 0.6], [0.8, 0.4]])
+R = np.array([[6, 1], [1, -2]])
+q = np.sum(P * R, axis=1)
+
+def value_function(v, P, q, t=100):
+    for _ in range(t):
+        v = q + np.dot(v, P)
+    return v
+
+v_initial = np.array([0, 0])
+v_result = value_function(v_initial, P, q)
+print(v_result)
+```
+
+## Asymptotic Behavior 
+
+<div style="text-align: center;">
+  ![](images/numberline.png){width=50%}
+</div>
+
+## Discounting Factor
+
+MATH DERIVATION FORMULA MISSING HERE 
+
+The **Discounting Factor** $\gamma$ places higher value on present rewards:
+
+$$
+\mathbf{v}(t) = \mathbf{q} + \gamma \mathbf{v}(t-1) \mathbf{P}
+$$
+
+At $\gamma=0.9$ and $t=100$:
+$$
+\mathbf{v}(100) = \begin{bmatrix} 8.4 & 6.7 \end{bmatrix}
+$$
+
+## Discounted Asymptotic Behavior 
+
+<div style="text-align: center;">
+  ![](images/numberline.png){width=50%}
+</div>

@@ -15,3 +15,6 @@ Learning Objectives for Lecture 3: Multi-Armed Bandits 🎯
 - Thompson Sampling.
 - Bernoulli & Gaussian generated environment using `numpy`.
 
+::: {style = "text-align:center;"}
+![Taxonomy of Reinforcement Learning](images/Lecture3.drawio.svg)
+:::

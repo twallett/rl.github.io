@@ -5,61 +5,77 @@ format:
     number-sections: false
 ---
 
----
-title: "Multi-Armed Bandit"
-format: beamer
----
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
 
 ## Bandit
 
-- A **bandit** is a slot machine.  
-- It is used as an analogy to represent the _action_ an agent can make in _one state_.  
-- Each action selection is like a play of one of the slot machine’s levers, and the _rewards_ are the payoffs for hitting the jackpot, according to its underlying probability distribution.
+A **bandit** is a slot machine.  
+It is used as an analogy to represent the _action_ an agent can make in _one state_.  
+Each action selection is like a play of one of the slot machine’s levers, and the _rewards_ are the payoffs for hitting the jackpot, according to its underlying probability distribution.
 
-::: columns
-::: column
-![](MAB/imgs/Bandit.png){width=40%}
+::: {.grid}
+::: {.g-col-5 style="padding-left: 20%;"}
+![](images/Bandit.png){width="100%"}
 :::
 
-::: column
-\Huge $\to$ \newline
-\small Rewards
-![](MAB/imgs/Gaussian_bandit.pdf){width=60%}
+::: {.g-col-2 .text-center style="display: flex; flex-direction: column; justify-content: center; align-items: center;"}
+$\Huge{\to}$
+
+Rewards
+:::
+
+::: {.g-col-3}
+![](images/Gaussian_1.svg){width=300px height=300px}
 :::
 :::
 
 ## Multi-Armed Bandit
 
-- A **Multi-Armed Bandit** can be interpreted as _k-actions_, or k-arms of the slot machines, to decide from.
-- Through repeated action selections, you maximize your winnings by concentrating actions on the best levers.
-
-::: columns
-::: column
-![](MAB/imgs/Bandit.png){width=15%}
-![](MAB/imgs/Bandit.png){width=15%}
-![](MAB/imgs/Bandit.png){width=15%}
-![](MAB/imgs/Bandit.png){width=15%}
-![](MAB/imgs/Bandit.png){width=15%}
+::: {.callout-tip}
+## Nonassociative Environments
+A _nonassociative environment_ is a setting that involves learning how to act in one state. 
+The best example of a nonassociative environment is Multi-Armed Bandit’s.
 :::
 
-::: column
-![](MAB/imgs/Gaussian_2.pdf){width=15%}
-![](MAB/imgs/Gaussian_bandit.pdf){width=15%}
-![](MAB/imgs/Gaussian_1.pdf){width=15%}
-![](MAB/imgs/Gaussian_bandit.pdf){width=15%}
-![](MAB/imgs/Gaussian_2.pdf){width=15%}
+A **Multi-Armed Bandit** can be interpreted as _k-actions_, or _k-arms_ of the slot machines, to decide from. <br>
+Through repeated action selections, you maximize your winnings by concentrating actions on the best levers.
+
+::: {.grid}
+::: {.g-col-2}
+![](images/Bandit.png){width=175px height=175px}  
+![](images/Gaussian_1.svg){width=200px height=200px}
+:::
+::: {.g-col-2}
+![](images/Bandit.png){width=175px height=175px}  
+![](images/Gaussian_2.svg){width=200px height=200px}
+:::
+::: {.g-col-2}
+![](images/Bandit.png){width=175px height=175px}  
+![](images/Gaussian_1.svg){width=200px height=200px}
+:::
+::: {.g-col-2}
+![](images/Bandit.png){width=175px height=175px}  
+![](images/Gaussian_3.svg){width=200px height=200px}
+:::
+::: {.g-col-2}
+![](images/Bandit.png){width=175px height=175px}  
+![](images/Gaussian_1.svg){width=200px height=200px}
 :::
 :::
 
-**Question:** How do we decide the most appropriate action?
+::: {.callout-note appearance="simple" icon=false}
+How do we decide the most appropriate action? 🤔
+:::
 
 ## Expectation of a Bandit
 
-- Each bandit has an expected reward given a particular action is selected, called the **action value**.
+Each bandit has an expected reward given a particular action is selected, called the **action value**.
 
-\[
+$$
 Q_t(a) = \mathbb{E}[R_t | A_t = a]
-\]
+$$
 
 Where:
 
@@ -69,29 +85,34 @@ Where:
 
 ## Action Value Method
 
-- To compute expectations of action values and select actions, we use **action value methods**.
+To compute expectations of action values and select actions, we use **action value methods**.
 
-\[
+$$
 Q_t(a) = \frac{\sum_{i=1}^{t-1} R_i * \mathbf{1}_{A_i = a}}{\sum_{i=1}^{t-1} \mathbf{1}_{A_i = a}}
-\]
+$$
 
 Where:
 
 - $Q_t(a)$ is the action value for a particular action $a$.
 - $\mathbf{1}$ is a predicate, which denotes whether $A_i = a$ is true or false.
 
-_Note_: If the denominator is $0$, then we denote $Q_t(a)$ as $0$.
+If the denominator is $0$, then we denote $Q_t(a)$ as $0$.
 
 ## Action Value Method Update
 
-\[
+To avoid computationally expensive updates using the predicate method, we can update action values in an incremental fashion:
+
+$$
 Q_{t+1} = Q_t + \frac{1}{t} (R_t - Q_t)
-\]
+$$
 
 or
 
-\[
+$$
 NewEstimate \gets OldEstimate + StepSize [Target - OldEstimate]
-\]
+$$
 
-**Question:** Do we always pick actions with the highest expected value?
+
+::: {.callout-note appearance="simple" icon=false}
+Should we always pick actions with the highest expected value? 🤔
+:::

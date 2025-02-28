@@ -1,46 +1,80 @@
 ---
-title: "3.2 &epsilon; Greedy"
+title: "3.2 &epsilon;-Greedy"
 format:
   html:
     number-sections: false
 ---
 
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
 ## Exploring vs. Exploiting
 
 - We are **exploring** when we randomly select an action.  
   
-  **Intuition:** _Acting randomly._
+Intuition: _Acting randomly._
 
 - We are **exploiting** when an action is selected based on its expected value. When we act this way, we are said to be acting in a _greedy_ manner.
   
-  **Intuition:** _Acting systematically._
+Intuition: _Acting systematically._
 
 ## Conflict of Exploring vs. Exploiting
 
 - **Exploring all of the time** does not permit you to exploit your knowledge of expected values.
 
-  **Question:** How do you maximize your expected value if you randomly pull bandit levers?
-
 - **Exploiting all of the time** does not permit you to explore all of the options.
 
-  **Question:** How do you know which bandit has the highest expected value if you only pull one bandit's lever?
+Thus, our decision-making must encompass a balance of exploring and exploiting actions.
 
-- Thus, our decision-making must encompass a balance of exploring and exploiting actions.
+## The Role of &epsilon;
 
-## The Role of Epsilon
-
-- Epsilon ($\epsilon$) is a fixed proportion that decides whether we explore or exploit our actions.
-
-  \[
+Epsilon ($\epsilon$) is a fixed proportion that decides whether we explore or exploit our actions.
+$$
   A_t \gets 
   \begin{cases}
       \text{a random action with probability } \epsilon \\
       \arg\max_a Q(a) \text{ with probability } 1 - \epsilon
   \end{cases}
-  \]
+$$
 
-- Hence, **Epsilon Greedy** is an algorithm that allows us to balance our decision-making in this simple manner.
+Hence, **Epsilon Greedy** is an algorithm that allows us to balance our decision-making in this simple manner.
 
-## Epsilon Greedy Pseudocode
+## Pseudocode
 
-![](MAB/imgs/1-1MAB.pdf){width=100%}
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{MAB $\epsilon$-Greedy}
+\begin{algorithmic}
+
+\State Initialize, for $a = 1$ to $k$:
+\State $Q(a) \gets 0$ 
+\State $N(a) \gets 0$ \\
+\For{$t$ in range($len(data)$)}
+    \State $A_t \gets
+        \begin{cases}
+            \text{a random action with probability } \epsilon \\
+            \text{argmax}_a\, Q(a) \text{ with probability } 1-\epsilon 
+        \end{cases}$
+    \State $R_t \gets \text{bandit}(A_t)$
+    \State $N(A_t) \gets N(A_t) + 1$
+    \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
+\Endfor
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> <!-- Adjust width as needed -->
+  </a>
+</div>

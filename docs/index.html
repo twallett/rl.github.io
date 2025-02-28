@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tyler Wallett, MS &amp; Amir Jafari, PhD">
-<meta name="dcterms.date" content="2025-02-24">
+<meta name="dcterms.date" content="2025-02-28">
 
 <title>DATS 6450 – Reinforcement Learning</title>
 <style>
@@ -258,7 +258,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Homeworks</span></a>
+ <span class="menu-text">Lecture 3: Multi-Armed Bandits</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -266,7 +266,48 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./lecture3/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture3/lecture3-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.1 Multi-Armed Bandit Framework</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.2 ε-Greedy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture3/lecture3-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.3 Upper Confidence Boundary (UCB)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture3/lecture3-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.4 Thompson Sampling</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homeworks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./homework/homework1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./homework/homework2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 2</span></a>
   </div>
 </li>
       </ul>
@@ -320,7 +361,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 24, 2025</p>
+      <p class="date">February 28, 2025</p>
     </div>
   </div>
   
@@ -434,7 +475,7 @@ window.Quarto = {
 <section id="learning-outcomes" class="level2">
 <h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
 <ol type="1">
-<li>Implement Reinforcement Learning frameworks using NumPy and TensorFlow. <br></li>
+<li>Implement Reinforcement Learning frameworks using <code>numpy</code> and <code>tensorflow</code>. <br></li>
 <li>Design decision-making systems using classical and deep learning architectures. <br></li>
 <li>Explain the Reinforcement Learning taxonomy. <br></li>
 <li>Identify Reinforcement Learning’s challenges, current research, and future outlook.</li>
@@ -444,7 +485,6 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
 <li><em>Reinforcement Learning: An Introduction</em> by Richard S. Sutton and Andrew G. Barto (<a href="https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf">Web Link</a>)</li>
-<li><em>Reinforcement Learning GitHub:</em> <a href="https://github.com/amir-jafari/Reinforcement-Learning/tree/main/08-ExtraMaterials">Extra Materials</a></li>
 </ul>
 </section>
 <section id="software-requirements" class="level2">
@@ -458,7 +498,7 @@ window.Quarto = {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install gymnasium</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install stable-baselines3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li><strong>Cloud Services:</strong> AWS &amp; GCP virtual machines.</li>
+<li><strong>Cloud Services:</strong> Google Colab.</li>
 </ul>
 </section>
 <section id="course-outline" class="level2">
@@ -495,13 +535,13 @@ window.Quarto = {
 <td>Sep 12, 2025</td>
 <td>Multi-Armed Bandits</td>
 <td>Quiz 1</td>
-<td>- Exploration vs.&nbsp;Exploitation <br> - <span class="math inline">\(\epsilon\)</span>-Greedy <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling</td>
+<td>- Multi-Armed Bandit Framework <br> - <span class="math inline">\(\epsilon\)</span>-Greedy <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling</td>
 </tr>
 <tr class="even">
 <td>Sep 19, 2025</td>
 <td>Dynamic Programming</td>
 <td>Quiz 2</td>
-<td>- Markov Chain <br> - Markov Decision Process <br> - Value Functions <br> - Action Value Functions <br> - Bellman Equations <br> - Value Iteration</td>
+<td>- Markov Chain <br> - Markov Decision Process <br> - Bellman Equations <br> - Dynamic Programming</td>
 </tr>
 <tr class="odd">
 <td>Sep 26, 2025</td>

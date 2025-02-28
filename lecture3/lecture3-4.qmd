@@ -5,40 +5,74 @@ format:
     number-sections: false
 ---
 
-## Thompson Sampling
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
 
-- **Thompson sampling** is an algorithm that leverages the beta distribution for its action value method and action selections.
+## Beta Distribution
 
-- Initialize beta distributed with parameters:
+**Thompson sampling** is an algorithm that leverages the beta distribution for its action value method and action selections.
 
-  $$
-  \alpha(a) = (\alpha_{1}, . . . , \alpha_{k}) = 1
-  $$
-  $$
-  \beta(a) = (\beta_{1}, . . . , \beta_{k}) = 1
-  $$
+Initialize beta distributed with parameters:
 
-- Now for each action $a$, the prior probability density function of our action value method $Q(a)$ is:
+$$
+\alpha(a) = (\alpha_{1}, . . . , \alpha_{k}) = 1
+$$
+$$
+\beta(a) = (\beta_{1}, . . . , \beta_{k}) = 1
+$$
 
-  $$
-  Q(a) = \frac{\Gamma(\alpha(a) + \beta(a))}{\Gamma(\alpha(a)) \ \Gamma(\beta(a))} a^{\alpha(a)-1} (1 - a)^{\beta(a)-1}
-  $$
+Now for each action $a$, the prior probability density function of our action value method $Q(a)$ is:
 
-## Action Value Method Update
+$$
+  Q(a) = \frac{\Gamma(\alpha(a) + \beta(a))}{\Gamma(\alpha(a)) \ \Gamma(\beta(a))} a^{\alpha(a)-1} (1 a)^{\beta(a)-1}
+$$
 
-- The agent updates its prior belief using the following action value method:
+## Thompson Sampling Exploring vs. Exploiting
 
-  $$
-  \alpha(A_{t}) \gets \alpha(A_{t}) + R_{t}
-  $$
-  $$
-  \beta(A_{t}) \gets \beta(A_{t}) + 1 - R_{t}
-  $$
+The agent updates its prior belief using the following action value method:
 
-- Notice that for those actions selected $A_t$, we increase its corresponding $\alpha$ parameter ($R_t = 1$) and maintain its $\beta$ parameter the same as before ($1 - R_t = 1 - 1 = 0$).
+$$
+\alpha(A_{t}) \gets \alpha(A_{t}) + R_{t}
+$$
+$$
+\beta(A_{t}) \gets \beta(A_{t}) + 1 R_{t}
+$$
 
-- This update allows the algorithm to draw accurate samples and strike a balance between exploring and exploiting.
+Notice that for those actions selected $A_t$, we increase its corresponding $\alpha$ parameter ($R_t = 1$) and maintain its $\beta$ parameter the same as before ($1 - R_t = 1 - 1 = 0$).
 
-## Thompson Sampling Pseudocode
+This update allows the algorithm to draw accurate samples and strike a balance between exploring and exploiting.
 
-![Thompson Sampling Pseudocode](MAB/imgs/1-3MAB.pdf)
+## Pseudocode
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{MAB Thompson Sampling}
+\begin{algorithmic}
+\State Initialize, for $a = 1$ to $k$:
+\State $\alpha(a) \gets 1$ 
+\State $\beta(a) \gets 1$ \\
+\For{$t$ in range($len(data)$)}
+    \State $Q(a) \leftarrow beta(\alpha(a),\beta(a))$
+    \State $A_t \leftarrow argmax_a Q(a)$
+    \State $R_t \gets \text{bandit}(A_t)$
+    \State $\alpha(A_t) \leftarrow \alpha(A_t) + R_t$
+    \State $\beta(A_t) \leftarrow \beta(A_t) + 1 - R_t$
+\Endfor
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> <!-- Adjust width as needed -->
+  </a>
+</div>

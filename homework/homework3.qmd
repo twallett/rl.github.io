@@ -1,0 +1,25 @@
+---
+title: "Homework 3"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Homework for Lecture 4: Dynamic Programming 📝
+:::
+
+> **Instructions:** <br> 
+> <br>
+> - **Show ALL Work, Neatly and in Order.** <br>
+> - **No** credit for Answers Without Work. <br>
+> - Submit a single PDF file including all solutions. <br>
+> - **DO NOT** submit individual files or images. <br>
+> - For coding questions, submit **ONE** `.py` file with comments. <br>
+
+::: {.callout-note}
+For this homework, you only need `numpy`, `pandas`, and `sklearn`'s `MinMaxScaler` function.
+:::
+
+
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1B9ko8fJaSFJRbbK493zTUCjI-uBFGla7#scrollTo=sp5yXpnFeSrp)

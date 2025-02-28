@@ -42,6 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
+<link href="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -239,7 +241,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.2 ε Greedy</span></a>
+  <a href="../lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.2 ε-Greedy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -257,12 +259,43 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Homeworks</span></a>
+ <span class="menu-text">Lecture 4: Dynamic Programming</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture4/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture4/lecture4-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4.1 Markov Chain</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture4/lecture4-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4.2 Markov Decision Process (MDPs)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture4/lecture4-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4.3 Dynamic Programming</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homeworks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 1</span></a>
@@ -271,6 +304,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 3</span></a>
   </div>
 </li>
       </ul>
@@ -293,7 +331,7 @@ window.Quarto = {
   <ul>
   <li><a href="#upper-confidence-boundaries" id="toc-upper-confidence-boundaries" class="nav-link active" data-scroll-target="#upper-confidence-boundaries">Upper Confidence Boundaries</a></li>
   <li><a href="#ucb-exploring-vs.-exploiting" id="toc-ucb-exploring-vs.-exploiting" class="nav-link" data-scroll-target="#ucb-exploring-vs.-exploiting">UCB Exploring vs.&nbsp;Exploiting</a></li>
-  <li><a href="#ucb-pseudocode" id="toc-ucb-pseudocode" class="nav-link" data-scroll-target="#ucb-pseudocode">UCB Pseudocode</a></li>
+  <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
   </ul>
 </nav>
     </div>
@@ -319,30 +357,49 @@ window.Quarto = {
 </header>
 
 
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲</p>
+</div>
+</div>
+</div>
 <section id="upper-confidence-boundaries" class="level2">
 <h2 class="anchored" data-anchor-id="upper-confidence-boundaries">Upper Confidence Boundaries</h2>
-<ul>
-<li><p><strong>Upper Confidence Boundaries</strong> allow us to select among the non-greedy actions according to their potential for actually being optimal.</p>
-<p>[ A_t _a ]</p>
-<p><strong>Where:</strong></p>
+<p><strong>Upper Confidence Boundaries</strong> allow us to select among the non-greedy actions according to their potential for actually being optimal.</p>
+<p><span class="math display">\[
+A_t \gets \arg\max_a \left[ Q(a) + \sqrt{\frac{2 \ln(t)}{N(a)}} \right]
+\]</span></p>
+<p>Where:</p>
 <ul>
 <li><span class="math inline">\(\sqrt{\frac{2 \ln(t)}{N(a)}}\)</span> is the measure of variance of the action <span class="math inline">\(a\)</span>.</li>
 <li>The natural logarithm increases get smaller over time but are unbounded, so all actions will be selected.</li>
-</ul></li>
 </ul>
 </section>
 <section id="ucb-exploring-vs.-exploiting" class="level2">
 <h2 class="anchored" data-anchor-id="ucb-exploring-vs.-exploiting">UCB Exploring vs.&nbsp;Exploiting</h2>
-<ul>
-<li><p>Each time <span class="math inline">\(a\)</span> is selected, the uncertainty is presumably reduced: <span class="math inline">\(N(a)\)</span> increments, and as it appears in the denominator, the uncertainty term decreases.</p>
-<p>[ VAR = ]</p></li>
-<li><p>Each time an action other than <span class="math inline">\(a\)</span> is selected, <span class="math inline">\(t\)</span> increases but <span class="math inline">\(N(a)\)</span> does not; because <span class="math inline">\(t\)</span> appears in the numerator, the uncertainty estimate increases.</p>
-<p>[ VAR = ]</p></li>
-</ul>
+<p>Each time <span class="math inline">\(a\)</span> is selected, the uncertainty is presumably reduced: <span class="math inline">\(N(a)\)</span> increments, and as it appears in the denominator, the uncertainty term decreases.</p>
+<p><span class="math display">\[
+VAR \downarrow = \sqrt{\frac{2 \ln(t)}{N(a)\uparrow}}
+\]</span></p>
+<p>Each time an action other than <span class="math inline">\(a\)</span> is selected, <span class="math inline">\(t\)</span> increases but <span class="math inline">\(N(a)\)</span> does not; because <span class="math inline">\(t\)</span> appears in the numerator, the uncertainty estimate increases.</p>
+<p><span class="math display">\[
+VAR \uparrow = \sqrt{\frac{2 \ln(t) \uparrow}{N(a)}}
+\]</span></p>
 </section>
-<section id="ucb-pseudocode" class="level2">
-<h2 class="anchored" data-anchor-id="ucb-pseudocode">UCB Pseudocode</h2>
-<p><embed src="MAB/imgs/1-2MAB.pdf" class="img-fluid" style="width:100.0%"></p>
+<section id="pseudocode" class="level2">
+<h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
+<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-line-number-punc=":" data-no-end="false" data-indent-size="1.2em" data-comment-delimiter="//" data-line-number="true" data-pseudocode-number="1">
+<div class="pseudocode">
+\begin{algorithm} \caption{MAB Upper Confidence Boundary (UCB)} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets 0$ \State $N(a) \gets 0$ \\ \For{$t$ in range($len(data)$)} \State $A_t \gets argmax_a[Q(a) + \sqrt{(\frac{2 ln(t)}{N(a)})}]$ \State $R_t \gets \text{bandit}(A_t)$ \State $N(A_t) \gets N(A_t) + 1$ \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$ \Endfor \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<div style="text-align: center;">
+<p><a href="https://github.com/"> <img src="images/github.svg" alt="GitHub" width="5%"> <!-- Adjust width as needed --> </a></p>
+</div>
 
 
 </section>
@@ -767,8 +824,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lecture3/lecture3-2.html" class="pagination-link" aria-label="3.2 &amp;epsilon; Greedy">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">3.2 ε Greedy</span></span>
+      <a href="../lecture3/lecture3-2.html" class="pagination-link" aria-label="3.2 &amp;epsilon;-Greedy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">3.2 ε-Greedy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -778,6 +835,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+    <script type="text/javascript">
+    (function(d) {
+      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
+        let pseudocodeOptions = {
+          indentSize: el.dataset.indentSize || "1.2em",
+          commentDelimiter: el.dataset.commentDelimiter || "//",
+          lineNumber: el.dataset.lineNumber === "true" ? true : false,
+          lineNumberPunc: el.dataset.lineNumberPunc || ":",
+          noEnd: el.dataset.noEnd === "true" ? true : false,
+          titlePrefix: el.dataset.captionPrefix || "Algorithm"
+        };
+        pseudocode.renderElement(el.querySelector(".pseudocode"), pseudocodeOptions);
+      });
+    })(document);
+    (function(d) {
+      d.querySelectorAll(".pseudocode-container").forEach(function(el) {
+        let captionSpan = el.querySelector(".ps-root > .ps-algorithm > .ps-line > .ps-keyword")
+        if (captionSpan !== null) {
+          let captionPrefix = el.dataset.captionPrefix + " ";
+          let captionNumber = "";
+          if (el.dataset.pseudocodeNumber) {
+            captionNumber = el.dataset.pseudocodeNumber + " ";
+            if (el.dataset.chapterLevel) {
+              captionNumber = el.dataset.chapterLevel + "." + captionNumber;
+            }
+          }
+          captionSpan.innerHTML = captionPrefix + captionNumber;
+        }
+      });
+    })(document);
+    </script>
+  
 
 
 

@@ -241,7 +241,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.2 ε Greedy</span></a>
+  <a href="../lecture3/lecture3-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3.2 ε-Greedy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -295,25 +295,14 @@ window.Quarto = {
   <ul>
   <li><a href="#coding-exercise-1-load-environments" id="toc-coding-exercise-1-load-environments" class="nav-link active" data-scroll-target="#coding-exercise-1-load-environments">Coding Exercise 1: Load Environments</a></li>
   <li><a href="#coding-exercise-2-epsilon-greedy-recommendation-system" id="toc-coding-exercise-2-epsilon-greedy-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-2-epsilon-greedy-recommendation-system">Coding Exercise 2: Epsilon-Greedy Recommendation System</a></li>
-  <li><a href="#coding-exercise-3-ucb-algorithm-and-recommendation-system" id="toc-coding-exercise-3-ucb-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-3-ucb-algorithm-and-recommendation-system">Coding Exercise 3: UCB Algorithm and Recommendation System</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-upper-confidence-boundary-ucb" id="toc-algorithm-upper-confidence-boundary-ucb" class="nav-link" data-scroll-target="#algorithm-upper-confidence-boundary-ucb">Algorithm: Upper Confidence Boundary (UCB)</a></li>
-  </ul></li>
-  <li><a href="#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" id="toc-coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system">Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-thompson-sampling" id="toc-algorithm-thompson-sampling" class="nav-link" data-scroll-target="#algorithm-thompson-sampling">Algorithm: Thompson Sampling</a></li>
-  </ul></li>
-  <li><a href="#coding-exercise-5-algorithm-performance-comparison" id="toc-coding-exercise-5-algorithm-performance-comparison" class="nav-link" data-scroll-target="#coding-exercise-5-algorithm-performance-comparison">Coding Exercise 5: Algorithm Performance Comparison</a></li>
+  <li><a href="#coding-exercise-3-ucb-algorithm-and-recommendation-system" id="toc-coding-exercise-3-ucb-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-3-ucb-algorithm-and-recommendation-system">Coding Exercise 3: UCB Algorithm and Recommendation System</a></li>
+  <li><a href="#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" id="toc-coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system">Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System</a></li>
+  <li><a href="#coding-exercise-5-mab-algorithm-performance-comparison" id="toc-coding-exercise-5-mab-algorithm-performance-comparison" class="nav-link" data-scroll-target="#coding-exercise-5-mab-algorithm-performance-comparison">Coding Exercise 5: MAB Algorithm Performance Comparison</a></li>
   <li><a href="#coding-exercise-6-random-seed-analysis" id="toc-coding-exercise-6-random-seed-analysis" class="nav-link" data-scroll-target="#coding-exercise-6-random-seed-analysis">Coding Exercise 6: Random Seed Analysis</a></li>
   <li><a href="#coding-exercise-7-amazon-dataset-analysis" id="toc-coding-exercise-7-amazon-dataset-analysis" class="nav-link" data-scroll-target="#coding-exercise-7-amazon-dataset-analysis">Coding Exercise 7: Amazon Dataset Analysis</a></li>
-  <li><a href="#coding-exercise-8-exp3-algorithm-and-recommendation-system" id="toc-coding-exercise-8-exp3-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-8-exp3-algorithm-and-recommendation-system">Coding Exercise 8: EXP3 Algorithm and Recommendation System</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-exp3" id="toc-algorithm-exp3" class="nav-link" data-scroll-target="#algorithm-exp3">Algorithm: EXP3</a></li>
-  </ul></li>
-  <li><a href="#coding-exercise-9-gradient-method-algorithm-and-recommendation-system" id="toc-coding-exercise-9-gradient-method-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-9-gradient-method-algorithm-and-recommendation-system">Coding Exercise 9: Gradient Method Algorithm and Recommendation System</a>
-  <ul class="collapse">
-  <li><a href="#algorithm-gradient-method" id="toc-algorithm-gradient-method" class="nav-link" data-scroll-target="#algorithm-gradient-method">Algorithm: Gradient Method</a></li>
-  </ul></li>
+  <li><a href="#coding-exercise-8-exp3-algorithm-and-recommendation-system" id="toc-coding-exercise-8-exp3-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-8-exp3-algorithm-and-recommendation-system">Coding Exercise 8: EXP3 Algorithm and Recommendation System</a></li>
+  <li><a href="#coding-exercise-9-gradient-method-algorithm-and-recommendation-system" id="toc-coding-exercise-9-gradient-method-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-9-gradient-method-algorithm-and-recommendation-system">Coding Exercise 9: Gradient Method Algorithm and Recommendation System</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></li>
   </ul>
 </nav>
     </div>
@@ -375,60 +364,14 @@ Note
 </section>
 <section id="coding-exercise-3-ucb-algorithm-and-recommendation-system" class="level2">
 <h2 class="anchored" data-anchor-id="coding-exercise-3-ucb-algorithm-and-recommendation-system">Coding Exercise 3: UCB Algorithm and Recommendation System</h2>
-<section id="algorithm-upper-confidence-boundary-ucb" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-upper-confidence-boundary-ucb">Algorithm: Upper Confidence Boundary (UCB)</h3>
-<!-- ```pseudocode
-#| html-indent-size: "1.2em"
-#| html-comment-delimiter: "//"
-#| html-line-number: true
-#| html-line-number-punc: ":"
-#| html-no-end: false
-#| pdf-placement: "htb!"
-#| pdf-line-number: true
-
-\begin{algorithm}
-\captionsetup{labelformat=empty}
-\caption{\textbf{Algorithm 3-2} MAB Upper Confidence Boundary (UCB)}
-\begin{algorithmic}
-
-\STATE Initialize, for $a = 1$ to $k$:
-\STATE $Q(a) \gets 0$ 
-\STATE $N(a) \gets 0$ \\~\\
-\FOR{$t$ in range($len(data)$)}
-    \STATE $A_t \gets argmax_a[Q(a) + \sqrt{(\frac{2 ln(t)}{N(a)})}]$
-    \STATE $R_t \gets \text{bandit}(A_t)$
-    \STATE $N(A_t) \gets N(A_t) + 1$
-    \STATE $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
-\ENDFOR
-
-\end{algorithmic}
-\end{algorithm}
-``` -->
-<div class="pseudocode-container quarto-float" data-indent-size="1.2em" data-line-number-punc=":" data-line-number="true" data-no-end="false" data-pseudocode-number="1" data-comment-delimiter="//" data-caption-prefix="Algorithm">
-<div class="pseudocode">
-\begin{algorithm} \caption{Quicksort} \begin{algorithmic} \Procedure{Quicksort}{$A, p, r$} \If{$p &lt; r$} \State $q = $ \Call{Partition}{$A, p, r$} \State \Call{Quicksort}{$A, p, q - 1$} \State \Call{Quicksort}{$A, q + 1, r$} \EndIf \EndProcedure \Procedure{Partition}{$A, p, r$} \State $x = A[r]$ \State $i = p - 1$ \For{$j = p$ \To $r - 1$} \If{$A[j] &lt; x$} \State $i = i + 1$ \State exchange $A[i]$ with $A[j]$ \EndIf \State exchange $A[i]$ with $A[r]$ \EndFor \EndProcedure \end{algorithmic} \end{algorithm}
-</div>
-</div>
-</section>
+<p>Code the Upper Confidence Boundary (UCB) algorithm and create a recommendation system.</p>
 </section>
 <section id="coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" class="level2">
 <h2 class="anchored" data-anchor-id="coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system">Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System</h2>
-<section id="algorithm-thompson-sampling" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-thompson-sampling">Algorithm: Thompson Sampling</h3>
-<pre class="pseudo"><code>Initialize, for a = 1 to k:
-  α(a) ← 1
-  β(a) ← 1
-
-For t in range(len(data)):
-  Q(a) ← beta(α(a), β(a))
-  A_t ← argmax_a Q(a)
-  R_t ← bandit(A_t)
-  α(A_t) ← α(A_t) + R_t
-  β(A_t) ← β(A_t) + (1 - R_t)</code></pre>
+<p>Code the Thompson Sampling algorithm and create a recommendation system.</p>
 </section>
-</section>
-<section id="coding-exercise-5-algorithm-performance-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-5-algorithm-performance-comparison">Coding Exercise 5: Algorithm Performance Comparison</h2>
+<section id="coding-exercise-5-mab-algorithm-performance-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-5-mab-algorithm-performance-comparison">Coding Exercise 5: MAB Algorithm Performance Comparison</h2>
 <p>For 10,000 recommendations:</p>
 <ol type="1">
 <li>Does Epsilon-Greedy (<span class="math inline">\(\epsilon = 0.10\)</span>) perform better in the Bernoulli or Gaussian environment?</li>
@@ -449,39 +392,24 @@ For t in range(len(data)):
 </section>
 <section id="coding-exercise-8-exp3-algorithm-and-recommendation-system" class="level2">
 <h2 class="anchored" data-anchor-id="coding-exercise-8-exp3-algorithm-and-recommendation-system">Coding Exercise 8: EXP3 Algorithm and Recommendation System</h2>
-<section id="algorithm-exp3" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-exp3">Algorithm: EXP3</h3>
-<pre class="pseudo"><code>Initialize, for a = 1 to k:
-  Q(a) ← 1/k
-  W(a) ← 1
-
-For t in range(len(data)):
-  Q(a) ← (1 - γ) * (W(a) / sum(W)) + (γ / k)
-  A_t ← random choice with probabilities Q(a)
-  R_t ← bandit(A_t)
-  R̂_t(a) ← (R_t / Q(A_t)) if A_t = a else 0
-  W(a) ← W(a) * exp(γ * R̂_t(a) / k)</code></pre>
-</section>
+<div class="pseudocode-container quarto-float" data-pseudocode-number="1" data-line-number-punc=":" data-no-end="false" data-indent-size="1.2em" data-line-number="true" data-comment-delimiter="//" data-caption-prefix="Algorithm">
+<div class="pseudocode">
+\begin{algorithm} \caption{MAB EXP3} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets \frac{1}{k}$ \State $W(a) \gets 1$ \\ \For{$t$ in range($len(data)$)} \State $Q(a) \gets (1 - \gamma) \frac{W(a)}{\sum_{i=1}^{k} W(a_{i})} + \frac{\gamma}{k}$ \\ \State $A_t \gets$ random choice with probabilities $Q(a)$ \\ \State $R_t \gets \text{bandit}(A_t)$ \State $\hat{R_t} \gets \begin{cases} \frac{R_t}{Q(A_t)} &amp; \text{if } A_t = a\\ 0 &amp; \text{else} \end{cases}$ \State $W(a) \gets W(a) e^{\frac{\gamma \hat{R_t}}{k}}$ \Endfor \end{algorithmic} \end{algorithm}
+</div>
+</div>
 </section>
 <section id="coding-exercise-9-gradient-method-algorithm-and-recommendation-system" class="level2">
 <h2 class="anchored" data-anchor-id="coding-exercise-9-gradient-method-algorithm-and-recommendation-system">Coding Exercise 9: Gradient Method Algorithm and Recommendation System</h2>
-<section id="algorithm-gradient-method" class="level3">
-<h3 class="anchored" data-anchor-id="algorithm-gradient-method">Algorithm: Gradient Method</h3>
-<pre class="pseudo"><code>Initialize, for a = 1 to k:
-  Q(a) ← 0
-  N(a) ← 0
-  H(a) ← 0
-
-For t in range(len(data)):
-  π(a) ← softmax(H(a))
-  A_t ← argmax_a(π(a))
-  R_t ← bandit(A_t)
-  N(A_t) ← N(A_t) + 1
-  Q(A_t) ← Q(A_t) + (1 / N(A_t)) [R_t - Q(A_t)]
-  H(a) ← update using softmax gradient update rule</code></pre>
-
-
+<div class="pseudocode-container quarto-float" data-pseudocode-number="1" data-line-number-punc=":" data-no-end="false" data-indent-size="1.2em" data-line-number="true" data-comment-delimiter="//" data-caption-prefix="Algorithm">
+<div class="pseudocode">
+\begin{algorithm} \caption{MAB Gradient Method} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets 0$ \State $N(a) \gets 0$ \State $H(a) \gets 0$ \\ \For{$t$ in range($len(data)$)} \State $\pi(a) \gets \text{softmax}(H(a))$ \State $A_t \gets \text{argmax}_a(\pi(a))$ \State $R_t \gets \text{bandit}(A_t)$ \State $N(A_t) \gets N(A_t) + 1$ \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$ \State $H(a) \gets \begin{cases} H(A_t) + \alpha (R_t - Q(A_t)) (1 - \pi(A_t)) &amp; \text{if } A_t = a\\ H(a) - \alpha (R_t - Q(a)) \pi(a) &amp; \text{else} \end{cases}$ \Endfor \end{algorithmic} \end{algorithm}
+</div>
+</div>
 </section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><a href="https://colab.research.google.com/drive/1B9ko8fJaSFJRbbK493zTUCjI-uBFGla7#scrollTo=sp5yXpnFeSrp"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></h2>
+
+
 </section>
 
 </main> <!-- /main -->
