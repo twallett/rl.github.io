@@ -58,6 +58,16 @@ book:
           file: lecture4/lecture4-2.qmd
         - text: "4.3 Dynamic Programming"
           file: lecture4/lecture4-3.qmd
+    # - part: "Lecture 5: Monte Carlo"
+    #   chapters:
+    #     - text: "Learning Objectives"
+    #       file: lecture5/lo.qmd
+    #     - text: "5.1 Monte Carlo Prediction"
+    #       file: lecture5/lecture5-1.qmd
+    #     - text: "5.2 On-Policy Monte Carlo"
+    #       file: lecture5/lecture5-2.qmd
+    #     - text: "5.3 Off-Policy Monte Carlo"
+    #       file: lecture5/lecture5-3.qmd
     - part: "Homeworks"
       chapters:
         - text: "Homework 1"
@@ -68,13 +78,9 @@ book:
           file: homework/homework3.qmd
         - text: "Homework 4"
           file: homework/homework4.qmd
+        # - text: "Homework 5"
+        #   file: homework/homework5.qmd
     - references.qmd
-    # - part: "Lecture 5: Monte Carlo"
-    #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd
     # - part: "Lecture 6: Temporal Differencing"
     #   chapters:
     #     - text: "2.1 Introduction to ML"

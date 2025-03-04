@@ -64,7 +64,7 @@
     "href": "index.html#course-outline",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "Course Outline",
-    "text": "Course Outline\n\n\n\n\n\n\n\n\n\nWeek\nTopic\nQuiz/Exams\nSubjects\n\n\n\n\nAug 29, 2025\nIntroduction to Reinforcement Learning\n\n- Course Outline  - Why should I study Reinforcement Learning?  - What is Reinforcement Learning?  - Where is Reinforcement Learning Applied?  - How is Reinforcement Learning Structured? \n\n\nSep 5, 2025\nMathematical Foundations\n\n- Set Theory  - Axiomatic Probability  - Conditioning  - Independence  - Random Variables  - Expectation  - Probability Distribution\n\n\nSep 12, 2025\nMulti-Armed Bandits\nQuiz 1\n- Multi-Armed Bandit Framework  - \\(\\epsilon\\)-Greedy  - Upper Confidence Boundary (UCB)  - Thompson Sampling\n\n\nSep 19, 2025\nDynamic Programming\nQuiz 2\n- Markov Chain  - Markov Decision Process  - Bellman Equations  - Dynamic Programming\n\n\nSep 26, 2025\nMonte Carlo Methods\nQuiz 3\n- OpenAI Gymansium Environment: GridWorld  - On-Policy Monte Carlo  - Off-Policy Monte Carlo\n\n\nOct 3, 2025\nTemporal-Difference\nQuiz 4\n- OpenAI Gymansium Environment: GridWorld  - Temporal Difference Prediction  - SARSA  - Q-Learning  - Double Q-Learning  - (Optional) n-step TD\n\n\nOct 10, 2025\nFunction Approximation\nExam 1\n- OpenAI Gymansium Environment: MountainCar  - Value Function Approximation (VFA)  - On-Policy Function Approximation  - Semi-gradient SARSA  - Limitations of Off-Policy Function Approximation\n\n\nOct 24, 2025\nDeep Q-Networks\nQuiz 5\n- OpenAI Gymansium Environment: BreakOut  - Multi-Layered Perceprtons (MLPs)  - Convolutional Neural Networks (CNNs)  - Experience Replay  - Fixed Targets  - Vanilla Deep Q-Network\n\n\nOct 31, 2025\nPolicy Gradients\nQuiz 6\n- OpenAI Gymansium Environment: CartPole  - Policy Gradient Theorem  - Vanilla Policy Gradient\n\n\nNov 7, 2025\nAdvanced Policy Gradients\nQuiz 7\n- OpenAI Gymansium Environment: HalfCheetah  - Trust Region Policy Optimization (TRPO)  - Proximal Policy Optimization: KL-Divergence  - Proximal Policy Optimization: Clip\n\n\nNov 14, 2025\nThanksgiving Break\n\n\n\n\nNov 21, 2025\nMonte Carlo Tree Search\nExam 2\n- OpenAI Gymansium Environment: Tic Tac Toe  - Model-based Reinforcement Learning  - Monte Carlo Tree Search  - AlphaGo  - MuZero\n\n\nOct 28, 2025\nConclusion\n\n\n\n\nDec 5, 2025\nFinal Project Submission",
+    "text": "Course Outline\n\n\n\n\n\n\n\n\n\nWeek\nTopic\nQuiz/Exams\nSubjects\n\n\n\n\nAug 29, 2025\nIntroduction to Reinforcement Learning\n\n- Course Outline  - Why should I study Reinforcement Learning?  - What is Reinforcement Learning?  - Where is Reinforcement Learning Applied?  - How is Reinforcement Learning Structured? \n\n\nSep 5, 2025\nMathematical Foundations\n\n- Set Theory  - Axiomatic Probability  - Conditioning  - Independence  - Random Variables  - Expectation  - Probability Distribution\n\n\nSep 12, 2025\nMulti-Armed Bandits\nQuiz 1\n- Multi-Armed Bandit Framework  - \\(\\epsilon\\)-Greedy  - Upper Confidence Boundary (UCB)  - Thompson Sampling\n\n\nSep 19, 2025\nDynamic Programming\nQuiz 2\n- Markov Chain  - Markov Decision Process (MDPs)  - Dynamic Programming\n\n\nSep 26, 2025\nMonte Carlo Methods\nQuiz 3\n- OpenAI Gymansium Environment: GridWorld  - On-Policy Monte Carlo  - Off-Policy Monte Carlo\n\n\nOct 3, 2025\nTemporal-Difference\nQuiz 4\n- OpenAI Gymansium Environment: GridWorld  - Temporal Difference Prediction  - SARSA  - Q-Learning  - Double Q-Learning  - (Optional) n-step TD\n\n\nOct 10, 2025\nFunction Approximation\nExam 1\n- OpenAI Gymansium Environment: MountainCar  - Value Function Approximation (VFA)  - On-Policy Function Approximation  - Semi-gradient SARSA  - Limitations of Off-Policy Function Approximation\n\n\nOct 24, 2025\nDeep Q-Networks\nQuiz 5\n- OpenAI Gymansium Environment: BreakOut  - Multi-Layered Perceprtons (MLPs)  - Convolutional Neural Networks (CNNs)  - Experience Replay  - Fixed Targets  - Vanilla Deep Q-Network\n\n\nOct 31, 2025\nPolicy Gradients\nQuiz 6\n- OpenAI Gymansium Environment: CartPole  - Policy Gradient Theorem  - Vanilla Policy Gradient\n\n\nNov 7, 2025\nAdvanced Policy Gradients\nQuiz 7\n- OpenAI Gymansium Environment: HalfCheetah  - Trust Region Policy Optimization (TRPO)  - Proximal Policy Optimization: KL-Divergence  - Proximal Policy Optimization: Clip\n\n\nNov 14, 2025\nThanksgiving Break\n\n\n\n\nNov 21, 2025\nMonte Carlo Tree Search\nExam 2\n- OpenAI Gymansium Environment: Tic Tac Toe  - Model-based Reinforcement Learning  - Monte Carlo Tree Search  - AlphaGo  - MuZero\n\n\nOct 28, 2025\nConclusion\n\n\n\n\nDec 5, 2025\nFinal Project Submission",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -764,7 +764,7 @@
     "href": "homework/homework1.html",
     "title": "Homework 1",
     "section": "",
-    "text": "No Homework! Enjoy!",
+    "text": "No Homework! Enjoy! 😊",
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Homework 1</span>"
@@ -2005,7 +2005,7 @@
   {
     "objectID": "lecture4/lecture4-1.html",
     "href": "lecture4/lecture4-1.html",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "",
     "text": "Markov Models\nAll Markov models assume the Markov Property, meaning that future states depend only on current states and not previous states.\n\\[\nP(s’ | s, s_{t-1}, s_{t-2}, \\dots) = P(s’ | s)\n\\]\nMarkov models differ based on whether every sequential state is observable and whether the system is adjusted based on observations:",
     "crumbs": [
@@ -2027,7 +2027,7 @@
   {
     "objectID": "lecture4/lecture4-1.html#probability-matrix",
     "href": "lecture4/lecture4-1.html#probability-matrix",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "Probability Matrix",
     "text": "Probability Matrix\nSuppose a frog jumps from one lily pad to another with state transition probabilities:\n\n\n\n\\[\n\\mathbf{P} = \\begin{bmatrix} 0.2 & 0.6 \\\\ 0.8 & 0.4 \\end{bmatrix}\n\\]",
     "crumbs": [
@@ -2038,7 +2038,7 @@
   {
     "objectID": "lecture4/lecture4-1.html#rewards-matrix",
     "href": "lecture4/lecture4-1.html#rewards-matrix",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "Rewards Matrix",
     "text": "Rewards Matrix\nSuppose the frog has associated rewards:\n\n\n\n\\[\n\\mathbf{R} = \\begin{bmatrix} 6 & 1 \\\\ 1 & -2 \\end{bmatrix}\n\\]",
     "crumbs": [
@@ -2049,7 +2049,7 @@
   {
     "objectID": "lecture4/lecture4-2.html",
     "href": "lecture4/lecture4-2.html",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "",
     "text": "Markov Decision Process\nA Markov Decision Process (MDP) is a model for transitions that are controlled between fully observable states.  The Agent is the learner and decision-maker.  The Environment is everything external to the agent.  From an Initial State, the agent interacts with the environment through its Actions.  These actions continuously give rise to different States and Rewards.",
     "crumbs": [
@@ -2060,7 +2060,7 @@
   {
     "objectID": "lecture4/lecture4-2.html#markov-decision-process",
     "href": "lecture4/lecture4-2.html#markov-decision-process",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "",
     "text": "Environment GridWorld\n\n\n\n\n\n\nActions are equally likely to occur. \nActions that take the agent out of the environment receive a reward of \\(-1\\), actions that take the agent to the terminal state (shaded in gray) receive a reward of \\(+1\\), and all other actions receive a reward of \\(0\\). \nOur objective is to calculate the shortest path from any state to the optimal state.",
     "crumbs": [
@@ -2082,7 +2082,7 @@
   {
     "objectID": "lecture4/lecture4-2.html#sequential-interaction",
     "href": "lecture4/lecture4-2.html#sequential-interaction",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "Sequential Interaction",
     "text": "Sequential Interaction\nFor a finite discrete number of time steps \\(t = 0, 1, 2, 3...,T\\) (where \\(T\\) is the terminal time step marking the end of an episode) the sequential interaction is:\n\nThe agent receives an interpretation from the state \\(s_t \\in S\\).\nThe agent makes an action \\(a_t \\in A(s_t)\\) based on the situation.\nThe agent receives a reward \\(r_{t+1} \\in R \\subseteq \\mathbb{R}\\) from its environment and finds itself in a new state \\(s_{t+1}\\) based on the action taken.\n\nThe sequence continues in the form:\n\\[\ns_0, a_0, r_1, s_1, a_1, r_2, s_2, a_2, r_3,...\n\\]\n\nEnvironment GridWorld\nSequential interaction for one episode:\n\n\n\n\n\nNotice that, for now, state transitions are deterministic. In other words, we assume a perfect model of the environment. We do not care about stochastic state transitions (this is something that we will visit in the next lectures).",
     "crumbs": [
@@ -2104,7 +2104,7 @@
   {
     "objectID": "lecture4/lecture4-2.html#policy",
     "href": "lecture4/lecture4-2.html#policy",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "Policy",
     "text": "Policy\nA Policy is a mapping from states to probabilities of selecting each possible action, denoted as:\n\\[\n\\pi(a|s)\n\\]\n\n\n\n\n\n\\[\n\\sum_{a \\in A(s)} \\pi(a|s) = 1 \\quad \\text{for all } s \\in S\n\\]\n\nEnvironment GridWorld\n\n\n\n\n\nSince all actions are equally likely, we are said to be following a random policy:\n\\[\n\\pi(a_0|s_0) = \\frac{1}{4}\n\\]",
     "crumbs": [
@@ -2126,7 +2126,7 @@
   {
     "objectID": "lecture4/lecture4-2.html#dynamic-function",
     "href": "lecture4/lecture4-2.html#dynamic-function",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "Dynamic Function",
     "text": "Dynamic Function\nThe dynamic function is a mapping of the state transition probabilities of the MDP for each possible reward:\n\\[\np(s^{'}, r | s, a)\n\\]\n\n\n\n\n\nAs mentioned before, the dynamics of GridWorld are deterministic leading to the same new state given each state and action:\n\\[\n\\sum_{s^{'} \\in S}\\sum_{r \\in R} p(s^{'}, r| s, a) = 1 \\quad \\text{for all } s \\in S \\text{ and } a \\in A(s)\n\\]\n\nEnvironment GridWorld\n\n\n\n\n\nAs mentioned before, the dynamics of GridWorld are deterministic, leading to the same new state given each state and action:\n\\[\np(s_{1}, r_{1}| s_0, a_{0}) = 1\n\\]",
     "crumbs": [
@@ -2148,7 +2148,7 @@
   {
     "objectID": "lecture4/lecture4-2.html#goal",
     "href": "lecture4/lecture4-2.html#goal",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "Goal",
     "text": "Goal\nOur Goal \\(G_{t}\\) is to maximize the expected return of the discounted reward sequence:\n\\[\n\\begin{aligned}\nG_{t} = r_{t+1} + \\gamma r_{t+2} + \\ldots + \\gamma^{T-1} r_{T} \\\\\n     = r_{t+1} + \\gamma (r_{t+2} + \\ldots + \\gamma^{T-2} r_{T}) \\\\\n     = r_{t+1} + \\gamma G_{t+1}\n\\end{aligned}\n\\]\n\nExercise\nSuppose \\(\\gamma = 0.5\\) and the following sequence of rewards is received \\(r_{1} = -1\\), \\(r_{2} = 2\\), \\(r_{3} = 6\\), \\(r_{4} = 3\\), and \\(r_{5} = 2\\), with \\(T = 5\\). What are \\(G_{0}\\), \\(G_{1}\\), …, \\(G_{5}\\)?\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\[\n\\begin{aligned}\nG_{5} &= r_{6} + r_{7} + \\dots = 0 \\\\\nG_{4} &= r_{5} + 0.5(G_{5}) = 2 \\\\\nG_{3} &= r_{4} + 0.5(G_{4}) = 4 \\\\\nG_{2} &= r_{3} + 0.5(G_{3}) = 8 \\\\\nG_{1} &= r_{2} + 0.5(G_{2}) = 6 \\\\\nG_{0} &= r_{1} + 0.5(G_{1}) = 2 \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
@@ -2170,7 +2170,7 @@
   {
     "objectID": "lecture4/lecture4-2.html#value-functions",
     "href": "lecture4/lecture4-2.html#value-functions",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "Value Functions",
     "text": "Value Functions\nValue Functions calculate the expected reward when starting from the state \\(s\\) and then interacting with the environment according to the policy \\(\\pi\\), denoted as:\n\\[\nv_{\\pi}(s) = \\mathbb{E_{\\pi}}[G_{t}| \\ s]\n\\]\n\n\n\n\n\n\nBellman Equation\nFor any policy \\(\\pi\\) and any state \\(s\\), the Bellman equation holds:\n\\[\n\\begin{aligned}\nv_{\\pi}(s) &= \\mathbb{E_{\\pi}}[G_{t}| \\ s] \\\\\n&= \\mathbb{E_{\\pi}}[r_{t+1} + \\gamma G_{t+1}| \\ s] \\\\\n&= \\sum_{a} \\pi(a|s) \\sum_{s^{'},r} p(s^{'},r|s,a)[r_{t+1} + \\gamma \\mathbb{E_{\\pi}}[G_{t+1}| \\ s]] \\\\\n&= \\underbrace{\\sum_{a} \\pi(a|s)}_{Policy} \\underbrace{\\sum_{s^{'}, r} p(s^{'},r|s,a)}_{Dynamic \\ Function}\\underbrace{[r_{t+1} + \\gamma v_{\\pi}(s^{'})]}_{Discounted \\ Reward \\ Sequence}\n\\end{aligned}\n\\]\n\nExercise\nFor the first episode, calculate the value of each state using the Bellman equation:\n\\[\nv_{\\pi}(s) = \\sum_{a} \\pi(a|s) \\sum_{s^{'}, r} p(s^{'},r|s,a)[r + \\gamma v_{\\pi}(s^{'})]\n\\]\n\n\n\n\n\n\n\n\n\n\n\nSolution",
     "crumbs": [
@@ -2214,7 +2214,7 @@
   {
     "objectID": "lecture4/lecture4-2.html#action-value-functions",
     "href": "lecture4/lecture4-2.html#action-value-functions",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "Action Value Functions",
     "text": "Action Value Functions\nAction Value Functions estimate how good it is for an agent to follow policy \\(\\pi\\) given the action taken under the previous state:\n\\[\nq_{\\pi}(s, a) = \\mathbb{E_{\\pi}}[G_{t}| \\ s, \\ a]\n\\]\n\n\n\n\n\n\nBellman Equation\nThe action value function is also expressed in terms of the Bellman equation:\n\\[\n\\begin{align}\n    q_{\\pi}(s, a) & = \\mathbb{E_{\\pi}}[G_{t}| \\ s, \\ a] \\\\\n     & = \\underbrace{\\sum_{s^{'}, r} p(s^{'},r|s,a)}_{Dynamic \\ Function} \\underbrace{[r + \\gamma v_{\\pi}(s^{'})]}_{Discounted \\ Reward \\  Sequence}\n\\end{align}\n\\]\nNotice that the policy is no longer calculated (since an action has already taken place according to the policy), and that the quality of following policy \\(\\pi\\) is calculated in \\(v_{\\pi}(s^{'})\\).",
     "crumbs": [
@@ -2236,7 +2236,7 @@
   {
     "objectID": "lecture4/lecture4-2.html#optimal-policy",
     "href": "lecture4/lecture4-2.html#optimal-policy",
-    "title": "Markov Decision Process (MDPs)",
+    "title": "4.2 Markov Decision Process (MDPs)",
     "section": "Optimal Policy",
     "text": "Optimal Policy\nAn optimal policy \\(\\pi\\) is defined to be better than or equal to a policy \\(\\pi^{'}\\) if its expected return is greater than or equal to that of \\(\\pi^{'}\\) for all states:\n\\[\n\\pi \\geq \\pi^{'} \\quad \\text{I.F.F.} \\quad v_{\\pi} \\geq v_{\\pi^{'}} \\quad \\forall s \\in S\n\\]\nSince there may be more than one optimal policy, we denote all optimal policies by \\(\\pi_{*}\\).\n\nOptimal Value Function\n\\[\nv_{*}(s) = \\max_{a} \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\n\n\n\n\nOptimal Action-Value Function\n\\[\nq_{*}(s, a) = \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\n\n\n\nExercise\nFor the first episode, calculate the optimal value for each state using the bellman equation:\n\\[\nv_{*}(s) = \\max_{a} \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\nNotice the behavior of the optimal policy as \\(\\pi_{*} \\to \\infty\\)",
     "crumbs": [
@@ -2269,7 +2269,7 @@
   {
     "objectID": "lecture4/lecture4-3.html",
     "href": "lecture4/lecture4-3.html",
-    "title": "Dynamic Programming",
+    "title": "4.3 Dynamic Programming",
     "section": "",
     "text": "Dynamic Programming\nDynamic Programming refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).\nThese algorithms have limited utility in reinforcement learning due to their assumption of a perfect model and their computational expense, but they are still important theoretically.\nIn fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.",
     "crumbs": [
@@ -2280,7 +2280,7 @@
   {
     "objectID": "lecture4/lecture4-3.html#dynamic-programming",
     "href": "lecture4/lecture4-3.html#dynamic-programming",
-    "title": "Dynamic Programming",
+    "title": "4.3 Dynamic Programming",
     "section": "",
     "text": "Pseudocode\n\n\n\\begin{algorithm} \\caption{Iterative Policy Evaluation (Prediction)}\\begin{algorithmic} \\State \\textbf{Initialize:} \\State $V(s) \\gets 0$ for all $s \\in S$ \\State $\\gamma \\in [0,1)$ \\State $\\theta \\gets 10^{-4}$ \\Comment{small positive number for accuracy of estimation} \\Repeat \\State $\\Delta \\gets 0$ \\ForAll{$s \\in S$} \\State $v \\gets V(s)$ \\State $V(s) \\gets \\sum_{a} \\pi(a|s) \\sum_{s',r} p(s',r|s,a) \\left[ r + \\gamma V(s') \\right]$ \\State $\\Delta \\gets \\max(\\Delta, |v - V(s)|)$ \\EndFor \\Until{$\\Delta &lt; \\theta$} \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
@@ -2313,7 +2313,7 @@
   {
     "objectID": "lecture4/lecture4-3.html#policy-improvement",
     "href": "lecture4/lecture4-3.html#policy-improvement",
-    "title": "Dynamic Programming",
+    "title": "4.3 Dynamic Programming",
     "section": "Policy Improvement",
     "text": "Policy Improvement\nWe know how good it is to follow the current policy from \\(s\\) — that is \\(v_{\\pi}(s)\\) — but would it be better or worse to change to a new policy \\(\\pi^{'}\\)?\nOne way to check if it is better to switch from policy \\(\\pi\\) to \\(\\pi^{'}\\) is by checking if the following inequality holds:\n\\[\nq_{\\pi}(s, \\pi^{'}(s)) \\geq v_{\\pi}(s)\n\\]\nIntuition: If selecting \\(a\\) in \\(s\\) and thereafter following policy \\(\\pi\\) is better than just following \\(\\pi\\), then there must be a better policy \\(\\pi^{'}\\).\nThe special case when this inequality is true is referred to as the policy improvement theorem.",
     "crumbs": [
@@ -2324,7 +2324,7 @@
   {
     "objectID": "lecture4/lecture4-3.html#value-iteration",
     "href": "lecture4/lecture4-3.html#value-iteration",
-    "title": "Dynamic Programming",
+    "title": "4.3 Dynamic Programming",
     "section": "Value Iteration",
     "text": "Value Iteration\nOne drawback of policy iteration is that policy evaluation is done iteratively, requiring convergence exactly to \\(v_{\\pi}\\), which occurs only in the limit.\nValue Iteration is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.\n\nPseudocode\n\n\n\\begin{algorithm} \\caption{Value Iteration} \\begin{algorithmic} \\State \\textbf{Initialize:} \\State $V(s) \\gets 0$ for all $s \\in S$ \\State $\\gamma \\in [0,1)$ \\State $\\theta \\gets 10^{-4}$ \\textit{// small positive number for accuracy of estimation} \\Repeat \\State $\\Delta \\gets 0$ \\Forall{$s \\in S$} \\State $v \\gets V(s)$ \\State $V(s) \\gets \\max_a \\sum_{s^{'},r} p(s^{'},r|s,a) \\left[ r + \\gamma V(s^{'}) \\right]$ \\State $\\Delta \\gets \\max(\\Delta, |v - V(s)|)$ \\Endfor \\Until{$\\Delta &lt; \\theta$} \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
@@ -2346,7 +2346,7 @@
   {
     "objectID": "lecture4/lecture4-3.html#generalized-policy-iteration",
     "href": "lecture4/lecture4-3.html#generalized-policy-iteration",
-    "title": "Dynamic Programming",
+    "title": "4.3 Dynamic Programming",
     "section": "Generalized Policy Iteration",
     "text": "Generalized Policy Iteration\n\n\nGeneralized Policy Iteration refers to the general idea of letting policy evaluation and policy improvement processes interact, regardless of anything else.\nAlmost all of RL can be described as the policy always being improved with respect to the value function, and the value function always being driven toward the value function for the policy.",
     "crumbs": [
@@ -2379,7 +2379,7 @@
   {
     "objectID": "lecture4/lecture4-1.html#markov-models",
     "href": "lecture4/lecture4-1.html#markov-models",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "",
     "text": "States are fully observable\nStates are partially observable\n\n\n\n\nDecision-making is not controlled\nMarkov Chain\nHidden Markov Model\n\n\nDecision-making is controlled\nMarkov Decision Process\nPartially Observable Markov Decision Process",
     "crumbs": [
@@ -2390,7 +2390,7 @@
   {
     "objectID": "lecture4/lecture4-1.html#markov-chain",
     "href": "lecture4/lecture4-1.html#markov-chain",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "Markov Chain",
     "text": "Markov Chain\nA Markov Chain is a model for transitions that are not controlled between fully observable states.  A State is a node.  A State Transition is one outward-going arrow.  State transitions are conditional probabilities of going to the next state given the current state.",
     "crumbs": [
@@ -2401,7 +2401,7 @@
   {
     "objectID": "lecture4/lecture4-1.html#value-function",
     "href": "lecture4/lecture4-1.html#value-function",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "Value Function",
     "text": "Value Function\nWe want to calculate the expected value of moving from state \\(i\\) to state \\(j\\) for all situations \\(s \\in \\{1,2,...,S\\}\\):\n\\[\n\\begin{align*}\nv_{j}(t) & = \\sum_{i=1}^{S} p_{i,j} \\ [r_{i,j}+v_{i}(t-1)] \\\\\n& = \\sum_{i=1}^{S} p_{i,j} \\ r_{i,j} + \\sum_{i=1}^{S} p_{i,j} \\ v_{i}(t-1) \\\\\n& = \\textbf{q} + \\sum_{i=1}^{S} p_{i,j}\\ v_{i}(t-1)\n\\end{align*}\n\\]\n\\[\n\\mathbf{v}(t) = \\mathbf{q} + \\mathbf{v}(t-1) \\mathbf{P}\n\\]\nFirst, we need to calculate \\(\\textbf{q}\\), the expected reward in the next transition out of state \\(i\\):\n\\[\n\\mathbf{q} = \\sum_{i=1}^{S} p_{i,j} r_{i,j}\n\\]\n\\[\nq_{1} = p_{1,1} \\ r_{1,1} + r_{2,1} \\ p_{2,1}\n\\]\n\\[\nq_{2} = p_{1,2} \\ r_{1,2} + r_{2,2} \\ p_{2,2}\n\\]\n\\[\n\\textbf{q} =\n\\begin{bmatrix}\n    2 & -0.2\n\\end{bmatrix}\n\\]\n\\[\n\\begin{bmatrix} v_{1}(t) \\ v_{2}(t) \\end{bmatrix} = \\begin{bmatrix} 2 \\ -0.2 \\end{bmatrix} + \\begin{bmatrix} v_{1}(t-1) \\ v_{2}(t-1) \\end{bmatrix} \\begin{bmatrix} 0.2 & 0.6 \\\\ 0.8 & 0.4 \\end{bmatrix}\n\\]\nAt \\(t=100\\): \\[\n\\mathbf{v}(100) = \\begin{bmatrix} 77.88 & 76.59 \\end{bmatrix}\n\\]\nIn other words, the frogs expected value at \\(t = 100\\) is that lilly pad \\(1\\) will be greater (with \\(77.88\\) expected flies) than that of lilly pad \\(2\\) (with \\(76.59\\) expected flies)",
     "crumbs": [
@@ -2412,7 +2412,7 @@
   {
     "objectID": "lecture4/lecture4-1.html#asymptotic-behavior",
     "href": "lecture4/lecture4-1.html#asymptotic-behavior",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "Asymptotic Behavior",
     "text": "Asymptotic Behavior",
     "crumbs": [
@@ -2423,7 +2423,7 @@
   {
     "objectID": "lecture4/lecture4-1.html#discounting-factor",
     "href": "lecture4/lecture4-1.html#discounting-factor",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "Discounting Factor",
     "text": "Discounting Factor\nThe \\(\\gamma\\) allows us to place a higher value on the present rewards, rather than future uncertain rewards.\n\\[\n\\mathbf{v}(t) = \\mathbf{q} + \\gamma \\mathbf{v}(t-1) \\mathbf{P}\n\\]\n\\[\n\\begin{bmatrix} v_{1}(t) \\ v_{2}(t) \\end{bmatrix} = \\begin{bmatrix} 2 \\ -0.2 \\end{bmatrix} + \\gamma \\begin{bmatrix} v_{1}(t-1) \\ v_{2}(t-1) \\end{bmatrix} \\begin{bmatrix} 0.2 & 0.6 \\\\ 0.8 & 0.4 \\end{bmatrix}\n\\]\nAt \\(\\gamma=0.9\\) and \\(t=100\\): \\[\n\\mathbf{v}(100) = \\begin{bmatrix} 8.47 & 7.15 \\end{bmatrix}\n\\]",
     "crumbs": [
@@ -2434,7 +2434,7 @@
   {
     "objectID": "lecture4/lecture4-1.html#discounted-asymptotic-behavior",
     "href": "lecture4/lecture4-1.html#discounted-asymptotic-behavior",
-    "title": "Markov Chain",
+    "title": "4.1 Markov Chain",
     "section": "Discounted Asymptotic Behavior",
     "text": "Discounted Asymptotic Behavior",
     "crumbs": [

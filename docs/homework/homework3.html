@@ -433,7 +433,7 @@ Note
 </section>
 <section id="coding-exercise-8-exp3-algorithm-and-recommendation-system" class="level2">
 <h2 class="anchored" data-anchor-id="coding-exercise-8-exp3-algorithm-and-recommendation-system">Coding Exercise 8: EXP3 Algorithm and Recommendation System</h2>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-indent-size="1.2em" data-line-number="true" data-comment-delimiter="//" data-no-end="false" data-caption-prefix="Algorithm" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-no-end="false" data-line-number-punc=":" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-line-number="true" data-pseudocode-number="1">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB EXP3} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets \frac{1}{k}$ \State $W(a) \gets 1$ \\ \For{$t$ in range($len(data)$)} \State $Q(a) \gets (1 - \gamma) \frac{W(a)}{\sum_{i=1}^{k} W(a_{i})} + \frac{\gamma}{k}$ \\ \State $A_t \gets$ random choice with probabilities $Q(a)$ \\ \State $R_t \gets \text{bandit}(A_t)$ \State $\hat{R_t} \gets \begin{cases} \frac{R_t}{Q(A_t)} &amp; \text{if } A_t = a\\ 0 &amp; \text{else} \end{cases}$ \State $W(a) \gets W(a) e^{\frac{\gamma \hat{R_t}}{k}}$ \Endfor \end{algorithmic} \end{algorithm}
 </div>
@@ -441,7 +441,7 @@ Note
 </section>
 <section id="coding-exercise-9-gradient-method-algorithm-and-recommendation-system" class="level2">
 <h2 class="anchored" data-anchor-id="coding-exercise-9-gradient-method-algorithm-and-recommendation-system">Coding Exercise 9: Gradient Method Algorithm and Recommendation System</h2>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-indent-size="1.2em" data-line-number="true" data-comment-delimiter="//" data-no-end="false" data-caption-prefix="Algorithm" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-no-end="false" data-line-number-punc=":" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-line-number="true" data-pseudocode-number="1">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB Gradient Method} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets 0$ \State $N(a) \gets 0$ \State $H(a) \gets 0$ \\ \For{$t$ in range($len(data)$)} \State $\pi(a) \gets \text{softmax}(H(a))$ \State $A_t \gets \text{argmax}_a(\pi(a))$ \State $R_t \gets \text{bandit}(A_t)$ \State $N(A_t) \gets N(A_t) + 1$ \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$ \State $H(a) \gets \begin{cases} H(A_t) + \alpha (R_t - Q(A_t)) (1 - \pi(A_t)) &amp; \text{if } A_t = a\\ H(a) - \alpha (R_t - Q(a)) \pi(a) &amp; \text{else} \end{cases}$ \Endfor \end{algorithmic} \end{algorithm}
 </div>

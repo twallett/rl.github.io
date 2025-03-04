@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dynamic Programming</title>
+<title>4.3 Dynamic Programming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">Dynamic Programming</span></h1>
+        <h1 class="quarto-secondary-nav-title no-breadcrumbs"><span class="chapter-title">4.3 Dynamic Programming</span></h1>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -352,7 +352,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">Dynamic Programming</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">4.3 Dynamic Programming</span></h1>
 </div>
 
 
@@ -386,7 +386,7 @@ window.Quarto = {
 <p>In fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.</p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-no-end="false" data-line-number="true" data-indent-size="1.2em" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-line-number="true" data-comment-delimiter="//" data-line-number-punc=":" data-indent-size="1.2em" data-pseudocode-number="1" data-no-end="false" data-caption-prefix="Algorithm">
 <div class="pseudocode">
 \begin{algorithm} \caption{Iterative Policy Evaluation (Prediction)}\begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $\gamma \in [0,1)$ \State $\theta \gets 10^{-4}$ \Comment{small positive number for accuracy of estimation} \Repeat \State $\Delta \gets 0$ \ForAll{$s \in S$} \State $v \gets V(s)$ \State $V(s) \gets \sum_{a} \pi(a|s) \sum_{s',r} p(s',r|s,a) \left[ r + \gamma V(s') \right]$ \State $\Delta \gets \max(\Delta, |v - V(s)|)$ \EndFor \Until{$\Delta &lt; \theta$} \end{algorithmic} \end{algorithm}
 </div>
@@ -412,7 +412,7 @@ q_{\pi}(s, \pi^{'}(s)) \geq v_{\pi}(s)
 <p><strong>Value Iteration</strong> is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.</p>
 <section id="pseudocode-1" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode-1">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-no-end="false" data-line-number="true" data-indent-size="1.2em" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-line-number="true" data-comment-delimiter="//" data-line-number-punc=":" data-indent-size="1.2em" data-pseudocode-number="1" data-no-end="false" data-caption-prefix="Algorithm">
 <div class="pseudocode">
 \begin{algorithm} \caption{Value Iteration} \begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $\gamma \in [0,1)$ \State $\theta \gets 10^{-4}$ \textit{// small positive number for accuracy of estimation} \Repeat \State $\Delta \gets 0$ \Forall{$s \in S$} \State $v \gets V(s)$ \State $V(s) \gets \max_a \sum_{s^{'},r} p(s^{'},r|s,a) \left[ r + \gamma V(s^{'}) \right]$ \State $\Delta \gets \max(\Delta, |v - V(s)|)$ \Endfor \Until{$\Delta &lt; \theta$} \end{algorithmic} \end{algorithm}
 </div>

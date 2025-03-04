@@ -290,12 +290,43 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Homeworks</span></a>
+ <span class="menu-text">Lecture 5: Monte Carlo</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture5/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture5/lecture5-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5.1 Monte Carlo Prediction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture5/lecture5-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5.2 On-Policy Monte Carlo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture5/lecture5-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5.3 Off-Policy Monte Carlo</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homeworks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 1</span></a>
@@ -314,6 +345,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 5</span></a>
   </div>
 </li>
       </ul>
@@ -397,7 +433,7 @@ VAR \uparrow = \sqrt{\frac{2 \ln(t) \uparrow}{N(a)}}
 </section>
 <section id="pseudocode" class="level2">
 <h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
-<div class="pseudocode-container quarto-float" data-line-number="true" data-pseudocode-number="1" data-caption-prefix="Algorithm" data-no-end="false" data-indent-size="1.2em" data-line-number-punc=":" data-comment-delimiter="//">
+<div class="pseudocode-container quarto-float" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-pseudocode-number="1" data-no-end="false" data-line-number="true" data-line-number-punc=":" data-comment-delimiter="//">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB Upper Confidence Boundary (UCB)} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets 0$ \State $N(a) \gets 0$ \\ \For{$t$ in range($len(data)$)} \State $A_t \gets argmax_a[Q(a) + \sqrt{(\frac{2 ln(t)}{N(a)})}]$ \State $R_t \gets \text{bandit}(A_t)$ \State $N(A_t) \gets N(A_t) + 1$ \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$ \Endfor \end{algorithmic} \end{algorithm}
 </div>

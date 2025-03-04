@@ -1,5 +1,5 @@
 ---
-title: "Dynamic Programming"
+title: "4.3 Dynamic Programming"
 format:
   html:
     number-sections: false

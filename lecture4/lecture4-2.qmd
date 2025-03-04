@@ -1,5 +1,5 @@
 ---
-title: "Markov Decision Process (MDPs)"
+title: "4.2 Markov Decision Process (MDPs)"
 format:
   html:
     number-sections: false

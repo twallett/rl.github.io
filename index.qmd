@@ -138,7 +138,7 @@ pip install stable-baselines3
 | Aug 29, 2025 | Introduction to Reinforcement Learning | | - Course Outline  <br> - Why should I study Reinforcement Learning? <br> - What is Reinforcement Learning?  <br> - Where is Reinforcement Learning Applied?  <br> - How is Reinforcement Learning Structured? <br>|
 | Sep 5, 2025  | Mathematical Foundations       | | - Set Theory <br> - Axiomatic Probability <br> - Conditioning <br> - Independence <br> - Random Variables <br> - Expectation <br> - Probability Distribution |
 | Sep 12, 2025 | Multi-Armed Bandits            | Quiz 1      | - Multi-Armed Bandit Framework  <br> - $\epsilon$-Greedy  <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling |
-| Sep 19, 2025 | Dynamic Programming            | Quiz 2      | - Markov Chain <br> - Markov Decision Process <br> - Bellman Equations <br> - Dynamic Programming |
+| Sep 19, 2025 | Dynamic Programming            | Quiz 2      | - Markov Chain <br> - Markov Decision Process (MDPs) <br> - Dynamic Programming |
 | Sep 26, 2025 | Monte Carlo Methods            | Quiz 3      | - OpenAI Gymansium Environment: GridWorld <br> - On-Policy Monte Carlo  <br> - Off-Policy Monte Carlo |
 | Oct 3, 2025  | Temporal-Difference            | Quiz 4      | - OpenAI Gymansium Environment: GridWorld <br> - Temporal Difference Prediction <br> - SARSA  <br> - Q-Learning  <br> - Double Q-Learning <br> - (Optional) n-step TD|
 | Oct 10, 2025 | Function Approximation         | **Exam 1**  | - OpenAI Gymansium Environment: MountainCar <br> - Value Function Approximation (VFA) <br> - On-Policy Function Approximation <br> - Semi-gradient SARSA <br> - Limitations of Off-Policy Function Approximation |
