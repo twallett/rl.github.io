@@ -764,7 +764,7 @@
     "href": "homework/homework1.html",
     "title": "Homework 1",
     "section": "",
-    "text": "Question 1\nWrite some of the elements of the following sets:\nWrite the following sets in set notation:",
+    "text": "No Homework! Enjoy!",
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Homework 1</span>"
@@ -1490,10 +1490,10 @@
     "href": "homework/homework2.html",
     "title": "Homework 2",
     "section": "",
-    "text": "Coding Exercise 1: Load Environments\nLoad existing Bernoulli and Gaussian environments from Utils.env using the default options and a random seed of 123.",
+    "text": "Question 1\nWrite some of the elements of the following sets:\nWrite the following sets in set notation:",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1504,7 +1504,7 @@
     "text": "\\(\\{ 5x-1: x \\in \\mathbb{Z} \\}\\)\n\\(\\{ x \\in \\mathbb{R}: \\sin \\pi x = 0 \\}\\)\n\\(\\{X : X \\subseteq \\{3,2,a\\} \\text{ and } |X|=2 \\}\\)\n\n\n\n\\(\\{ 2, 4, 8, 16, 32, 64, ...\\}\\)\n\\(\\{0,1,4,9,16,25,36, ...\\}\\)\n\\(\\{..., \\frac{1}{8},\\frac{1}{4},\\frac{1}{2},1,2,4,8,... \\}\\)",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1515,7 +1515,7 @@
     "text": "Coding Exercise 1\nThe binomial distribution PMF is:\n\\[\np_X(\\lambda) = {n \\choose k} \\lambda^n (1-\\lambda)^{n-k}\n\\]\nUsing Python, generate binomial data and create visualizations for \\(p_X(\\lambda)\\) and \\(F_X(\\lambda)\\).",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1845,7 +1845,7 @@
     "text": "Coding Exercise 2: Epsilon-Greedy Recommendation System\nUsing the existing Epsilon-Greedy (\\(\\epsilon = 0.10\\)) code, create a recommendation system.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1856,7 +1856,7 @@
     "text": "Coding Exercise 3: UCB Algorithm and Recommendation System\nCode the Upper Confidence Boundary (UCB) algorithm and create a recommendation system.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1867,7 +1867,7 @@
     "text": "Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System\nCode the Thompson Sampling algorithm and create a recommendation system.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1889,7 +1889,7 @@
     "text": "Coding Exercise 6: Random Seed Analysis\nUsing random seeds 0-50, for 10,000 recommendations, do the algorithms perform the same?",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1900,7 +1900,7 @@
     "text": "Coding Exercise 7: Amazon Dataset Analysis\nFor the Amazon.csv dataset, repeat exercise Coding Exercise 6 and find the most frequently recommended arm.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1911,7 +1911,7 @@
     "text": "Coding Exercise 8: EXP3 Algorithm and Recommendation System\n\n\n\\begin{algorithm} \\caption{MAB EXP3} \\begin{algorithmic} \\State Initialize, for $a = 1$ to $k$: \\State $Q(a) \\gets \\frac{1}{k}$ \\State $W(a) \\gets 1$ \\\\ \\For{$t$ in range($len(data)$)} \\State $Q(a) \\gets (1 - \\gamma) \\frac{W(a)}{\\sum_{i=1}^{k} W(a_{i})} + \\frac{\\gamma}{k}$ \\\\ \\State $A_t \\gets$ random choice with probabilities $Q(a)$ \\\\ \\State $R_t \\gets \\text{bandit}(A_t)$ \\State $\\hat{R_t} \\gets \\begin{cases} \\frac{R_t}{Q(A_t)} & \\text{if } A_t = a\\\\ 0 & \\text{else} \\end{cases}$ \\State $W(a) \\gets W(a) e^{\\frac{\\gamma \\hat{R_t}}{k}}$ \\Endfor \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1922,7 +1922,7 @@
     "text": "Coding Exercise 9: Gradient Method Algorithm and Recommendation System\n\n\n\\begin{algorithm} \\caption{MAB Gradient Method} \\begin{algorithmic} \\State Initialize, for $a = 1$ to $k$: \\State $Q(a) \\gets 0$ \\State $N(a) \\gets 0$ \\State $H(a) \\gets 0$ \\\\ \\For{$t$ in range($len(data)$)} \\State $\\pi(a) \\gets \\text{softmax}(H(a))$ \\State $A_t \\gets \\text{argmax}_a(\\pi(a))$ \\State $R_t \\gets \\text{bandit}(A_t)$ \\State $N(A_t) \\gets N(A_t) + 1$ \\State $Q(A_t) \\gets Q(A_t) + \\frac{1}{N(A_t)}[R_t - Q(A_t)]$ \\State $H(a) \\gets \\begin{cases} H(A_t) + \\alpha (R_t - Q(A_t)) (1 - \\pi(A_t)) & \\text{if } A_t = a\\\\ H(a) - \\alpha (R_t - Q(a)) \\pi(a) & \\text{else} \\end{cases}$ \\Endfor \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1999,7 +1999,7 @@
     "text": "Coding Exercise 5: MAB Algorithm Performance Comparison\nFor 10,000 recommendations:\n\nDoes Epsilon-Greedy (\\(\\epsilon = 0.10\\)) perform better in the Bernoulli or Gaussian environment?\nDoes UCB perform better in the Bernoulli or Gaussian environment?\nDoes Thompson Sampling perform better in the Bernoulli or Gaussian environment?\nWhich algorithm performs best in the Bernoulli environment?\nWhich algorithm performs best in the Gaussian environment?\n\nHint: Check the performance of each MAB by observing the most frequently recommended arm.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -2051,7 +2051,7 @@
     "href": "lecture4/lecture4-2.html",
     "title": "Markov Decision Process (MDPs)",
     "section": "",
-    "text": "Markov Decision Process",
+    "text": "Markov Decision Process\nA Markov Decision Process (MDP) is a model for transitions that are controlled between fully observable states.  The Agent is the learner and decision-maker.  The Environment is everything external to the agent.  From an Initial State, the agent interacts with the environment through its Actions.  These actions continuously give rise to different States and Rewards.",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2062,7 +2062,7 @@
     "href": "lecture4/lecture4-2.html#markov-decision-process",
     "title": "Markov Decision Process (MDPs)",
     "section": "",
-    "text": "A Markov Decision Process (MDP) is a model for transitions that are controlled between fully observable states.\nThe Agent is the learner and decision-maker.\nThe Environment is everything external to the agent.\nFrom an Initial State, the agent interacts with the environment through its Actions.\nThese actions continuously give rise to different States and Rewards.\n\n\n\n\nMDP Diagram",
+    "text": "Environment GridWorld\n\n\n\n\n\n\nActions are equally likely to occur. \nActions that take the agent out of the environment receive a reward of \\(-1\\), actions that take the agent to the terminal state (shaded in gray) receive a reward of \\(+1\\), and all other actions receive a reward of \\(0\\). \nOur objective is to calculate the shortest path from any state to the optimal state.",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2073,7 +2073,7 @@
     "href": "lecture4/lecture4-2.html#example-gridworld",
     "title": "Markov Decision Process (MDPs)",
     "section": "Example: GridWorld",
-    "text": "Example: GridWorld\n\nAgent, Environment, Initial State, and Actions:\n\n\n\n\nGridWorld\n\n\n\nActions are equally likely to occur.\nActions that take the agent out of the environment receive a reward of \\(-1\\), actions that take the agent to the terminal state (shaded in gray) receive a reward of \\(+1\\), and all other actions receive a reward of \\(0\\).\nOur objective is to calculate the shortest path from any state to the optimal state.",
+    "text": "Example: GridWorld\nAgent, Environment, Initial State, and Actions:\n\nActions are equally likely to occur.  Actions that take the agent out of the environment receive a reward of \\(-1\\), actions that take the agent to the terminal state (shaded in gray) receive a reward of \\(+1\\), and all other actions receive a reward of \\(0\\).  Our objective is to calculate the shortest path from any state to the optimal state.",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2084,7 +2084,7 @@
     "href": "lecture4/lecture4-2.html#sequential-interaction",
     "title": "Markov Decision Process (MDPs)",
     "section": "Sequential Interaction",
-    "text": "Sequential Interaction\n\nFor a finite discrete number of time steps \\(t = \\{0, 1, 2, 3...,T\\}\\) (where \\(T\\) is the terminal time step marking the end of an episode) the sequential interaction is:\n\n\nThe agent receives an interpretation from the state \\(s_t \\in S\\).\nThe agent makes an action \\(a_t \\in A(s_t)\\) based on the situation.\nThe agent receives a reward \\(r_{t+1} \\in R \\subseteq \\mathbb{R}\\) from its environment and finds itself in a new state \\(s_{t+1}\\) based on the action taken.\n\n\nThe sequence continues in the form:\n\n\\[\ns_0, a_0, r_1, s_1, a_1, r_2, s_2, a_2, r_3,...\n\\]",
+    "text": "Sequential Interaction\nFor a finite discrete number of time steps \\(t = 0, 1, 2, 3...,T\\) (where \\(T\\) is the terminal time step marking the end of an episode) the sequential interaction is:\n\nThe agent receives an interpretation from the state \\(s_t \\in S\\).\nThe agent makes an action \\(a_t \\in A(s_t)\\) based on the situation.\nThe agent receives a reward \\(r_{t+1} \\in R \\subseteq \\mathbb{R}\\) from its environment and finds itself in a new state \\(s_{t+1}\\) based on the action taken.\n\nThe sequence continues in the form:\n\\[\ns_0, a_0, r_1, s_1, a_1, r_2, s_2, a_2, r_3,...\n\\]\n\nEnvironment GridWorld\nSequential interaction for one episode:\n\n\n\n\n\nNotice that, for now, state transitions are deterministic. In other words, we assume a perfect model of the environment. We do not care about stochastic state transitions (this is something that we will visit in the next lectures).",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2095,7 +2095,7 @@
     "href": "lecture4/lecture4-2.html#example-gridworld-sequential-interaction",
     "title": "Markov Decision Process (MDPs)",
     "section": "Example: GridWorld Sequential Interaction",
-    "text": "Example: GridWorld Sequential Interaction\n\n\n\nGridWorld Interaction\n\n\n\nNotice that, for now, state transitions are deterministic. We assume a perfect model of the environment. Stochastic state transitions will be covered later.",
+    "text": "Example: GridWorld Sequential Interaction\nSequential interaction for one episode:\n\nNotice that, for now, state transitions are deterministic. In other words, we assume a perfect model of the environment. We do not care about stochastic state transitions (this is something that we will visit in the next lectures).",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2106,7 +2106,7 @@
     "href": "lecture4/lecture4-2.html#policy",
     "title": "Markov Decision Process (MDPs)",
     "section": "Policy",
-    "text": "Policy\n\nA Policy is a mapping from states to probabilities of selecting each possible action, denoted as:\n\\[\\pi(a|s)\\]\n\n\n\n\nPolicy Diagram\n\n\n\\[\\sum_{a \\in A(s)} \\pi(a|s) = 1 \\quad \\text{for all } s \\in S\\]",
+    "text": "Policy\nA Policy is a mapping from states to probabilities of selecting each possible action, denoted as:\n\\[\n\\pi(a|s)\n\\]\n\n\n\n\n\n\\[\n\\sum_{a \\in A(s)} \\pi(a|s) = 1 \\quad \\text{for all } s \\in S\n\\]\n\nEnvironment GridWorld\n\n\n\n\n\nSince all actions are equally likely, we are said to be following a random policy:\n\\[\n\\pi(a_0|s_0) = \\frac{1}{4}\n\\]",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2117,7 +2117,7 @@
     "href": "lecture4/lecture4-2.html#example-gridworld-policy",
     "title": "Markov Decision Process (MDPs)",
     "section": "Example: GridWorld Policy",
-    "text": "Example: GridWorld Policy\n\n\n\nGridWorld Policy",
+    "text": "Example: GridWorld Policy\n\nSince all actions are equally likely, we are said to be following a random policy:\n\\[\n\\pi(a_0|s_0) = \\frac{1}{4}\n\\]",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2128,7 +2128,7 @@
     "href": "lecture4/lecture4-2.html#dynamic-function",
     "title": "Markov Decision Process (MDPs)",
     "section": "Dynamic Function",
-    "text": "Dynamic Function\nThe dynamic function is a mapping of the state transition probabilities of the MDP for each possible reward:\n\\[p(s^{'}, r | s, a)\\]\n\nThe function satisfies the following constraint:\n\\[\\sum_{s^{'} \\in S}\\sum_{r \\in R} p(s^{'}, r| s, a) = 1 \\quad \\text{for all } s \\in S \\text{ and } a \\in A(s)\\]",
+    "text": "Dynamic Function\nThe dynamic function is a mapping of the state transition probabilities of the MDP for each possible reward:\n\\[\np(s^{'}, r | s, a)\n\\]\n\n\n\n\n\nAs mentioned before, the dynamics of GridWorld are deterministic leading to the same new state given each state and action:\n\\[\n\\sum_{s^{'} \\in S}\\sum_{r \\in R} p(s^{'}, r| s, a) = 1 \\quad \\text{for all } s \\in S \\text{ and } a \\in A(s)\n\\]\n\nEnvironment GridWorld\n\n\n\n\n\nAs mentioned before, the dynamics of GridWorld are deterministic, leading to the same new state given each state and action:\n\\[\np(s_{1}, r_{1}| s_0, a_{0}) = 1\n\\]",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2139,7 +2139,7 @@
     "href": "lecture4/lecture4-2.html#example-gridworld-1",
     "title": "Markov Decision Process (MDPs)",
     "section": "Example: GridWorld",
-    "text": "Example: GridWorld\n\nAs mentioned before, the dynamics of GridWorld are deterministic, leading to the same new state given each state and action:\n\\[p(s_{1}, r_{1}| s_0, a_{0}) = 1\\]",
+    "text": "Example: GridWorld\n\nAs mentioned before, the dynamics of GridWorld are deterministic, leading to the same new state given each state and action:\n\\[\np(s_{1}, r_{1}| s_0, a_{0}) = 1\n\\]",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2150,7 +2150,7 @@
     "href": "lecture4/lecture4-2.html#goal",
     "title": "Markov Decision Process (MDPs)",
     "section": "Goal",
-    "text": "Goal\nOur Goal \\(G_{t}\\) is to maximize the expected return of the discounted reward sequence:\n\\[\nG_{t} = r_{t+1} + \\gamma r_{t+2} + \\ldots + \\gamma^{T-1} r_{T} \\\\\n     = r_{t+1} + \\gamma (r_{t+2} + \\ldots + \\gamma^{T-2} r_{T}) \\\\\n     = r_{t+1} + \\gamma G_{t+1}\n\\]",
+    "text": "Goal\nOur Goal \\(G_{t}\\) is to maximize the expected return of the discounted reward sequence:\n\\[\n\\begin{aligned}\nG_{t} = r_{t+1} + \\gamma r_{t+2} + \\ldots + \\gamma^{T-1} r_{T} \\\\\n     = r_{t+1} + \\gamma (r_{t+2} + \\ldots + \\gamma^{T-2} r_{T}) \\\\\n     = r_{t+1} + \\gamma G_{t+1}\n\\end{aligned}\n\\]\n\nExercise\nSuppose \\(\\gamma = 0.5\\) and the following sequence of rewards is received \\(r_{1} = -1\\), \\(r_{2} = 2\\), \\(r_{3} = 6\\), \\(r_{4} = 3\\), and \\(r_{5} = 2\\), with \\(T = 5\\). What are \\(G_{0}\\), \\(G_{1}\\), …, \\(G_{5}\\)?\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\[\n\\begin{aligned}\nG_{5} &= r_{6} + r_{7} + \\dots = 0 \\\\\nG_{4} &= r_{5} + 0.5(G_{5}) = 2 \\\\\nG_{3} &= r_{4} + 0.5(G_{4}) = 4 \\\\\nG_{2} &= r_{3} + 0.5(G_{3}) = 8 \\\\\nG_{1} &= r_{2} + 0.5(G_{2}) = 6 \\\\\nG_{0} &= r_{1} + 0.5(G_{1}) = 2 \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2172,7 +2172,7 @@
     "href": "lecture4/lecture4-2.html#value-functions",
     "title": "Markov Decision Process (MDPs)",
     "section": "Value Functions",
-    "text": "Value Functions\n\nValue Functions\nValue Functions calculate the expected reward when starting from the state \\(s\\) and then interacting with the environment according to the policy \\(\\pi\\), denoted as:\n\\[\nv_{\\pi}(s) = \\mathbb{E_{\\pi}}[G_{t}| \\ s]\n\\]",
+    "text": "Value Functions\nValue Functions calculate the expected reward when starting from the state \\(s\\) and then interacting with the environment according to the policy \\(\\pi\\), denoted as:\n\\[\nv_{\\pi}(s) = \\mathbb{E_{\\pi}}[G_{t}| \\ s]\n\\]\n\n\n\n\n\n\nBellman Equation\nFor any policy \\(\\pi\\) and any state \\(s\\), the Bellman equation holds:\n\\[\n\\begin{aligned}\nv_{\\pi}(s) &= \\mathbb{E_{\\pi}}[G_{t}| \\ s] \\\\\n&= \\mathbb{E_{\\pi}}[r_{t+1} + \\gamma G_{t+1}| \\ s] \\\\\n&= \\sum_{a} \\pi(a|s) \\sum_{s^{'},r} p(s^{'},r|s,a)[r_{t+1} + \\gamma \\mathbb{E_{\\pi}}[G_{t+1}| \\ s]] \\\\\n&= \\underbrace{\\sum_{a} \\pi(a|s)}_{Policy} \\underbrace{\\sum_{s^{'}, r} p(s^{'},r|s,a)}_{Dynamic \\ Function}\\underbrace{[r_{t+1} + \\gamma v_{\\pi}(s^{'})]}_{Discounted \\ Reward \\ Sequence}\n\\end{aligned}\n\\]\n\nExercise\nFor the first episode, calculate the value of each state using the Bellman equation:\n\\[\nv_{\\pi}(s) = \\sum_{a} \\pi(a|s) \\sum_{s^{'}, r} p(s^{'},r|s,a)[r + \\gamma v_{\\pi}(s^{'})]\n\\]\n\n\n\n\n\n\n\n\n\n\n\nSolution",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2183,7 +2183,7 @@
     "href": "lecture4/lecture4-2.html#bellman-equation",
     "title": "Markov Decision Process (MDPs)",
     "section": "Bellman Equation",
-    "text": "Bellman Equation\n\nBellman Equation\nFor any policy \\(\\pi\\) and any state \\(s\\), the Bellman equation holds:\n\\[\n\\begin{aligned}\nv_{\\pi}(s) &= \\mathbb{E_{\\pi}}[G_{t}| \\ s] \\\\\n&= \\mathbb{E_{\\pi}}[r_{t+1} + \\gamma G_{t+1}| \\ s] \\\\\n&= \\sum_{a} \\pi(a|s) \\sum_{s^{'},r} p(s^{'},r|s,a)[r_{t+1} + \\gamma \\mathbb{E_{\\pi}}[G_{t+1}| \\ s]] \\\\\n&= \\underbrace{\\sum_{a} \\pi(a|s)}_{Policy} \\underbrace{\\sum_{s^{'}, r} p(s^{'},r|s,a)}_{Dynamic \\ Function}\\underbrace{[r_{t+1} + \\gamma v_{\\pi}(s^{'})]}_{Discounted \\ Reward \\ Sequence}\n\\end{aligned}\n\\]",
+    "text": "Bellman Equation\n\nBellman Equation\nFor any policy \\(\\pi\\) and any state \\(s\\), the Bellman equation holds:\n\\[\n\\begin{aligned}\nv_{\\pi}(s) &= \\mathbb{E_{\\pi}}[G_{t}| \\ s] \\\\\n&= \\mathbb{E_{\\pi}}[r_{t+1} + \\gamma G_{t+1}| \\ s] \\\\\n&= \\sum_{a} \\pi(a|s) \\sum_{s^{'},r} p(s^{'},r|s,a)[r_{t+1} + \\gamma \\mathbb{E_{\\pi}}[G_{t+1}| \\ s]] \\\\\n&= \\underbrace{\\sum_{a} \\pi(a|s)}_{Policy} \\underbrace{\\sum_{s^{'}, r} p(s^{'},r|s,a)}_{Dynamic \\ Function}\\underbrace{[r_{t+1} + \\gamma v_{\\pi}(s^{'})]}_{Discounted \\ Reward \\ Sequence}\n\\end{aligned}\n\\]\n\n\nExercise\nFor the first episode, calculate the value of each state using the Bellman equation:\n\\[\nv_{\\pi}(s) = \\sum_{a} \\pi(a|s) \\sum_{s^{'}, r} p(s^{'},r|s,a)[r + \\gamma v_{\\pi}(s^{'})]\n\\]\n\n\n\n\n\n\n\nSolution",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2205,7 +2205,7 @@
     "href": "lecture4/lecture4-2.html#gridworld-solution",
     "title": "Markov Decision Process (MDPs)",
     "section": "GridWorld: Solution",
-    "text": "GridWorld: Solution\n\nGridWorld: Solution\n\n\n\nGridWorld Solution\n\n\nQuestion: Did we know that the value function was going to converge? Is this something that was expected?",
+    "text": "GridWorld: Solution\n\nGridWorld: Solution\n\nQuestion: Did we know that the value function was going to converge? Is this something that was expected?",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2216,7 +2216,7 @@
     "href": "lecture4/lecture4-2.html#action-value-functions",
     "title": "Markov Decision Process (MDPs)",
     "section": "Action Value Functions",
-    "text": "Action Value Functions\n\nAction Value Functions\nAction Value Functions estimate how good it is for an agent to follow policy \\(\\pi\\) given the action taken under the previous state:\n\\[\nq_{\\pi}(s, a) = \\mathbb{E_{\\pi}}[G_{t}| \\ s, \\ a]\n\\]",
+    "text": "Action Value Functions\nAction Value Functions estimate how good it is for an agent to follow policy \\(\\pi\\) given the action taken under the previous state:\n\\[\nq_{\\pi}(s, a) = \\mathbb{E_{\\pi}}[G_{t}| \\ s, \\ a]\n\\]\n\n\n\n\n\n\nBellman Equation\nThe action value function is also expressed in terms of the Bellman equation:\n\\[\n\\begin{align}\n    q_{\\pi}(s, a) & = \\mathbb{E_{\\pi}}[G_{t}| \\ s, \\ a] \\\\\n     & = \\underbrace{\\sum_{s^{'}, r} p(s^{'},r|s,a)}_{Dynamic \\ Function} \\underbrace{[r + \\gamma v_{\\pi}(s^{'})]}_{Discounted \\ Reward \\  Sequence}\n\\end{align}\n\\]\nNotice that the policy is no longer calculated (since an action has already taken place according to the policy), and that the quality of following policy \\(\\pi\\) is calculated in \\(v_{\\pi}(s^{'})\\).",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2227,7 +2227,7 @@
     "href": "lecture4/lecture4-2.html#bellman-equation-2",
     "title": "Markov Decision Process (MDPs)",
     "section": "Bellman Equation",
-    "text": "Bellman Equation\n\nThe action value function is also expressed in terms of the Bellman equation:\n\n\\[\n    q_{\\pi}(s, a) = \\mathbb{E}_{\\pi}[G_{t}| \\ s, \\ a] = \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{\\pi}(s^{'}) \\big]\n\\]\n\nNotice that the policy is no longer calculated (since an action has already taken place according to the policy), and that the quality of following policy \\(\\pi\\) is calculated in \\(v_{\\pi}(s^{'})\\).",
+    "text": "Bellman Equation\nThe action value function is also expressed in terms of the Bellman equation:\n\\[\nq_{\\pi}(s, a) = \\mathbb{E}_{\\pi}[G_{t}| \\ s, \\ a] = \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{\\pi}(s^{'}) \\big]\n\\]\nNotice that the policy is no longer calculated (since an action has already taken place according to the policy), and that the quality of following policy \\(\\pi\\) is calculated in \\(v_{\\pi}(s^{'})\\).",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2238,7 +2238,7 @@
     "href": "lecture4/lecture4-2.html#optimal-policy",
     "title": "Markov Decision Process (MDPs)",
     "section": "Optimal Policy",
-    "text": "Optimal Policy\n\nAn optimal policy \\(\\pi\\) is defined to be better than or equal to a policy \\(\\pi^{'}\\) if its expected return is greater than or equal to that of \\(\\pi^{'}\\) for all states:\n\n\\[\n    \\pi \\geq \\pi^{'} \\quad \\text{I.F.F.} \\quad v_{\\pi} \\geq v_{\\pi^{'}} \\quad \\forall s \\in S\n\\]\n\nSince there may be more than one optimal policy, we denote all optimal policies by \\(\\pi_{*}\\).",
+    "text": "Optimal Policy\nAn optimal policy \\(\\pi\\) is defined to be better than or equal to a policy \\(\\pi^{'}\\) if its expected return is greater than or equal to that of \\(\\pi^{'}\\) for all states:\n\\[\n\\pi \\geq \\pi^{'} \\quad \\text{I.F.F.} \\quad v_{\\pi} \\geq v_{\\pi^{'}} \\quad \\forall s \\in S\n\\]\nSince there may be more than one optimal policy, we denote all optimal policies by \\(\\pi_{*}\\).\n\nOptimal Value Function\n\\[\nv_{*}(s) = \\max_{a} \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\n\n\n\n\nOptimal Action-Value Function\n\\[\nq_{*}(s, a) = \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\n\n\n\nExercise\nFor the first episode, calculate the optimal value for each state using the bellman equation:\n\\[\nv_{*}(s) = \\max_{a} \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\nNotice the behavior of the optimal policy as \\(\\pi_{*} \\to \\infty\\)",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2249,7 +2249,7 @@
     "href": "lecture4/lecture4-2.html#optimal-value-function",
     "title": "Markov Decision Process (MDPs)",
     "section": "Optimal Value Function",
-    "text": "Optimal Value Function\n\nBellman Optimal Value Function:\n\n\\[\n    v_{*}(s) = \\max_{a} \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\nOptimal Value Function",
+    "text": "Optimal Value Function\nBellman Optimal Value Function:\n\\[\nv_{*}(s) = \\max_{a} \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\nOptimal Value Function",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2260,7 +2260,7 @@
     "href": "lecture4/lecture4-2.html#optimal-action-value-function",
     "title": "Markov Decision Process (MDPs)",
     "section": "Optimal Action-Value Function",
-    "text": "Optimal Action-Value Function\n\nBellman Optimal Action-Value Function:\n\n\\[\n    q_{*}(s, a) = \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\nOptimal Action-Value Function",
+    "text": "Optimal Action-Value Function\nBellman Optimal Action-Value Function:\n\\[\nq_{*}(s, a) = \\sum_{s^{'}, r} p(s^{'},r|s,a) \\big[ r + \\gamma v_{*}(s^{'}) \\big]\n\\]\n\n\n\nOptimal Action-Value Function",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>4.2 Markov Decision Process (MDPs)</span>"
@@ -2271,7 +2271,7 @@
     "href": "lecture4/lecture4-3.html",
     "title": "Dynamic Programming",
     "section": "",
-    "text": "Definition",
+    "text": "Dynamic Programming\nDynamic Programming refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).\nThese algorithms have limited utility in reinforcement learning due to their assumption of a perfect model and their computational expense, but they are still important theoretically.\nIn fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>4.3 Dynamic Programming</span>"
@@ -2282,7 +2282,7 @@
     "href": "lecture4/lecture4-3.html#dynamic-programming",
     "title": "Dynamic Programming",
     "section": "",
-    "text": "Dynamic Programming refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).\nThese algorithms have limited utility in reinforcement learning due to their assumption of a perfect model and their computational expense, but they are still important theoretically.\nIn fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.",
+    "text": "Pseudocode\n\n\n\\begin{algorithm} \\caption{Iterative Policy Evaluation (Prediction)}\\begin{algorithmic} \\State \\textbf{Initialize:} \\State $V(s) \\gets 0$ for all $s \\in S$ \\State $\\gamma \\in [0,1)$ \\State $\\theta \\gets 10^{-4}$ \\Comment{small positive number for accuracy of estimation} \\Repeat \\State $\\Delta \\gets 0$ \\ForAll{$s \\in S$} \\State $v \\gets V(s)$ \\State $V(s) \\gets \\sum_{a} \\pi(a|s) \\sum_{s',r} p(s',r|s,a) \\left[ r + \\gamma V(s') \\right]$ \\State $\\Delta \\gets \\max(\\Delta, |v - V(s)|)$ \\EndFor \\Until{$\\Delta &lt; \\theta$} \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>4.3 Dynamic Programming</span>"
@@ -2315,7 +2315,7 @@
     "href": "lecture4/lecture4-3.html#policy-improvement",
     "title": "Dynamic Programming",
     "section": "Policy Improvement",
-    "text": "Policy Improvement\n\nWe know how good it is to follow the current policy from (s) — that is (v_{}(s)) — but would it be better or worse to change to a new policy (^{’})?\nOne way to check if it is better to switch from policy () to (^{’}) is by checking if the following inequality holds:\n\\[ q_{\\pi}(s, \\pi^{'}(s)) \\geq v_{\\pi}(s) \\]\nIntuition: If selecting (a) in (s) and thereafter following policy () is better than just following (), then there must be a better policy (^{’}).\nThe special case when this inequality is true is referred to as the policy improvement theorem.",
+    "text": "Policy Improvement\nWe know how good it is to follow the current policy from \\(s\\) — that is \\(v_{\\pi}(s)\\) — but would it be better or worse to change to a new policy \\(\\pi^{'}\\)?\nOne way to check if it is better to switch from policy \\(\\pi\\) to \\(\\pi^{'}\\) is by checking if the following inequality holds:\n\\[\nq_{\\pi}(s, \\pi^{'}(s)) \\geq v_{\\pi}(s)\n\\]\nIntuition: If selecting \\(a\\) in \\(s\\) and thereafter following policy \\(\\pi\\) is better than just following \\(\\pi\\), then there must be a better policy \\(\\pi^{'}\\).\nThe special case when this inequality is true is referred to as the policy improvement theorem.",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>4.3 Dynamic Programming</span>"
@@ -2326,7 +2326,7 @@
     "href": "lecture4/lecture4-3.html#value-iteration",
     "title": "Dynamic Programming",
     "section": "Value Iteration",
-    "text": "Value Iteration\n\nOne drawback of policy iteration is that policy evaluation is done iteratively, requiring convergence exactly to (v_{}), which occurs only in the limit.\nValue Iteration is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.",
+    "text": "Value Iteration\nOne drawback of policy iteration is that policy evaluation is done iteratively, requiring convergence exactly to \\(v_{\\pi}\\), which occurs only in the limit.\nValue Iteration is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.\n\nPseudocode\n\n\n\\begin{algorithm} \\caption{Value Iteration} \\begin{algorithmic} \\State \\textbf{Initialize:} \\State $V(s) \\gets 0$ for all $s \\in S$ \\State $\\gamma \\in [0,1)$ \\State $\\theta \\gets 10^{-4}$ \\textit{// small positive number for accuracy of estimation} \\Repeat \\State $\\Delta \\gets 0$ \\Forall{$s \\in S$} \\State $v \\gets V(s)$ \\State $V(s) \\gets \\max_a \\sum_{s^{'},r} p(s^{'},r|s,a) \\left[ r + \\gamma V(s^{'}) \\right]$ \\State $\\Delta \\gets \\max(\\Delta, |v - V(s)|)$ \\Endfor \\Until{$\\Delta &lt; \\theta$} \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>4.3 Dynamic Programming</span>"
@@ -2348,7 +2348,7 @@
     "href": "lecture4/lecture4-3.html#generalized-policy-iteration",
     "title": "Dynamic Programming",
     "section": "Generalized Policy Iteration",
-    "text": "Generalized Policy Iteration\n\n\n\nGeneralized Policy Iteration refers to the general idea of letting policy evaluation and policy improvement processes interact, regardless of anything else.\nAlmost all of RL can be described as the policy always being improved with respect to the value function, and the value function always being driven toward the value function for the policy.",
+    "text": "Generalized Policy Iteration\n\n\nGeneralized Policy Iteration refers to the general idea of letting policy evaluation and policy improvement processes interact, regardless of anything else.\nAlmost all of RL can be described as the policy always being improved with respect to the value function, and the value function always being driven toward the value function for the policy.",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>4.3 Dynamic Programming</span>"
@@ -2403,7 +2403,7 @@
     "href": "lecture4/lecture4-1.html#value-function",
     "title": "Markov Chain",
     "section": "Value Function",
-    "text": "Value Function\nWe want to calculate the expected value of moving from state \\(i\\) to state \\(j\\) for all situations \\(s \\in \\{1,2,...,S\\}\\):\nMATH DERIVATION FORMULA MISSING HERE\n\\[\n\\mathbf{v}(t) = \\mathbf{q} + \\mathbf{v}(t-1) \\mathbf{P}\n\\]\nWhere: \\[\n\\mathbf{q} = \\sum_{i=1}^{S} p_{i,j} r_{i,j}\n\\]\nAt \\(t=100\\): \\[\n\\mathbf{v}(100) = \\begin{bmatrix} 75.2 & 73.6 \\end{bmatrix}\n\\]",
+    "text": "Value Function\nWe want to calculate the expected value of moving from state \\(i\\) to state \\(j\\) for all situations \\(s \\in \\{1,2,...,S\\}\\):\n\\[\n\\begin{align*}\nv_{j}(t) & = \\sum_{i=1}^{S} p_{i,j} \\ [r_{i,j}+v_{i}(t-1)] \\\\\n& = \\sum_{i=1}^{S} p_{i,j} \\ r_{i,j} + \\sum_{i=1}^{S} p_{i,j} \\ v_{i}(t-1) \\\\\n& = \\textbf{q} + \\sum_{i=1}^{S} p_{i,j}\\ v_{i}(t-1)\n\\end{align*}\n\\]\n\\[\n\\mathbf{v}(t) = \\mathbf{q} + \\mathbf{v}(t-1) \\mathbf{P}\n\\]\nFirst, we need to calculate \\(\\textbf{q}\\), the expected reward in the next transition out of state \\(i\\):\n\\[\n\\mathbf{q} = \\sum_{i=1}^{S} p_{i,j} r_{i,j}\n\\]\n\\[\nq_{1} = p_{1,1} \\ r_{1,1} + r_{2,1} \\ p_{2,1}\n\\]\n\\[\nq_{2} = p_{1,2} \\ r_{1,2} + r_{2,2} \\ p_{2,2}\n\\]\n\\[\n\\textbf{q} =\n\\begin{bmatrix}\n    2 & -0.2\n\\end{bmatrix}\n\\]\n\\[\n\\begin{bmatrix} v_{1}(t) \\ v_{2}(t) \\end{bmatrix} = \\begin{bmatrix} 2 \\ -0.2 \\end{bmatrix} + \\begin{bmatrix} v_{1}(t-1) \\ v_{2}(t-1) \\end{bmatrix} \\begin{bmatrix} 0.2 & 0.6 \\\\ 0.8 & 0.4 \\end{bmatrix}\n\\]\nAt \\(t=100\\): \\[\n\\mathbf{v}(100) = \\begin{bmatrix} 77.88 & 76.59 \\end{bmatrix}\n\\]\nIn other words, the frogs expected value at \\(t = 100\\) is that lilly pad \\(1\\) will be greater (with \\(77.88\\) expected flies) than that of lilly pad \\(2\\) (with \\(76.59\\) expected flies)",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>4.1 Markov Chain</span>"
@@ -2425,7 +2425,7 @@
     "href": "lecture4/lecture4-1.html#discounting-factor",
     "title": "Markov Chain",
     "section": "Discounting Factor",
-    "text": "Discounting Factor\nMATH DERIVATION FORMULA MISSING HERE\nThe Discounting Factor \\(\\gamma\\) places higher value on present rewards:\n\\[\n\\mathbf{v}(t) = \\mathbf{q} + \\gamma \\mathbf{v}(t-1) \\mathbf{P}\n\\]\nAt \\(\\gamma=0.9\\) and \\(t=100\\): \\[\n\\mathbf{v}(100) = \\begin{bmatrix} 8.4 & 6.7 \\end{bmatrix}\n\\]",
+    "text": "Discounting Factor\nThe \\(\\gamma\\) allows us to place a higher value on the present rewards, rather than future uncertain rewards.\n\\[\n\\mathbf{v}(t) = \\mathbf{q} + \\gamma \\mathbf{v}(t-1) \\mathbf{P}\n\\]\n\\[\n\\begin{bmatrix} v_{1}(t) \\ v_{2}(t) \\end{bmatrix} = \\begin{bmatrix} 2 \\ -0.2 \\end{bmatrix} + \\gamma \\begin{bmatrix} v_{1}(t-1) \\ v_{2}(t-1) \\end{bmatrix} \\begin{bmatrix} 0.2 & 0.6 \\\\ 0.8 & 0.4 \\end{bmatrix}\n\\]\nAt \\(\\gamma=0.9\\) and \\(t=100\\): \\[\n\\mathbf{v}(100) = \\begin{bmatrix} 8.47 & 7.15 \\end{bmatrix}\n\\]",
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>4.1 Markov Chain</span>"
@@ -2440,6 +2440,281 @@
     "crumbs": [
       "Lecture 4: Dynamic Programming",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>4.1 Markov Chain</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework2.html#question-2",
+    "href": "homework/homework2.html#question-2",
+    "title": "Homework 2",
+    "section": "Question 2",
+    "text": "Question 2\nA retail store accepts either American Express or VISA. The percentages of customers carrying each card are: \n\nAmerican Express: \\(24%\\)\nVISA: \\(61%\\)\nBoth: \\(11%\\)\n\nWhat percentage of customers carry a card accepted by the store?",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework2.html#question-3",
+    "href": "homework/homework2.html#question-3",
+    "title": "Homework 2",
+    "section": "Question 3",
+    "text": "Question 3\nSixty percent of students wear neither a ring nor a necklace. Given: \n\n\\(20%\\) wear a ring\n\\(30%\\) wear a necklace\n\nFind the probability that a randomly chosen student wears:\n\nA ring or a necklace\nBoth a ring and a necklace",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework2.html#question-4",
+    "href": "homework/homework2.html#question-4",
+    "title": "Homework 2",
+    "section": "Question 4",
+    "text": "Question 4\nTwo fair dice are rolled. Find the conditional probability that at least one die lands on \\(6\\), given that they land on different numbers.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework2.html#question-5",
+    "href": "homework/homework2.html#question-5",
+    "title": "Homework 2",
+    "section": "Question 5",
+    "text": "Question 5\nAn urn contains \\(6\\) white and \\(9\\) black balls. If \\(4\\) balls are selected without replacement, what is the probability that the first \\(2\\) are white and the last \\(2\\) are black?",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework2.html#question-6",
+    "href": "homework/homework2.html#question-6",
+    "title": "Homework 2",
+    "section": "Question 6",
+    "text": "Question 6\nA defendant is judged guilty if at least \\(2\\) out of \\(3\\) judges vote guilty. Given:\n\nProbability of a guilty vote when defendant is guilty: \\(0.7\\) \nProbability of a guilty vote when defendant is innocent: \\(0.2\\) \n\\(70%\\) of defendants are guilty\n\nCompute the conditional probability that judge \\(3\\) votes guilty given:\n\nJudges \\(1\\) and \\(2\\) vote guilty. \nJudges \\(1\\) and \\(2\\) split votes. \nJudges \\(1\\) and \\(2\\) vote not guilty.\n\nAre the judges’ votes independent? Conditionally independent? Explain.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework2.html#question-7",
+    "href": "homework/homework2.html#question-7",
+    "title": "Homework 2",
+    "section": "Question 7",
+    "text": "Question 7\nGiven the distribution function of \\(X\\):\n\\[\nF_{X}(\\lambda) =\n\\begin{cases}\n0, & \\lambda &lt; 0 \\\\\n\\frac{1}{2}, & 0 \\leq \\lambda &lt; 1 \\\\\n\\frac{3}{5}, & 1 \\leq \\lambda &lt; 2 \\\\\n\\frac{4}{5}, & 2 \\leq \\lambda &lt; 3 \\\\\n\\frac{9}{10}, & 3 \\leq \\lambda &lt; 3.5 \\\\\n1, & \\lambda \\geq 3.5 \\\\\n\\end{cases}\n\\]\nFind \\(p_X(\\lambda)\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework2.html#question-8",
+    "href": "homework/homework2.html#question-8",
+    "title": "Homework 2",
+    "section": "Question 8",
+    "text": "Question 8\nA player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Homework 2</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html",
+    "href": "homework/homework3.html",
+    "title": "Homework 3",
+    "section": "",
+    "text": "Coding Exercise 1: Load Environments\nLoad existing Bernoulli and Gaussian environments from Utils.env using the default options and a random seed of 123.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html#coding-exercise-2-epsilon-greedy-recommendation-system",
+    "href": "homework/homework3.html#coding-exercise-2-epsilon-greedy-recommendation-system",
+    "title": "Homework 3",
+    "section": "Coding Exercise 2: Epsilon-Greedy Recommendation System",
+    "text": "Coding Exercise 2: Epsilon-Greedy Recommendation System\nUsing the existing Epsilon-Greedy (\\(\\epsilon = 0.10\\)) code, create a recommendation system.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html#coding-exercise-3-ucb-algorithm-and-recommendation-system",
+    "href": "homework/homework3.html#coding-exercise-3-ucb-algorithm-and-recommendation-system",
+    "title": "Homework 3",
+    "section": "Coding Exercise 3: UCB Algorithm and Recommendation System",
+    "text": "Coding Exercise 3: UCB Algorithm and Recommendation System\nCode the Upper Confidence Boundary (UCB) algorithm and create a recommendation system.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system",
+    "href": "homework/homework3.html#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system",
+    "title": "Homework 3",
+    "section": "Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System",
+    "text": "Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System\nCode the Thompson Sampling algorithm and create a recommendation system.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html#coding-exercise-5-mab-algorithm-performance-comparison",
+    "href": "homework/homework3.html#coding-exercise-5-mab-algorithm-performance-comparison",
+    "title": "Homework 3",
+    "section": "Coding Exercise 5: MAB Algorithm Performance Comparison",
+    "text": "Coding Exercise 5: MAB Algorithm Performance Comparison\nFor 10,000 recommendations:\n\nDoes Epsilon-Greedy (\\(\\epsilon = 0.10\\)) perform better in the Bernoulli or Gaussian environment?\nDoes UCB perform better in the Bernoulli or Gaussian environment?\nDoes Thompson Sampling perform better in the Bernoulli or Gaussian environment?\nWhich algorithm performs best in the Bernoulli environment?\nWhich algorithm performs best in the Gaussian environment?\n\nHint: Check the performance of each MAB by observing the most frequently recommended arm.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html#coding-exercise-6-random-seed-analysis",
+    "href": "homework/homework3.html#coding-exercise-6-random-seed-analysis",
+    "title": "Homework 3",
+    "section": "Coding Exercise 6: Random Seed Analysis",
+    "text": "Coding Exercise 6: Random Seed Analysis\nUsing random seeds 0-50, for 10,000 recommendations, do the algorithms perform the same?",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html#coding-exercise-7-amazon-dataset-analysis",
+    "href": "homework/homework3.html#coding-exercise-7-amazon-dataset-analysis",
+    "title": "Homework 3",
+    "section": "Coding Exercise 7: Amazon Dataset Analysis",
+    "text": "Coding Exercise 7: Amazon Dataset Analysis\nFor the Amazon.csv dataset, repeat exercise Coding Exercise 6 and find the most frequently recommended arm.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html#coding-exercise-8-exp3-algorithm-and-recommendation-system",
+    "href": "homework/homework3.html#coding-exercise-8-exp3-algorithm-and-recommendation-system",
+    "title": "Homework 3",
+    "section": "Coding Exercise 8: EXP3 Algorithm and Recommendation System",
+    "text": "Coding Exercise 8: EXP3 Algorithm and Recommendation System\n\n\n\\begin{algorithm} \\caption{MAB EXP3} \\begin{algorithmic} \\State Initialize, for $a = 1$ to $k$: \\State $Q(a) \\gets \\frac{1}{k}$ \\State $W(a) \\gets 1$ \\\\ \\For{$t$ in range($len(data)$)} \\State $Q(a) \\gets (1 - \\gamma) \\frac{W(a)}{\\sum_{i=1}^{k} W(a_{i})} + \\frac{\\gamma}{k}$ \\\\ \\State $A_t \\gets$ random choice with probabilities $Q(a)$ \\\\ \\State $R_t \\gets \\text{bandit}(A_t)$ \\State $\\hat{R_t} \\gets \\begin{cases} \\frac{R_t}{Q(A_t)} & \\text{if } A_t = a\\\\ 0 & \\text{else} \\end{cases}$ \\State $W(a) \\gets W(a) e^{\\frac{\\gamma \\hat{R_t}}{k}}$ \\Endfor \\end{algorithmic} \\end{algorithm}",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework3.html#coding-exercise-9-gradient-method-algorithm-and-recommendation-system",
+    "href": "homework/homework3.html#coding-exercise-9-gradient-method-algorithm-and-recommendation-system",
+    "title": "Homework 3",
+    "section": "Coding Exercise 9: Gradient Method Algorithm and Recommendation System",
+    "text": "Coding Exercise 9: Gradient Method Algorithm and Recommendation System\n\n\n\\begin{algorithm} \\caption{MAB Gradient Method} \\begin{algorithmic} \\State Initialize, for $a = 1$ to $k$: \\State $Q(a) \\gets 0$ \\State $N(a) \\gets 0$ \\State $H(a) \\gets 0$ \\\\ \\For{$t$ in range($len(data)$)} \\State $\\pi(a) \\gets \\text{softmax}(H(a))$ \\State $A_t \\gets \\text{argmax}_a(\\pi(a))$ \\State $R_t \\gets \\text{bandit}(A_t)$ \\State $N(A_t) \\gets N(A_t) + 1$ \\State $Q(A_t) \\gets Q(A_t) + \\frac{1}{N(A_t)}[R_t - Q(A_t)]$ \\State $H(a) \\gets \\begin{cases} H(A_t) + \\alpha (R_t - Q(A_t)) (1 - \\pi(A_t)) & \\text{if } A_t = a\\\\ H(a) - \\alpha (R_t - Q(a)) \\pi(a) & \\text{else} \\end{cases}$ \\Endfor \\end{algorithmic} \\end{algorithm}",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Homework 3</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html",
+    "href": "homework/homework4.html",
+    "title": "Homework 4",
+    "section": "",
+    "text": "Question 1\nIf the current state is \\(S_{t}\\), and actions are selected according to stochastic policy \\(\\pi\\), then what is the expectation of \\(R_{t+1}\\) in terms of \\(\\pi\\) and the four-argument function \\(p\\)?",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html#question-2",
+    "href": "homework/homework4.html#question-2",
+    "title": "Homework 4",
+    "section": "Question 2",
+    "text": "Question 2\nGive an equation for \\(v_{\\pi}\\) in terms of \\(q_{\\pi}\\) and \\(\\pi\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html#question-3",
+    "href": "homework/homework4.html#question-3",
+    "title": "Homework 4",
+    "section": "Question 3",
+    "text": "Question 3\nGive an equation for \\(q_{\\pi}\\) in terms of \\(v_{\\pi}\\) and \\(\\pi\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html#exercise-1",
+    "href": "homework/homework4.html#exercise-1",
+    "title": "Homework 4",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nWith a discount factor of \\(\\gamma = 0.9\\), calculate \\(v(t)\\) when \\(t = 100\\) for the following Markov Chain:\nIMAGE\nRewards: - \\(R = 9\\) for self-loop on State 1 - \\(R = -7\\) for self-loop on State 2 - \\(R = 3\\) for transitions between states",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html#exercise-2",
+    "href": "homework/homework4.html#exercise-2",
+    "title": "Homework 4",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWith a discount factor of \\(\\gamma = 0.9\\), calculate \\(v(t)\\) when \\(t = 100\\) for the following Markov Chain:\nIMAGE\nRewards: - Various rewards for different transitions as specified.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html#exercise-3",
+    "href": "homework/homework4.html#exercise-3",
+    "title": "Homework 4",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nWith a discount factor of \\(\\gamma = 0.9\\), code Iterative Policy Evaluation (Prediction) and Value Iteration algorithms for the following GridWorld MDP:\n\n\n\nGridWorld\n\n\nNote: The gray shaded areas are barriers. Moving into a barrier incurs a reward of \\(R = -1\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html#coding-exercise-1",
+    "href": "homework/homework4.html#coding-exercise-1",
+    "title": "Homework 4",
+    "section": "Coding Exercise 1",
+    "text": "Coding Exercise 1\nWith a discount factor of \\(\\gamma = 0.9\\), calculate \\(v(t)\\) when \\(t = 100\\) for the following Markov Chain:",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html#coding-exercise-2",
+    "href": "homework/homework4.html#coding-exercise-2",
+    "title": "Homework 4",
+    "section": "Coding Exercise 2",
+    "text": "Coding Exercise 2\nWith a discount factor of \\(\\gamma = 0.9\\), calculate \\(v(t)\\) when \\(t = 100\\) for the following Markov Chain:",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework4.html#coding-exercise-3",
+    "href": "homework/homework4.html#coding-exercise-3",
+    "title": "Homework 4",
+    "section": "Coding Exercise 3",
+    "text": "Coding Exercise 3\nWith a discount factor of \\(\\gamma = 0.9\\), code Iterative Policy Evaluation (Prediction) and Value Iteration algorithms for the following GridWorld MDP:\n\n\n\n\n\nNote: The gray shaded areas are barriers. Moving into a barrier incurs a reward of \\(R = -1\\).",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Homework 4</span>"
     ]
   }
 ]

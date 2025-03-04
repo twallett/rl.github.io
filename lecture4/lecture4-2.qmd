@@ -11,100 +11,112 @@ A formal framework that defines probability using three fundamental rules, ensur
 
 ## Markov Decision Process
 
-- A **Markov Decision Process** (MDP) is a model for transitions that are _controlled_ between _fully observable states_.
+A **Markov Decision Process** (MDP) is a model for transitions that are _controlled_ between _fully observable states_. <br>
+The **Agent** is the learner and decision-maker. <br>
+The **Environment** is everything external to the agent. <br>
+From an **Initial State**, the agent interacts with the environment through its **Actions**. <br>
+These actions continuously give rise to different **States** and **Rewards**.
 
-- The **Agent** is the learner and decision-maker.
+![](images/MDP.png){width=75% fig-align="center"}
 
-- The **Environment** is everything external to the agent.
+### Environment GridWorld
 
-- From an **Initial State**, the agent interacts with the environment through its **Actions**.
+![](images/MDPGridworld-ex.png){width=65% fig-align="center"}
 
-- These actions continuously give rise to different **States** and **Rewards**.
-
-![MDP Diagram](DP/imgs/MDP.png)
-
-## Example: GridWorld
-
-- Agent, Environment, Initial State, and Actions:
-
-![GridWorld](DP/imgs/GridWorldExample.png)
-
-- Actions are equally likely to occur.
-
-- Actions that take the agent out of the environment receive a reward of $-1$, actions that take the agent to the terminal state (shaded in gray) receive a reward of $+1$, and all other actions receive a reward of $0$.
-
-- Our objective is to calculate the shortest path from any state to the optimal state.
+- Actions are equally likely to occur. <br>
+- Actions that take the agent out of the environment receive a reward of $-1$, actions that take the agent to the terminal state (shaded in gray) receive a reward of $+1$, and all other actions receive a reward of $0$. <br>
+- Our objective is to calculate the shortest path from any state to the optimal state. 
 
 ## Sequential Interaction
 
-- For a finite discrete number of time steps $t = \{0, 1, 2, 3...,T\}$ (where $T$ is the terminal time step marking the end of an episode) the sequential interaction is:
+For a finite discrete number of time steps $t = 0, 1, 2, 3...,T$ (where $T$ is the terminal time step marking the end of an episode) the **sequential interaction** is:
 
 1. The agent receives an interpretation from the state $s_t \in S$.
 2. The agent makes an action $a_t \in A(s_t)$ based on the situation.
 3. The agent receives a reward $r_{t+1} \in R \subseteq \mathbb{R}$ from its environment and finds itself in a new state $s_{t+1}$ based on the action taken.
 
-- The sequence continues in the form:
+The sequence continues in the form:
 
 $$
 s_0, a_0, r_1, s_1, a_1, r_2, s_2, a_2, r_3,...
 $$
 
-## Example: GridWorld Sequential Interaction
+### Environment GridWorld
 
-![GridWorld Interaction](DP/imgs/GridWorldSequence.png)
+Sequential interaction for one episode:
 
-- Notice that, for now, state transitions are **deterministic**. We assume a perfect model of the environment. **Stochastic** state transitions will be covered later.
+![](images/SequentialGridworld-ex.png){width=75% fig-align="center"}
+
+Notice that, for now, state transitions are **deterministic**. In other words, we assume a perfect model of the environment. We do not care about **stochastic** state transitions (this is something that we will visit in the next lectures).
 
 ## Policy
 
-- A **Policy** is a mapping from states to probabilities of selecting each possible action, denoted as:
+A **Policy** is a mapping from states to probabilities of selecting each possible action, denoted as:
 
-  $$\pi(a|s)$$
+$$
+\pi(a|s)
+$$
 
-![Policy Diagram](DP/imgs/Policy.pdf)
+![](images/Policy.png){width=35% fig-align="center"}
 
-  $$\sum_{a \in A(s)} \pi(a|s) = 1 \quad \text{for all } s \in S$$
+$$
+\sum_{a \in A(s)} \pi(a|s) = 1 \quad \text{for all } s \in S
+$$
 
-## Example: GridWorld Policy
+### Environment GridWorld
 
-![GridWorld Policy](DP/imgs/GridWorldPolicy.pdf)
+![](images/GridWorld-Policy.png){width=55% fig-align="center"}
+
+Since all actions are equally likely, we are said to be following a **random policy**:
+
+$$
+\pi(a_0|s_0) = \frac{1}{4}
+$$
 
 ## Dynamic Function
 
 The **dynamic function** is a mapping of the state transition probabilities of the MDP for each possible reward:
 
-$$p(s^{'}, r | s, a)$$
+$$
+p(s^{'}, r | s, a)
+$$
 
-![](DP/imgs/DynamicFunction.pdf)
+![](images/DynamicFunction.png){width=35% fig-align="center"}
 
-The function satisfies the following constraint:
+As mentioned before, the dynamics of GridWorld are **deterministic** leading to the same new state given each state and action:
 
-$$\sum_{s^{'} \in S}\sum_{r \in R} p(s^{'}, r| s, a) = 1 \quad \text{for all } s \in S \text{ and } a \in A(s)$$
+$$
+\sum_{s^{'} \in S}\sum_{r \in R} p(s^{'}, r| s, a) = 1 \quad \text{for all } s \in S \text{ and } a \in A(s)
+$$
 
-## Example: GridWorld
+### Environment GridWorld
 
-![](DP/imgs/GridWorldDynamicFunction.pdf)
+![](images/GridWorldDynamicFunction.png){width=55% fig-align="center"}
 
 As mentioned before, the dynamics of GridWorld are **deterministic**, leading to the same new state given each state and action:
 
-$$p(s_{1}, r_{1}| s_0, a_{0}) = 1$$
+$$
+p(s_{1}, r_{1}| s_0, a_{0}) = 1
+$$
 
 ## Goal
 
 Our **Goal** $G_{t}$ is to maximize the expected return of the discounted reward sequence:
 
 $$
+\begin{aligned}
 G_{t} = r_{t+1} + \gamma r_{t+2} + \ldots + \gamma^{T-1} r_{T} \\
      = r_{t+1} + \gamma (r_{t+2} + \ldots + \gamma^{T-2} r_{T}) \\
      = r_{t+1} + \gamma G_{t+1} 
+\end{aligned}
 $$
 
-## Example: Goal
-
-::: {.frame}
-### Example: Goal
+#### <u>Exercise</u>
 
 Suppose $\gamma = 0.5$ and the following sequence of rewards is received $r_{1} = -1$, $r_{2} = 2$, $r_{3} = 6$, $r_{4} = 3$, and $r_{5} = 2$, with $T = 5$. What are $G_{0}$, $G_{1}$, ..., $G_{5}$? 
+
+::: {.callout-tip collapse="true"}
+## Solution
 
 $$
 \begin{aligned}
@@ -120,24 +132,17 @@ $$
 
 ## Value Functions
 
-::: {.frame}
-### Value Functions
-
-Value Functions calculate the expected reward when starting from the state $s$ and then interacting with the environment according to the policy $\pi$, denoted as:
+**Value Functions** calculate the expected reward when starting from the state $s$ and then interacting with the environment according to the policy $\pi$, denoted as:
 
 $$
 v_{\pi}(s) = \mathbb{E_{\pi}}[G_{t}| \ s]
 $$
 
-![](DP/imgs/ValueFunction.pdf)
-:::
+![](images/ValueFunction.png){width=35% fig-align="center"}
 
-## Bellman Equation
-
-::: {.frame}
 ### Bellman Equation
 
-For any policy $\pi$ and any state $s$, the **Bellman equation** holds:
+For any policy $\pi$ and any state $s$, the Bellman equation holds:
 
 $$
 \begin{aligned}
@@ -147,12 +152,8 @@ v_{\pi}(s) &= \mathbb{E_{\pi}}[G_{t}| \ s] \\
 &= \underbrace{\sum_{a} \pi(a|s)}_{Policy} \underbrace{\sum_{s^{'}, r} p(s^{'},r|s,a)}_{Dynamic \ Function}\underbrace{[r_{t+1} + \gamma v_{\pi}(s^{'})]}_{Discounted \ Reward \ Sequence}
 \end{aligned}
 $$
-:::
 
-## GridWorld: Practice Example
-
-::: {.frame}
-### GridWorld: Practice Example
+#### <u>Exercise</u>
 
 For the first episode, calculate the value of each state using the Bellman equation:
 
@@ -160,22 +161,16 @@ $$
 v_{\pi}(s) = \sum_{a} \pi(a|s) \sum_{s^{'}, r} p(s^{'},r|s,a)[r + \gamma v_{\pi}(s^{'})]
 $$
 
-:::
+![](images/GridWorldEmpty-ex.png){width=13% fig-align="center"}
 
-## GridWorld: Solution
+::: {.callout-tip collapse="true"}
+## Solution
 
-::: {.frame}
-### GridWorld: Solution
+![](images/GridWorldSolution.png){width=75% fig-align="center"}
 
-![GridWorld Solution](DP/imgs/GridWorldSolution.png)
-
-**Question:** Did we know that the value function was going to converge? Is this something that was expected?
 :::
 
 ## Action Value Functions
-
-::: {.frame}
-### Action Value Functions
 
 **Action Value Functions** estimate how good it is for an agent to follow policy $\pi$ given the action taken under the previous state:
 
@@ -183,45 +178,64 @@ $$
 q_{\pi}(s, a) = \mathbb{E_{\pi}}[G_{t}| \ s, \ a]
 $$
 
-![](DP/imgs/ActionValue.pdf)
-:::
+![](images/ActionValue.png){width=35% fig-align="center"}
 
-## Bellman Equation
+### Bellman Equation
 
-- The action value function is also expressed in terms of the Bellman equation:
+The action value function is also expressed in terms of the Bellman equation:
 
 $$
-    q_{\pi}(s, a) = \mathbb{E}_{\pi}[G_{t}| \ s, \ a] = \sum_{s^{'}, r} p(s^{'},r|s,a) \big[ r + \gamma v_{\pi}(s^{'}) \big]
+\begin{align}
+    q_{\pi}(s, a) & = \mathbb{E_{\pi}}[G_{t}| \ s, \ a] \\
+     & = \underbrace{\sum_{s^{'}, r} p(s^{'},r|s,a)}_{Dynamic \ Function} \underbrace{[r + \gamma v_{\pi}(s^{'})]}_{Discounted \ Reward \  Sequence}
+\end{align}
 $$
 
-- Notice that the policy is no longer calculated (since an action has already taken place according to the policy), and that the quality of following policy $\pi$ is calculated in $v_{\pi}(s^{'})$.
+Notice that the policy is no longer calculated (since an action has already taken place according to the policy), and that the quality of following policy $\pi$ is calculated in $v_{\pi}(s^{'})$.
 
 ## Optimal Policy
 
-- An **optimal policy** $\pi$ is defined to be better than or equal to a policy $\pi^{'}$ if its expected return is greater than or equal to that of $\pi^{'}$ for all states:
+An **optimal policy** $\pi$ is defined to be better than or equal to a policy $\pi^{'}$ if its expected return is greater than or equal to that of $\pi^{'}$ for all states:
 
 $$
-    \pi \geq \pi^{'} \quad \text{I.F.F.} \quad v_{\pi} \geq v_{\pi^{'}} \quad \forall s \in S
+\pi \geq \pi^{'} \quad \text{I.F.F.} \quad v_{\pi} \geq v_{\pi^{'}} \quad \forall s \in S
 $$
 
-- Since there may be more than one optimal policy, we denote all optimal policies by $\pi_{*}$.
+Since there may be more than one optimal policy, we denote all optimal policies by $\pi_{*}$.
 
-## Optimal Value Function
-
-- **Bellman Optimal Value Function**:
+### Optimal Value Function
 
 $$
-    v_{*}(s) = \max_{a} \sum_{s^{'}, r} p(s^{'},r|s,a) \big[ r + \gamma v_{*}(s^{'}) \big]
+v_{*}(s) = \max_{a} \sum_{s^{'}, r} p(s^{'},r|s,a) \big[ r + \gamma v_{*}(s^{'}) \big]
 $$
 
-![Optimal Value Function](DP/imgs/OptimValue.pdf)
+![](images/OptimValue.png){width=35% fig-align="center"}
 
-## Optimal Action-Value Function
-
-- **Bellman Optimal Action-Value Function**:
+### Optimal Action-Value Function
 
 $$
-    q_{*}(s, a) = \sum_{s^{'}, r} p(s^{'},r|s,a) \big[ r + \gamma v_{*}(s^{'}) \big]
+q_{*}(s, a) = \sum_{s^{'}, r} p(s^{'},r|s,a) \big[ r + \gamma v_{*}(s^{'}) \big]
 $$
 
-![Optimal Action-Value Function](DP/imgs/OptimActionValue.pdf)
+![](images/OptimActionValue.png){width=35% fig-align="center"}
+
+#### <u>Exercise</u>
+
+For the first episode, calculate the optimal value for each state using the bellman equation:
+
+$$
+v_{*}(s) = \max_{a} \sum_{s^{'}, r} p(s^{'},r|s,a) \big[ r + \gamma v_{*}(s^{'}) \big]
+$$
+
+![](images/GridWorldEmpty-ex.png){width=13% fig-align="center"}
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+![](images/GridWorldOptimal-sol.png){width=75% fig-align="center"}
+
+Notice the behavior of the optimal policy as $\pi_{*} \to \infty$
+
+![](images/GridWorldOptim-sol2.png){width=13% fig-align="center"}
+
+:::

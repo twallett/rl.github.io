@@ -311,6 +311,11 @@ window.Quarto = {
   <a href="../homework/homework3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 4</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -329,12 +334,15 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition">Definition</a></li>
-  <li><a href="#bellman-equations" id="toc-bellman-equations" class="nav-link" data-scroll-target="#bellman-equations">Bellman Equations</a></li>
-  <li><a href="#policy-evaluation" id="toc-policy-evaluation" class="nav-link" data-scroll-target="#policy-evaluation">Policy Evaluation</a></li>
+  <li><a href="#dynamic-programming" id="toc-dynamic-programming" class="nav-link active" data-scroll-target="#dynamic-programming">Dynamic Programming</a>
+  <ul class="collapse">
+  <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
+  </ul></li>
   <li><a href="#policy-improvement" id="toc-policy-improvement" class="nav-link" data-scroll-target="#policy-improvement">Policy Improvement</a></li>
-  <li><a href="#value-iteration" id="toc-value-iteration" class="nav-link" data-scroll-target="#value-iteration">Value Iteration</a></li>
-  <li><a href="#value-iteration-pseudocode" id="toc-value-iteration-pseudocode" class="nav-link" data-scroll-target="#value-iteration-pseudocode">Value Iteration Pseudocode</a></li>
+  <li><a href="#value-iteration" id="toc-value-iteration" class="nav-link" data-scroll-target="#value-iteration">Value Iteration</a>
+  <ul class="collapse">
+  <li><a href="#pseudocode-1" id="toc-pseudocode-1" class="nav-link" data-scroll-target="#pseudocode-1">Pseudocode</a></li>
+  </ul></li>
   <li><a href="#generalized-policy-iteration" id="toc-generalized-policy-iteration" class="nav-link" data-scroll-target="#generalized-policy-iteration">Generalized Policy Iteration</a></li>
   </ul>
 </nav>
@@ -371,65 +379,61 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<section id="definition" class="level2">
-<h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<ul>
-<li><p><strong>Dynamic Programming</strong> refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).</p></li>
-<li><p>These algorithms have limited utility in reinforcement learning due to their <strong>assumption of a perfect model</strong> and their <strong>computational expense</strong>, but they are still important theoretically.</p></li>
-<li><p>In fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.</p></li>
-</ul>
-<hr>
+<section id="dynamic-programming" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-programming">Dynamic Programming</h2>
+<p><strong>Dynamic Programming</strong> refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).</p>
+<p>These algorithms have limited utility in reinforcement learning due to their <strong>assumption of a perfect model</strong> and their <strong>computational expense</strong>, but they are still important theoretically.</p>
+<p>In fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.</p>
+<section id="pseudocode" class="level3">
+<h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
+<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-no-end="false" data-line-number="true" data-indent-size="1.2em" data-pseudocode-number="1">
+<div class="pseudocode">
+\begin{algorithm} \caption{Iterative Policy Evaluation (Prediction)}\begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $\gamma \in [0,1)$ \State $\theta \gets 10^{-4}$ \Comment{small positive number for accuracy of estimation} \Repeat \State $\Delta \gets 0$ \ForAll{$s \in S$} \State $v \gets V(s)$ \State $V(s) \gets \sum_{a} \pi(a|s) \sum_{s',r} p(s',r|s,a) \left[ r + \gamma V(s') \right]$ \State $\Delta \gets \max(\Delta, |v - V(s)|)$ \EndFor \Until{$\Delta &lt; \theta$} \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<div style="text-align: center;">
+<p><a href="https://github.com/"> <img src="images/github.svg" alt="GitHub" width="5%"> </a></p>
+</div>
 </section>
-<section id="bellman-equations" class="level2">
-<h2 class="anchored" data-anchor-id="bellman-equations">Bellman Equations</h2>
-<p>So far, we looked at how to evaluate Bellman equations:</p>
-<p><strong>Value Function</strong><br>
-<span class="math display">\[ v_{\pi}(s) = \sum_{a} \pi(a|s) \sum_{s^{'}, r} p(s^{'},r|s,a)[r + \gamma v_{\pi}(s^{'})] \]</span><br>
-<em>Intuition: How good is it to be in state (s) according to policy ()?</em></p>
-<p><strong>Action-Value Function</strong><br>
-<span class="math display">\[ q_{\pi}(s, a) = \sum_{s^{'}, r} p(s^{'},r|s,a)[r + \gamma v_{\pi}(s^{'})] \]</span><br>
-<em>Intuition: Is it good to select (a) in (s) and thereafter follow policy ()?</em></p>
-<hr>
-</section>
-<section id="policy-evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="policy-evaluation">Policy Evaluation</h2>
-<p><embed src="DP/imgs/4-1DP.pdf" class="img-fluid"></p>
-<hr>
 </section>
 <section id="policy-improvement" class="level2">
 <h2 class="anchored" data-anchor-id="policy-improvement">Policy Improvement</h2>
-<ul>
-<li><p>We know how good it is to follow the current policy from (s) — that is (v_{}(s)) — but would it be better or worse to change to a new policy (^{’})?</p></li>
-<li><p>One way to check if it is better to switch from policy () to (^{’}) is by checking if the following inequality holds:</p>
-<p><span class="math display">\[ q_{\pi}(s, \pi^{'}(s)) \geq v_{\pi}(s) \]</span></p></li>
-<li><p><em>Intuition:</em> If selecting (a) in (s) and thereafter following policy () is better than just following (), then there must be a better policy (^{’}).</p></li>
-<li><p>The special case when this inequality is true is referred to as the <strong>policy improvement theorem</strong>.</p></li>
-</ul>
-<hr>
+<p>We know how good it is to follow the current policy from <span class="math inline">\(s\)</span> — that is <span class="math inline">\(v_{\pi}(s)\)</span> — but would it be better or worse to change to a new policy <span class="math inline">\(\pi^{'}\)</span>?</p>
+<p>One way to check if it is better to switch from policy <span class="math inline">\(\pi\)</span> to <span class="math inline">\(\pi^{'}\)</span> is by checking if the following inequality holds:</p>
+<p><span class="math display">\[
+q_{\pi}(s, \pi^{'}(s)) \geq v_{\pi}(s)
+\]</span></p>
+<p><em>Intuition:</em> If selecting <span class="math inline">\(a\)</span> in <span class="math inline">\(s\)</span> and thereafter following policy <span class="math inline">\(\pi\)</span> is better than just following <span class="math inline">\(\pi\)</span>, then there must be a better policy <span class="math inline">\(\pi^{'}\)</span>.</p>
+<p>The special case when this inequality is true is referred to as the <strong>policy improvement theorem</strong>.</p>
 </section>
 <section id="value-iteration" class="level2">
 <h2 class="anchored" data-anchor-id="value-iteration">Value Iteration</h2>
-<ul>
-<li><p>One drawback of policy iteration is that policy evaluation is done iteratively, requiring convergence exactly to (v_{}), which occurs only in the limit.</p></li>
-<li><p><strong>Value Iteration</strong> is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.</p></li>
-</ul>
-<hr>
+<p>One drawback of policy iteration is that policy evaluation is done iteratively, requiring convergence exactly to <span class="math inline">\(v_{\pi}\)</span>, which occurs only in the limit.</p>
+<p><strong>Value Iteration</strong> is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.</p>
+<section id="pseudocode-1" class="level3">
+<h3 class="anchored" data-anchor-id="pseudocode-1">Pseudocode</h3>
+<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-no-end="false" data-line-number="true" data-indent-size="1.2em" data-pseudocode-number="1">
+<div class="pseudocode">
+\begin{algorithm} \caption{Value Iteration} \begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $\gamma \in [0,1)$ \State $\theta \gets 10^{-4}$ \textit{// small positive number for accuracy of estimation} \Repeat \State $\Delta \gets 0$ \Forall{$s \in S$} \State $v \gets V(s)$ \State $V(s) \gets \max_a \sum_{s^{'},r} p(s^{'},r|s,a) \left[ r + \gamma V(s^{'}) \right]$ \State $\Delta \gets \max(\Delta, |v - V(s)|)$ \Endfor \Until{$\Delta &lt; \theta$} \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<div style="text-align: center;">
+<p><a href="https://github.com/"> <img src="images/github.svg" alt="GitHub" width="5%"> <!-- Adjust width as needed --> </a></p>
+</div>
 </section>
-<section id="value-iteration-pseudocode" class="level2">
-<h2 class="anchored" data-anchor-id="value-iteration-pseudocode">Value Iteration Pseudocode</h2>
-<p><embed src="DP/imgs/4-2DP.pdf" class="img-fluid"></p>
-<hr>
 </section>
 <section id="generalized-policy-iteration" class="level2">
 <h2 class="anchored" data-anchor-id="generalized-policy-iteration">Generalized Policy Iteration</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<ul>
-<li><p><strong>Generalized Policy Iteration</strong> refers to the general idea of letting policy evaluation and policy improvement processes interact, regardless of anything else.</p></li>
-<li><p>Almost all of RL can be described as the policy always being improved with respect to the value function, and the value function always being driven toward the value function for the policy.</p></li>
-</ul>
+<p><strong>Generalized Policy Iteration</strong> refers to the general idea of letting policy evaluation and policy improvement processes interact, regardless of anything else.</p>
+<p>Almost all of RL can be described as the policy always being improved with respect to the value function, and the value function always being driven toward the value function for the policy.</p>
 </div><div class="column" style="width:50%;">
-<p><img src="DP/imgs/GPI.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/GPI.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 

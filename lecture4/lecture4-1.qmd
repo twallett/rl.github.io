@@ -69,64 +69,96 @@ $$
 
 We want to calculate the expected value of moving from state $i$ to state $j$ for all situations $s \in \{1,2,...,S\}$:
 
-MATH DERIVATION FORMULA MISSING HERE 
+$$
+\begin{align*}
+v_{j}(t) & = \sum_{i=1}^{S} p_{i,j} \ [r_{i,j}+v_{i}(t-1)] \\
+& = \sum_{i=1}^{S} p_{i,j} \ r_{i,j} + \sum_{i=1}^{S} p_{i,j} \ v_{i}(t-1) \\ 
+& = \textbf{q} + \sum_{i=1}^{S} p_{i,j}\ v_{i}(t-1)
+\end{align*}
+$$
 
 $$
 \mathbf{v}(t) = \mathbf{q} + \mathbf{v}(t-1) \mathbf{P}
 $$
 
-Where:
+First, we need to calculate $\textbf{q}$, the expected reward in the next transition out of state $i$:
+
 $$
 \mathbf{q} = \sum_{i=1}^{S} p_{i,j} r_{i,j}
 $$
 
+$$
+q_{1} = p_{1,1} \ r_{1,1} + r_{2,1} \ p_{2,1}
+$$
+
+$$
+q_{2} = p_{1,2} \ r_{1,2} + r_{2,2} \ p_{2,2}
+$$
+
+$$
+\textbf{q} = 
+\begin{bmatrix}
+    2 & -0.2
+\end{bmatrix}
+$$
+
+
+$$
+\begin{bmatrix} v_{1}(t) \ v_{2}(t) \end{bmatrix} = \begin{bmatrix} 2 \ -0.2 \end{bmatrix} + \begin{bmatrix} v_{1}(t-1) \ v_{2}(t-1) \end{bmatrix} \begin{bmatrix} 0.2 & 0.6 \\ 0.8 & 0.4 \end{bmatrix}
+$$
+
 At $t=100$:
 $$
-\mathbf{v}(100) = \begin{bmatrix} 75.2 & 73.6 \end{bmatrix}
+\mathbf{v}(100) = \begin{bmatrix} 77.88 & 76.59 \end{bmatrix}
 $$
 
-# Code Implementation
-
-```python
-import numpy as np
-
-P = np.array([[0.2, 0.6], [0.8, 0.4]])
-R = np.array([[6, 1], [1, -2]])
-q = np.sum(P * R, axis=1)
-
-def value_function(v, P, q, t=100):
-    for _ in range(t):
-        v = q + np.dot(v, P)
-    return v
-
-v_initial = np.array([0, 0])
-v_result = value_function(v_initial, P, q)
-print(v_result)
-```
+In other words, the frogs expected value at $t = 100$ is that lilly pad $1$ will be greater (with $77.88$ expected flies) than that of lilly pad $2$ (with $76.59$ expected flies)
 
 ## Asymptotic Behavior 
 
 <div style="text-align: center;">
-  ![](images/numberline.png){width=50%}
+  ![](images/MCAsymptotic_.svg){width=50%}
 </div>
 
 ## Discounting Factor
 
-MATH DERIVATION FORMULA MISSING HERE 
-
-The **Discounting Factor** $\gamma$ places higher value on present rewards:
+\item The \textbf{Discounting Factor} $\gamma$ allows us to place a higher value on the present rewards, rather than future uncertain rewards.
 
 $$
 \mathbf{v}(t) = \mathbf{q} + \gamma \mathbf{v}(t-1) \mathbf{P}
 $$
 
+$$
+\begin{bmatrix} v_{1}(t) \ v_{2}(t) \end{bmatrix} = \begin{bmatrix} 2 \ -0.2 \end{bmatrix} + \gamma \begin{bmatrix} v_{1}(t-1) \ v_{2}(t-1) \end{bmatrix} \begin{bmatrix} 0.2 & 0.6 \\ 0.8 & 0.4 \end{bmatrix}
+$$
+
 At $\gamma=0.9$ and $t=100$:
 $$
-\mathbf{v}(100) = \begin{bmatrix} 8.4 & 6.7 \end{bmatrix}
+\mathbf{v}(100) = \begin{bmatrix} 8.47 & 7.15 \end{bmatrix}
 $$
 
 ## Discounted Asymptotic Behavior 
 
 <div style="text-align: center;">
-  ![](images/numberline.png){width=50%}
+  ![](images/MCAsymptotic.svg){width=50%}
 </div>
+
+# Python Code
+
+```python
+import numpy as np
+
+GAMMA = 0.9
+P = np.array([[0.2, 0.6], [0.8, 0.4]])
+R = np.array([[6, 1], [1, -2]])
+q = np.sum(P * R, axis=1)
+v_initial = np.array([0, 0])
+
+def value_function(v, P, q, t=100):
+    for _ in range(t):
+        v = q + GAMMA * np.dot(v, P)
+    return v
+
+v_result = value_function(v_initial, P, q)
+print(v_result)
+```

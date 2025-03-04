@@ -1,0 +1,50 @@
+---
+title: "Homework 4"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Homework for Lecture 4: Dynamic Programming 📝
+:::
+
+> **Instructions:** <br> 
+> <br>
+> - **Show ALL Work, Neatly and in Order.** <br>
+> - **No** credit for Answers Without Work. <br>
+> - Submit a single PDF file including all solutions. <br>
+> - **DO NOT** submit individual files or images. <br>
+> - For coding questions, submit **ONE** `.py` file with comments. <br>
+
+::: {.callout-note}
+For this homework, you only need `gymnasium`, `pygame`, `matplotlib` & `numpy` function.
+:::
+
+## Question 1
+If the current state is $S_{t}$, and actions are selected according to stochastic policy $\pi$, then what is the expectation of $R_{t+1}$ in terms of $\pi$ and the four-argument function $p$?
+
+## Question 2
+Give an equation for $v_{\pi}$ in terms of $q_{\pi}$ and $\pi$.
+
+## Question 3
+Give an equation for $q_{\pi}$ in terms of $v_{\pi}$ and $\pi$.
+
+## Coding Exercise 1
+With a discount factor of $\gamma = 0.9$, calculate $v(t)$ when $t = 100$ for the following Markov Chain:
+
+![](images/hw4-1.png){width=40% fig-align="center"}
+
+## Coding Exercise 2
+With a discount factor of $\gamma = 0.9$, calculate $v(t)$ when $t = 100$ for the following Markov Chain:
+
+![](images/hw4-2.png){width=40% fig-align="center"}
+
+## Coding Exercise 3
+With a discount factor of $\gamma = 0.9$, code Iterative Policy Evaluation (Prediction) and Value Iteration algorithms for the following GridWorld MDP:
+
+![](images/hw4-3.png){width=40% fig-align="center"}
+
+**Note:** The gray shaded areas are barriers. Moving into a barrier incurs a reward of $R = -1$.
+
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1QtZg6Pg_ZDB1D6kFWyEukpxmIvJSrifG?usp=sharing)

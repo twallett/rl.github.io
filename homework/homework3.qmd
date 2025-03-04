@@ -6,7 +6,7 @@ format:
 ---
 
 ::: {.callout-note appearance="simple" icon=false}
-Homework for Lecture 4: Dynamic Programming 📝
+Homework for Lecture 3: Multi-Armed Bandits 📝
 :::
 
 > **Instructions:** <br> 
@@ -21,5 +21,99 @@ Homework for Lecture 4: Dynamic Programming 📝
 For this homework, you only need `numpy`, `pandas`, and `sklearn`'s `MinMaxScaler` function.
 :::
 
+## Coding Exercise 1: Load Environments
+Load existing Bernoulli and Gaussian environments from `Utils.env` using the default options and a random seed of 123.
+
+## Coding Exercise 2: Epsilon-Greedy Recommendation System
+Using the existing Epsilon-Greedy ($\epsilon = 0.10$) code, create a recommendation system.
+
+## Coding Exercise 3: UCB Algorithm and Recommendation System
+Code the Upper Confidence Boundary (UCB) algorithm and create a recommendation system.
+
+## Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System
+Code the Thompson Sampling algorithm and create a recommendation system.
+
+## Coding Exercise 5: MAB Algorithm Performance Comparison
+For 10,000 recommendations:
+
+1. Does Epsilon-Greedy ($\epsilon = 0.10$) perform better in the Bernoulli or Gaussian environment?
+2. Does UCB perform better in the Bernoulli or Gaussian environment?
+3. Does Thompson Sampling perform better in the Bernoulli or Gaussian environment?
+4. Which algorithm performs best in the Bernoulli environment?
+5. Which algorithm performs best in the Gaussian environment?
+
+*Hint: Check the performance of each MAB by observing the most frequently recommended arm.*
+
+## Coding Exercise 6: Random Seed Analysis
+Using random seeds 0-50, for 10,000 recommendations, do the algorithms perform the same?
+
+## Coding Exercise 7: Amazon Dataset Analysis
+For the `Amazon.csv` dataset, repeat exercise Coding Exercise 6 and find the most frequently recommended arm.
+
+## Coding Exercise 8: EXP3 Algorithm and Recommendation System
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{MAB EXP3}
+\begin{algorithmic}
+\State Initialize, for $a = 1$ to $k$:
+\State $Q(a) \gets \frac{1}{k}$
+\State $W(a) \gets 1$ \\
+\For{$t$ in range($len(data)$)}
+    \State $Q(a) \gets (1 - \gamma) \frac{W(a)}{\sum_{i=1}^{k} W(a_{i})} + \frac{\gamma}{k}$ \\
+    \State $A_t \gets$ random choice with probabilities $Q(a)$ \\
+    \State $R_t \gets \text{bandit}(A_t)$
+    \State $\hat{R_t} \gets
+        \begin{cases}
+            \frac{R_t}{Q(A_t)} & \text{if } A_t = a\\
+            0 & \text{else}
+        \end{cases}$
+    \State $W(a) \gets W(a) e^{\frac{\gamma \hat{R_t}}{k}}$
+\Endfor
+\end{algorithmic}
+\end{algorithm}
+```
+
+## Coding Exercise 9: Gradient Method Algorithm and Recommendation System
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{MAB Gradient Method}
+\begin{algorithmic}
+\State Initialize, for $a = 1$ to $k$:
+\State $Q(a) \gets 0$
+\State $N(a) \gets 0$
+\State $H(a) \gets 0$ \\
+\For{$t$ in range($len(data)$)}
+\State $\pi(a) \gets \text{softmax}(H(a))$
+\State $A_t \gets \text{argmax}_a(\pi(a))$
+\State $R_t \gets \text{bandit}(A_t)$
+\State $N(A_t) \gets N(A_t) + 1$
+\State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
+\State $H(a) \gets
+    \begin{cases}
+        H(A_t) + \alpha (R_t - Q(A_t)) (1 - \pi(A_t)) & \text{if } A_t = a\\
+        H(a) - \alpha (R_t - Q(a)) \pi(a) & \text{else}
+    \end{cases}$
+\Endfor
+\end{algorithmic}
+\end{algorithm}
+```
 
 ## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1B9ko8fJaSFJRbbK493zTUCjI-uBFGla7#scrollTo=sp5yXpnFeSrp)

@@ -311,6 +311,11 @@ window.Quarto = {
   <a href="../homework/homework3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 4</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -394,7 +399,7 @@ window.Quarto = {
 </section>
 <section id="pseudocode" class="level2">
 <h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
-<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-no-end="false" data-line-number="true" data-comment-delimiter="//" data-line-number-punc=":" data-indent-size="1.2em" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-comment-delimiter="//" data-no-end="false" data-indent-size="1.2em" data-line-number="true" data-pseudocode-number="1" data-caption-prefix="Algorithm">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB Thompson Sampling} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $\alpha(a) \gets 1$ \State $\beta(a) \gets 1$ \\ \For{$t$ in range($len(data)$)} \State $Q(a) \leftarrow beta(\alpha(a),\beta(a))$ \State $A_t \leftarrow argmax_a Q(a)$ \State $R_t \gets \text{bandit}(A_t)$ \State $\alpha(A_t) \leftarrow \alpha(A_t) + R_t$ \State $\beta(A_t) \leftarrow \beta(A_t) + 1 - R_t$ \Endfor \end{algorithmic} \end{algorithm}
 </div>

@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -311,6 +282,11 @@ window.Quarto = {
   <a href="../homework/homework3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 4</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -324,23 +300,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
-  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
-  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
-  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
-  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
-  <li><a href="#coding-exercise-1" id="toc-coding-exercise-1" class="nav-link" data-scroll-target="#coding-exercise-1">Coding Exercise 1</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -370,121 +331,12 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Homework for Lecture 2: Mathematical Foundations 📝</p>
+<p>No Homework! Enjoy!</p>
 </div>
 </div>
 </div>
-<blockquote class="blockquote">
-<p><strong>Instructions:</strong> <br> <br> - <strong>Show ALL Work, Neatly and in Order.</strong> <br> - <strong>No</strong> credit for Answers Without Work. <br> - Submit a single PDF file including all solutions. <br> - <strong>DO NOT</strong> submit individual files or images. <br> - For coding questions, submit <strong>ONE</strong> <code>.py</code> file with comments. <br></p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For this homework, you only need <code>numpy</code> and <code>matplotlib</code>.</p>
-</div>
-</div>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Write some of the elements of the following sets:</p>
-<ol type="1">
-<li><span class="math inline">\(\{ 5x-1: x \in \mathbb{Z} \}\)</span></li>
-<li><span class="math inline">\(\{ x \in \mathbb{R}: \sin \pi x = 0 \}\)</span></li>
-<li><span class="math inline">\(\{X : X \subseteq \{3,2,a\} \text{ and } |X|=2 \}\)</span></li>
-</ol>
-<p>Write the following sets in set notation:</p>
-<ol start="4" type="1">
-<li><span class="math inline">\(\{ 2, 4, 8, 16, 32, 64, ...\}\)</span></li>
-<li><span class="math inline">\(\{0,1,4,9,16,25,36, ...\}\)</span></li>
-<li><span class="math inline">\(\{..., \frac{1}{8},\frac{1}{4},\frac{1}{2},1,2,4,8,... \}\)</span></li>
-</ol>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>A retail store accepts either American Express or VISA. The percentages of customers carrying each card are: <br></p>
-<ul>
-<li>American Express: <span class="math inline">\(24%\)</span></li>
-<li>VISA: <span class="math inline">\(61%\)</span></li>
-<li>Both: <span class="math inline">\(11%\)</span></li>
-</ul>
-<p>What percentage of customers carry a card accepted by the store?</p>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>Sixty percent of students wear neither a ring nor a necklace. Given: <br></p>
-<ul>
-<li><span class="math inline">\(20%\)</span> wear a ring</li>
-<li><span class="math inline">\(30%\)</span> wear a necklace</li>
-</ul>
-<p>Find the probability that a randomly chosen student wears:</p>
-<ol type="1">
-<li>A ring or a necklace</li>
-<li>Both a ring and a necklace</li>
-</ol>
-</section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Two fair dice are rolled. Find the conditional probability that at least one die lands on <span class="math inline">\(6\)</span>, given that they land on different numbers.</p>
-</section>
-<section id="question-5" class="level2">
-<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
-<p>An urn contains <span class="math inline">\(6\)</span> white and <span class="math inline">\(9\)</span> black balls. If <span class="math inline">\(4\)</span> balls are selected without replacement, what is the probability that the first <span class="math inline">\(2\)</span> are white and the last <span class="math inline">\(2\)</span> are black?</p>
-</section>
-<section id="question-6" class="level2">
-<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
-<p>A defendant is judged guilty if at least <span class="math inline">\(2\)</span> out of <span class="math inline">\(3\)</span> judges vote guilty. Given:</p>
-<ul>
-<li>Probability of a guilty vote when defendant is guilty: <span class="math inline">\(0.7\)</span> <br></li>
-<li>Probability of a guilty vote when defendant is innocent: <span class="math inline">\(0.2\)</span> <br></li>
-<li><span class="math inline">\(70%\)</span> of defendants are guilty</li>
-</ul>
-<p>Compute the conditional probability that judge <span class="math inline">\(3\)</span> votes guilty given:</p>
-<ol type="1">
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> vote guilty. <br></li>
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> split votes. <br></li>
-<li>Judges <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> vote not guilty.</li>
-</ol>
-<p>Are the judges’ votes independent? Conditionally independent? Explain.</p>
-</section>
-<section id="question-7" class="level2">
-<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
-<p>Given the distribution function of <span class="math inline">\(X\)</span>:</p>
-<p><span class="math display">\[
-F_{X}(\lambda) =
-\begin{cases}
-0, &amp; \lambda &lt; 0 \\
-\frac{1}{2}, &amp; 0 \leq \lambda &lt; 1 \\
-\frac{3}{5}, &amp; 1 \leq \lambda &lt; 2 \\
-\frac{4}{5}, &amp; 2 \leq \lambda &lt; 3 \\
-\frac{9}{10}, &amp; 3 \leq \lambda &lt; 3.5 \\
-1, &amp; \lambda \geq 3.5 \\
-\end{cases}
-\]</span></p>
-<p>Find <span class="math inline">\(p_X(\lambda)\)</span>.</p>
-</section>
-<section id="question-8" class="level2">
-<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
-<p>A player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.</p>
-</section>
-<section id="coding-exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-1">Coding Exercise 1</h2>
-<p>The binomial distribution PMF is:</p>
-<p><span class="math display">\[
-p_X(\lambda) = {n \choose k} \lambda^n (1-\lambda)^{n-k}
-\]</span></p>
-<p>Using Python, generate binomial data and create visualizations for <span class="math inline">\(p_X(\lambda)\)</span> and <span class="math inline">\(F_X(\lambda)\)</span>.</p>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"><a href="https://colab.research.google.com/drive/1aA2D9X1oTxvi1BPl5TqSZ_2rKDOUIIHD?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></h2>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -9,78 +9,126 @@ format:
 A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
 :::
 
-## Definition
+## Dynamic Programming
 
-- **Dynamic Programming** refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).
+**Dynamic Programming** refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environment as a Markov decision process (MDP).
 
-- These algorithms have limited utility in reinforcement learning due to their **assumption of a perfect model** and their **computational expense**, but they are still important theoretically.
+These algorithms have limited utility in reinforcement learning due to their **assumption of a perfect model** and their **computational expense**, but they are still important theoretically.
 
-- In fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.
+In fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.
 
----
+### Pseudocode
 
-## Bellman Equations
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
 
-So far, we looked at how to evaluate Bellman equations:
+\begin{algorithm}
+\caption{Iterative Policy Evaluation (Prediction)}
+\begin{algorithmic}[1]  % [1] enables line numbers
 
-**Value Function**  
-$$ v_{\pi}(s) = \sum_{a} \pi(a|s) \sum_{s^{'}, r} p(s^{'},r|s,a)[r + \gamma v_{\pi}(s^{'})] $$  
-*Intuition: How good is it to be in state \(s\) according to policy \(\pi\)?*
+\State \textbf{Initialize:} 
+\State $V(s) \gets 0$ for all $s \in S$
+\State $\gamma \in [0,1)$
+\State $\theta \gets 10^{-4}$ \Comment{small positive number for accuracy of estimation}
 
-**Action-Value Function**  
-$$ q_{\pi}(s, a) = \sum_{s^{'}, r} p(s^{'},r|s,a)[r + \gamma v_{\pi}(s^{'})] $$  
-*Intuition: Is it good to select \(a\) in \(s\) and thereafter follow policy \(\pi\)?*
+\Repeat
+    \State $\Delta \gets 0$
+    \ForAll{$s \in S$}
+        \State $v \gets V(s)$
+        \State $V(s) \gets \sum_{a} \pi(a|s) \sum_{s',r} p(s',r|s,a) \left[ r + \gamma V(s') \right]$
+        \State $\Delta \gets \max(\Delta, |v - V(s)|)$
+    \EndFor
+\Until{$\Delta < \theta$}
 
----
+\end{algorithmic}
+\end{algorithm}
+```
 
-## Policy Evaluation
-
-![](DP/imgs/4-1DP.pdf)
-
----
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
 
 ## Policy Improvement
 
-- We know how good it is to follow the current policy from \(s\) — that is \(v_{\pi}(s)\) — but would it be better or worse to change to a new policy \(\pi^{'}\)?
+We know how good it is to follow the current policy from $s$ — that is $v_{\pi}(s)$ — but would it be better or worse to change to a new policy $\pi^{'}$?
 
-- One way to check if it is better to switch from policy \(\pi\) to \(\pi^{'}\) is by checking if the following inequality holds:
+One way to check if it is better to switch from policy $\pi$ to $\pi^{'}$ is by checking if the following inequality holds:
 
-  $$ q_{\pi}(s, \pi^{'}(s)) \geq v_{\pi}(s) $$
+$$ 
+q_{\pi}(s, \pi^{'}(s)) \geq v_{\pi}(s) 
+$$
 
-- *Intuition:* If selecting \(a\) in \(s\) and thereafter following policy \(\pi\) is better than just following \(\pi\), then there must be a better policy \(\pi^{'}\).
+*Intuition:* If selecting $a$ in $s$ and thereafter following policy $\pi$ is better than just following $\pi$, then there must be a better policy $\pi^{'}$.
 
-- The special case when this inequality is true is referred to as the **policy improvement theorem**.
-
----
+The special case when this inequality is true is referred to as the **policy improvement theorem**.
 
 ## Value Iteration
 
-- One drawback of policy iteration is that policy evaluation is done iteratively, requiring convergence exactly to \(v_{\pi}\), which occurs only in the limit.
+One drawback of policy iteration is that policy evaluation is done iteratively, requiring convergence exactly to $v_{\pi}$, which occurs only in the limit.
 
-- **Value Iteration** is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.
+**Value Iteration** is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.
 
----
+### Pseudocode
 
-## Value Iteration Pseudocode
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
 
-![](DP/imgs/4-2DP.pdf)
+\begin{algorithm}
+\caption{Value Iteration}
+\begin{algorithmic}
 
----
+\State \textbf{Initialize:} 
+\State $V(s) \gets 0$ for all $s \in S$
+\State $\gamma \in [0,1)$
+\State $\theta \gets 10^{-4}$  \textit{// small positive number for accuracy of estimation}
+
+\Repeat
+    \State $\Delta \gets 0$
+    \Forall{$s \in S$}
+        \State $v \gets V(s)$
+        \State $V(s) \gets \max_a \sum_{s^{'},r} p(s^{'},r|s,a) \left[ r + \gamma V(s^{'}) \right]$
+        \State $\Delta \gets \max(\Delta, |v - V(s)|)$
+    \Endfor
+\Until{$\Delta < \theta$}
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> <!-- Adjust width as needed -->
+  </a>
+</div>
 
 ## Generalized Policy Iteration
 
 ::: {.columns}
 ::: {.column width="50%"}
 
-- **Generalized Policy Iteration** refers to the general idea of letting policy evaluation and policy improvement processes interact, regardless of anything else.
+**Generalized Policy Iteration** refers to the general idea of letting policy evaluation and policy improvement processes interact, regardless of anything else.
 
-- Almost all of RL can be described as the policy always being improved with respect to the value function, and the value function always being driven toward the value function for the policy.
+Almost all of RL can be described as the policy always being improved with respect to the value function, and the value function always being driven toward the value function for the policy.
 
 :::
 
 ::: {.column width="50%"}
 
-![](DP/imgs/GPI.png)
+![](images/GPI.png){width=40% fig-align="center"}
 
 :::
 :::

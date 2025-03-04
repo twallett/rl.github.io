@@ -6,7 +6,7 @@ format:
 ---
 
 ::: {.callout-note appearance="simple" icon=false}
-Homework for Lecture 3: Multi-Armed Bandits 📝
+Homework for Lecture 2: Mathematical Foundations 📝
 :::
 
 > **Instructions:** <br> 
@@ -18,102 +18,91 @@ Homework for Lecture 3: Multi-Armed Bandits 📝
 > - For coding questions, submit **ONE** `.py` file with comments. <br>
 
 ::: {.callout-note}
-For this homework, you only need `numpy`, `pandas`, and `sklearn`'s `MinMaxScaler` function.
+For this homework, you only need `numpy` and `matplotlib`.
 :::
 
-## Coding Exercise 1: Load Environments
-Load existing Bernoulli and Gaussian environments from `Utils.env` using the default options and a random seed of 123.
+## Question 1
+Write some of the elements of the following sets:
 
-## Coding Exercise 2: Epsilon-Greedy Recommendation System
-Using the existing Epsilon-Greedy ($\epsilon = 0.10$) code, create a recommendation system.
+1. $\{ 5x-1: x \in \mathbb{Z} \}$
+2. $\{ x \in \mathbb{R}: \sin \pi x = 0 \}$
+3. $\{X : X \subseteq \{3,2,a\} \text{ and } |X|=2 \}$
 
-## Coding Exercise 3: UCB Algorithm and Recommendation System
-Code the Upper Confidence Boundary (UCB) algorithm and create a recommendation system.
+Write the following sets in set notation:
 
-## Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System
-Code the Thompson Sampling algorithm and create a recommendation system.
+4. $\{ 2, 4, 8, 16, 32, 64, ...\}$
+5. $\{0,1,4,9,16,25,36, ...\}$
+6. $\{..., \frac{1}{8},\frac{1}{4},\frac{1}{2},1,2,4,8,... \}$
 
-## Coding Exercise 5: MAB Algorithm Performance Comparison
-For 10,000 recommendations:
+## Question 2
+A retail store accepts either American Express or VISA. The percentages of customers carrying each card are: <br> 
 
-1. Does Epsilon-Greedy ($\epsilon = 0.10$) perform better in the Bernoulli or Gaussian environment?
-2. Does UCB perform better in the Bernoulli or Gaussian environment?
-3. Does Thompson Sampling perform better in the Bernoulli or Gaussian environment?
-4. Which algorithm performs best in the Bernoulli environment?
-5. Which algorithm performs best in the Gaussian environment?
+- American Express: $24%$
+- VISA: $61%$
+- Both: $11%$
 
-*Hint: Check the performance of each MAB by observing the most frequently recommended arm.*
+What percentage of customers carry a card accepted by the store?
 
-## Coding Exercise 6: Random Seed Analysis
-Using random seeds 0-50, for 10,000 recommendations, do the algorithms perform the same?
+## Question 3
+Sixty percent of students wear neither a ring nor a necklace. Given: <br>
 
-## Coding Exercise 7: Amazon Dataset Analysis
-For the `Amazon.csv` dataset, repeat exercise Coding Exercise 6 and find the most frequently recommended arm.
+- $20%$ wear a ring
+- $30%$ wear a necklace
 
-## Coding Exercise 8: EXP3 Algorithm and Recommendation System
+Find the probability that a randomly chosen student wears:
 
-```pseudocode
-#| html-indent-size: "1.2em"
-#| html-comment-delimiter: "//"
-#| html-line-number: true
-#| html-line-number-punc: ":"
-#| html-no-end: false
-#| pdf-placement: "htb!"
-#| pdf-line-number: true
+1. A ring or a necklace
+2. Both a ring and a necklace
 
-\begin{algorithm}
-\caption{MAB EXP3}
-\begin{algorithmic}
-\State Initialize, for $a = 1$ to $k$:
-\State $Q(a) \gets \frac{1}{k}$
-\State $W(a) \gets 1$ \\
-\For{$t$ in range($len(data)$)}
-    \State $Q(a) \gets (1 - \gamma) \frac{W(a)}{\sum_{i=1}^{k} W(a_{i})} + \frac{\gamma}{k}$ \\
-    \State $A_t \gets$ random choice with probabilities $Q(a)$ \\
-    \State $R_t \gets \text{bandit}(A_t)$
-    \State $\hat{R_t} \gets
-        \begin{cases}
-            \frac{R_t}{Q(A_t)} & \text{if } A_t = a\\
-            0 & \text{else}
-        \end{cases}$
-    \State $W(a) \gets W(a) e^{\frac{\gamma \hat{R_t}}{k}}$
-\Endfor
-\end{algorithmic}
-\end{algorithm}
-```
+## Question 4
+Two fair dice are rolled. Find the conditional probability that at least one die lands on $6$, given that they land on different numbers.
 
-## Coding Exercise 9: Gradient Method Algorithm and Recommendation System
+## Question 5
+An urn contains $6$ white and $9$ black balls. If $4$ balls are selected without replacement, what is the probability that the first $2$ are white and the last $2$ are black?
 
-```pseudocode
-#| html-indent-size: "1.2em"
-#| html-comment-delimiter: "//"
-#| html-line-number: true
-#| html-line-number-punc: ":"
-#| html-no-end: false
-#| pdf-placement: "htb!"
-#| pdf-line-number: true
+## Question 6
+A defendant is judged guilty if at least $2$ out of $3$ judges vote guilty. Given: 
 
-\begin{algorithm}
-\caption{MAB Gradient Method}
-\begin{algorithmic}
-\State Initialize, for $a = 1$ to $k$:
-\State $Q(a) \gets 0$
-\State $N(a) \gets 0$
-\State $H(a) \gets 0$ \\
-\For{$t$ in range($len(data)$)}
-\State $\pi(a) \gets \text{softmax}(H(a))$
-\State $A_t \gets \text{argmax}_a(\pi(a))$
-\State $R_t \gets \text{bandit}(A_t)$
-\State $N(A_t) \gets N(A_t) + 1$
-\State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
-\State $H(a) \gets
-    \begin{cases}
-        H(A_t) + \alpha (R_t - Q(A_t)) (1 - \pi(A_t)) & \text{if } A_t = a\\
-        H(a) - \alpha (R_t - Q(a)) \pi(a) & \text{else}
-    \end{cases}$
-\Endfor
-\end{algorithmic}
-\end{algorithm}
-```
+- Probability of a guilty vote when defendant is guilty: $0.7$ <br>
+- Probability of a guilty vote when defendant is innocent: $0.2$ <br>
+- $70%$ of defendants are guilty
 
-## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1B9ko8fJaSFJRbbK493zTUCjI-uBFGla7#scrollTo=sp5yXpnFeSrp)
+Compute the conditional probability that judge $3$ votes guilty given:
+
+1. Judges $1$ and $2$ vote guilty. <br>
+2. Judges $1$ and $2$ split votes. <br>
+3. Judges $1$ and $2$ vote not guilty.
+
+Are the judges' votes independent? Conditionally independent? Explain.
+
+## Question 7
+Given the distribution function of $X$:
+
+$$
+F_{X}(\lambda) = 
+\begin{cases}
+0, & \lambda < 0 \\
+\frac{1}{2}, & 0 \leq \lambda < 1 \\
+\frac{3}{5}, & 1 \leq \lambda < 2 \\
+\frac{4}{5}, & 2 \leq \lambda < 3 \\
+\frac{9}{10}, & 3 \leq \lambda < 3.5 \\
+1, & \lambda \geq 3.5 \\
+\end{cases}
+$$
+
+
+Find $p_X(\lambda)$.
+
+## Question 8
+A player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.
+
+## Coding Exercise 1
+The binomial distribution PMF is:
+
+$$
+p_X(\lambda) = {n \choose k} \lambda^n (1-\lambda)^{n-k}
+$$
+
+Using Python, generate binomial data and create visualizations for $p_X(\lambda)$ and $F_X(\lambda)$.
+
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1aA2D9X1oTxvi1BPl5TqSZ_2rKDOUIIHD?usp=sharing)

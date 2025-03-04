@@ -48,24 +48,26 @@ book:
           file: lecture3/lecture3-3.qmd
         - text: "3.4 Thompson Sampling"
           file: lecture3/lecture3-4.qmd
-    # - part: "Lecture 4: Dynamic Programming"
-    #   chapters:
-    #     - text: "Learning Objectives"
-    #       file: lecture4/lo.qmd
-    #     - text: "4.1 Markov Chain"
-    #       file: lecture4/lecture4-1.qmd
-    #     - text: "4.2 Markov Decision Process (MDPs)"
-    #       file: lecture4/lecture4-2.qmd
-    #     - text: "4.3 Dynamic Programming"
-    #       file: lecture4/lecture4-3.qmd
+    - part: "Lecture 4: Dynamic Programming"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture4/lo.qmd
+        - text: "4.1 Markov Chain"
+          file: lecture4/lecture4-1.qmd
+        - text: "4.2 Markov Decision Process (MDPs)"
+          file: lecture4/lecture4-2.qmd
+        - text: "4.3 Dynamic Programming"
+          file: lecture4/lecture4-3.qmd
     - part: "Homeworks"
       chapters:
         - text: "Homework 1"
           file: homework/homework1.qmd
         - text: "Homework 2"
           file: homework/homework2.qmd
-        # - text: "Homework 3"
-        #   file: homework/homework3.qmd
+        - text: "Homework 3"
+          file: homework/homework3.qmd
+        - text: "Homework 4"
+          file: homework/homework4.qmd
     - references.qmd
     # - part: "Lecture 5: Monte Carlo"
     #   chapters:

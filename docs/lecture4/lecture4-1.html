@@ -345,6 +345,11 @@ window.Quarto = {
   <a href="../homework/homework3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 4</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -368,12 +373,10 @@ window.Quarto = {
   <li><a href="#probability-matrix" id="toc-probability-matrix" class="nav-link" data-scroll-target="#probability-matrix">Probability Matrix</a></li>
   <li><a href="#rewards-matrix" id="toc-rewards-matrix" class="nav-link" data-scroll-target="#rewards-matrix">Rewards Matrix</a></li>
   <li><a href="#value-function" id="toc-value-function" class="nav-link" data-scroll-target="#value-function">Value Function</a></li>
-  <li><a href="#code-implementation" id="toc-code-implementation" class="nav-link" data-scroll-target="#code-implementation">Code Implementation</a>
-  <ul class="collapse">
   <li><a href="#asymptotic-behavior" id="toc-asymptotic-behavior" class="nav-link" data-scroll-target="#asymptotic-behavior">Asymptotic Behavior</a></li>
   <li><a href="#discounting-factor" id="toc-discounting-factor" class="nav-link" data-scroll-target="#discounting-factor">Discounting Factor</a></li>
   <li><a href="#discounted-asymptotic-behavior" id="toc-discounted-asymptotic-behavior" class="nav-link" data-scroll-target="#discounted-asymptotic-behavior">Discounted Asymptotic Behavior</a></li>
-  </ul></li>
+  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code">Python Code</a></li>
   </ul>
 </nav>
     </div>
@@ -486,58 +489,84 @@ P(s’ | s, s_{t-1}, s_{t-2}, \dots) = P(s’ | s)
 <section id="value-function" class="level2">
 <h2 class="anchored" data-anchor-id="value-function">Value Function</h2>
 <p>We want to calculate the expected value of moving from state <span class="math inline">\(i\)</span> to state <span class="math inline">\(j\)</span> for all situations <span class="math inline">\(s \in \{1,2,...,S\}\)</span>:</p>
-<p>MATH DERIVATION FORMULA MISSING HERE</p>
+<p><span class="math display">\[
+\begin{align*}
+v_{j}(t) &amp; = \sum_{i=1}^{S} p_{i,j} \ [r_{i,j}+v_{i}(t-1)] \\
+&amp; = \sum_{i=1}^{S} p_{i,j} \ r_{i,j} + \sum_{i=1}^{S} p_{i,j} \ v_{i}(t-1) \\
+&amp; = \textbf{q} + \sum_{i=1}^{S} p_{i,j}\ v_{i}(t-1)
+\end{align*}
+\]</span></p>
 <p><span class="math display">\[
 \mathbf{v}(t) = \mathbf{q} + \mathbf{v}(t-1) \mathbf{P}
 \]</span></p>
-<p>Where: <span class="math display">\[
+<p>First, we need to calculate <span class="math inline">\(\textbf{q}\)</span>, the expected reward in the next transition out of state <span class="math inline">\(i\)</span>:</p>
+<p><span class="math display">\[
 \mathbf{q} = \sum_{i=1}^{S} p_{i,j} r_{i,j}
 \]</span></p>
-<p>At <span class="math inline">\(t=100\)</span>: <span class="math display">\[
-\mathbf{v}(100) = \begin{bmatrix} 75.2 &amp; 73.6 \end{bmatrix}
+<p><span class="math display">\[
+q_{1} = p_{1,1} \ r_{1,1} + r_{2,1} \ p_{2,1}
 \]</span></p>
+<p><span class="math display">\[
+q_{2} = p_{1,2} \ r_{1,2} + r_{2,2} \ p_{2,2}
+\]</span></p>
+<p><span class="math display">\[
+\textbf{q} =
+\begin{bmatrix}
+    2 &amp; -0.2
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\begin{bmatrix} v_{1}(t) \ v_{2}(t) \end{bmatrix} = \begin{bmatrix} 2 \ -0.2 \end{bmatrix} + \begin{bmatrix} v_{1}(t-1) \ v_{2}(t-1) \end{bmatrix} \begin{bmatrix} 0.2 &amp; 0.6 \\ 0.8 &amp; 0.4 \end{bmatrix}
+\]</span></p>
+<p>At <span class="math inline">\(t=100\)</span>: <span class="math display">\[
+\mathbf{v}(100) = \begin{bmatrix} 77.88 &amp; 76.59 \end{bmatrix}
+\]</span></p>
+<p>In other words, the frogs expected value at <span class="math inline">\(t = 100\)</span> is that lilly pad <span class="math inline">\(1\)</span> will be greater (with <span class="math inline">\(77.88\)</span> expected flies) than that of lilly pad <span class="math inline">\(2\)</span> (with <span class="math inline">\(76.59\)</span> expected flies)</p>
 </section>
-<section id="code-implementation" class="level1">
-<h1>Code Implementation</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> np.array([[<span class="fl">0.2</span>, <span class="fl">0.6</span>], [<span class="fl">0.8</span>, <span class="fl">0.4</span>]])</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> np.array([[<span class="dv">6</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.<span class="bu">sum</span>(P <span class="op">*</span> R, axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> value_function(v, P, q, t<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(t):</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        v <span class="op">=</span> q <span class="op">+</span> np.dot(v, P)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>v_initial <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">0</span>])</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>v_result <span class="op">=</span> value_function(v_initial, P, q)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="asymptotic-behavior" class="level2">
 <h2 class="anchored" data-anchor-id="asymptotic-behavior">Asymptotic Behavior</h2>
 <div style="text-align: center;">
-<p><img src="images/numberline.png" class="img-fluid" style="width:50.0%"></p>
+<p><img src="images/MCAsymptotic_.svg" class="img-fluid" style="width:50.0%"></p>
 </div>
 </section>
 <section id="discounting-factor" class="level2">
 <h2 class="anchored" data-anchor-id="discounting-factor">Discounting Factor</h2>
-<p>MATH DERIVATION FORMULA MISSING HERE</p>
-<p>The <strong>Discounting Factor</strong> <span class="math inline">\(\gamma\)</span> places higher value on present rewards:</p>
+<p>The <span class="math inline">\(\gamma\)</span> allows us to place a higher value on the present rewards, rather than future uncertain rewards.</p>
 <p><span class="math display">\[
 \mathbf{v}(t) = \mathbf{q} + \gamma \mathbf{v}(t-1) \mathbf{P}
 \]</span></p>
+<p><span class="math display">\[
+\begin{bmatrix} v_{1}(t) \ v_{2}(t) \end{bmatrix} = \begin{bmatrix} 2 \ -0.2 \end{bmatrix} + \gamma \begin{bmatrix} v_{1}(t-1) \ v_{2}(t-1) \end{bmatrix} \begin{bmatrix} 0.2 &amp; 0.6 \\ 0.8 &amp; 0.4 \end{bmatrix}
+\]</span></p>
 <p>At <span class="math inline">\(\gamma=0.9\)</span> and <span class="math inline">\(t=100\)</span>: <span class="math display">\[
-\mathbf{v}(100) = \begin{bmatrix} 8.4 &amp; 6.7 \end{bmatrix}
+\mathbf{v}(100) = \begin{bmatrix} 8.47 &amp; 7.15 \end{bmatrix}
 \]</span></p>
 </section>
 <section id="discounted-asymptotic-behavior" class="level2">
 <h2 class="anchored" data-anchor-id="discounted-asymptotic-behavior">Discounted Asymptotic Behavior</h2>
 <div style="text-align: center;">
-<p><img src="images/numberline.png" class="img-fluid" style="width:50.0%"></p>
+<p><img src="images/MCAsymptotic.svg" class="img-fluid" style="width:50.0%"></p>
 </div>
-
-
 </section>
+<section id="python-code" class="level1">
+<h1>Python Code</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>GAMMA <span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> np.array([[<span class="fl">0.2</span>, <span class="fl">0.6</span>], [<span class="fl">0.8</span>, <span class="fl">0.4</span>]])</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> np.array([[<span class="dv">6</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.<span class="bu">sum</span>(P <span class="op">*</span> R, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>v_initial <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> value_function(v, P, q, t<span class="op">=</span><span class="dv">100</span>):</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(t):</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        v <span class="op">=</span> q <span class="op">+</span> GAMMA <span class="op">*</span> np.dot(v, P)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>v_result <span class="op">=</span> value_function(v_initial, P, q)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
 </section>
 
 </main> <!-- /main -->
