@@ -36,7 +36,7 @@ $$
 VAR \uparrow = \sqrt{\frac{2 \ln(t) \uparrow}{N(a)}}
 $$
 
-## Pseudocode
+### Pseudocode
 
 ```pseudocode
 #| html-indent-size: "1.2em"

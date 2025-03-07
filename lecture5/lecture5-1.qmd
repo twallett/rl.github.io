@@ -4,3 +4,80 @@ format:
   html:
     number-sections: false
 ---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Monte Carlo
+
+**Monte Carlo** is a powerful *learning rule* for estimating value functions $v_{\pi}$ and action value functions $q_{\pi}$ in associative environments.
+
+The power of Monte Carlo resides in its ability to _learn the dynamics of any environment, without assuming any prior knowledge, only using experience_.
+
+## Monte Carlo Prediction
+
+Monte Carlo methods are based on averaging sample returns of trajectories following a policy $\pi$.
+
+Recall that returns are calculated as follows:
+
+$$ 
+G_{t} = r_{t+1} + \gamma G_{t+1} 
+$$
+
+Only on the completion of an episode are value estimates $v_{\pi}(s)$ and action value estimates $q_{\pi}(s,a)$ updated.
+
+![](images/MonteCarlo.png){width=10% fig-align="center"}
+
+### Pseudocode
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{Monte Carlo Prediction}
+\begin{algorithmic}
+
+\State \textbf{Initialize:} 
+\State $V(s) \gets 0$ for all $s \in S$
+\State $Returns(s) \gets \{\}$ for all $s \in S$
+\State $\gamma \in [0,1)$
+
+\State \textbf{Loop for each episode:}
+\State Generate an episode following $\pi$: $S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, \dots, S_{T-1}, A_{T-1}, R_{T}$
+\State $G \gets 0$
+\For{$t = T-1, T-2, \dots, 0$}
+    \State $G \gets \gamma G + R_{t+1}$
+    \If{$S_{t}$ not in $\{S_{0}, S_{1}, \dots, S_{t-1}\}$}  \Comment{First-visit check}
+        \State $Returns(S_{t}) \gets Returns(S_{t}) \cup \{G\}$
+        \State $V(S_{t}) \gets \text{average}(Returns(S_{t}))$
+    \Endif
+\Endfor
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
+
+### Environment GridWorld
+
+Assume $\gamma = 0.9$
+
+Suppose we followed the trajectory of $\pi$ for one episode:
+
+![](images/MonteCarloSequential.png){width=65% fig-align="center"}
+
+The following illustrates a Monte Carlo update for the trajectory:
+
+![](images/MonteCarloUpdate.png){width=65% fig-align="center"}

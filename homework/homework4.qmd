@@ -18,7 +18,7 @@ Homework for Lecture 4: Dynamic Programming 📝
 > - For coding questions, submit **ONE** `.py` file with comments. <br>
 
 ::: {.callout-note}
-For this homework, you only need `gymnasium`, `pygame`, `matplotlib` & `numpy` function.
+For this homework, you only need `gymnasium`, `pygame`, `matplotlib` & `numpy`.
 :::
 
 ## Question 1

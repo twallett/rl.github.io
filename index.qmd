@@ -139,8 +139,8 @@ pip install stable-baselines3
 | Sep 5, 2025  | Mathematical Foundations       | | - Set Theory <br> - Axiomatic Probability <br> - Conditioning <br> - Independence <br> - Random Variables <br> - Expectation <br> - Probability Distribution |
 | Sep 12, 2025 | Multi-Armed Bandits            | Quiz 1      | - Multi-Armed Bandit Framework  <br> - $\epsilon$-Greedy  <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling |
 | Sep 19, 2025 | Dynamic Programming            | Quiz 2      | - Markov Chain <br> - Markov Decision Process (MDPs) <br> - Dynamic Programming |
-| Sep 26, 2025 | Monte Carlo Methods            | Quiz 3      | - OpenAI Gymansium Environment: GridWorld <br> - On-Policy Monte Carlo  <br> - Off-Policy Monte Carlo |
-| Oct 3, 2025  | Temporal-Difference            | Quiz 4      | - OpenAI Gymansium Environment: GridWorld <br> - Temporal Difference Prediction <br> - SARSA  <br> - Q-Learning  <br> - Double Q-Learning <br> - (Optional) n-step TD|
+| Sep 26, 2025 | Monte Carlo            | Quiz 3      | - OpenAI Gymansium Environment: GridWorld <br> - Monte Carlo Prediction <br> - Exploring Starts Monte Carlo <br> - On-Policy Monte Carlo  <br> - Off-Policy Monte Carlo |
+| Oct 3, 2025  | Temporal Difference            | Quiz 4      | - OpenAI Gymansium Environment: GridWorld <br> - Temporal Difference (TD) Prediction <br> - SARSA  <br> - Q-Learning  <br> - Double Q-Learning <br> - (Optional) n-step TD|
 | Oct 10, 2025 | Function Approximation         | **Exam 1**  | - OpenAI Gymansium Environment: MountainCar <br> - Value Function Approximation (VFA) <br> - On-Policy Function Approximation <br> - Semi-gradient SARSA <br> - Limitations of Off-Policy Function Approximation |
 | Oct 24, 2025 | Deep Q-Networks                | Quiz 5      | - OpenAI Gymansium Environment: BreakOut <br> - Multi-Layered Perceprtons (MLPs) <br> - Convolutional Neural Networks (CNNs) <br> - Experience Replay  <br> - Fixed Targets <br> - Vanilla Deep Q-Network |
 | Oct 31, 2025  | Policy Gradients               | Quiz 6      | - OpenAI Gymansium Environment: CartPole <br> - Policy Gradient Theorem  <br> - Vanilla Policy Gradient |

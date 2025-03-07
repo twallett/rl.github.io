@@ -4,3 +4,73 @@ format:
   html:
     number-sections: false
 ---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Monte Carlo Control
+
+Without a model, state values $v_{\pi}(s)$ alone are not sufficient.
+
+We must explicitly estimate the value of each action $q_{\pi}(s,a)$.
+
+Monte Carlo methods for this are similar to state value estimation, focusing on visits to state-action pairs $(s,a)$.
+
+The main advantage of estimating action values $q_{\pi}(s,a)$ in Monte Carlo methods lies in **Control**, which refers to finding approximate optimal policies $\pi_{*}$.
+
+Proceeding with the idea of Generalized Policy Iteration (GPI), we evaluate and improve action values $q_{\pi}(s,a)$ to find optimal policies.
+
+## Exploring Starts
+
+The only problem of estimating action values $q_{\pi}(s,a)$ is that some state action pairs $(s,a)$ may never be visited during an episode.
+
+Which brings us back to the same dilemma we faced in the Multi-Armed Bandit chapter, that is:
+
+Balancing exploration and exploitation.
+
+One "quick-fix" is to start each episode from a random state $s$ and take any action $a$ with probability greater than $0$. 
+
+This "quick-fix" is referred to as **Exploring Starts**.
+
+### Pseudocode
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{Monte Carlo Exploring Starts}
+\begin{algorithmic}
+
+\State \textbf{Initialize:} 
+\State $Q(s, a) \gets 0$ for all $(s, a) \in S \times A$
+\State $Returns(s, a) \gets \{\}$ for all $(s, a) \in S \times A$
+\State $\gamma \in [0, 1)$
+
+\State \textbf{Loop for each episode:}
+\State Choose $S_{0}$ and $A_{0}$ randomly with probability $> 0$
+\State Generate episode following $\pi$: $S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, \dots, S_{T-1}, A_{T-1}, R_{T}$
+\State $G \gets 0$
+\For{$t = T-1, T-2, \dots, 0$}
+    \State $G \gets \gamma G + R_{t+1}$
+    \If{$(S_{t}, A_{t})$ not in $\{(S_{0}, A_{0}), (S_{1}, A_{1}), \dots, (S_{t-1}, A_{t-1})\}$}  \Comment{First-visit check}
+        \State $Returns(S_{t}, A_{t}) \gets Returns(S_{t}, A_{t}) \cup \{G\}$
+        \State $Q(S_{t}, A_{t}) \gets \text{average}(Returns(S_{t}, A_{t}))$
+    \Endif
+\Endfor
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>

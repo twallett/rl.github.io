@@ -1,6 +1,85 @@
 ---
-title: "5.3 Off-Policy Monte Carlo"
+title: "5.3 On-Policy Monte Carlo"
 format:
   html:
     number-sections: false
 ---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+::: {.callout-tip}
+## On-Policy Learning
+_On-Policy_ learning evaluates or improves the policy that is used to make decisions.
+:::
+
+## Exploration without an Initial Random State and Action
+
+How can we explore without having to rely on the unrealistic assumption of an initial random state and action?
+
+::: {style="margin-top: 0.6cm"}
+Recall, $\epsilon$-greedy methods for balancing exploration vs. exploitation in Multi-Armed Bandits.
+:::
+
+::: {style="margin-top: 0.6cm"}
+These policies are usually referred to as $\epsilon$-soft policies as they require that the probability of every action is non-zero for all states and actions pairs, that is:
+:::
+
+$$
+\pi(a|s) > 0 \quad \text{for all} \quad s \in S \quad \text{and} \quad a \in A(s)
+$$
+
+## $\epsilon$-Greedy
+
+To calculate the probabilities of selecting an action according to the $\epsilon$-greedy policy $\pi(a|s)$, we use the following update rule:
+
+$$
+\pi(a|s) \gets \begin{cases}
+1 - \epsilon + \frac{\epsilon}{|A(S_{t})|}  & \text{if} \quad a = A_{t} \quad \text{(exploitation)} \\
+\frac{\epsilon}{|A(S_{t})|} & \text{if} \quad a \neq A_{t} \quad \text{(exploration)}
+\end{cases}
+$$
+
+### Pseudocode
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{On-Policy Monte Carlo Control}
+\begin{algorithmic}
+
+\State \textbf{Initialize:} 
+\State $Q(s, a) \gets 0$ for all $(s, a) \in S \times A$
+\State $Returns(s, a) \gets \{\}$ for all $(s, a) \in S \times A$
+\State $\gamma \in [0, 1)$
+\State $\epsilon \in (0, 1]$
+\State $\pi \gets$ arbitrary $\epsilon$-soft policy
+
+\State \textbf{Loop for each episode:}
+\State Generate episode following $\pi$: $S_{0}, A_{0}, R_{1}, \dots, S_{T-1}, A_{T-1}, R_{T}$
+\State $G \gets 0$
+\For{$t = T-1, T-2, \dots, 0$}
+    \State $G \gets \gamma G + R_{t+1}$
+    \If{$(S_{t}, A_{t})$ not in $\{(S_{0}, A_{0}), (S_{1}, A_{1}), \dots, (S_{t-1}, A_{t-1})\}$}  \Comment{First-visit check}
+        \State $Returns(S_{t}, A_{t}) \gets Returns(S_{t}, A_{t}) \cup \{G\}$
+        \State $Q(S_{t}, A_{t}) \gets \text{average}(Returns(S_{t}, A_{t}))$
+    \Endif
+\Endfor
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>

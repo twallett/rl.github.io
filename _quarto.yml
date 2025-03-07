@@ -22,6 +22,8 @@ book:
           file: lecture1/lecture1-4.qmd
     - part: "Lecture 2: Mathematical Foundations"
       chapters:
+        - text: "Learning Objectives"
+          file: lecture2/lo.qmd
         - text: "2.1 Set Theory"
           file: lecture2/lecture2-1.qmd
         - text: "2.2 Axiomatic Probability"
@@ -58,16 +60,32 @@ book:
           file: lecture4/lecture4-2.qmd
         - text: "4.3 Dynamic Programming"
           file: lecture4/lecture4-3.qmd
-    # - part: "Lecture 5: Monte Carlo"
-    #   chapters:
-    #     - text: "Learning Objectives"
-    #       file: lecture5/lo.qmd
-    #     - text: "5.1 Monte Carlo Prediction"
-    #       file: lecture5/lecture5-1.qmd
-    #     - text: "5.2 On-Policy Monte Carlo"
-    #       file: lecture5/lecture5-2.qmd
-    #     - text: "5.3 Off-Policy Monte Carlo"
-    #       file: lecture5/lecture5-3.qmd
+    - part: "Lecture 5: Monte Carlo"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture5/lo.qmd
+        - text: "5.1 Monte Carlo Prediction"
+          file: lecture5/lecture5-1.qmd
+        - text: "5.2 Exploring Starts Monte Carlo"
+          file: lecture5/lecture5-2.qmd
+        - text: "5.3 On-Policy Monte Carlo"
+          file: lecture5/lecture5-3.qmd
+        - text: "5.4 Off-Policy Monte Carlo"
+          file: lecture5/lecture5-4.qmd
+    - part: "Lecture 6: Temporal Difference"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture6/lo.qmd
+        - text: "6.1 Temporal Difference (TD) Prediction"
+          file: lecture6/lecture6-1.qmd
+        - text: "6.2 SARSA"
+          file: lecture6/lecture6-2.qmd
+        - text: "6.3 Q-Learning"
+          file: lecture6/lecture6-3.qmd
+        - text: "6.4 Double Q-Learning"
+          file: lecture6/lecture6-4.qmd
+        - text: "6.5 (Optional) n-step Bootstrapping"
+          file: lecture6/lecture6-5.qmd
     - part: "Homeworks"
       chapters:
         - text: "Homework 1"
@@ -78,15 +96,11 @@ book:
           file: homework/homework3.qmd
         - text: "Homework 4"
           file: homework/homework4.qmd
-        # - text: "Homework 5"
-        #   file: homework/homework5.qmd
+        - text: "Homework 5"
+          file: homework/homework5.qmd
+        - text: "Homework 6"
+          file: homework/homework6.qmd
     - references.qmd
-    # - part: "Lecture 6: Temporal Differencing"
-    #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd
     # - part: "Lecture 7: Function Approximation"
     #   chapters:
     #     - text: "2.1 Introduction to ML"

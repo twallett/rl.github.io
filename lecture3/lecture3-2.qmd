@@ -40,7 +40,7 @@ $$
 
 Hence, **Epsilon Greedy** is an algorithm that allows us to balance our decision-making in this simple manner.
 
-## Pseudocode
+### Pseudocode
 
 ```pseudocode
 #| html-indent-size: "1.2em"

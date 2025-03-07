@@ -1,0 +1,21 @@
+---
+title: "Learning Objectives"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Learning Objectives for Lecture 6: Temporal Difference 🎯
+:::
+
+- Temporal Difference (TD) Prediction.
+- SARSA.
+- Q-Learning.
+- Double Q-Learning.
+- (Optional) n-step Bootstrapping.
+- Homemade GridWorld OpenAI environment using `gymnasium`, `pygame` & `numpy`.
+
+::: {style = "text-align:center;"}
+![Taxonomy of Reinforcement Learning](images/Lecture6.drawio.svg)
+:::

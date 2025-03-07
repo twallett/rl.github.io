@@ -1,0 +1,70 @@
+---
+title: "6.4 Double Q-Learning"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Double Q-Learning
+
+One of the drawbacks of Q-Learning is the maximization bias, where maximization of action value estimates $Q(s,a)$ is higher than those of the true action values $q(s,a)$, leading to a bias.
+
+Double Q-Learning addresses this bias by creating two action value estimates $Q_{1}(s,a)$ and $Q_{2}(s,a)$.
+
+With equal likelihood, one action value estimate yields the maximization action $A_{t}$ and the other provides the action value estimate $Q(S_{t}, A_{t})$.
+
+$$
+Q_{1}(S_{t},A_{t}) = Q_{1}(S_{t},A_{t}) + \alpha [R_{t+1} + \gamma Q_{2}(S_{t+1},\max_{a} Q_{1}(S_{t+1},a)) - Q_{1}(S_{t},A_{t})]
+$$
+
+$$
+Q_{2}(S_{t},A_{t}) = Q_{2}(S_{t},A_{t}) + \alpha [R_{t+1} + \gamma Q_{1}(S_{t+1},\max_{a} Q_{2}(S_{t+1},a)) - Q_{2}(S_{t},A_{t})]
+$$
+
+### Pseudocode
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{TD Double Q-Learning}
+\begin{algorithmic}
+
+\State \textbf{Initialize:}
+\State $Q_{1}(s, a) \gets 0$ for all $(s, a) \in S \times A$
+\State $Q_{2}(s, a) \gets 0$ for all $(s, a) \in S \times A$
+\State $\gamma \in [0, 1)$
+\State $\alpha \in (0, 1]$
+\State $\epsilon > 0$
+\State $\pi \gets$ arbitrary $\epsilon$-soft policy
+
+\State \textbf{Loop for each episode:}
+\State Initialize $S_{0}$
+\Repeat
+  \State Choose $A_{t}$ from $S_{t}$ using $\pi$
+  \State Take action $A_{t}$, observe $R_{t+1}$ and $S_{t+1}$
+  \State With $0.5$ probability: 
+  \State $Q_{1}(S_{t}, A_{t}) \gets Q_{1}(S_{t}, A_{t}) + \alpha [R_{t+1} + \gamma Q_{2}(S_{t+1}, \arg\max_{a} Q_{1}(S_{t+1}, a)) - Q_{1}(S_{t}, A_{t})]$
+  \State \textbf{Else:}
+  \State $Q_{2}(S_{t}, A_{t}) \gets Q_{2}(S_{t}, A_{t}) + \alpha [R_{t+1} + \gamma Q_{1}(S_{t+1}, \arg\max_{a} Q_{2}(S_{t+1}, a)) - Q_{2}(S_{t}, A_{t})]$
+\Until{$S_{t}$ is terminal}
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>

@@ -43,7 +43,7 @@ Notice that for those actions selected $A_t$, we increase its corresponding $\al
 
 This update allows the algorithm to draw accurate samples and strike a balance between exploring and exploiting.
 
-## Pseudocode
+### Pseudocode
 
 ```pseudocode
 #| html-indent-size: "1.2em"

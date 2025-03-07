@@ -1,0 +1,126 @@
+---
+title: "6.5 (Optional) n-step Bootstrapping"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## n-step TD Prediction
+
+**n-step Bootstrapping** is a _learning rule_ that is a combination of Monte Carlo and Temporal Difference ideas.
+
+- Like Monte Carlo, n-step methods learn from experience.
+- Like Temporal Difference, n-step methods bootstrap multiple time steps.
+
+![](images/n-step.png){width=60% fig-align="center"}
+
+### Pseudocode 
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{n-step TD Prediction}
+\begin{algorithmic}
+
+\State Initialize:
+\State $V(s) \gets 0$, for all $s \in S$  
+\State $\gamma \in [0,1)$
+\State $\alpha \in (0,1]$
+\State Loop for each episode:
+\State Initialize $S_{0}$
+\State $T \gets \infty$
+\State Loop for each step $t = 0,...,T-2,T-1$ in episode: 
+\State If $t < T$:
+\State $A_{t} \gets$ action given by $\pi$ for $S_{t}$
+\State Take action $A_{t}$, observe $R_{t+1}$, $S_{t+1}$
+\State If $S_{t+1} = S_{T-1}$:
+\State $T \gets t + 1$
+\State $\tau \gets t - n + 1$
+\State If $\tau \geq 0$:
+\State $G \gets \sum^{min(\tau+n, T)}_{i=\tau+1} \gamma^{i-\tau-1}R_{i}$
+\State If $\tau + n < T$:
+\State $G \gets G + \gamma^{n}V(S_{\tau+n})$
+\State $V(S_{\tau}) \gets V(S_{\tau}) + \alpha [G - V(S_{\tau})]$
+\State Until $\tau = T-1$ 
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
+
+## n-step SARSA 
+
+n-step SARSA extends the standard SARSA algorithm to incorporate multi-step returns. Instead of updating based on a single-step transition, it utilizes an accumulated return over n steps, striking a balance between bias and variance.
+
+Uses an n-step return to update the action-value function.
+
+Ensures learning from actual experience while incorporating bootstrapping.
+
+Balances exploration and exploitation more effectively than 1-step SARSA.
+
+![](images/n-stepSARSA.png){width=10% fig-align="center"}
+
+### Pseudocode 
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true 
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
+
+## n-step Tree Backup
+
+n-step Tree Backup is an extension of Q-learning that allows updates without the requirement of selecting an on-policy action. It generalizes the Expected SARSA algorithm by propagating multiple steps of information while weighting future actions by their probability under the policy.
+
+Eliminates the need for importance sampling in off-policy learning.
+
+Updates the action-value function based on expected future returns.
+
+Incorporates multiple time steps, making it more stable in some environments.
+
+![](images/n-stepTree.png){width=15% fig-align="center"}
+
+### Pseudocode 
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>

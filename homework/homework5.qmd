@@ -1,0 +1,32 @@
+---
+title: "Homework 5"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Homework for Lecture 5: Monte Carlo 📝
+:::
+
+> **Instructions:** <br> 
+> <br>
+> - **Show ALL Work, Neatly and in Order.** <br>
+> - **No** credit for Answers Without Work. <br>
+> - Submit a single PDF file including all solutions. <br>
+> - **DO NOT** submit individual files or images. <br>
+> - For coding questions, submit **ONE** `.py` file with comments. <br>
+
+::: {.callout-note}
+For this homework, you only need `gymnasium`, `pygame`, & `numpy`.
+:::
+
+![](images/hw5-1.png){width=40% fig-align="center"}
+
+## Coding Exercise 1
+For the `hw_env` environment, code the On-Policy Monte Carlo Control algorithm using the provided parameters.
+
+## Coding Exercise 2
+For the `hw_env` environment, code the Off-Policy Monte Carlo Control algorithm using the provided parameters.
+
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Y_A4uKoSmjc6EmU-Or7tbeo3fe_ZD4RH?usp=sharing)

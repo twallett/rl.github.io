@@ -185,6 +185,11 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../lecture2/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../lecture2/lecture2-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2.1 Set Theory</span></a>
   </div>
 </li>
@@ -308,12 +313,17 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture5/lecture5-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5.2 On-Policy Monte Carlo</span></a>
+  <a href="../lecture5/lecture5-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5.2 Exploring Starts Monte Carlo</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture5/lecture5-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5.3 Off-Policy Monte Carlo</span></a>
+  <a href="../lecture5/lecture5-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5.3 On-Policy Monte Carlo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture5/lecture5-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5.4 Off-Policy Monte Carlo</span></a>
   </div>
 </li>
       </ul>
@@ -321,12 +331,53 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Homeworks</span></a>
+ <span class="menu-text">Lecture 6: Temporal Difference</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture6/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture6/lecture6-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6.1 Temporal Difference (TD) Prediction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture6/lecture6-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6.2 SARSA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture6/lecture6-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6.3 Q-Learning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture6/lecture6-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6.4 Double Q-Learning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture6/lecture6-5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6.5 (Optional) n-step Bootstrapping</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homeworks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 1</span></a>
@@ -352,6 +403,11 @@ window.Quarto = {
   <a href="../homework/homework5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 5</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 6</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -371,8 +427,10 @@ window.Quarto = {
    
   <ul>
   <li><a href="#beta-distribution" id="toc-beta-distribution" class="nav-link active" data-scroll-target="#beta-distribution">Beta Distribution</a></li>
-  <li><a href="#thompson-sampling-exploring-vs.-exploiting" id="toc-thompson-sampling-exploring-vs.-exploiting" class="nav-link" data-scroll-target="#thompson-sampling-exploring-vs.-exploiting">Thompson Sampling Exploring vs.&nbsp;Exploiting</a></li>
+  <li><a href="#thompson-sampling-exploring-vs.-exploiting" id="toc-thompson-sampling-exploring-vs.-exploiting" class="nav-link" data-scroll-target="#thompson-sampling-exploring-vs.-exploiting">Thompson Sampling Exploring vs.&nbsp;Exploiting</a>
+  <ul class="collapse">
   <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -432,10 +490,9 @@ window.Quarto = {
 \]</span></p>
 <p>Notice that for those actions selected <span class="math inline">\(A_t\)</span>, we increase its corresponding <span class="math inline">\(\alpha\)</span> parameter (<span class="math inline">\(R_t = 1\)</span>) and maintain its <span class="math inline">\(\beta\)</span> parameter the same as before (<span class="math inline">\(1 - R_t = 1 - 1 = 0\)</span>).</p>
 <p>This update allows the algorithm to draw accurate samples and strike a balance between exploring and exploiting.</p>
-</section>
-<section id="pseudocode" class="level2">
-<h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
-<div class="pseudocode-container quarto-float" data-indent-size="1.2em" data-comment-delimiter="//" data-line-number-punc=":" data-line-number="true" data-no-end="false" data-pseudocode-number="1" data-caption-prefix="Algorithm">
+<section id="pseudocode" class="level3">
+<h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
+<div class="pseudocode-container quarto-float" data-indent-size="1.2em" data-line-number-punc=":" data-comment-delimiter="//" data-pseudocode-number="1" data-line-number="true" data-caption-prefix="Algorithm" data-no-end="false">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB Thompson Sampling} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $\alpha(a) \gets 1$ \State $\beta(a) \gets 1$ \\ \For{$t$ in range($len(data)$)} \State $Q(a) \leftarrow beta(\alpha(a),\beta(a))$ \State $A_t \leftarrow argmax_a Q(a)$ \State $R_t \gets \text{bandit}(A_t)$ \State $\alpha(A_t) \leftarrow \alpha(A_t) + R_t$ \State $\beta(A_t) \leftarrow \beta(A_t) + 1 - R_t$ \Endfor \end{algorithmic} \end{algorithm}
 </div>
@@ -445,6 +502,7 @@ window.Quarto = {
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,0 +1,103 @@
+---
+title: "5.4 Off-Policy Monte Carlo"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+::: {.callout-tip}
+## Off-Policy Learning
+_Off-Policy_ methods evaluate or improve a policy different from that used to generate the data. Typically this is accomplished using two policies:
+
+- A **target policy**, denoted $\pi$, is the policy being learned.
+
+- A **behavior policy**, denoted $b$, is the policy used to generate behavior.
+
+:::
+
+## Importance Sampling
+
+**Importance Sampling** is a general technique for estimating expected values under one distribution given samples from another.
+
+We apply importance sampling to off-policy learning by weighting returns according to the relative probability of their trajectories occurring under the target and behavior policies, called the importance-sampling ratio.
+
+$$
+\text{Pr}\{A_{t}, S_{t+1}, A_{t+1}, \dots , S_{T} \mid S_{t}, A_{t:T-1} \sim \pi \} = \prod_{k=t}^{T-1} \frac{\pi(A_{k} \mid S_{k})}{b(A_{k} \mid S_{k})}
+$$
+
+## Incremental Implementation
+
+Similarly to the Multi-Armed Bandits chapter, action values $q_{\pi}(s,a)$ can be calculated incrementally.
+
+In order to do so, we must first begin by calculating a cumulative sum of the weights:
+
+$$
+C(S_{t},A_{t}) = C(S_{t},A_{t}) + W
+$$
+
+Then, we average returns of corresponding action values:
+
+$$
+Q(S_{t},A_{t}) = Q(S_{t},A_{t}) + \frac{W}{C(S_{t},A_{t})}[G - Q(S_{t},A_{t})]
+$$
+
+Finally, we update the weight according to our importance sampling ratio:
+
+$$
+W = W \frac{\pi(A_{k} \mid S_{k})}{b(A_{k} \mid S_{k})}
+$$
+
+## Off-Policy Control
+
+We can assure Off-Policy methods to achieve control by choosing $b$ to be $\epsilon$-soft.
+
+The target policy $\pi$ converges to optimal at all encountered states even though actions are selected according to a different soft policy $b$, which may change between or even within episodes.
+  
+### Pseudocode
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{Off-Policy Monte Carlo Control}
+\begin{algorithmic}
+
+\State \textbf{Initialize:} 
+\State $Q(s, a) \gets 0$ for all $(s, a) \in S \times A$
+\State $C(s, a) \gets 0$ for all $(s, a) \in S \times A$
+\State $\gamma \in [0, 1)$
+\State $b \gets$ any soft policy
+
+\State \textbf{Loop forever (for each episode):}
+\State Generate episode following $b$: $S_{0}, A_{0}, R_{1}, \dots, S_{T-1}, A_{T-1}, R_{T}$
+\State $G \gets 0$
+\State $W \gets 1$
+\For{$t = T-1, T-2, \dots, 0$}
+    \State $G \gets \gamma G + R_{t+1}$
+    \State $C(S_{t}, A_{t}) \gets C(S_{t}, A_{t}) + W$
+    \State $Q(S_{t}, A_{t}) \gets Q(S_{t}, A_{t}) + \frac{W}{C(S_{t}, A_{t})} [G - Q(S_{t}, A_{t})]$
+    \If{$A_{t} \neq \pi(S_{t})$}
+        \State \textbf{break}
+    \Endif
+    \State $W \gets W \cdot \frac{1}{b(A_{t} \mid S_{t})}$
+\Endfor
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
