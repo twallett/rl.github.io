@@ -175,7 +175,6 @@ format:
       sidebar-width: 320px
     theme:
       - cosmo
-      - brand
   pdf:
     documentclass: scrreprt
 
