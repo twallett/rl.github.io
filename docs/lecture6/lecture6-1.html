@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b8deefef84550b90a974051c7dd77ae0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -670,7 +670,7 @@ V(S_{t}) = V(S_{t}) + \underbrace{\alpha}_{Step \ Size} [ \underbrace{\underbrac
 </div>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-comment-delimiter="//" data-no-end="false" data-line-number="true" data-pseudocode-number="1" data-caption-prefix="Algorithm" data-indent-size="1.2em">
+<div class="pseudocode-container quarto-float" data-pseudocode-number="1" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-line-number-punc=":" data-line-number="true" data-no-end="false" data-comment-delimiter="//">
 <div class="pseudocode">
 \begin{algorithm} \caption{TD Prediction} \begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $\gamma \in [0, 1)$ \State $\alpha \in (0, 1]$ \State \textbf{Loop for each episode:} \State Initialize $S_{0}$ \Repeat \State $A_{t} \gets$ action given by $\pi$ for $S_{t}$ \State Take action $A_{t}$, observe $R_{t+1}$ and $S_{t+1}$ \State $V(S_{t}) \gets V(S_{t}) + \alpha \left[R_{t+1} + \gamma V(S_{t+1}) - V(S_{t})\right]$ \State $S_{t} \gets S_{t+1}$ \Until{$S_{t}$ is terminal} \end{algorithmic} \end{algorithm}
 </div>

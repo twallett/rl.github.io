@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b8deefef84550b90a974051c7dd77ae0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -684,7 +684,7 @@ window.Quarto = {
 <p>Hence, <strong>Epsilon Greedy</strong> is an algorithm that allows us to balance our decision-making in this simple manner.</p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-line-number-punc=":" data-no-end="false" data-line-number="true" data-indent-size="1.2em" data-comment-delimiter="//" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-pseudocode-number="1" data-line-number="true" data-no-end="false" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-line-number-punc=":">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB $\epsilon$-Greedy} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets 0$ \State $N(a) \gets 0$ \\ \For{$t$ in range($len(data)$)} \State $A_t \gets \begin{cases} \text{a random action with probability } \epsilon \\ \text{argmax}_a\, Q(a) \text{ with probability } 1-\epsilon \end{cases}$ \State $R_t \gets \text{bandit}(A_t)$ \State $N(A_t) \gets N(A_t) + 1$ \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$ \Endfor \end{algorithmic} \end{algorithm}
 </div>

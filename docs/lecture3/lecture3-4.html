@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b8deefef84550b90a974051c7dd77ae0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -678,7 +678,7 @@ window.Quarto = {
 <p>This update allows the algorithm to draw accurate samples and strike a balance between exploring and exploiting.</p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-pseudocode-number="1" data-line-number="true" data-indent-size="1.2em" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-no-end="false">
+<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-no-end="false" data-line-number="true" data-pseudocode-number="1" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB Thompson Sampling} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $\alpha(a) \gets 1$ \State $\beta(a) \gets 1$ \\ \For{$t$ in range($len(data)$)} \State $Q(a) \leftarrow beta(\alpha(a),\beta(a))$ \State $A_t \leftarrow argmax_a Q(a)$ \State $R_t \gets \text{bandit}(A_t)$ \State $\alpha(A_t) \leftarrow \alpha(A_t) + R_t$ \State $\beta(A_t) \leftarrow \beta(A_t) + 1 - R_t$ \Endfor \end{algorithmic} \end{algorithm}
 </div>

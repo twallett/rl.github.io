@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b8deefef84550b90a974051c7dd77ae0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -693,7 +693,7 @@ F(\mathbf{w}_{t}) = \mathbb{E}_{\pi}[(Q_{\pi}(S_{t},A_{t}) - \hat{Q}(S_{t},A_{t}
 </section>
 <section id="pseudocode" class="level2">
 <h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
-<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-line-number-punc=":" data-indent-size="1.2em" data-line-number="true" data-no-end="false" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-no-end="false" data-line-number-punc=":" data-pseudocode-number="1" data-comment-delimiter="//" data-line-number="true" data-caption-prefix="Algorithm" data-indent-size="1.2em">
 <div class="pseudocode">
 \begin{algorithm} \caption{Semi-Gradient SARSA} \begin{algorithmic} \State \textbf{Initialize:} \State $\mathbf{w} \gets 0$, $\mathbf{w} \in \mathbb{R}^{d}$ \State $\gamma \in [0,1)$ \State $\alpha \in (0,1]$ \State $\epsilon &gt; 0$ \State $\pi \gets$ arbitrary $\epsilon$-soft policy \State \textbf{Loop for each episode:} \State Initialize $S_{0}$ \State Choose $A_{0}$ from $S_{0}$ using $\pi$ \Repeat \State Take action $A_{t}$, observe $R_{t+1}$, $S_{t+1}, d_{t}$ \State \textbf{If} $d_{t}$ is True: \State \quad $\text{TD-Target}_{t} \gets R_{T}$ \State \textbf{Else:} \State \quad Choose $A_{t+1}$ from $S_{t+1}$ using $\pi$ \State \quad $\text{TD-Target}_{t} \gets R_{t+1} + \gamma \hat{Q}(S_{t+1}, A_{t+1}; \mathbf{w}_{t})$ \State $\mathbf{w}_{t+1} \gets \mathbf{w}_{t} + \alpha(\text{TD-Target}_{t} - \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t}))\nabla_{\mathbf{w}_{t}} \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t})$ \Until{$S_{t}$ is terminal} \end{algorithmic} \end{algorithm}
 </div>

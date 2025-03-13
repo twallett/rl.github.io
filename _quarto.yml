@@ -173,6 +173,9 @@ format:
     grid:
       body-width: 1000px
       sidebar-width: 320px
+    theme:
+      - cosmo
+      - brand
   pdf:
     documentclass: scrreprt
 

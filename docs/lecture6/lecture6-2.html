@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b8deefef84550b90a974051c7dd77ae0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0507d3a3abd0a0796254caf2bfe5f33.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -665,7 +665,7 @@ Q(S_{t},A_{t}) = Q(S_{t},A_{t}) + \alpha [ R_{t+1} + \gamma Q(S_{t+1},A_{t+1}) -
 <p>This rule uses every element of the quintuple of events (<span class="math inline">\(S_{t}, A_{t}, R_{t+1}, S_{t+1}, A_{t+1}\)</span>)</p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-pseudocode-number="1" data-comment-delimiter="//" data-line-number="true" data-line-number-punc=":" data-no-end="false">
+<div class="pseudocode-container quarto-float" data-line-number="true" data-comment-delimiter="//" data-pseudocode-number="1" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-no-end="false" data-line-number-punc=":">
 <div class="pseudocode">
 \begin{algorithm} \caption{TD SARSA} \begin{algorithmic} \State \textbf{Initialize:} \State $Q(s, a) \gets 0$ for all $(s, a) \in S \times A$ \State $\gamma \in [0, 1)$ \State $\alpha \in (0, 1]$ \State $\epsilon &gt; 0$ \State $\pi \gets$ arbitrary $\epsilon$-soft policy \State \textbf{Loop for each episode:} \State Initialize $S_{0}$ \State Choose $A_{0}$ from $S_{0}$ using $\pi$ \Repeat \State Take action $A_{t}$, observe $R_{t+1}$ and $S_{t+1}$ \State Choose $A_{t+1}$ from $S_{t+1}$ using $\pi$ \State $Q(S_{t}, A_{t}) \gets Q(S_{t}, A_{t}) + \alpha \left[R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_{t}, A_{t})\right]$ \State $S_{t} \gets S_{t+1}$ \State $A_{t} \gets A_{t+1}$ \Until{$S_{t}$ is terminal} \end{algorithmic} \end{algorithm}
 </div>
