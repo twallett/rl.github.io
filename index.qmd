@@ -26,6 +26,10 @@ format:
       <img src="data/images/highway.gif" />
       <figcaption>Highway (Lecture 8)</figcaption>
     </div>
+        <div class="slide">
+      <img src="data/images/mountaincar.gif" />
+      <figcaption>MountainCar (Lecture 7)</figcaption>
+    </div>
   </div>
 </div>
 

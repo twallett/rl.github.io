@@ -458,9 +458,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-line-number="true" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-no-end="false" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-line-number="true" data-indent-size="1.2em" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-no-end="false" data-pseudocode-number="1">
 <div class="pseudocode">
-\begin{algorithm} \caption{n-step TD Prediction} \begin{algorithmic} \State Initialize: \State $V(s) \gets 0$, for all $s \in S$ \State $\gamma \in [0,1)$ \State $\alpha \in (0,1]$ \State Loop for each episode: \State Initialize $S_{0}$ \State $T \gets \infty$ \State Loop for each step $t = 0,...,T-2,T-1$ in episode: \State If $t &lt; T$: \State $A_{t} \gets$ action given by $\pi$ for $S_{t}$ \State Take action $A_{t}$, observe $R_{t+1}$, $S_{t+1}$ \State If $S_{t+1} = S_{T-1}$: \State $T \gets t + 1$ \State $\tau \gets t - n + 1$ \State If $\tau \geq 0$: \State $G \gets \sum^{min(\tau+n, T)}_{i=\tau+1} \gamma^{i-\tau-1}R_{i}$ \State If $\tau + n &lt; T$: \State $G \gets G + \gamma^{n}V(S_{\tau+n})$ \State $V(S_{\tau}) \gets V(S_{\tau}) + \alpha [G - V(S_{\tau})]$ \State Until $\tau = T-1$ \end{algorithmic} \end{algorithm}
+\begin{algorithm} \caption{n-step TD Prediction}\begin{algorithmic} \Require $\gamma \in [0,1)$, $\alpha \in (0,1]$ \State Initialize $V(s) \leftarrow 0$, for all $s \in S$ \For{each episode} \State Initialize $S_0$ \State $T \leftarrow \infty$ \State $t \leftarrow 0$ \Repeat \If{$t &lt; T$} \State Choose $A_t$ using policy $\pi$ for $S_t$ \State Take action $A_t$, observe $R_{t+1}$ and $S_{t+1}$ \If{$S_{t+1}$ is terminal} \State $T \leftarrow t + 1$ \EndIf \EndIf \State $\tau \leftarrow t - n + 1$ \If{$\tau \geq 0$} \State $G \leftarrow \sum_{i=\tau+1}^{\min(\tau+n, T)} \gamma^{i-\tau-1} R_i$ \If{$\tau + n &lt; T$} \State $G \leftarrow G + \gamma^n V(S_{\tau+n})$ \EndIf \State $V(S_{\tau}) \leftarrow V(S_{\tau}) + \alpha [G - V(S_{\tau})]$ \EndIf \State $t \leftarrow t + 1$ \Until{$\tau = T-1$} \EndFor \end{algorithmic} \end{algorithm}
 </div>
 </div>
 <div style="text-align: center;">
@@ -481,7 +481,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="pseudocode-1" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode-1">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-line-number="true" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-no-end="false" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-line-number="true" data-indent-size="1.2em" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-no-end="false" data-pseudocode-number="1">
 <div class="pseudocode">
 
 </div>
@@ -504,7 +504,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="pseudocode-2" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode-2">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-line-number="true" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-no-end="false" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-line-number="true" data-indent-size="1.2em" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-no-end="false" data-pseudocode-number="1">
 <div class="pseudocode">
 
 </div>

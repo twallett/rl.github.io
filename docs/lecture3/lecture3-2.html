@@ -498,7 +498,7 @@ window.Quarto = {
 <p>Hence, <strong>Epsilon Greedy</strong> is an algorithm that allows us to balance our decision-making in this simple manner.</p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number="true" data-comment-delimiter="//" data-pseudocode-number="1" data-line-number-punc=":" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-no-end="false">
+<div class="pseudocode-container quarto-float" data-no-end="false" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-pseudocode-number="1" data-line-number="true" data-indent-size="1.2em" data-line-number-punc=":">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB $\epsilon$-Greedy} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets 0$ \State $N(a) \gets 0$ \\ \For{$t$ in range($len(data)$)} \State $A_t \gets \begin{cases} \text{a random action with probability } \epsilon \\ \text{argmax}_a\, Q(a) \text{ with probability } 1-\epsilon \end{cases}$ \State $R_t \gets \text{bandit}(A_t)$ \State $N(A_t) \gets N(A_t) + 1$ \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$ \Endfor \end{algorithmic} \end{algorithm}
 </div>

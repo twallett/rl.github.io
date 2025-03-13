@@ -1,0 +1,116 @@
+---
+title: "7.2 On-Policy Function Approximation"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## On-Policy Function Approximation
+
+Approximating state values is not sufficient to achieve control.
+
+$$
+\hat{V}(s; \mathbf{w}) \approx V_{\pi}(s)
+$$
+
+We need to approximate action-value functions.
+
+$$
+\hat{Q}(s,a; \mathbf{w}) \approx Q_{\pi}(s,a)
+$$
+
+In doing so, we will incorporate previously learned techniques, such as SARSA from TD learning to devise a learning algorithm.
+
+Because $s$ represents any state information and $a$ represents all possible actions.
+
+## Mathematical Intuition
+
+Similarly, MSE loss for action values:
+
+$$
+F(\mathbf{w}_{t}) = \mathbb{E}_{\pi}[(Q_{\pi}(S_{t},A_{t}) - \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t}))^{2}]
+$$
+
+Similarly, SGD update for parameters $\mathbf{w}$:
+
+$$
+\mathbf{w}_{t+1} = \mathbf{w}_{t} + \alpha(Q_{\pi}(S_{t},A_{t}) - \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t}))\nabla_{\mathbf{w}_{t}} \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t})
+$$
+
+Finally, to implement TD learning, we substitute $Q_{\pi}(s,a)$ for our TD targets at each step:
+
+$$
+\langle S_{0}, \ R_{1} + \gamma \hat{Q}(S_{1},A_{1}; \mathbf{w}_{0})\rangle, \ ... \ ,\langle S_{T-1},R_{T}\rangle
+$$
+
+Thus, our update equation for TD on-policy approximation:
+
+$$
+\mathbf{w}_{t+1} = \mathbf{w}_{t} + \alpha(R_{t+1} + \gamma \hat{Q}(S_{t+1},A_{t+1}; \mathbf{w}_{t}) - \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t}))\nabla_{\mathbf{w}_{t}} \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t})
+$$
+
+## On-Policy Function Approximation: Illustration
+
+![](images/SemiGradientSARSA.png){width=100% fig-align="center"}
+
+## Pseudocode
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{Semi-Gradient SARSA}
+\begin{algorithmic}
+
+\State \textbf{Initialize:}
+\State $\mathbf{w} \gets 0$, $\mathbf{w} \in \mathbb{R}^{d}$
+\State $\gamma \in [0,1)$
+\State $\alpha \in (0,1]$ 
+\State $\epsilon > 0$ 
+\State $\pi \gets$ arbitrary $\epsilon$-soft policy 
+
+\State \textbf{Loop for each episode:}
+\State Initialize $S_{0}$
+\State Choose $A_{0}$ from $S_{0}$ using $\pi$ 
+\Repeat
+  \State Take action $A_{t}$, observe $R_{t+1}$, $S_{t+1}, d_{t}$
+  \State \textbf{If} $d_{t}$ is True:
+  \State \quad $\text{TD-Target}_{t} \gets R_{T}$
+  \State \textbf{Else:}
+  \State \quad Choose $A_{t+1}$ from $S_{t+1}$ using $\pi$
+  \State \quad $\text{TD-Target}_{t} \gets R_{t+1} + \gamma \hat{Q}(S_{t+1}, A_{t+1}; \mathbf{w}_{t})$
+  \State $\mathbf{w}_{t+1} \gets \mathbf{w}_{t} + \alpha(\text{TD-Target}_{t} - \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t}))\nabla_{\mathbf{w}_{t}} \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t})$
+\Until{$S_{t}$ is terminal}
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
+
+#### <u>Exercise</u>
+
+How can we summarize the update equation in 3 components?
+
+$$
+\mathbf{w}_{t+1} = \mathbf{w}_{t} + \alpha(R_{t+1} + \gamma \hat{Q}(S_{t+1},A_{t+1}; \mathbf{w}_{t}) - \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t}))\nabla_{\mathbf{w}_{t}} \hat{Q}(S_{t},A_{t}; \mathbf{w}_{t})
+$$
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+:::

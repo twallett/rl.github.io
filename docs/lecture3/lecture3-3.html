@@ -490,7 +490,7 @@ VAR \uparrow = \sqrt{\frac{2 \ln(t) \uparrow}{N(a)}}
 \]</span></p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-indent-size="1.2em" data-line-number-punc=":" data-no-end="false" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-line-number="true" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-indent-size="1.2em" data-no-end="false" data-pseudocode-number="1" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-line-number="true">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB Upper Confidence Boundary (UCB)} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets 0$ \State $N(a) \gets 0$ \\ \For{$t$ in range($len(data)$)} \State $A_t \gets argmax_a[Q(a) + \sqrt{(\frac{2 ln(t)}{N(a)})}]$ \State $R_t \gets \text{bandit}(A_t)$ \State $N(A_t) \gets N(A_t) + 1$ \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$ \Endfor \end{algorithmic} \end{algorithm}
 </div>

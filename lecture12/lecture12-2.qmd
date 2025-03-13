@@ -1,0 +1,96 @@
+---
+title: "12.2 Identify the Reinforcement Learning Application"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Applications
+
+::: {.callout-note}
+**Instructions:** For each task presented, determine whether it can be solved using:
+
+- Supervised Learning  
+- Unsupervised Learning  
+- Multi-Armed Bandit  
+- Classical Reinforcement Learning  
+- Deep Reinforcement Learning  
+
+Form groups of two or more and discuss the most appropriate approach for each application.
+:::
+
+## Reinforcement Learning Framework
+
+![](images/ReinforcementLearningFramework.svg){width=300px height=300px}
+
+## Task 1: Email Spam Detection
+
+![](images/SupervisedLearning.png){width=300px height=150px}
+
+#### Answer: Supervised Learning
+
+- **Supervised Learning:** Classification.
+- **Features (X):**
+  - Frequency of specific keywords (e.g., "free", "win", "money").
+  - Presence of special characters (e.g., "!", "$", etc.).
+  - Sender’s domain (e.g., "trusted.com", "unknown.com").
+- **Labels (y):**
+  - 0 for Non-Spam.
+  - 1 for Spam.
+- **Example Algorithm:** Naive Bayes.
+
+## Task 2: Customer Segmentation for a Retail Store
+
+![](images/UnsupervisedLearning.png){width=350px height=150px}
+
+#### Answer: Unsupervised Learning
+
+- **Unsupervised Learning:** Clustering.
+- **Features (X):**
+  - Customer age, annual income, spending score, purchase frequency.
+  - Product categories purchased, total expenditure, location.
+  - Customer loyalty (e.g., membership status).
+- **Example Algorithm:** K-Means.
+
+## Task 3: Online Ad Optimization
+
+![](images/MultiArmedBandit.png){width=350px height=150px}
+
+#### Answer: Multi-Armed Bandit
+
+- **State (S):** Single state (environment does not change).
+- **Actions (A):** Display ad 1, Display ad 2, Display ad 3.
+- **Rewards (R):** Click-through rate, conversion rate, user engagement.
+- **Example Algorithm:** Thompson Sampling.
+
+## Task 4: Warehouse Robot Path-finding
+
+![](images/ClassicalReinforcementLearning.png){width=350px height=200px}
+
+#### Answer: Classical Reinforcement Learning
+
+- **Example Algorithm:** Q-learning.
+- **State (S):** Robot position, obstacles, goal location.
+- **Actions (A):** Move up, down, left, right, stay.
+- **Rewards (R):**
+  - Positive for reaching goal.
+  - Negative for hitting obstacles.
+  - Small penalty for each step (efficiency).
+
+## Task 5: Fine-tuning LLMs with Human Feedback
+
+![](images/DeepReinforcementLearning.png){width=250px height=250px}
+
+#### Answer: Deep Reinforcement Learning
+
+- **Example Algorithm:** Proximal Policy Optimization (PPO).
+- **State (S):** Model predictions, conversation history, human feedback.
+- **Actions (A):** Adjust weights, generate responses, explore approaches.
+- **Rewards (R):**
+  - Positive for high-quality responses.
+  - Negative for low-quality responses.
+  - Reward for alignment with human feedback.

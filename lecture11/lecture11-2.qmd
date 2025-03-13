@@ -1,0 +1,112 @@
+---
+title: "11.2 Advanced Monte Carlo Tree Search"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Motivation
+
+### Problem
+
+Require an algorithm that leverages neural networks for more efficient MCTS acting and updating.
+
+### Solution
+
+::: columns
+:::: column
+![](images/AlphaGo.png){width=60%}
+
+Google DeepMind 2016  
+[Link to Research Paper](https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf)
+::::
+
+:::: column
+![](images/Muzero.png){width=60%}
+
+Google DeepMind 2020  
+[Link to Research Paper](https://arxiv.org/pdf/1911.08265)
+::::
+:::
+
+### Advanced MCTS: Illustration
+
+- **Policy Network:** Guides expansion by prioritizing actions with high probabilities, reducing the search space:  
+
+$$
+P(a|s) \propto \pi(a|s; \theta)
+$$
+
+- **Value Network:** Replaces random rollouts with a learned estimate of the value function:  
+$$ 
+Q(s,a) \approx V(s; \theta) 
+$$
+
+### Advanced MCTS: Steps
+
+1. **Selecting:**  
+$$ 
+A_t = \arg\max_a \left[ Q(s, a) + C \cdot \pi(a | s; \theta) \frac{\sqrt{\sum_b N(s, b)}}{1 + N(s, a)} \right] 
+$$
+
+2. **Expanding:**  
+If the selected node has unvisited children, expand.
+
+3. **Simulating:**  
+$$ 
+V(s; \theta) = (1 - \lambda) V(s; \theta) + \lambda R 
+$$
+
+4. **Updating:**  
+$$ 
+N(s, a) = N(s, a) + 1 
+$$  
+
+$$ 
+Q(s, a) = Q(s, a) + \frac{1}{N(s, a)} \left( V(s; \theta) - Q(s, a) \right) 
+$$
+
+### Advanced MCTS: Results
+
+Results of 5-game tournament against Fan Hui (Elo in 2016: 3036).
+
+![](images/AlphaGoResults.png){width=80%}
+
+AlphaGo won all 5 games.
+
+### MuZero MCTS with Neural Networks
+
+1. **Selecting:**  
+$$ 
+A_t = \arg\max_a \left[ Q(s,a) + C \frac{\pi(a|s)}{1 + N(s,a)}  \right] 
+$$  
+
+Using Prediction Network $f(s)$ to compute $\pi$ and $Q$
+
+2. **Expanding:**  
+
+Use Representation Network $h(o)$ to create state  
+Prediction Network $f(s)$ generates initial policy/value
+
+3. **Simulating:**  
+
+Dynamics Network $g(s,a)$ predicts next state and reward
+
+4. **Updating:**  
+$$ 
+N(s,a) = N(s,a) + 1 
+$$  
+
+$$ 
+Q(s,a) = \frac{1}{N(s,a)} \sum_i V_i(s) 
+$$
+
+## Advanced MCTS: AlphaZero Performance
+
+Orange line indicates best result of AlphaZero (AlphaGo trained purely on self-play).
+
+![](images/MuzeroResults.png){width=80%}

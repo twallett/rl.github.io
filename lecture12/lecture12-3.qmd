@@ -1,0 +1,30 @@
+---
+title: "12.3 Outlook of Reinforcement Learning"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Challenges in Reinforcement Learning
+
+- **Balancing Exploration vs Exploitation**
+
+- **Sample Efficiency**
+
+- **Sparse Rewards**
+
+- **Converging to optimal policies**
+
+## Artificial General Intelligence (AGI)
+
+- **Definition:** AGI is AI capable of learning and applying intelligence across a wide range of tasks, similar to human cognition.
+
+- **Role of RL in AGI:** RL enables autonomous learning and decision-making, key for AGI's adaptability and problem-solving.
+
+- **Current Progress:** Significant advancements in deep RL and multi-agent systems, though AGI remains a long-term goal.
+
+- **Potential Impact:** AGI could revolutionize industries, solve global challenges, and transform work and society.

@@ -1,0 +1,17 @@
+---
+title: "Learning Objectives"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Learning Objectives for Lecture 9: Policy Gradients 🎯
+:::
+
+- Policy Gradients.
+- `CartPole-v1` environment using `gymnasium` & `tensorflow`.
+
+::: {style = "text-align:center;"}
+![Taxonomy of Reinforcement Learning](images/Lecture9.drawio.svg)
+:::

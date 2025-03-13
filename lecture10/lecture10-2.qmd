@@ -1,0 +1,73 @@
+---
+title: "10.2 Proximal Policy Optimization (PPO)"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Mathematical Intuition
+
+### TRPO's Main Drawback
+
+TRPO's main drawback has to do with the calculation of the Hessian matrix with respect to the KL-Divergence:
+
+$$
+\mathbf{H} = \nabla^2 D_{KL}(\pi_{\theta_{t}} \| \pi_{\theta_{t+1}})
+$$
+
+### Proximal Policy Optimization (PPO)
+
+![](images/PPO.png){width=300px height=100px}
+
+OpenAI 2017  
+[Link to Research Paper](https://arxiv.org/pdf/1707.06347)
+
+### PPO: Surrogate Objectives
+
+PPO KL-Divergence Penalty:
+
+$$
+L^{\text{KL}}(\pi_{\theta_{t+1}}) = \mathbb{E} \left[ \frac{\pi_{\theta_{t+1}}(a|s)}{\pi_{\theta_{t}}(a|s)} \hat{A}_t - \beta D_{KL}(\pi_{\theta_{t}} \| \pi_{\theta_{t+1}}) \right]
+$$
+
+PPO Clip:
+
+$$
+L^{\text{CLIP}}(\pi_{\theta_{t+1}}) = \mathbb{E} \left[ \min \left( \frac{\pi_{\theta_{t+1}}(a|s)}{\pi_{\theta_{t}}(a|s)} \hat{A}_t, \text{clip}\left(\frac{\pi_{\theta_{t+1}}(a|s)}{\pi_{\theta_{t}}(a|s)}, 1-\epsilon, 1+\epsilon\right) \hat{A}_t \right) \right]
+$$
+
+### Gaussian Policy
+
+$$
+\begin{aligned}
+    \mu(s), \sigma(s) &= \theta_{\mu, \sigma}(s) \\
+    \pi(a|s; \theta) &= \frac{1}{\sqrt{2 \pi \sigma^2(s)}} \exp\left(-\frac{(a - \mu(s))^2}{2 \sigma^2(s)}\right)
+\end{aligned}
+$$
+
+## Proximal Policy Optimization: Illustration
+
+![](images/PPOClip.png){width=100%}
+
+## Proximal Policy Optimization: Pseudocode
+
+```pseudocode
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
+
+#### <u> Exercise </u>
+
+What is the key mathematical difference between the true policy gradient and a surrogate policy gradient in reinforcement learning?
+
+$$
+L(\pi_{\theta_{t+1}}) =  F(\pi_{\theta_{t}}) + \mathbb{E}_{s \approx \rho_{\pi_{\theta_{t}}}, a \approx \pi_{\theta_{t}}} \left[\frac{\pi_{\theta_{t+1}}(a|s)}{\pi_{\theta_{t}}(a|s)} \hat{A}_t\right]
+$$

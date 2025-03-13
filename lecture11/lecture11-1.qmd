@@ -1,0 +1,128 @@
+---
+title: "11.1 Monte Carlo Tree Search (MCTS)"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Model-based Reinforcement Learning
+
+**Problem**:
+
+Agents need to sample many environment interactions to *learn* environment dynamics.
+
+$$
+P(s^{'}, r| s, a)
+$$
+
+Exploration is blind without a model of environment dynamics.
+Model-free methods focus on immediate rewards.
+
+**Solution**:
+
+Agents can *plan* future rewards by leveraging environment dynamics.
+Safe exploration - informed exploration.
+
+### Model-based Reinforcement Learning: Illustration
+
+![](images/Model-basedRL.png){width=80%}
+
+## MCTS: Motivation
+
+**Problem**:
+
+Require an algorithm that demonstrates strong empirical performance and effectively *plans* based on the dynamics of an environment.
+
+**Solution**:
+
+![](images/MCTS.png){width=50%}
+
+Université Charles de Gaulle 2006  
+[Link to Research Paper](https://inria.hal.science/inria-00116992/document)
+
+### MCTS: Illustration
+
+::: columns
+::: {.column width="70%"}
+- Similar to UCB bandit problems, we select actions according to a confidence interval that balances exploration and exploitation, with the formula:
+
+  $$A_t = \arg\max_a \left[ Q(s,a) + C \sqrt{\frac{\ln(N(s)_{\text{parent}})}{N(s)}} \right]$$
+:::
+
+::: {.column width="30%"}
+![](images/MCTSSelecting.svg){width=100%}
+:::
+:::
+
+### MCTS: Expansion
+
+::: columns
+::: {.column width="70%"}
+- After selecting an action \(A_t\), if the corresponding child node does not exist, we expand the search tree by creating a new node for the resulting state \(S^{A_t}_{t+1}\).
+:::
+
+::: {.column width="30%"}
+![](images/MCTSExpanding.svg){width=100%}
+:::
+:::
+
+### MCTS: Simulation
+
+::: columns
+::: {.column width="70%"}
+- From the expanded node, we simulate *n*-times acting randomly and calculate the average rewards for all simulations:
+
+  $$\bar{R} = \frac{1}{n} \sum_{j=1}^{n} R_j$$
+:::
+
+::: {.column width="30%"}
+![](images/MCTSSimulating.svg){width=100%}
+:::
+:::
+
+### MCTS: Backpropagation
+
+::: columns
+::: {.column width="70%"}
+- After obtaining the average rewards, we update the values from the current node up to the root node:
+
+$$
+N(s) = N(s) + 1
+$$  
+
+$$
+Q(s,a) = Q(s,a) + \frac{\bar{R}}{N(s)}
+$$
+:::
+
+::: {.column width="30%"}
+![](images/MCTSUpdating.svg){width=100%}
+:::
+:::
+
+### MCTS: Summary Illustration
+
+![](images/MCTS.svg){width=90%}
+
+## Pseudocode
+
+```pseudocode
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
+
+#### <u> Exercise </u>
+
+How does the Upper Confidence Bound for Trees (UCT) algorithm balance exploration and exploitation in MCTS?
+
+$$
+A_t = \arg\max_a \left[ Q(s,a) + C \sqrt{\frac{\ln(N(s)_{\text{parent}})}{N(s)}} \right]
+$$

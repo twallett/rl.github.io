@@ -1,0 +1,73 @@
+---
+title: "12.1 Advanced Topics in Reinforcement Learning"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Imitation Learning
+
+- Learn a policy $\pi(a|s)$ by mimicking an expert's demonstrations, $(s, a)$, without requiring explicit reward signals.
+
+![](images/ImitationLearning.png){width=200px}
+
+**Application:** Autonomous Driving  
+[Link to Research Paper](https://arxiv.org/pdf/2212.11419)
+
+## Inverse Reinforcement Learning
+
+- Infer the reward function $R(s, a)$ given expert trajectories to derive an optimal policy, $\pi^*$.
+
+![](images/InverseReinforcementLearning.png){width=300px}
+
+**Application:** Predicting Driver Behavior and Route Recommendation  
+[Link to Research Paper](https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf)
+
+## Offline Reinforcement Learning
+
+- Learn a policy $\pi(a|s)$ from a fixed dataset $D = \{(s, a, r, s')\}$ without further environment interaction.
+
+![](images/OfflineReinforcementLearning.png){width=300px}
+
+**Application:** Robotic Manipulation  
+[Link to Research Paper](https://arxiv.org/pdf/2109.10813)
+
+## Multi-Agent Reinforcement Learning
+
+- Optimize multiple agents' policies $\pi_i(a|s)$ interacting in a shared environment, considering cooperation or competition.
+
+![](images/MultiAgentReinforcementLearning.png){width=300px}
+
+**Application:** Strategic Game-play in Dota2  
+[Link to Research Paper](https://arxiv.org/pdf/1912.06680)
+
+## Hierarchical Reinforcement Learning
+
+- Decompose tasks into a hierarchy of policies, $\pi_\text{high}(g|s)$ for goals and $\pi_\text{low}(a|s, g)$ for actions.
+
+![](images/HierarchicalReinforcementLearning.png){width=300px}
+
+**Application:** MuJoCo Ant Maze Path Finding  
+[Link to Research Paper](https://arxiv.org/pdf/1710.09767)
+
+## Multi-Objective Reinforcement Learning
+
+- Optimize a policy $\pi(a|s)$ under multiple conflicting objectives, $\{R_1, R_2, \dots\}$
+
+![](images/MultiObjectiveReinforcementLearning.png){width=200px}
+
+**Application:** Resource Allocation  
+[Link to Research Paper](https://dl.acm.org/doi/10.1145/1390156.1390162)
+
+## Meta Learning
+
+- Train agents to quickly adapt to new tasks $\mathcal{T}$ by optimizing over task distributions $p(\mathcal{T})$.
+
+![](images/MetaLearning.png){width=400px}
+
+**Application:** Few Shot Learning  
+[Link to Research Paper](https://arxiv.org/pdf/1703.03400)

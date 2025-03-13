@@ -1,0 +1,74 @@
+---
+title: "10.1 Trust Region Policy Optimization (TRPO)"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Motivation 
+
+### Problem
+
+Sampling is poor, preferably we would like a batch form.
+
+$$
+\hat{g} =  \frac{1}{m} \sum^{m}_{i = 1}  \sum^{T-1}_{t=0} \log \nabla_\theta \pi(A_{t}|S_{t}, \theta) \ \hat{A}_{t}
+$$
+
+Step size $\alpha$ is hard to get right.
+
+Small changes in the parameter space $\theta$ create drastic changes in the log probabilities of actions.
+
+### Solution
+
+For the sampling problem, we can store old trajectories in a buffer $D$ and learn from these in a batch form.
+
+![](images/TrajectoryBuffer.svg)
+
+We need a new algorithm that takes step sizes $\alpha$ without creating drastic changes in the log probabilities of actions.
+
+## Trust Region Policy Optimization (TRPO)
+
+![](images/TRPO.png)
+
+**U.C. Berkeley 2015**  
+[Link to Research Paper](https://arxiv.org/pdf/1502.05477)
+
+## Mathematical Intuition
+
+For the expected discounted reward of $\pi_{\theta_{t+1}}$:
+
+$$
+F(\pi_{\theta_{t+1}}) = F(\pi_{\theta_{t}}) + \mathbb{E}_{\tau \approx \pi_{\theta_{t+1}}} [\sum^{\infty}_{t=0} \gamma^{t} \hat{A}_t]
+$$
+
+For the discounted visitation frequencies:
+
+$$
+\rho_{\pi_{\theta_{t}}} = P(S_{0}) + \gamma P(S_{1}) + \gamma^{2} P(S_{2}) + ...
+$$
+
+
+We can now rewrite in terms of sum of states and actions:
+
+$$
+F(\pi_{\theta_{t+1}}) = F(\pi_{\theta_{t}}) + \mathbb{E}_{s \approx \rho_{\pi_{\theta_{t+1}}}, a \approx \pi_{\theta_{t}}} \left[\frac{\pi_{\theta_{t+1}}(a|s)}{\pi_{\theta_{t}}(a|s)} \hat{A}_t\right]
+$$
+
+$\rho_{\pi_{\theta_{t+1}}}$ makes optimizing $F(\pi_{\theta_{t+1}})$ directly difficult.
+
+One approach to this problem is to replace future sampling $\rho_{\pi_{\theta_{t+1}}}$ with a local approximation $L(\pi_{\theta_{t+1}})$, or "surrogate objective":
+
+$$
+L(\pi_{\theta_{t+1}}) =  F(\pi_{\theta_{t}}) + \mathbb{E}_{s \approx \rho_{\pi_{\theta_{t}}}, a \approx \pi_{\theta_{t}}} \left[\frac{\pi_{\theta_{t+1}}(a|s)}{\pi_{\theta_{t}}(a|s)} \hat{A}_t\right]
+$$
+
+TRPO's main contribution is monotonic improvement guarantee using a KL-Divergence metric:
+
+$$
+F(\pi_{\theta_{t+1}}) \geq L(\pi_{\theta_{t+1}}) - C \ D^{max}_{KL}(\pi_{\theta_{t}} \| \pi_{\theta_{t+1}})
+$$

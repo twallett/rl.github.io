@@ -1,0 +1,98 @@
+---
+title: "8.2 Deep Q-Networks (DQN)"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Motivation
+
+Need an algorithm that:
+
+- Leverages neural networks.
+- Leverages a classical RL learning method (TD: Q-learning).
+- Implements batch form.
+- Empirically performs well.
+
+![](images/DQNresearchpaper.png){width=50% fig-align="center"}
+
+- Google DeepMind 2013  
+  [Link to Research Paper](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf)
+
+## Deep Q-Network: Mathematical Intuition
+
+$$
+F(\mathbf{x}_{k}) = \mathbb{E}[(\mathbf{t}_{k} - \mathbf{a}_{k})^2]
+$$
+
+$$
+\mathbf{x}_{k+1} = \mathbf{x}_{k} - \alpha \nabla_{\mathbf{x}_{k}} F(\mathbf{x}_{k})
+$$
+
+To implement Q-learning, substitute the oracle $Q_{\pi}(s,a)$ for our TD targets:
+
+$$
+\langle S_{0}, \ R_{1} + \gamma \max_{a} \hat{Q}(S_{1},a; \theta_{0})\rangle, \ ... \ ,\langle S_{T-1},R_{T}\rangle
+$$
+
+Gradient for the loss function:
+
+$$
+\nabla_{\theta} F(\theta_{t}) = (R_{t+1} + \gamma \max_{a} \hat{Q}(S_{t+1},a; \theta_{t}) - \hat{Q}(S_{t},A_{t}; \theta_{t}))\nabla_{\theta} \hat{Q}(S_{t},A_{t}; \theta_{t})
+$$
+
+## Experience Replay
+
+Experience replay enables learning from mini-batches of past experiences, improving data efficiency and stability.
+
+![](images/ExperienceReplay.svg){width=40% fig-align="center"}
+
+## Fixed Targets
+
+Stabilizes training by holding target values constant for several updates:
+
+$$
+\hat{Q}(s,a; \theta^{-})
+$$
+
+Gradient for the loss function:
+
+$$
+\nabla_\theta F(\theta_{t}) = (R_{t+1} + \gamma \max_{a} \hat{Q}(S_{t+1},a; \theta^{-}_{t}) - \hat{Q}(S_{t},A_{t}; \theta_{t}))\nabla_\theta \hat{Q}(S_{t},A_{t}; \theta_{t})
+$$
+
+## Deep Q-Network: Illustration
+
+![](images/DQN.png){width=100% fig-align="center"}
+
+## Pseudocode
+
+```pseudocode
+
+```
+
+<div style="text-align: center;">
+  <a href="https://github.com/">
+    <img src="images/github.svg" alt="GitHub" width="5%"/> 
+  </a>
+</div>
+
+#### <u> Exercise </u>
+
+Is there a mistake with the following loss function for DQN?
+
+$$
+F(\theta_{t}) = (\text{TD-Target}_{j} - \hat{Q}(S_{j+1},a; \theta_{t}))^{2}
+$$
+
+Why does this suggest that we are updating the MSE of a scalar and a vector? <br>
+What is actually happening here during the gradient update step?
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+:::

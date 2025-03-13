@@ -84,8 +84,58 @@ book:
           file: lecture6/lecture6-3.qmd
         - text: "6.4 Double Q-Learning"
           file: lecture6/lecture6-4.qmd
-        - text: "6.5 (Optional) n-step Bootstrapping"
-          file: lecture6/lecture6-5.qmd
+        # - text: "6.5 (Optional) n-step Bootstrapping"
+        #   file: lecture6/lecture6-5.qmd
+    - part: "Lecture 7: Function Approximation"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture7/lo.qmd
+        - text: "7.1 Value Function Approximation"
+          file: lecture7/lecture7-1.qmd
+        - text: "7.2 On-Policy Function Approximation"
+          file: lecture7/lecture7-2.qmd
+        - text: "7.3 Off-Policy Function Approximation"
+          file: lecture7/lecture7-3.qmd
+    - part: "Lecture 8: Deep Q-Networks (DQN)"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture8/lo.qmd
+        - text: "8.1 Deep Learning"
+          file: lecture8/lecture8-1.qmd
+        - text: "8.2 Deep Q-Networks"
+          file: lecture8/lecture8-2.qmd
+    - part: "Lecture 9: Policy Gradients"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture9/lo.qmd
+        - text: "9.1 Policy Gradients"
+          file: lecture9/lecture9-1.qmd
+    - part: "Lecture 10: Advanced Policy Gradients"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture10/lo.qmd
+        - text: "10.1 Trust Region Policy Optimization (TRPO)"
+          file: lecture10/lecture10-1.qmd
+        - text: "10.2 Proximal Policy Optimization (PPO)"
+          file: lecture10/lecture10-2.qmd
+    - part: "Lecture 11: Monte Carlo Tree Search"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture11/lo.qmd
+        - text: "11.1 Monte Carlo Tree Search (MCTS)"
+          file: lecture11/lecture11-1.qmd
+        - text: "11.2 Advanced Monte Carlo Tree Search"
+          file: lecture11/lecture11-2.qmd
+    - part: "Lecture 12: Conclusion"
+      chapters:
+        - text: "Learning Objectives"
+          file: lecture12/lo.qmd
+        - text: "12.1 Advanced Topics in Reinforcement Learning"
+          file: lecture12/lecture12-1.qmd
+        - text: "12.2 Identify the Reinforcement Learning Application"
+          file: lecture12/lecture12-2.qmd
+        - text: "12.3 Outlook of Reinforcement Learning"
+          file: lecture12/lecture12-3.qmd
     - part: "Homeworks"
       chapters:
         - text: "Homework 1"
@@ -100,37 +150,19 @@ book:
           file: homework/homework5.qmd
         - text: "Homework 6"
           file: homework/homework6.qmd
+        - text: "Homework 7"
+          file: homework/homework7.qmd
+        - text: "Homework 8"
+          file: homework/homework8.qmd
+        - text: "Homework 9"
+          file: homework/homework9.qmd
+        - text: "Homework 10"
+          file: homework/homework10.qmd
+        - text: "Homework 11"
+          file: homework/homework11.qmd
+        - text: "Homework 12"
+          file: homework/homework12.qmd
     - references.qmd
-    # - part: "Lecture 7: Function Approximation"
-    #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd  
-    # - part: "Lecture 8: Deep Q-Networks"
-    #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd 
-    # - part: "Lecture 9: Policy Gradients"
-    #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd    
-    # - part: "Lecture 10: Advanced Policy Gradients"
-    #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd   
-    # - part: "Lecture 11: Monte Carlo Tree Search"
-    #   chapters:
-    #     - text: "2.1 Introduction to ML"
-    #       file: index.qmd
-    #     - text: "2.2 Neural Networks"
-    #       file: index.qmd
 
 bibliography: references.bib
 

@@ -1,0 +1,18 @@
+---
+title: "Learning Objectives"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Learning Objectives for Lecture 12: Conclusion 🎯
+:::
+
+- Advanced Topics in Reinforcement Learning
+- Identify the Reinforcement Learning Application.
+- Outlook of Reinforcement Learning.
+
+::: {style = "text-align:center;"}
+![Taxonomy of Reinforcement Learning](images/Lecture12.drawio.svg)
+:::

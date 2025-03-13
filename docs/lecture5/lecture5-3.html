@@ -503,7 +503,7 @@ On-Policy Learning
 \]</span></p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number="true" data-no-end="false" data-comment-delimiter="//" data-pseudocode-number="1" data-line-number-punc=":" data-caption-prefix="Algorithm" data-indent-size="1.2em">
+<div class="pseudocode-container quarto-float" data-no-end="false" data-line-number="true" data-indent-size="1.2em" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-line-number-punc=":" data-pseudocode-number="1">
 <div class="pseudocode">
 \begin{algorithm} \caption{On-Policy Monte Carlo Control} \begin{algorithmic} \State \textbf{Initialize:} \State $Q(s, a) \gets 0$ for all $(s, a) \in S \times A$ \State $Returns(s, a) \gets \{\}$ for all $(s, a) \in S \times A$ \State $\gamma \in [0, 1)$ \State $\epsilon \in (0, 1]$ \State $\pi \gets$ arbitrary $\epsilon$-soft policy \State \textbf{Loop for each episode:} \State Generate episode following $\pi$: $S_{0}, A_{0}, R_{1}, \dots, S_{T-1}, A_{T-1}, R_{T}$ \State $G \gets 0$ \For{$t = T-1, T-2, \dots, 0$} \State $G \gets \gamma G + R_{t+1}$ \If{$(S_{t}, A_{t})$ not in $\{(S_{0}, A_{0}), (S_{1}, A_{1}), \dots, (S_{t-1}, A_{t-1})\}$} \Comment{First-visit check} \State $Returns(S_{t}, A_{t}) \gets Returns(S_{t}, A_{t}) \cup \{G\}$ \State $Q(S_{t}, A_{t}) \gets \text{average}(Returns(S_{t}, A_{t}))$ \Endif \Endfor \end{algorithmic} \end{algorithm}
 </div>

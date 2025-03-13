@@ -1,0 +1,65 @@
+---
+title: "8.1 Deep Learning"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+A formal framework that defines probability using three fundamental rules, ensuring consistency in measuring uncertainty. 🎲
+:::
+
+## Motivation
+
+::: {.callout-warning}
+## Problem
+One parameter vector $\mathbf{w}$ is not enough to represent $s$.
+
+::: {style="text-align: center;"}
+![](images/ImageTensor.svg){width=50%}
+:::
+
+What happens if $s$ is an image tensor?
+:::
+
+::: {.callout-tip}
+## Solution
+
+We would like to use neural networks $\theta$ for more parameters to improve our function approximation:
+
+- Multi-layered Perceptrons (MLPs)
+- Convolutional Neural Networks (CNNs)
+:::
+
+## Multi-Layered Perceptrons (MLPs)
+
+::: {style="text-align: center;"}
+![](images/AbbNota-eps-converted-to.svg){width=80%}
+:::
+
+::: {style="text-align: center;"}
+![](images/AbbNota1-eps-converted-to.svg){width=80%}
+:::
+
+## Convolutional Neural Networks (CNNs) 
+
+::: {style="text-align: center;"}
+![](images/ConvPoolingLayers-eps-converted-to.svg){width=80%}
+:::
+
+::: {style="text-align: center;"}
+![](images/ConvNetWithFullyConnected-eps-converted-to.svg){width=80%}
+:::
+
+#### <u> Exercise </u>
+
+Based on your intuition, do you think it makes sense to use raw pixels as input for a Deep Q-Network (DQN) instead of preprocessed state features?
+
+::: {style="text-align: center;"}
+![](images/ImageTensor.svg){width=50%}
+:::
+
+::: {.callout-tip collapse="true"}
+## Solution
+
+:::

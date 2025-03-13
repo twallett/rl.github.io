@@ -21,7 +21,7 @@ Homework for Lecture 6: Temporal Differnce 📝
 For this homework, you only need `gymnasium`, `pygame`, & `numpy`.
 :::
 
-![](images/hw4-3.png){width=40% fig-align="center"}
+![](images/hw6-1.png){width=40% fig-align="center"}
 
 ## Coding Exercise 1
 For the `hw\_env` environment code the SARSA algorithm using the provided parameters.

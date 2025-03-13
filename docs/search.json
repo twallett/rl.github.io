@@ -767,7 +767,7 @@
     "text": "No Homework! Enjoy! 😊",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Homework 1</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Homework 1</span>"
     ]
   },
   {
@@ -1493,7 +1493,7 @@
     "text": "Question 1\nWrite some of the elements of the following sets:\nWrite the following sets in set notation:",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1504,7 +1504,7 @@
     "text": "\\(\\{ 5x-1: x \\in \\mathbb{Z} \\}\\)\n\\(\\{ x \\in \\mathbb{R}: \\sin \\pi x = 0 \\}\\)\n\\(\\{X : X \\subseteq \\{3,2,a\\} \\text{ and } |X|=2 \\}\\)\n\n\n\n\\(\\{ 2, 4, 8, 16, 32, 64, ...\\}\\)\n\\(\\{0,1,4,9,16,25,36, ...\\}\\)\n\\(\\{..., \\frac{1}{8},\\frac{1}{4},\\frac{1}{2},1,2,4,8,... \\}\\)",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1515,7 +1515,7 @@
     "text": "Coding Exercise 1\nThe binomial distribution PMF is:\n\\[\np_X(\\lambda) = {n \\choose k} \\lambda^n (1-\\lambda)^{n-k}\n\\]\nUsing Python, generate binomial data and create visualizations for \\(p_X(\\lambda)\\) and \\(F_X(\\lambda)\\).",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -1526,7 +1526,7 @@
     "text": "Bandit\nA bandit is a slot machine.\nIt is used as an analogy to represent the action an agent can make in one state.\nEach action selection is like a play of one of the slot machine’s levers, and the rewards are the payoffs for hitting the jackpot, according to its underlying probability distribution.",
     "crumbs": [
       "Lecture 3: Multi-Armed Bandits",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
     ]
   },
   {
@@ -1537,7 +1537,7 @@
     "text": "\\(\\Huge{\\to}\\)\nRewards",
     "crumbs": [
       "Lecture 3: Multi-Armed Bandits",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
     ]
   },
   {
@@ -1548,7 +1548,7 @@
     "text": "Multi-Armed Bandit\n\n\n\n\n\n\nNonassociative Environments\n\n\n\nA nonassociative environment is a setting that involves learning how to act in one state. The best example of a nonassociative environment is Multi-Armed Bandit’s.\n\n\nA Multi-Armed Bandit can be interpreted as k-actions, or k-arms of the slot machines, to decide from.  Through repeated action selections, you maximize your winnings by concentrating actions on the best levers.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow do we decide the most appropriate action? 🤔",
     "crumbs": [
       "Lecture 3: Multi-Armed Bandits",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
     ]
   },
   {
@@ -1559,7 +1559,7 @@
     "text": "Expectation of a Bandit\nEach bandit has an expected reward given a particular action is selected, called the action value.\n\\[\nQ_t(a) = \\mathbb{E}[R_t | A_t = a]\n\\]\nWhere:\n\n\\(Q_t(a)\\) is the conditional expectation of the rewards \\(R_t\\) given the selection of an action \\(A_t\\).\n\\(R_t\\) is the random variable for the reward at time step \\(t\\).\n\\(A_t\\) is the random variable for the action selected at time step \\(t\\).",
     "crumbs": [
       "Lecture 3: Multi-Armed Bandits",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
     ]
   },
   {
@@ -1570,7 +1570,7 @@
     "text": "Action Value Method\nTo compute expectations of action values and select actions, we use action value methods.\n\\[\nQ_t(a) = \\frac{\\sum_{i=1}^{t-1} R_i * \\mathbf{1}_{A_i = a}}{\\sum_{i=1}^{t-1} \\mathbf{1}_{A_i = a}}\n\\]\nWhere:\n\n\\(Q_t(a)\\) is the action value for a particular action \\(a\\).\n\\(\\mathbf{1}\\) is a predicate, which denotes whether \\(A_i = a\\) is true or false.\n\nIf the denominator is \\(0\\), then we denote \\(Q_t(a)\\) as \\(0\\).",
     "crumbs": [
       "Lecture 3: Multi-Armed Bandits",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
     ]
   },
   {
@@ -1581,7 +1581,7 @@
     "text": "Action Value Method Update\nTo avoid computationally expensive updates using the predicate method, we can update action values in an incremental fashion:\n\\[\nQ_{t+1} = Q_t + \\frac{1}{t} (R_t - Q_t)\n\\]\nor\n\\[\nNewEstimate \\gets OldEstimate + StepSize [Target - OldEstimate]\n\\]\n\n\n\n\n\n\nShould we always pick actions with the highest expected value? 🤔",
     "crumbs": [
       "Lecture 3: Multi-Armed Bandits",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>3.1 Multi-Armed Bandit Framework</span>"
     ]
   },
   {
@@ -2450,7 +2450,7 @@
     "text": "Question 2\nA retail store accepts either American Express or VISA. The percentages of customers carrying each card are: \n\nAmerican Express: \\(24%\\)\nVISA: \\(61%\\)\nBoth: \\(11%\\)\n\nWhat percentage of customers carry a card accepted by the store?",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -2461,7 +2461,7 @@
     "text": "Question 3\nSixty percent of students wear neither a ring nor a necklace. Given: \n\n\\(20%\\) wear a ring\n\\(30%\\) wear a necklace\n\nFind the probability that a randomly chosen student wears:\n\nA ring or a necklace\nBoth a ring and a necklace",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -2472,7 +2472,7 @@
     "text": "Question 4\nTwo fair dice are rolled. Find the conditional probability that at least one die lands on \\(6\\), given that they land on different numbers.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -2483,7 +2483,7 @@
     "text": "Question 5\nAn urn contains \\(6\\) white and \\(9\\) black balls. If \\(4\\) balls are selected without replacement, what is the probability that the first \\(2\\) are white and the last \\(2\\) are black?",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -2494,7 +2494,7 @@
     "text": "Question 6\nA defendant is judged guilty if at least \\(2\\) out of \\(3\\) judges vote guilty. Given:\n\nProbability of a guilty vote when defendant is guilty: \\(0.7\\) \nProbability of a guilty vote when defendant is innocent: \\(0.2\\) \n\\(70%\\) of defendants are guilty\n\nCompute the conditional probability that judge \\(3\\) votes guilty given:\n\nJudges \\(1\\) and \\(2\\) vote guilty. \nJudges \\(1\\) and \\(2\\) split votes. \nJudges \\(1\\) and \\(2\\) vote not guilty.\n\nAre the judges’ votes independent? Conditionally independent? Explain.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -2505,7 +2505,7 @@
     "text": "Question 7\nGiven the distribution function of \\(X\\):\n\\[\nF_{X}(\\lambda) =\n\\begin{cases}\n0, & \\lambda &lt; 0 \\\\\n\\frac{1}{2}, & 0 \\leq \\lambda &lt; 1 \\\\\n\\frac{3}{5}, & 1 \\leq \\lambda &lt; 2 \\\\\n\\frac{4}{5}, & 2 \\leq \\lambda &lt; 3 \\\\\n\\frac{9}{10}, & 3 \\leq \\lambda &lt; 3.5 \\\\\n1, & \\lambda \\geq 3.5 \\\\\n\\end{cases}\n\\]\nFind \\(p_X(\\lambda)\\).",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -2516,7 +2516,7 @@
     "text": "Question 8\nA player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Homework 2</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Homework 2</span>"
     ]
   },
   {
@@ -2527,7 +2527,7 @@
     "text": "Coding Exercise 1: Load Environments\nLoad existing Bernoulli and Gaussian environments from Utils.env using the default options and a random seed of 123.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2538,7 +2538,7 @@
     "text": "Coding Exercise 2: Epsilon-Greedy Recommendation System\nUsing the existing Epsilon-Greedy (\\(\\epsilon = 0.10\\)) code, create a recommendation system.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2549,7 +2549,7 @@
     "text": "Coding Exercise 3: UCB Algorithm and Recommendation System\nCode the Upper Confidence Boundary (UCB) algorithm and create a recommendation system.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2560,7 +2560,7 @@
     "text": "Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System\nCode the Thompson Sampling algorithm and create a recommendation system.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2571,7 +2571,7 @@
     "text": "Coding Exercise 5: MAB Algorithm Performance Comparison\nFor 10,000 recommendations:\n\nDoes Epsilon-Greedy (\\(\\epsilon = 0.10\\)) perform better in the Bernoulli or Gaussian environment?\nDoes UCB perform better in the Bernoulli or Gaussian environment?\nDoes Thompson Sampling perform better in the Bernoulli or Gaussian environment?\nWhich algorithm performs best in the Bernoulli environment?\nWhich algorithm performs best in the Gaussian environment?\n\nHint: Check the performance of each MAB by observing the most frequently recommended arm.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2582,7 +2582,7 @@
     "text": "Coding Exercise 6: Random Seed Analysis\nUsing random seeds 0-50, for 10,000 recommendations, do the algorithms perform the same?",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2593,7 +2593,7 @@
     "text": "Coding Exercise 7: Amazon Dataset Analysis\nFor the Amazon.csv dataset, repeat exercise Coding Exercise 6 and find the most frequently recommended arm.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2604,7 +2604,7 @@
     "text": "Coding Exercise 8: EXP3 Algorithm and Recommendation System\n\n\n\\begin{algorithm} \\caption{MAB EXP3} \\begin{algorithmic} \\State Initialize, for $a = 1$ to $k$: \\State $Q(a) \\gets \\frac{1}{k}$ \\State $W(a) \\gets 1$ \\\\ \\For{$t$ in range($len(data)$)} \\State $Q(a) \\gets (1 - \\gamma) \\frac{W(a)}{\\sum_{i=1}^{k} W(a_{i})} + \\frac{\\gamma}{k}$ \\\\ \\State $A_t \\gets$ random choice with probabilities $Q(a)$ \\\\ \\State $R_t \\gets \\text{bandit}(A_t)$ \\State $\\hat{R_t} \\gets \\begin{cases} \\frac{R_t}{Q(A_t)} & \\text{if } A_t = a\\\\ 0 & \\text{else} \\end{cases}$ \\State $W(a) \\gets W(a) e^{\\frac{\\gamma \\hat{R_t}}{k}}$ \\Endfor \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2615,7 +2615,7 @@
     "text": "Coding Exercise 9: Gradient Method Algorithm and Recommendation System\n\n\n\\begin{algorithm} \\caption{MAB Gradient Method} \\begin{algorithmic} \\State Initialize, for $a = 1$ to $k$: \\State $Q(a) \\gets 0$ \\State $N(a) \\gets 0$ \\State $H(a) \\gets 0$ \\\\ \\For{$t$ in range($len(data)$)} \\State $\\pi(a) \\gets \\text{softmax}(H(a))$ \\State $A_t \\gets \\text{argmax}_a(\\pi(a))$ \\State $R_t \\gets \\text{bandit}(A_t)$ \\State $N(A_t) \\gets N(A_t) + 1$ \\State $Q(A_t) \\gets Q(A_t) + \\frac{1}{N(A_t)}[R_t - Q(A_t)]$ \\State $H(a) \\gets \\begin{cases} H(A_t) + \\alpha (R_t - Q(A_t)) (1 - \\pi(A_t)) & \\text{if } A_t = a\\\\ H(a) - \\alpha (R_t - Q(a)) \\pi(a) & \\text{else} \\end{cases}$ \\Endfor \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Homework 3</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Homework 3</span>"
     ]
   },
   {
@@ -2626,7 +2626,7 @@
     "text": "Question 1\nIf the current state is \\(S_{t}\\), and actions are selected according to stochastic policy \\(\\pi\\), then what is the expectation of \\(R_{t+1}\\) in terms of \\(\\pi\\) and the four-argument function \\(p\\)?",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Homework 4</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Homework 4</span>"
     ]
   },
   {
@@ -2637,7 +2637,7 @@
     "text": "Question 2\nGive an equation for \\(v_{\\pi}\\) in terms of \\(q_{\\pi}\\) and \\(\\pi\\).",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Homework 4</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Homework 4</span>"
     ]
   },
   {
@@ -2648,7 +2648,7 @@
     "text": "Question 3\nGive an equation for \\(q_{\\pi}\\) in terms of \\(v_{\\pi}\\) and \\(\\pi\\).",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Homework 4</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Homework 4</span>"
     ]
   },
   {
@@ -2692,7 +2692,7 @@
     "text": "Coding Exercise 1\nWith a discount factor of \\(\\gamma = 0.9\\), calculate \\(v(t)\\) when \\(t = 100\\) for the following Markov Chain:",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Homework 4</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Homework 4</span>"
     ]
   },
   {
@@ -2703,7 +2703,7 @@
     "text": "Coding Exercise 2\nWith a discount factor of \\(\\gamma = 0.9\\), calculate \\(v(t)\\) when \\(t = 100\\) for the following Markov Chain:",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Homework 4</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Homework 4</span>"
     ]
   },
   {
@@ -2714,7 +2714,7 @@
     "text": "Coding Exercise 3\nWith a discount factor of \\(\\gamma = 0.9\\), code Iterative Policy Evaluation (Prediction) and Value Iteration algorithms for the following GridWorld MDP:\n\n\n\n\n\nNote: The gray shaded areas are barriers. Moving into a barrier incurs a reward of \\(R = -1\\).",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Homework 4</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Homework 4</span>"
     ]
   },
   {
@@ -2956,7 +2956,7 @@
     "text": "Coding Exercise 1\nFor the hw_env environment, code the On-Policy Monte Carlo Control algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>Homework 5</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Homework 5</span>"
     ]
   },
   {
@@ -3110,7 +3110,7 @@
     "text": "Coding Exercise 2\nFor the hw_env environment, code the Off-Policy Monte Carlo Control algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>Homework 5</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Homework 5</span>"
     ]
   },
   {
@@ -3209,7 +3209,7 @@
     "text": "Coding Exercise 1\nFor the hw\\_env environment code the SARSA algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Homework 6</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Homework 6</span>"
     ]
   },
   {
@@ -3220,7 +3220,7 @@
     "text": "Coding Exercise 2\nFor the hw\\_env environment code the Q-learning algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Homework 6</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Homework 6</span>"
     ]
   },
   {
@@ -3330,7 +3330,7 @@
     "text": "Coding Exercise 3\nFor the hw\\_env environment code the Double Q-learning algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Homework 6</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Homework 6</span>"
     ]
   },
   {
@@ -3371,7 +3371,7 @@
     "href": "lecture6/lecture6-5.html#n-step-td-prediction",
     "title": "6.5 (Optional) n-step Bootstrapping",
     "section": "",
-    "text": "Like Monte Carlo, n-step methods learn from experience.\nLike Temporal Difference, n-step methods bootstrap multiple time steps.\n\n\n\n\n\n\n\nPseudocode\n\n\n\\begin{algorithm} \\caption{n-step TD Prediction} \\begin{algorithmic} \\State Initialize: \\State $V(s) \\gets 0$, for all $s \\in S$ \\State $\\gamma \\in [0,1)$ \\State $\\alpha \\in (0,1]$ \\State Loop for each episode: \\State Initialize $S_{0}$ \\State $T \\gets \\infty$ \\State Loop for each step $t = 0,...,T-2,T-1$ in episode: \\State If $t &lt; T$: \\State $A_{t} \\gets$ action given by $\\pi$ for $S_{t}$ \\State Take action $A_{t}$, observe $R_{t+1}$, $S_{t+1}$ \\State If $S_{t+1} = S_{T-1}$: \\State $T \\gets t + 1$ \\State $\\tau \\gets t - n + 1$ \\State If $\\tau \\geq 0$: \\State $G \\gets \\sum^{min(\\tau+n, T)}_{i=\\tau+1} \\gamma^{i-\\tau-1}R_{i}$ \\State If $\\tau + n &lt; T$: \\State $G \\gets G + \\gamma^{n}V(S_{\\tau+n})$ \\State $V(S_{\\tau}) \\gets V(S_{\\tau}) + \\alpha [G - V(S_{\\tau})]$ \\State Until $\\tau = T-1$ \\end{algorithmic} \\end{algorithm}",
+    "text": "Like Monte Carlo, n-step methods learn from experience.\nLike Temporal Difference, n-step methods bootstrap multiple time steps.\n\n\n\n\n\n\n\nPseudocode\n\n\n\\begin{algorithm} \\caption{n-step TD Prediction}\\begin{algorithmic} \\Require $\\gamma \\in [0,1)$, $\\alpha \\in (0,1]$ \\State Initialize $V(s) \\leftarrow 0$, for all $s \\in S$ \\For{each episode} \\State Initialize $S_0$ \\State $T \\leftarrow \\infty$ \\State $t \\leftarrow 0$ \\Repeat \\If{$t &lt; T$} \\State Choose $A_t$ using policy $\\pi$ for $S_t$ \\State Take action $A_t$, observe $R_{t+1}$ and $S_{t+1}$ \\If{$S_{t+1}$ is terminal} \\State $T \\leftarrow t + 1$ \\EndIf \\EndIf \\State $\\tau \\leftarrow t - n + 1$ \\If{$\\tau \\geq 0$} \\State $G \\leftarrow \\sum_{i=\\tau+1}^{\\min(\\tau+n, T)} \\gamma^{i-\\tau-1} R_i$ \\If{$\\tau + n &lt; T$} \\State $G \\leftarrow G + \\gamma^n V(S_{\\tau+n})$ \\EndIf \\State $V(S_{\\tau}) \\leftarrow V(S_{\\tau}) + \\alpha [G - V(S_{\\tau})]$ \\EndIf \\State $t \\leftarrow t + 1$ \\Until{$\\tau = T-1$} \\EndFor \\end{algorithmic} \\end{algorithm}",
     "crumbs": [
       "Lecture 6: Temporal Difference",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>6.5 (Optional) n-step Bootstrapping</span>"
@@ -3430,6 +3430,1183 @@
     "crumbs": [
       "Lecture 6: Temporal Difference",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>6.4 Double Q-Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lo.html",
+    "href": "lecture7/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 7: Function Approximation 🎯\n\n\n\n\nValue Function Approximation.\nOn-Policy Approximation.\nLimitations of Off-Policy Approximation.\nMountainCarContinuous-v0 environment using gymnasium & numpy.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html",
+    "href": "lecture7/lecture7-1.html",
+    "title": "7.1 Value Function Approximation",
+    "section": "",
+    "text": "Motivation\nAssume state \\(\\mathbf{s}\\) is represented by a vector of continuous values.\n\\[\ns = \\begin{bmatrix} s_1 \\\\ s_2 \\\\ \\vdots \\\\ s_n \\end{bmatrix}\n\\]\nwhere \\(s_i \\in \\mathbb{R}\\) for all \\(i = 1, 2, \\ldots, n\\)\n\\(\\because s\\) is the representation of any state information.",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-motivation",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-motivation",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Motivation",
+    "text": "Value Function Approximation: Motivation\n\nAssume state \\(\\mathbf{s}\\) is represented by a vector of continuous values.\n\n\\[\ns = \\begin{bmatrix} s_1 \\\\ s_2 \\\\ \\vdots \\\\ s_n \\end{bmatrix}\n\\] where \\(s_i \\in \\mathbb{R}\\) for all \\(i = 1, 2, \\ldots, n\\)\n\n\\(\\because s\\) is the representation of any state information.\nProblem:\n\nTabular representation for \\(s_i\\) does not work now.\nWhat if the interval for \\(s_i\\) is infinite?",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-motivation-1",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-motivation-1",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Motivation",
+    "text": "Value Function Approximation: Motivation\n\nSolution:\n\nDevelop a function with parameters \\(\\mathbf{w}\\) that approximates the value of these continuous state values:\n\n\n\\[\n\\hat{V}(s; \\mathbf{w}) \\approx V_{\\pi}(s)\n\\]\n\nNow, we can generalize approximate values of states encountered and those we have not.",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Mathematical Intuition",
+    "text": "Value Function Approximation: Mathematical Intuition\n\nThere are many ways of constructing \\(\\hat{V}(s; \\mathbf{w})\\):\n\nEnsemble methods (decision trees, nearest neighbors, etc.)\nFourier basis\nMuch more…\n\nWe will focus only on differentiable methods:\n\nLinear combination of features (today’s lecture)\nNeural networks (next lecture: DQN)\n\nThe purpose is to update our parameters \\(\\mathbf{w}\\) using mean-squared error (MSE) and stochastic gradient descent (SGD).",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-1",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-1",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Mathematical Intuition",
+    "text": "Value Function Approximation: Mathematical Intuition\n\nRecall MSE for supervised learning:\n\n\\[\nF(\\mathbf{x}_{k}) = \\mathbb{E}[(\\mathbf{t}_{k} - \\mathbf{a}_{k})^2]\n\\]\n\nRecall SGD for supervised learning:\n\n\\[\n\\mathbf{x}_{k+1} = \\mathbf{x}_{k} - \\alpha \\nabla_{\\mathbf{x}_{k}} F(\\mathbf{x}_{k})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-2",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-2",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Mathematical Intuition",
+    "text": "Value Function Approximation: Mathematical Intuition\n\nOur loss function will optimize for our parameter vector \\(\\mathbf{w}\\) while minimizing MSE between our approximate value \\(\\hat{V}(s; \\mathbf{w})\\) and our “true value” \\(V_{\\pi}(s)\\):\n\n\\[\nF(\\mathbf{w}_{t}) = \\mathbb{E}_{\\pi}[(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))^{2}]\n\\]\n\nSGD update for parameters \\(\\mathbf{w}\\):\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-3",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-3",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Mathematical Intuition",
+    "text": "Value Function Approximation: Mathematical Intuition\n\nDerivative of MSE loss:\n\n\\[\n\\nabla_{\\mathbf{w}_{t}} F(\\mathbf{w}_{t}) \\approx -2(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]\n\nPlug derivative of MSE loss into SGD equation:\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-4",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-4",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Mathematical Intuition",
+    "text": "Value Function Approximation: Mathematical Intuition\n\nPrior to calculating \\(\\hat{V}(s; \\mathbf{w})\\), we must preprocess \\(\\mathbf{s}\\) to construct proper feature representations:\n\n\\[\n\\mathbf{f}(s) = \\begin{bmatrix} s_1 \\\\ s_2 \\\\ \\vdots \\\\ s_d \\end{bmatrix}\n\\]\n\nSome types of feature representations \\(\\mathbf{f}\\) include:\n\nOne-hot encoding\nPolynomials\nRadial basis functions\nState normalization (homework)\nTile coding (homework)",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-5",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-mathematical-intuition-5",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Mathematical Intuition",
+    "text": "Value Function Approximation: Mathematical Intuition\n\nState normalization ensures consistent scaling between 0 and 1:\n\n\\[\n\\mathbf{f}(s) = \\begin{bmatrix}\n\\frac{s_1 - \\text{lower bound}_{1}}{\\text{upper bound}_{1} - \\text{lower bound}_{1}} \\\\\n\\frac{s_2 - \\text{lower bound}_{2}}{\\text{upper bound}_{2} - \\text{lower bound}_{2}} \\\\\n\\vdots \\\\\n\\frac{s_d - \\text{lower bound}_{d}}{\\text{upper bound}_{d} - \\text{lower bound}_{d}}\n\\end{bmatrix}\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-illustration",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-illustration",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Illustration",
+    "text": "Value Function Approximation: Illustration\n\n\nExercise\nBased on your mathematical intuition using SGD, are we guaranteed convergence to a local or global minimum?\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]\n\n\n\n\n\n\nSolution",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-illustration-1",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-illustration-1",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Illustration",
+    "text": "Value Function Approximation: Illustration",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#value-function-approximation-test-understanding",
+    "href": "lecture7/lecture7-1.html#value-function-approximation-test-understanding",
+    "title": "7.1 Value Function Approximation",
+    "section": "Value Function Approximation: Test Understanding",
+    "text": "Value Function Approximation: Test Understanding\n\nBased on your mathematical intuition using SGD, are we guaranteed convergence to a local or global minimum?\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html",
+    "href": "lecture7/lecture7-2.html",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "",
+    "text": "On-Policy Function Approximation\nApproximating state values is not sufficient to achieve control.\n\\[\n\\hat{V}(s; \\mathbf{w}) \\approx V_{\\pi}(s)\n\\]\nWe need to approximate action-value functions.\n\\[\n\\hat{Q}(s,a; \\mathbf{w}) \\approx Q_{\\pi}(s,a)\n\\]\nIn doing so, we will incorporate previously learned techniques, such as SARSA from TD learning to devise a learning algorithm.\nBecause \\(s\\) represents any state information and \\(a\\) represents all possible actions.",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#on-policy-function-approximation-motivation",
+    "href": "lecture7/lecture7-2.html#on-policy-function-approximation-motivation",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "On-Policy Function Approximation: Motivation",
+    "text": "On-Policy Function Approximation: Motivation\nProblem:\n\nApproximating state values is not sufficient to achieve control.\n\n\\[\n\\hat{V}(s; \\mathbf{w}) \\approx V_{\\pi}(s)\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#on-policy-function-approximation-motivation-1",
+    "href": "lecture7/lecture7-2.html#on-policy-function-approximation-motivation-1",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "On-Policy Function Approximation: Motivation",
+    "text": "On-Policy Function Approximation: Motivation\nSolution:\n\nWe need to approximate action-value functions.\n\n\\[\n\\hat{Q}(s,a; \\mathbf{w}) \\approx Q_{\\pi}(s,a)\n\\]\n\nIn doing so, we will incorporate previously learned techniques, such as SARSA from TD learning to devise a learning algorithm.\nBecause \\(s\\) represents any state information and \\(a\\) represents all possible actions.",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#on-policy-function-approximation-mathematical-intuition",
+    "href": "lecture7/lecture7-2.html#on-policy-function-approximation-mathematical-intuition",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "On-Policy Function Approximation: Mathematical Intuition",
+    "text": "On-Policy Function Approximation: Mathematical Intuition\n\nSimilarly, MSE loss for action values:\n\n\\[\nF(\\mathbf{w}_{t}) = \\mathbb{E}_{\\pi}[(Q_{\\pi}(S_{t},A_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))^{2}]\n\\]\n\nSimilarly, SGD update for parameters \\(\\mathbf{w}\\):\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(Q_{\\pi}(S_{t},A_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#on-policy-function-approximation-mathematical-intuition-1",
+    "href": "lecture7/lecture7-2.html#on-policy-function-approximation-mathematical-intuition-1",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "On-Policy Function Approximation: Mathematical Intuition",
+    "text": "On-Policy Function Approximation: Mathematical Intuition\n\nFinally, to implement TD learning, we substitute \\(Q_{\\pi}(s,a)\\) for our TD targets at each step:\n\n\\[\n\\langle S_{0}, \\ R_{1} + \\gamma \\hat{Q}(S_{1},A_{1}; \\mathbf{w}_{0})\\rangle, \\ ... \\ ,\\langle S_{T-1},R_{T}\\rangle\n\\]\n\nThus, our update equation for TD on-policy approximation:\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(R_{t+1} + \\gamma \\hat{Q}(S_{t+1},A_{t+1}; \\mathbf{w}_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#on-policy-function-approximation-illustration",
+    "href": "lecture7/lecture7-2.html#on-policy-function-approximation-illustration",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "On-Policy Function Approximation: Illustration",
+    "text": "On-Policy Function Approximation: Illustration",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#on-policy-function-approximation-illustration-1",
+    "href": "lecture7/lecture7-2.html#on-policy-function-approximation-illustration-1",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "On-Policy Function Approximation: Illustration",
+    "text": "On-Policy Function Approximation: Illustration",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#semi-gradient-sarsa-pseudocode",
+    "href": "lecture7/lecture7-2.html#semi-gradient-sarsa-pseudocode",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "Semi-Gradient SARSA: Pseudocode",
+    "text": "Semi-Gradient SARSA: Pseudocode",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#on-policy-function-approximation-test-understanding",
+    "href": "lecture7/lecture7-2.html#on-policy-function-approximation-test-understanding",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "On-Policy Function Approximation: Test Understanding",
+    "text": "On-Policy Function Approximation: Test Understanding\n\nHow can we summarize the update equation in 3 components?\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(R_{t+1} + \\gamma \\hat{Q}(S_{t+1},A_{t+1}; \\mathbf{w}_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-3.html",
+    "href": "lecture7/lecture7-3.html",
+    "title": "7.3 On-Policy Function Approximation",
+    "section": "",
+    "text": "Limits of Off-Policy Approximation",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>7.3 Off-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-3.html#limits-of-off-policy-approximation",
+    "href": "lecture7/lecture7-3.html#limits-of-off-policy-approximation",
+    "title": "7.3 On-Policy Function Approximation",
+    "section": "",
+    "text": "Baird’s Example\n\n\n\n\n\nOff-Policy Divergence",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>7.3 Off-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-3.html#limits-of-off-policy-approximation-1",
+    "href": "lecture7/lecture7-3.html#limits-of-off-policy-approximation-1",
+    "title": "7.3 On-Policy Function Approximation",
+    "section": "Limits of Off-Policy Approximation",
+    "text": "Limits of Off-Policy Approximation\nConvergence of control algorithms:\n\n\n\nAlgorithm\nTabular\nLinear\nNeural Networks\n\n\n\n\nMonte-Carlo Control\n✅\n(✅)\n❌\n\n\nSARSA\n✅\n(✅)\n❌\n\n\nQ-learning\n✅\n❌\n❌",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>7.3 Off-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework7.html",
+    "href": "homework/homework7.html",
+    "title": "Homework 7",
+    "section": "",
+    "text": "Coding Exercise 1\nFor the MountainCarContinuous-v0 environment, code the feature representation for Semi-Gradient SARSA algorithm using the provided parameters.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>Homework 7</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#motivation",
+    "href": "lecture7/lecture7-1.html#motivation",
+    "title": "7.1 Value Function Approximation",
+    "section": "",
+    "text": "Problem\n\n\n\nTabular representation for \\(s_i\\) does not work now. What if the interval for \\(s_i\\) is infinite?\n\n\n\n\n\n\n\n\nSolution\n\n\n\nDevelop a function with parameters \\(\\mathbf{w}\\) that approximates the value of these continuous state values:\n\\[\n\\hat{V}(s; \\mathbf{w}) \\approx V_{\\pi}(s)\n\\]\nNow, we can generalize approximate values of states encountered and those we have not.",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#mathematical-intuition",
+    "href": "lecture7/lecture7-1.html#mathematical-intuition",
+    "title": "7.1 Value Function Approximation",
+    "section": "Mathematical Intuition",
+    "text": "Mathematical Intuition\n\nThere are many ways of constructing \\(\\hat{V}(s; \\mathbf{w})\\):\n\nEnsemble methods (decision trees, nearest neighbors, etc.)\nFourier basis\nMuch more…\n\nWe will focus only on differentiable methods:\n\nLinear combination of features (today’s lecture)\nNeural networks (next lecture: DQN)\n\nThe purpose is to update our parameters \\(\\mathbf{w}\\) using mean-squared error (MSE) and stochastic gradient descent (SGD).\nRecall MSE for supervised learning:\n\n\\[\nF(\\mathbf{x}_{k}) = \\mathbb{E}[(\\mathbf{t}_{k} - \\mathbf{a}_{k})^2]\n\\]\n\nRecall SGD for supervised learning:\n\n\\[\n\\mathbf{x}_{k+1} = \\mathbf{x}_{k} - \\alpha \\nabla_{\\mathbf{x}_{k}} F(\\mathbf{x}_{k})\n\\]\n\nOur loss function will optimize for our parameter vector \\(\\mathbf{w}\\) while minimizing MSE between our approximate value \\(\\hat{V}(s; \\mathbf{w})\\) and our “true value” \\(V_{\\pi}(s)\\):\n\n\\[\nF(\\mathbf{w}_{t}) = \\mathbb{E}_{\\pi}[(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))^{2}]\n\\]\n\nSGD update for parameters \\(\\mathbf{w}\\):\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]\n\nDerivative of MSE loss:\n\n\\[\n\\nabla_{\\mathbf{w}_{t}} F(\\mathbf{w}_{t}) \\approx -2(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]\n\nPlug derivative of MSE loss into SGD equation:\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]\n\nPrior to calculating \\(\\hat{V}(s; \\mathbf{w})\\), we must preprocess \\(\\mathbf{s}\\) to construct proper feature representations:\n\n\\[\n\\mathbf{f}(s) = \\begin{bmatrix} s_1 \\\\ s_2 \\\\ \\vdots \\\\ s_d \\end{bmatrix}\n\\]\n\nSome types of feature representations \\(\\mathbf{f}\\) include:\n\nOne-hot encoding\nPolynomials\nRadial basis functions\nState normalization (homework)\nTile coding (homework)\n\nState normalization ensures consistent scaling between \\(0\\) and \\(1\\):\n\n\\[\n\\mathbf{f}(s) = \\begin{bmatrix}\n\\frac{s_1 - \\text{lower bound}_{1}}{\\text{upper bound}_{1} - \\text{lower bound}_{1}} \\\\\n\\frac{s_2 - \\text{lower bound}_{2}}{\\text{upper bound}_{2} - \\text{lower bound}_{2}} \\\\\n\\vdots \\\\\n\\frac{s_d - \\text{lower bound}_{d}}{\\text{upper bound}_{d} - \\text{lower bound}_{d}}\n\\end{bmatrix}\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#test-understanding",
+    "href": "lecture7/lecture7-1.html#test-understanding",
+    "title": "7.1 Value Function Approximation",
+    "section": "Test Understanding",
+    "text": "Test Understanding\n\nBased on your mathematical intuition using SGD, are we guaranteed convergence to a local or global minimum?\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#on-policy-function-approximation",
+    "href": "lecture7/lecture7-2.html#on-policy-function-approximation",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "",
+    "text": "Approximating state values is not sufficient to achieve control.\n\n\n\n\nWe need to approximate action-value functions.\n\n\n\nIn doing so, we will incorporate previously learned techniques, such as SARSA from TD learning to devise a learning algorithm.\nBecause \\(s\\) represents any state information and \\(a\\) represents all possible actions.",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#mathematical-intuition",
+    "href": "lecture7/lecture7-2.html#mathematical-intuition",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "Mathematical Intuition",
+    "text": "Mathematical Intuition\nSimilarly, MSE loss for action values:\n\\[\nF(\\mathbf{w}_{t}) = \\mathbb{E}_{\\pi}[(Q_{\\pi}(S_{t},A_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))^{2}]\n\\]\nSimilarly, SGD update for parameters \\(\\mathbf{w}\\):\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(Q_{\\pi}(S_{t},A_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t})\n\\]\nFinally, to implement TD learning, we substitute \\(Q_{\\pi}(s,a)\\) for our TD targets at each step:\n\\[\n\\langle S_{0}, \\ R_{1} + \\gamma \\hat{Q}(S_{1},A_{1}; \\mathbf{w}_{0})\\rangle, \\ ... \\ ,\\langle S_{T-1},R_{T}\\rangle\n\\]\nThus, our update equation for TD on-policy approximation:\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(R_{t+1} + \\gamma \\hat{Q}(S_{t+1},A_{t+1}; \\mathbf{w}_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#pseudocode",
+    "href": "lecture7/lecture7-2.html#pseudocode",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "Pseudocode",
+    "text": "Pseudocode\n\n\n\\begin{algorithm} \\caption{Semi-Gradient SARSA} \\begin{algorithmic} \\State \\textbf{Initialize:} \\State $\\mathbf{w} \\gets 0$, $\\mathbf{w} \\in \\mathbb{R}^{d}$ \\State $\\gamma \\in [0,1)$ \\State $\\alpha \\in (0,1]$ \\State $\\epsilon &gt; 0$ \\State $\\pi \\gets$ arbitrary $\\epsilon$-soft policy \\State \\textbf{Loop for each episode:} \\State Initialize $S_{0}$ \\State Choose $A_{0}$ from $S_{0}$ using $\\pi$ \\Repeat \\State Take action $A_{t}$, observe $R_{t+1}$, $S_{t+1}, d_{t}$ \\State \\textbf{If} $d_{t}$ is True: \\State \\quad $\\text{TD-Target}_{t} \\gets R_{T}$ \\State \\textbf{Else:} \\State \\quad Choose $A_{t+1}$ from $S_{t+1}$ using $\\pi$ \\State \\quad $\\text{TD-Target}_{t} \\gets R_{t+1} + \\gamma \\hat{Q}(S_{t+1}, A_{t+1}; \\mathbf{w}_{t})$ \\State $\\mathbf{w}_{t+1} \\gets \\mathbf{w}_{t} + \\alpha(\\text{TD-Target}_{t} - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t})$ \\Until{$S_{t}$ is terminal} \\end{algorithmic} \\end{algorithm}\n\n\n\n  \n\n\nExercise\nHow can we summarize the update equation in 3 components?\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(R_{t+1} + \\gamma \\hat{Q}(S_{t+1},A_{t+1}; \\mathbf{w}_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t})\n\\]\n\n\n\n\n\n\nSolution",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-2.html#test-understanding",
+    "href": "lecture7/lecture7-2.html#test-understanding",
+    "title": "7.2 On-Policy Function Approximation",
+    "section": "Test Understanding",
+    "text": "Test Understanding\n\nHow can we summarize the update equation in 3 components?\n\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(R_{t+1} + \\gamma \\hat{Q}(S_{t+1},A_{t+1}; \\mathbf{w}_{t}) - \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{Q}(S_{t},A_{t}; \\mathbf{w}_{t})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>7.2 On-Policy Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#types-of-value-function-approximators",
+    "href": "lecture7/lecture7-1.html#types-of-value-function-approximators",
+    "title": "7.1 Value Function Approximation",
+    "section": "Types of Value Function Approximators",
+    "text": "Types of Value Function Approximators\nThere are many ways of constructing \\(\\hat{V}(s; \\mathbf{w})\\):\n\nEnsemble methods (decision trees, nearest neighbors, etc.)\nFourier basis\nMuch more…\n\nWe will focus only on differentiable methods:\n\nLinear combination of features (today’s lecture)\nNeural networks (next lecture: DQN)\n\nThe purpose is to update our parameters \\(\\mathbf{w}\\) using mean-squared error (MSE) and stochastic gradient descent (SGD).",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#updating-value-function-approximators",
+    "href": "lecture7/lecture7-1.html#updating-value-function-approximators",
+    "title": "7.1 Value Function Approximation",
+    "section": "Updating Value Function Approximators",
+    "text": "Updating Value Function Approximators\nRecall MSE for supervised learning:\n\\[\nF(\\mathbf{x}_{k}) = \\mathbb{E}[(\\mathbf{t}_{k} - \\mathbf{a}_{k})^2]\n\\]\nRecall SGD for supervised learning:\n\\[\n\\mathbf{x}_{k+1} = \\mathbf{x}_{k} - \\alpha \\nabla_{\\mathbf{x}_{k}} F(\\mathbf{x}_{k})\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#optimizing-value-function-approximators",
+    "href": "lecture7/lecture7-1.html#optimizing-value-function-approximators",
+    "title": "7.1 Value Function Approximation",
+    "section": "Optimizing Value Function Approximators",
+    "text": "Optimizing Value Function Approximators\nOur loss function will optimize for our parameter vector \\(\\mathbf{w}\\) while minimizing MSE between our approximate value \\(\\hat{V}(s; \\mathbf{w})\\) and our “true value” \\(V_{\\pi}(s)\\):\n\\[\nF(\\mathbf{w}_{t}) = \\mathbb{E}_{\\pi}[(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))^{2}]\n\\]\nSGD update for parameters \\(\\mathbf{w}\\):\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]\nDerivative of MSE loss:\n\\[\n\\nabla_{\\mathbf{w}_{t}} F(\\mathbf{w}_{t}) \\approx -2(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]\nPlug derivative of MSE loss into SGD equation:\n\\[\n\\begin{align}\n\\mathbf{w}_{t+1} &= \\mathbf{w}_{t} - \\alpha \\nabla_{\\mathbf{w}_{t}} F(\\mathbf{w}_{t}) \\\\[10pt]\n&= \\mathbf{w}_{t} - \\alpha (-2(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})) \\\\[10pt]\n&= \\mathbf{w}_{t} + 2\\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t}) \\\\[10pt]\n&= \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\end{align}\n\\]",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lecture7-1.html#feature-representations",
+    "href": "lecture7/lecture7-1.html#feature-representations",
+    "title": "7.1 Value Function Approximation",
+    "section": "Feature Representations",
+    "text": "Feature Representations\nPrior to calculating \\(\\hat{V}(s; \\mathbf{w})\\), we must preprocess \\(\\mathbf{s}\\) to construct proper feature representations:\n\\[\n\\mathbf{f}(s) = \\begin{bmatrix} s_1 \\\\ s_2 \\\\ \\vdots \\\\ s_d \\end{bmatrix}\n\\]\nSome types of feature representations \\(\\mathbf{f}\\) include:\n\nOne-hot encoding\nPolynomials\nRadial basis functions\nState normalization (homework)\nTile coding (homework)\n\nState normalization ensures consistent scaling between \\(0\\) and \\(1\\):\n\\[\n\\mathbf{f}(s) = \\begin{bmatrix}\n\\frac{s_1 - \\text{lower bound}_{1}}{\\text{upper bound}_{1} - \\text{lower bound}_{1}} \\\\\n\\frac{s_2 - \\text{lower bound}_{2}}{\\text{upper bound}_{2} - \\text{lower bound}_{2}} \\\\\n\\vdots \\\\\n\\frac{s_d - \\text{lower bound}_{d}}{\\text{upper bound}_{d} - \\text{lower bound}_{d}}\n\\end{bmatrix}\n\\]\nTile coding is a one-hot representation for multi-dimensional continuous spaces that is flexible and computationally efficient.\n\\[\n\\mathbf{f}(s) = \\begin{bmatrix}\n\\delta(s, T_1) \\\\\n\\delta(s, T_2) \\\\\n\\vdots \\\\\n\\delta(s, T_d)\n\\end{bmatrix}\n\\text{where} \\ d \\ \\text{is the number of tilings}\n\\]\n\\[\n\\delta(s, T_i) =\n\\begin{cases}\n1 & \\text{if } s \\in T_i \\\\\n0 & \\text{otherwise}\n\\end{cases}\n\\]\n\n\n\n\n\n\nExercise\nBased on your mathematical intuition using SGD, are we guaranteed convergence to a local or global minimum?\n\\[\n\\mathbf{w}_{t+1} = \\mathbf{w}_{t} + \\alpha(V_{\\pi}(S_{t}) - \\hat{V}(S_{t}; \\mathbf{w}_{t}))\\nabla_{\\mathbf{w}_{t}} \\hat{V}(S_{t}; \\mathbf{w}_{t})\n\\]\n\n\n\n\n\n\nSolution",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>7.1 Value Function Approximation</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework8.html",
+    "href": "homework/homework8.html",
+    "title": "Homework 8",
+    "section": "",
+    "text": "Coding Exercise 1\nFor the highway-v0 environment, code the update method for the Deep Q-Netowrk (DQN) algorithm using the provided parameters.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>52</span>  <span class='chapter-title'>Homework 8</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lo.html",
+    "href": "lecture8/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 8: Deep Q-Networks 🎯\n\n\n\n\nDeep Learning.\nDeep Q-Networks (DQN).\nALE/Breakout-v5 environment using gymnasium & tensorflow.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-1.html",
+    "href": "lecture8/lecture8-1.html",
+    "title": "8.1 Deep Learning",
+    "section": "",
+    "text": "Motivation",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>8.1 Deep Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-1.html#motivation",
+    "href": "lecture8/lecture8-1.html#motivation",
+    "title": "8.1 Deep Learning",
+    "section": "",
+    "text": "Problem\n\n\n\nOne parameter vector \\(\\mathbf{w}\\) is not enough to represent \\(s\\).\n\n\n\nWhat happens if \\(s\\) is an image tensor?\n\n\n\n\n\n\n\n\nSolution\n\n\n\nWe would like to use neural networks \\(\\theta\\) for more parameters to improve our function approximation:\n\nMulti-layered Perceptrons (MLPs)\nConvolutional Neural Networks (CNNs)",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>8.1 Deep Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-1.html#multi-layered-perceptron-mlp",
+    "href": "lecture8/lecture8-1.html#multi-layered-perceptron-mlp",
+    "title": "8.1 Deep Learning",
+    "section": "Multi-Layered Perceptron (MLP)",
+    "text": "Multi-Layered Perceptron (MLP)",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>8.1 Deep Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-1.html#convolutional-neural-networks",
+    "href": "lecture8/lecture8-1.html#convolutional-neural-networks",
+    "title": "8.1 Deep Learning",
+    "section": "Convolutional Neural Networks",
+    "text": "Convolutional Neural Networks\n\n\n\n\n\n\n\n Exercise \nBased on your intuition, do you think it makes sense to use raw pixels as input for a Deep Q-Network (DQN) instead of preprocessed state features?",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>8.1 Deep Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html",
+    "href": "lecture8/lecture8-2.html",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "",
+    "text": "Motivation\nNeed an algorithm that:",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html#deep-q-network-motivation",
+    "href": "lecture8/lecture8-2.html#deep-q-network-motivation",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "",
+    "text": "Problem:\n\nNeed an algorithm that:\n\nLeverages neural networks.\nLeverages a classical method (TD: Q-learning).\nImplements batch form.\nEmpirically performs well.\n\n\n\n\nSolution:\n\n\nGoogle DeepMind 2013\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html#deep-q-network-mathematical-intuition",
+    "href": "lecture8/lecture8-2.html#deep-q-network-mathematical-intuition",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "Deep Q-Network: Mathematical Intuition",
+    "text": "Deep Q-Network: Mathematical Intuition\n\\[\nF(\\mathbf{x}_{k}) = \\mathbb{E}[(\\mathbf{t}_{k} - \\mathbf{a}_{k})^2]\n\\]\n\\[\n\\mathbf{x}_{k+1} = \\mathbf{x}_{k} - \\alpha \\nabla_{\\mathbf{x}_{k}} F(\\mathbf{x}_{k})\n\\]\nTo implement Q-learning, substitute the oracle \\(Q_{\\pi}(s,a)\\) for our TD targets:\n\\[\n\\langle S_{0}, \\ R_{1} + \\gamma \\max_{a} \\hat{Q}(S_{1},a; \\theta_{0})\\rangle, \\ ... \\ ,\\langle S_{T-1},R_{T}\\rangle\n\\]\nGradient for the loss function:\n\\[\n\\nabla_{\\theta} F(\\theta_{t}) = (R_{t+1} + \\gamma \\max_{a} \\hat{Q}(S_{t+1},a; \\theta_{t}) - \\hat{Q}(S_{t},A_{t}; \\theta_{t}))\\nabla_{\\theta} \\hat{Q}(S_{t},A_{t}; \\theta_{t})\n\\]",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html#deep-q-network-mathematical-intuition-1",
+    "href": "lecture8/lecture8-2.html#deep-q-network-mathematical-intuition-1",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "Deep Q-Network: Mathematical Intuition",
+    "text": "Deep Q-Network: Mathematical Intuition\nTo implement Q-learning, substitute the oracle \\(Q_{\\pi}(s,a)\\) for our TD targets:\n\\[\n\\langle S_{0}, \\ R_{1} + \\gamma \\max_{a} \\hat{Q}(S_{1},a; \\theta_{0})\\rangle, \\ ... \\ ,\\langle S_{T-1},R_{T}\\rangle\n\\]\nGradient for the loss function: \\[\n\\nabla_{\\theta} F(\\theta_{t}) = (R_{t+1} + \\gamma \\max_{a} \\hat{Q}(S_{t+1},a; \\theta_{t}) - \\hat{Q}(S_{t},A_{t}; \\theta_{t}))\\nabla_{\\theta} \\hat{Q}(S_{t},A_{t}; \\theta_{t})\n\\]",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html#experience-replay",
+    "href": "lecture8/lecture8-2.html#experience-replay",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "Experience Replay",
+    "text": "Experience Replay\nExperience replay enables learning from mini-batches of past experiences, improving data efficiency and stability.",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html#fixed-targets",
+    "href": "lecture8/lecture8-2.html#fixed-targets",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "Fixed Targets",
+    "text": "Fixed Targets\nStabilizes training by holding target values constant for several updates:\n\\[\n\\hat{Q}(s,a; \\theta^{-})\n\\]\nGradient for the loss function:\n\\[\n\\nabla_\\theta F(\\theta_{t}) = (R_{t+1} + \\gamma \\max_{a} \\hat{Q}(S_{t+1},a; \\theta^{-}_{t}) - \\hat{Q}(S_{t},A_{t}; \\theta_{t}))\\nabla_\\theta \\hat{Q}(S_{t},A_{t}; \\theta_{t})\n\\]",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html#deep-q-network-illustration",
+    "href": "lecture8/lecture8-2.html#deep-q-network-illustration",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "Deep Q-Network: Illustration",
+    "text": "Deep Q-Network: Illustration",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html#pseudocode",
+    "href": "lecture8/lecture8-2.html#pseudocode",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "Pseudocode",
+    "text": "Pseudocode\n\n\n\n\n\n\n  \n\n\n Exercise \nIs there a mistake with the following loss function for DQN?\n\\[\nF(\\theta_{t}) = (\\text{TD-Target}_{j} - \\hat{Q}(S_{j+1},a; \\theta_{t}))^{2}\n\\]\nWhy does this suggest that we are updating the MSE of a scalar and a vector?  What is actually happening here during the gradient update step?\n\n\n\n\n\n\nSolution",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-1.html#multi-layered-perceptrons-mlps",
+    "href": "lecture8/lecture8-1.html#multi-layered-perceptrons-mlps",
+    "title": "8.1 Deep Learning",
+    "section": "Multi-Layered Perceptrons (MLPs)",
+    "text": "Multi-Layered Perceptrons (MLPs)",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>8.1 Deep Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-1.html#convolutional-neural-networks-cnns",
+    "href": "lecture8/lecture8-1.html#convolutional-neural-networks-cnns",
+    "title": "8.1 Deep Learning",
+    "section": "Convolutional Neural Networks (CNNs)",
+    "text": "Convolutional Neural Networks (CNNs)\n\n\n\n\n\n\n\n Exercise \nBased on your intuition, do you think it makes sense to use raw pixels as input for a Deep Q-Network (DQN) instead of preprocessed state features?\n\n\n\n\n\n\n\n\n\nSolution",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>8.1 Deep Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lecture8-2.html#motivation",
+    "href": "lecture8/lecture8-2.html#motivation",
+    "title": "8.2 Deep Q-Networks (DQN)",
+    "section": "",
+    "text": "Leverages neural networks.\nLeverages a classical RL learning method (TD: Q-learning).\nImplements batch form.\nEmpirically performs well.\n\n\n\n\n\n\n\nGoogle DeepMind 2013\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>8.2 Deep Q-Networks</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lo.html",
+    "href": "lecture9/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 9: Policy Gradients 🎯\n\n\n\n\nPolicy Gradients.\nCartPole-v1 environment using gymnasium & tensorflow.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html",
+    "href": "lecture9/lecture9-1.html",
+    "title": "9.1 Policy Gradients",
+    "section": "",
+    "text": "Motivation",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#problem",
+    "href": "lecture9/lecture9-1.html#problem",
+    "title": "9.1 Policy Gradients",
+    "section": "Problem",
+    "text": "Problem\n\nDQN is unstable and does not guarantee convergence.\nFollowing deterministic or \\(\\epsilon\\)-greedy policies is not optimal.\n\n\n\n\n\nRock-Paper-Scissors\n\n\nRock-Paper-Scissors\n\n\n\nGridWorld Alias\n\n\nGridWorld Alias",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#solution",
+    "href": "lecture9/lecture9-1.html#solution",
+    "title": "9.1 Policy Gradients",
+    "section": "Solution",
+    "text": "Solution\n\nLet’s learn stochastic policies using differentiable methods:\n\n\\[\n\\pi(a|s; \\theta)\n\\]\n\nBy following \\(\\pi(a|s; \\theta)\\), we can find optimal policy parameters \\(\\theta\\) that maximize:\n\n\\[\nV^{\\pi_{\\theta}}(s) = V(S_{0}; \\theta)\n\\]",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#soft-max-policy",
+    "href": "lecture9/lecture9-1.html#soft-max-policy",
+    "title": "9.1 Policy Gradients",
+    "section": "Soft-max Policy",
+    "text": "Soft-max Policy\n\\[\n\\pi(a|s;\\theta) = \\frac{\\exp(\\theta_{\\text{logits}}(s)[a])}{\\sum_{a'} \\exp(\\theta_{\\text{logits}}(s)[a'])}\n\\]",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#policy-gradient-theorem",
+    "href": "lecture9/lecture9-1.html#policy-gradient-theorem",
+    "title": "9.1 Policy Gradients",
+    "section": "Policy Gradient Theorem",
+    "text": "Policy Gradient Theorem\n\nTheorem: Let \\(\\pi(a|s;\\theta)\\) be a differentiable policy. The gradient of the expected reward \\(F(\\theta)\\) with respect to \\(\\theta\\) is:\n\\[\n\\nabla_{\\theta} F(\\theta) = \\mathbb{E}_{\\pi_{\\theta}} \\left[\\nabla_{\\theta} \\log \\pi(a|s;\\theta) Q^{\\pi_{\\theta}}(s, a)\\right]\n\\]",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#addressing-high-variance",
+    "href": "lecture9/lecture9-1.html#addressing-high-variance",
+    "title": "9.1 Policy Gradients",
+    "section": "Addressing High Variance",
+    "text": "Addressing High Variance\n\nInstead of multiplying the sum of rewards by the score function:\n\n\\[\n\\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1} R(\\tau^{i}) \\sum^{T-1}_{t=0} \\log \\nabla_{\\theta} \\pi(A_{t}|S_{t}, \\theta)\n\\]\n\nUse temporal structure to weight rewards relevant to each time-step:\n\n\\[\n\\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1}  \\sum^{T-1}_{t=0} \\log \\nabla_{\\theta} \\pi(A_{t}|S_{t}, \\theta) \\sum^{T-1}_{t' = t} r^{i}_{t'}\n\\]",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#baselines-to-reduce-variance",
+    "href": "lecture9/lecture9-1.html#baselines-to-reduce-variance",
+    "title": "9.1 Policy Gradients",
+    "section": "Baselines to Reduce Variance",
+    "text": "Baselines to Reduce Variance\n\nUnbiased estimators \\(b(s)\\) help adjust for expected rewards:\n\n\\[\n\\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1}  \\sum^{T-1}_{t=0} \\log \\nabla_{\\theta} \\pi(A_{t}|S_{t}, \\theta) (r^{i}_{t'} - b(s))\n\\]\n\nDefining advantage estimates:\n\n\\[\n\\hat{A}_{t} = \\sum^{T-1}_{t' = t} (r^{i}_{t'} - b(s))\n\\]\nthus,\n\\[\n\\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1}  \\sum^{T-1}_{t=0} \\log \\nabla_{\\theta} \\pi(A_{t}|S_{t}, \\theta) \\hat{A}_{t}\n\\]",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#motivation",
+    "href": "lecture9/lecture9-1.html#motivation",
+    "title": "9.1 Policy Gradients",
+    "section": "",
+    "text": "Problem\n\n\n\nDQN is unstable and does not guarantee convergence. Following deterministic or \\(\\epsilon\\)-greedy policies is not optimal.\n\n\n\n\nRock-Paper-Scissors\n\n\n\n\n\nGridWorld Alias\n\n\n\n\n\n\n\n\n\n\n\nSolution\n\n\n\nLet’s learn stochastic policies using differentiable methods:\n\\[\n\\pi(a|s; \\theta)\n\\]\nBy following \\(\\pi(a|s; \\theta)\\), we can find optimal policy parameters \\(\\theta\\) that maximize:\n\\[\nV^{\\pi_{\\theta}}(s) = V(S_{0}; \\theta)\n\\]",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#mathematical-intuition",
+    "href": "lecture9/lecture9-1.html#mathematical-intuition",
+    "title": "9.1 Policy Gradients",
+    "section": "Mathematical Intuition",
+    "text": "Mathematical Intuition\nPolicy gradient algorithms search for a local maximum in \\(V^{\\pi_{\\theta}}(s)\\) using stochastic gradient ascent (SGA):\n\\[\n\\Delta \\theta = \\alpha \\nabla V(S_{0}; \\theta)\n\\]\nIdeally, we want to compute this gradient analytically.\nAssume \\(\\pi\\) is differentiable where it is non-zero:\n\\[\nV(S_{0}; \\theta) = \\sum_{a} \\pi(a|S_{0}; \\theta) Q(S_{0},a; \\theta)\n\\]\nAnother formulation in terms of trajectories \\(\\tau\\):\n\\[\nV(S_{0}; \\theta) = \\sum_{\\tau} P(\\tau; \\theta) R(\\tau)\n\\]\nwhere \\(P(\\tau; \\theta)\\) is the probability and \\(R(\\tau)\\) the reward of trajectory.\nUsing likelihood ratios:\n\\[\n\\nabla_{\\theta} V(\\theta) = \\sum_{\\tau} P(\\tau; \\theta) R(\\tau) \\nabla_{\\theta} \\log P(\\tau; \\theta)\n\\]\nApproximation using empirical estimate:\n\\[\n\\nabla_{\\theta} V(\\theta) \\approx \\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1} R(\\tau^{i}) \\nabla_{\\theta} \\log P(\\tau^{i}; \\theta)\n\\]\nDecomposing dynamics into states and actions:\n\\[\n\\nabla_{\\theta} \\log P(\\tau^{i}; \\theta) = \\sum^{T-1}_{t=0} \\nabla_{\\theta} \\log \\pi(A_{t}|S_{t}, \\theta)\n\\]\nThis term is called the score function.\n\nSoft-max Policy\n\\[\n\\pi(a|s;\\theta) = \\frac{\\exp(\\theta_{\\text{logits}}(s)[a])}{\\sum_{a'} \\exp(\\theta_{\\text{logits}}(s)[a'])}\n\\]\n\n\nPolicy Gradient Theorem\nTheorem: Let \\(\\pi(a|s;\\theta)\\) be a differentiable policy. The gradient of the expected reward \\(F(\\theta)\\) with respect to \\(\\theta\\) is:\n\\[\n\\nabla_{\\theta} F(\\theta) = \\mathbb{E}_{\\pi_{\\theta}} \\left[\\nabla_{\\theta} \\log \\pi(a|s;\\theta) Q^{\\pi_{\\theta}}(s, a)\\right]\n\\]\n\n\nAddressing High Variance\nInstead of multiplying the sum of rewards by the score function:\n\\[\n\\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1} R(\\tau^{i}) \\sum^{T-1}_{t=0} \\log \\nabla_{\\theta} \\pi(A_{t}|S_{t}, \\theta)\n\\]\n\nUse temporal structure to weight rewards relevant to each time-step:\n\n\\[\n\\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1}  \\sum^{T-1}_{t=0} \\log \\nabla_{\\theta} \\pi(A_{t}|S_{t}, \\theta) \\sum^{T-1}_{t' = t} r^{i}_{t'}\n\\]\n\n\nBaselines to Reduce Variance\nUnbiased estimators \\(b(s)\\) help adjust for expected rewards:\n\\[\n\\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1}  \\sum^{T-1}_{t=0} \\log \\nabla_{\\theta} \\pi(A_{t}|S_{t}, \\theta) (r^{i}_{t'} - b(s))\n\\]\nDefining advantage estimates:\n\\[\n\\hat{A}_{t} = \\sum^{T-1}_{t' = t} (r^{i}_{t'} - b(s))\n\\]\nthus,\n\\[\n\\hat{g} = \\frac{1}{m} \\sum^{m}_{i = 1}  \\sum^{T-1}_{t=0} \\log \\nabla_{\\theta} \\pi(A_{t}|S_{t}, \\theta) \\hat{A}_{t}\n\\]",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#vanilla-policy-gradient-illustration",
+    "href": "lecture9/lecture9-1.html#vanilla-policy-gradient-illustration",
+    "title": "9.1 Policy Gradients",
+    "section": "Vanilla Policy Gradient: Illustration",
+    "text": "Vanilla Policy Gradient: Illustration\n\n\n\nVanilla Policy Gradient",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lecture9-1.html#pseudocode",
+    "href": "lecture9/lecture9-1.html#pseudocode",
+    "title": "9.1 Policy Gradients",
+    "section": "Pseudocode",
+    "text": "Pseudocode\n\n\n\n\n\n\n  \n\n\n Exercise \nMatch the following concepts:\n\n\n\n\n\n\n\nConcept\nDefinition\n\n\n\n\nLikelihood Ratio\n\\(\\frac{\\nabla_{\\theta} \\pi_{\\theta}(a|s)}{\\pi_{\\theta}(a|s)}\\)\n\n\nScore Function\n\\(\\nabla_{\\theta} \\log \\pi_{\\theta}(a|s)\\)\n\n\nPolicy Gradient\n\\(\\mathbb{E}_{\\pi_\\theta} \\left[\\nabla_\\theta \\log \\pi(a|s;\\theta) Q^{\\pi_\\theta}(s, a)\\right]\\)\n\n\nEmpirical Estimate\n\\(\\frac{1}{m} \\sum^{m}_{i = 1}  \\sum^{T-1}_{t=0} \\log \\nabla_\\theta \\pi(A_{t}|S_{t}, \\theta) \\hat{A}_{t}\\)\n\n\nBaseline\n\\(b(s)\\)",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>9.1 Policy Gradients</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework9.html",
+    "href": "homework/homework9.html",
+    "title": "Homework 9",
+    "section": "",
+    "text": "Coding Exercise 1\nFor the CartPole-v1 environment, code the update method for the Vanilla Policy Graidient algorithm using the provided parameters.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>53</span>  <span class='chapter-title'>Homework 9</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework10.html",
+    "href": "homework/homework10.html",
+    "title": "Homework 10",
+    "section": "",
+    "text": "Coding Exercise 1\nFor the HalfCheetah-v5 environment, code the update method for the Proximal Policy Optimization algorithm using the provided parameters.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Homework 10</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lo.html",
+    "href": "lecture10/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 10: Advanced Policy Gradients 🎯\n\n\n\n\nTrust Region Policy Optimization (TRPO).\nProximal Policy Optimization (PPO).\nHalfCheetah-v5 environment using gymnasium & tensorflow.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lecture10-1.html",
+    "href": "lecture10/lecture10-1.html",
+    "title": "10.1 Trust Region Policy Optimization (TRPO)",
+    "section": "",
+    "text": "Motivation",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>10.1 Trust Region Policy Optimization (TRPO)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lecture10-1.html#motivation",
+    "href": "lecture10/lecture10-1.html#motivation",
+    "title": "10.1 Trust Region Policy Optimization (TRPO)",
+    "section": "",
+    "text": "Problem\nSampling is poor, preferably we would like a batch form.\n\\[\n\\hat{g} =  \\frac{1}{m} \\sum^{m}_{i = 1}  \\sum^{T-1}_{t=0} \\log \\nabla_\\theta \\pi(A_{t}|S_{t}, \\theta) \\ \\hat{A}_{t}\n\\]\nStep size \\(\\alpha\\) is hard to get right.\nSmall changes in the parameter space \\(\\theta\\) create drastic changes in the log probabilities of actions.\n\n\nSolution\nFor the sampling problem, we can store old trajectories in a buffer \\(D\\) and learn from these in a batch form.\n\nWe need a new algorithm that takes step sizes \\(\\alpha\\) without creating drastic changes in the log probabilities of actions.",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>10.1 Trust Region Policy Optimization (TRPO)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lecture10-1.html#trust-region-policy-optimization-trpo",
+    "href": "lecture10/lecture10-1.html#trust-region-policy-optimization-trpo",
+    "title": "10.1 Trust Region Policy Optimization (TRPO)",
+    "section": "Trust Region Policy Optimization (TRPO)",
+    "text": "Trust Region Policy Optimization (TRPO)\n\nU.C. Berkeley 2015\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>10.1 Trust Region Policy Optimization (TRPO)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lecture10-1.html#mathematical-intuition",
+    "href": "lecture10/lecture10-1.html#mathematical-intuition",
+    "title": "10.1 Trust Region Policy Optimization (TRPO)",
+    "section": "Mathematical Intuition",
+    "text": "Mathematical Intuition\nFor the expected discounted reward of \\(\\pi_{\\theta_{t+1}}\\):\n\\[\nF(\\pi_{\\theta_{t+1}}) = F(\\pi_{\\theta_{t}}) + \\mathbb{E}_{\\tau \\approx \\pi_{\\theta_{t+1}}} [\\sum^{\\infty}_{t=0} \\gamma^{t} \\hat{A}_t]\n\\]\nFor the discounted visitation frequencies:\n\\[\n\\rho_{\\pi_{\\theta_{t}}} = P(S_{0}) + \\gamma P(S_{1}) + \\gamma^{2} P(S_{2}) + ...\n\\]\nWe can now rewrite in terms of sum of states and actions:\n\\[\nF(\\pi_{\\theta_{t+1}}) = F(\\pi_{\\theta_{t}}) + \\mathbb{E}_{s \\approx \\rho_{\\pi_{\\theta_{t+1}}}, a \\approx \\pi_{\\theta_{t}}} \\left[\\frac{\\pi_{\\theta_{t+1}}(a|s)}{\\pi_{\\theta_{t}}(a|s)} \\hat{A}_t\\right]\n\\]\n\\(\\rho_{\\pi_{\\theta_{t+1}}}\\) makes optimizing \\(F(\\pi_{\\theta_{t+1}})\\) directly difficult.\nOne approach to this problem is to replace future sampling \\(\\rho_{\\pi_{\\theta_{t+1}}}\\) with a local approximation \\(L(\\pi_{\\theta_{t+1}})\\), or “surrogate objective”:\n\\[\nL(\\pi_{\\theta_{t+1}}) =  F(\\pi_{\\theta_{t}}) + \\mathbb{E}_{s \\approx \\rho_{\\pi_{\\theta_{t}}}, a \\approx \\pi_{\\theta_{t}}} \\left[\\frac{\\pi_{\\theta_{t+1}}(a|s)}{\\pi_{\\theta_{t}}(a|s)} \\hat{A}_t\\right]\n\\]\nTRPO’s main contribution is monotonic improvement guarantee using a KL-Divergence metric:\n\\[\nF(\\pi_{\\theta_{t+1}}) \\geq L(\\pi_{\\theta_{t+1}}) - C \\ D^{max}_{KL}(\\pi_{\\theta_{t}} \\| \\pi_{\\theta_{t+1}})\n\\]",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>10.1 Trust Region Policy Optimization (TRPO)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lecture10-2.html",
+    "href": "lecture10/lecture10-2.html",
+    "title": "10.2 Proximal Policy Optimization (PPO)",
+    "section": "",
+    "text": "Mathematical Intuition",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>10.2 Proximal Policy Optimization (PPO)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lecture10-2.html#mathematical-intuition",
+    "href": "lecture10/lecture10-2.html#mathematical-intuition",
+    "title": "10.2 Proximal Policy Optimization (PPO)",
+    "section": "",
+    "text": "TRPO’s Main Drawback\nTRPO’s main drawback has to do with the calculation of the Hessian matrix with respect to the KL-Divergence:\n\\[\n\\mathbf{H} = \\nabla^2 D_{KL}(\\pi_{\\theta_{t}} \\| \\pi_{\\theta_{t+1}})\n\\]\n\n\nProximal Policy Optimization (PPO)\n\nOpenAI 2017\nLink to Research Paper\n\n\nPPO: Surrogate Objectives\nPPO KL-Divergence Penalty:\n\\[\nL^{\\text{KL}}(\\pi_{\\theta_{t+1}}) = \\mathbb{E} \\left[ \\frac{\\pi_{\\theta_{t+1}}(a|s)}{\\pi_{\\theta_{t}}(a|s)} \\hat{A}_t - \\beta D_{KL}(\\pi_{\\theta_{t}} \\| \\pi_{\\theta_{t+1}}) \\right]\n\\]\nPPO Clip:\n\\[\nL^{\\text{CLIP}}(\\pi_{\\theta_{t+1}}) = \\mathbb{E} \\left[ \\min \\left( \\frac{\\pi_{\\theta_{t+1}}(a|s)}{\\pi_{\\theta_{t}}(a|s)} \\hat{A}_t, \\text{clip}\\left(\\frac{\\pi_{\\theta_{t+1}}(a|s)}{\\pi_{\\theta_{t}}(a|s)}, 1-\\epsilon, 1+\\epsilon\\right) \\hat{A}_t \\right) \\right]\n\\]\n\n\nGaussian Policy\n\\[\n\\begin{aligned}\n    \\mu(s), \\sigma(s) &= \\theta_{\\mu, \\sigma}(s) \\\\\n    \\pi(a|s; \\theta) &= \\frac{1}{\\sqrt{2 \\pi \\sigma^2(s)}} \\exp\\left(-\\frac{(a - \\mu(s))^2}{2 \\sigma^2(s)}\\right)\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>10.2 Proximal Policy Optimization (PPO)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lecture10-2.html#proximal-policy-optimization-illustration",
+    "href": "lecture10/lecture10-2.html#proximal-policy-optimization-illustration",
+    "title": "10.2 Proximal Policy Optimization (PPO)",
+    "section": "Proximal Policy Optimization: Illustration",
+    "text": "Proximal Policy Optimization: Illustration",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>10.2 Proximal Policy Optimization (PPO)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lecture10-2.html#proximal-policy-optimization-pseudocode",
+    "href": "lecture10/lecture10-2.html#proximal-policy-optimization-pseudocode",
+    "title": "10.2 Proximal Policy Optimization (PPO)",
+    "section": "Proximal Policy Optimization: Pseudocode",
+    "text": "Proximal Policy Optimization: Pseudocode\n\n\n\n\n\n\n  \n\n\n Exercise \nWhat is the key mathematical difference between the true policy gradient and a surrogate policy gradient in reinforcement learning?\n\\[\nL(\\pi_{\\theta_{t+1}}) =  F(\\pi_{\\theta_{t}}) + \\mathbb{E}_{s \\approx \\rho_{\\pi_{\\theta_{t}}}, a \\approx \\pi_{\\theta_{t}}} \\left[\\frac{\\pi_{\\theta_{t+1}}(a|s)}{\\pi_{\\theta_{t}}(a|s)} \\hat{A}_t\\right]\n\\]",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>10.2 Proximal Policy Optimization (PPO)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lo.html",
+    "href": "lecture11/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 11: Monte Carlo Tree Search 🎯\n\n\n\n\nMonte Carlo Tree Search (MCTS).\nAdvanced Monte Carlo Tree Search.\nCartPole-v0 environment using gymnasium & tensorflow.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-1.html",
+    "href": "lecture11/lecture11-1.html",
+    "title": "11.1 Monte Carlo Tree Search (MCTS)",
+    "section": "",
+    "text": "Model-based Reinforcement Learning\nProblem:\nAgents need to sample many environment interactions to learn environment dynamics.\n\\[\nP(s^{'}, r| s, a)\n\\]\nExploration is blind without a model of environment dynamics. Model-free methods focus on immediate rewards.\nSolution:\nAgents can plan future rewards by leveraging environment dynamics. Safe exploration - informed exploration.",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>11.1 Monte Carlo Tree Search (MCTS)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-1.html#model-based-reinforcement-learning",
+    "href": "lecture11/lecture11-1.html#model-based-reinforcement-learning",
+    "title": "11.1 Monte Carlo Tree Search (MCTS)",
+    "section": "",
+    "text": "Model-based Reinforcement Learning: Illustration",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>11.1 Monte Carlo Tree Search (MCTS)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-1.html#mcts-motivation",
+    "href": "lecture11/lecture11-1.html#mcts-motivation",
+    "title": "11.1 Monte Carlo Tree Search (MCTS)",
+    "section": "MCTS: Motivation",
+    "text": "MCTS: Motivation\nProblem:\nRequire an algorithm that demonstrates strong empirical performance and effectively plans based on the dynamics of an environment.\nSolution:\n\nUniversité Charles de Gaulle 2006\nLink to Research Paper\n\nMCTS: Illustration\n\n\n\nSimilar to UCB bandit problems, we select actions according to a confidence interval that balances exploration and exploitation, with the formula:\n\\[A_t = \\arg\\max_a \\left[ Q(s,a) + C \\sqrt{\\frac{\\ln(N(s)_{\\text{parent}})}{N(s)}} \\right]\\]\n\n\n\n\n\n\n\nMCTS: Expansion\n\n\n\nAfter selecting an action (A_t), if the corresponding child node does not exist, we expand the search tree by creating a new node for the resulting state (S^{A_t}_{t+1}).\n\n\n\n\n\n\n\nMCTS: Simulation\n\n\n\nFrom the expanded node, we simulate n-times acting randomly and calculate the average rewards for all simulations:\n\\[\\bar{R} = \\frac{1}{n} \\sum_{j=1}^{n} R_j\\]\n\n\n\n\n\n\n\nMCTS: Backpropagation\n\n\n\nAfter obtaining the average rewards, we update the values from the current node up to the root node:\n\n\\[\nN(s) = N(s) + 1\n\\]\n\\[\nQ(s,a) = Q(s,a) + \\frac{\\bar{R}}{N(s)}\n\\]\n\n\n\n\n\n\nMCTS: Summary Illustration",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>11.1 Monte Carlo Tree Search (MCTS)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-1.html#pseudocode",
+    "href": "lecture11/lecture11-1.html#pseudocode",
+    "title": "11.1 Monte Carlo Tree Search (MCTS)",
+    "section": "Pseudocode",
+    "text": "Pseudocode\n\n\n\n\n\n\n  \n\n\n Exercise \nHow does the Upper Confidence Bound for Trees (UCT) algorithm balance exploration and exploitation in MCTS?\n\\[\nA_t = \\arg\\max_a \\left[ Q(s,a) + C \\sqrt{\\frac{\\ln(N(s)_{\\text{parent}})}{N(s)}} \\right]\n\\]",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>11.1 Monte Carlo Tree Search (MCTS)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-2.html",
+    "href": "lecture11/lecture11-2.html",
+    "title": "11.2 Advanced Monte Carlo Tree Search",
+    "section": "",
+    "text": "Motivation",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>11.2 Advanced Monte Carlo Tree Search</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-2.html#motivation",
+    "href": "lecture11/lecture11-2.html#motivation",
+    "title": "11.2 Advanced Monte Carlo Tree Search",
+    "section": "",
+    "text": "Problem\nRequire an algorithm that leverages neural networks for more efficient MCTS acting and updating.\n\n\nSolution\n\n\n\nGoogle DeepMind 2016\nLink to Research Paper\n\n\nGoogle DeepMind 2020\nLink to Research Paper\n\n\n\n\nAdvanced MCTS: Illustration\n\nPolicy Network: Guides expansion by prioritizing actions with high probabilities, reducing the search space:\n\n\\[\nP(a|s) \\propto \\pi(a|s; \\theta)\n\\]\n\nValue Network: Replaces random rollouts with a learned estimate of the value function:\n\\[\nQ(s,a) \\approx V(s; \\theta)\n\\]\n\n\n\nAdvanced MCTS: Steps\n\nSelecting:\n\\[\nA_t = \\arg\\max_a \\left[ Q(s, a) + C \\cdot \\pi(a | s; \\theta) \\frac{\\sqrt{\\sum_b N(s, b)}}{1 + N(s, a)} \\right]\n\\]\nExpanding:\nIf the selected node has unvisited children, expand.\nSimulating:\n\\[\nV(s; \\theta) = (1 - \\lambda) V(s; \\theta) + \\lambda R\n\\]\nUpdating:\n\\[\nN(s, a) = N(s, a) + 1\n\\]\n\n\\[\nQ(s, a) = Q(s, a) + \\frac{1}{N(s, a)} \\left( V(s; \\theta) - Q(s, a) \\right)\n\\]\n\n\nAdvanced MCTS: Results\nResults of 5-game tournament against Fan Hui (Elo in 2016: 3036).\n\nAlphaGo won all 5 games.\n\n\nMuZero MCTS with Neural Networks\n\nSelecting:\n\\[\nA_t = \\arg\\max_a \\left[ Q(s,a) + C \\frac{\\pi(a|s)}{1 + N(s,a)}  \\right]\n\\]\n\nUsing Prediction Network \\(f(s)\\) to compute \\(\\pi\\) and \\(Q\\)\n\nExpanding:\n\nUse Representation Network \\(h(o)\\) to create state\nPrediction Network \\(f(s)\\) generates initial policy/value\n\nSimulating:\n\nDynamics Network \\(g(s,a)\\) predicts next state and reward\n\nUpdating:\n\\[\nN(s,a) = N(s,a) + 1\n\\]\n\n\\[\nQ(s,a) = \\frac{1}{N(s,a)} \\sum_i V_i(s)\n\\]",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>11.2 Advanced Monte Carlo Tree Search</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-2.html#advanced-mcts-alphazero-performance",
+    "href": "lecture11/lecture11-2.html#advanced-mcts-alphazero-performance",
+    "title": "11.2 Advanced Monte Carlo Tree Search",
+    "section": "Advanced MCTS: AlphaZero Performance",
+    "text": "Advanced MCTS: AlphaZero Performance\nOrange line indicates best result of AlphaZero (AlphaGo trained purely on self-play).",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>11.2 Advanced Monte Carlo Tree Search</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-1.html",
+    "href": "lecture12/lecture12-1.html",
+    "title": "12.1 Advanced Topics in Reinforcement Learning",
+    "section": "",
+    "text": "Advanced Topics",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>12.1 Advanced Topics in Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-1.html#imitation-learning",
+    "href": "lecture12/lecture12-1.html#imitation-learning",
+    "title": "12.1 Advanced Topics in Reinforcement Learning",
+    "section": "Imitation Learning",
+    "text": "Imitation Learning\n\nLearn a policy \\(\\pi(a|s)\\) by mimicking an expert’s demonstrations, \\((s, a)\\), without requiring explicit reward signals.\n\n\nApplication: Autonomous Driving\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>12.1 Advanced Topics in Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-1.html#inverse-reinforcement-learning",
+    "href": "lecture12/lecture12-1.html#inverse-reinforcement-learning",
+    "title": "12.1 Advanced Topics in Reinforcement Learning",
+    "section": "Inverse Reinforcement Learning",
+    "text": "Inverse Reinforcement Learning\n\nInfer the reward function \\(R(s, a)\\) given expert trajectories to derive an optimal policy, \\(\\pi^*\\).\n\n\nApplication: Predicting Driver Behavior and Route Recommendation\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>12.1 Advanced Topics in Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-1.html#offline-reinforcement-learning",
+    "href": "lecture12/lecture12-1.html#offline-reinforcement-learning",
+    "title": "12.1 Advanced Topics in Reinforcement Learning",
+    "section": "Offline Reinforcement Learning",
+    "text": "Offline Reinforcement Learning\n\nLearn a policy \\(\\pi(a|s)\\) from a fixed dataset \\(D = \\{(s, a, r, s')\\}\\) without further environment interaction.\n\n\nApplication: Robotic Manipulation\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>12.1 Advanced Topics in Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-1.html#multi-agent-reinforcement-learning",
+    "href": "lecture12/lecture12-1.html#multi-agent-reinforcement-learning",
+    "title": "12.1 Advanced Topics in Reinforcement Learning",
+    "section": "Multi-Agent Reinforcement Learning",
+    "text": "Multi-Agent Reinforcement Learning\n\nOptimize multiple agents’ policies \\(\\pi_i(a|s)\\) interacting in a shared environment, considering cooperation or competition.\n\n\nApplication: Strategic Game-play in Dota2\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>12.1 Advanced Topics in Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-1.html#hierarchical-reinforcement-learning",
+    "href": "lecture12/lecture12-1.html#hierarchical-reinforcement-learning",
+    "title": "12.1 Advanced Topics in Reinforcement Learning",
+    "section": "Hierarchical Reinforcement Learning",
+    "text": "Hierarchical Reinforcement Learning\n\nDecompose tasks into a hierarchy of policies, \\(\\pi_\\text{high}(g|s)\\) for goals and \\(\\pi_\\text{low}(a|s, g)\\) for actions.\n\n\nApplication: MuJoCo Ant Maze Path Finding\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>12.1 Advanced Topics in Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-1.html#multi-objective-reinforcement-learning",
+    "href": "lecture12/lecture12-1.html#multi-objective-reinforcement-learning",
+    "title": "12.1 Advanced Topics in Reinforcement Learning",
+    "section": "Multi-Objective Reinforcement Learning",
+    "text": "Multi-Objective Reinforcement Learning\n\nOptimize a policy \\(\\pi(a|s)\\) under multiple conflicting objectives, \\(\\{R_1, R_2, \\dots\\}\\)\n\n\nApplication: Resource Allocation\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>12.1 Advanced Topics in Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-1.html#meta-learning",
+    "href": "lecture12/lecture12-1.html#meta-learning",
+    "title": "12.1 Advanced Topics in Reinforcement Learning",
+    "section": "Meta Learning",
+    "text": "Meta Learning\n\nTrain agents to quickly adapt to new tasks \\(\\mathcal{T}\\) by optimizing over task distributions \\(p(\\mathcal{T})\\).\n\n\nApplication: Few Shot Learning\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>12.1 Advanced Topics in Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-2.html",
+    "href": "lecture12/lecture12-2.html",
+    "title": "12.2 Identify the Reinforcement Learning Application",
+    "section": "",
+    "text": "Applications",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>12.2 Identify the Reinforcement Learning Application</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-3.html",
+    "href": "lecture12/lecture12-3.html",
+    "title": "12.3 Outlook of Reinforcement Learning",
+    "section": "",
+    "text": "Challenges in Reinforcement Learning",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>12.3 Outlook of Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework12.html",
+    "href": "homework/homework12.html",
+    "title": "Homework 12",
+    "section": "",
+    "text": "No Homework! Enjoy! 😊",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Homework 12</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-2.html#applications",
+    "href": "lecture12/lecture12-2.html#applications",
+    "title": "12.2 Identify the Reinforcement Learning Application",
+    "section": "",
+    "text": "Note\n\n\n\nInstructions: For each task presented, determine whether it can be solved using:\n\nSupervised Learning\n\nUnsupervised Learning\n\nMulti-Armed Bandit\n\nClassical Reinforcement Learning\n\nDeep Reinforcement Learning\n\nForm groups of two or more and discuss the most appropriate approach for each application.",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>12.2 Identify the Reinforcement Learning Application</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-2.html#reinforcement-learning-framework",
+    "href": "lecture12/lecture12-2.html#reinforcement-learning-framework",
+    "title": "12.2 Identify the Reinforcement Learning Application",
+    "section": "Reinforcement Learning Framework",
+    "text": "Reinforcement Learning Framework",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>12.2 Identify the Reinforcement Learning Application</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-2.html#task-1-email-spam-detection",
+    "href": "lecture12/lecture12-2.html#task-1-email-spam-detection",
+    "title": "12.2 Identify the Reinforcement Learning Application",
+    "section": "Task 1: Email Spam Detection",
+    "text": "Task 1: Email Spam Detection\n\n\nAnswer: Supervised Learning\n\nSupervised Learning: Classification.\nFeatures (X):\n\nFrequency of specific keywords (e.g., “free”, “win”, “money”).\nPresence of special characters (e.g., “!”, “$”, etc.).\nSender’s domain (e.g., “trusted.com”, “unknown.com”).\n\nLabels (y):\n\n0 for Non-Spam.\n1 for Spam.\n\nExample Algorithm: Naive Bayes.",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>12.2 Identify the Reinforcement Learning Application</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-2.html#task-2-customer-segmentation-for-a-retail-store",
+    "href": "lecture12/lecture12-2.html#task-2-customer-segmentation-for-a-retail-store",
+    "title": "12.2 Identify the Reinforcement Learning Application",
+    "section": "Task 2: Customer Segmentation for a Retail Store",
+    "text": "Task 2: Customer Segmentation for a Retail Store\n\n\nAnswer: Unsupervised Learning\n\nUnsupervised Learning: Clustering.\nFeatures (X):\n\nCustomer age, annual income, spending score, purchase frequency.\nProduct categories purchased, total expenditure, location.\nCustomer loyalty (e.g., membership status).\n\nExample Algorithm: K-Means.",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>12.2 Identify the Reinforcement Learning Application</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-2.html#task-3-online-ad-optimization",
+    "href": "lecture12/lecture12-2.html#task-3-online-ad-optimization",
+    "title": "12.2 Identify the Reinforcement Learning Application",
+    "section": "Task 3: Online Ad Optimization",
+    "text": "Task 3: Online Ad Optimization\n\n\nAnswer: Multi-Armed Bandit\n\nState (S): Single state (environment does not change).\nActions (A): Display ad 1, Display ad 2, Display ad 3.\nRewards (R): Click-through rate, conversion rate, user engagement.\nExample Algorithm: Thompson Sampling.",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>12.2 Identify the Reinforcement Learning Application</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-2.html#task-4-warehouse-robot-path-finding",
+    "href": "lecture12/lecture12-2.html#task-4-warehouse-robot-path-finding",
+    "title": "12.2 Identify the Reinforcement Learning Application",
+    "section": "Task 4: Warehouse Robot Path-finding",
+    "text": "Task 4: Warehouse Robot Path-finding\n\n\nAnswer: Classical Reinforcement Learning\n\nExample Algorithm: Q-learning.\nState (S): Robot position, obstacles, goal location.\nActions (A): Move up, down, left, right, stay.\nRewards (R):\n\nPositive for reaching goal.\nNegative for hitting obstacles.\nSmall penalty for each step (efficiency).",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>12.2 Identify the Reinforcement Learning Application</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-2.html#task-5-fine-tuning-llms-with-human-feedback",
+    "href": "lecture12/lecture12-2.html#task-5-fine-tuning-llms-with-human-feedback",
+    "title": "12.2 Identify the Reinforcement Learning Application",
+    "section": "Task 5: Fine-tuning LLMs with Human Feedback",
+    "text": "Task 5: Fine-tuning LLMs with Human Feedback\n\n\nAnswer: Deep Reinforcement Learning\n\nExample Algorithm: Proximal Policy Optimization (PPO).\nState (S): Model predictions, conversation history, human feedback.\nActions (A): Adjust weights, generate responses, explore approaches.\nRewards (R):\n\nPositive for high-quality responses.\nNegative for low-quality responses.\nReward for alignment with human feedback.",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>12.2 Identify the Reinforcement Learning Application</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-3.html#challenges-in-reinforcement-learning",
+    "href": "lecture12/lecture12-3.html#challenges-in-reinforcement-learning",
+    "title": "12.3 Outlook of Reinforcement Learning",
+    "section": "",
+    "text": "Balancing Exploration vs Exploitation\nSample Efficiency\nSparse Rewards\nConverging to optimal policies",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>12.3 Outlook of Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lecture12-3.html#artificial-general-intelligence-agi",
+    "href": "lecture12/lecture12-3.html#artificial-general-intelligence-agi",
+    "title": "12.3 Outlook of Reinforcement Learning",
+    "section": "Artificial General Intelligence (AGI)",
+    "text": "Artificial General Intelligence (AGI)\n\nDefinition: AGI is AI capable of learning and applying intelligence across a wide range of tasks, similar to human cognition.\nRole of RL in AGI: RL enables autonomous learning and decision-making, key for AGI’s adaptability and problem-solving.\nCurrent Progress: Significant advancements in deep RL and multi-agent systems, though AGI remains a long-term goal.\nPotential Impact: AGI could revolutionize industries, solve global challenges, and transform work and society.",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>12.3 Outlook of Reinforcement Learning</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework11.html",
+    "href": "homework/homework11.html",
+    "title": "Homework 11",
+    "section": "",
+    "text": "Coding Exercise 1\nFor the CartPole-v0 environment, code the update method for the Monte Carlo Tree Search (MCTS) algorithm using the provided parameters.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Homework 11</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lo.html",
+    "href": "lecture12/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 12: Conclusion 🎯\n\n\n\n\nAdvanced Topics in Reinforcement Learning\nIdentify the Reinforcement Learning Application.\nOutlook of Reinforcement Learning.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Learning Objectives</span>"
     ]
   }
 ]

@@ -1,0 +1,29 @@
+---
+title: "Homework 11"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Homework for Lecture 11: Monte Carlo Tree Search 📝
+:::
+
+> **Instructions:** <br> 
+> <br>
+> - **Show ALL Work, Neatly and in Order.** <br>
+> - **No** credit for Answers Without Work. <br>
+> - Submit a single PDF file including all solutions. <br>
+> - **DO NOT** submit individual files or images. <br>
+> - For coding questions, submit **ONE** `.py` file with comments. <br>
+
+::: {.callout-note}
+For this homework, you only need `gymnasium` & `numpy`.
+:::
+
+![](images/cartpole.gif){width=40% fig-align="center"}
+
+## Coding Exercise 1
+For the `CartPole-v0` environment, code the update method for the Monte Carlo Tree Search (MCTS) algorithm using the provided parameters.
+
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Y_A4uKoSmjc6EmU-Or7tbeo3fe_ZD4RH?usp=sharing)

@@ -479,7 +479,7 @@ Q(S_{t},A_{t}) = Q(S_{t},A_{t}) + \alpha [ R_{t+1} + \gamma \max_{a} Q(S_{t+1},a
 <p>Q-Learning is a breakthrough in reinforcement learning due to its simplification of algorithm analysis and early convergence proofs.</p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number="true" data-line-number-punc=":" data-caption-prefix="Algorithm" data-no-end="false" data-pseudocode-number="1" data-indent-size="1.2em">
+<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-comment-delimiter="//" data-no-end="false" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-line-number="true" data-pseudocode-number="1">
 <div class="pseudocode">
 \begin{algorithm} \caption{TD Q-Learning} \begin{algorithmic} \State \textbf{Initialize:} \State $Q(s, a) \gets 0$ for all $(s, a) \in S \times A$ \State $\gamma \in [0, 1)$ \State $\alpha \in (0, 1]$ \State $\epsilon &gt; 0$ \State $\pi \gets$ arbitrary $\epsilon$-soft policy \State \textbf{Loop for each episode:} \State Initialize $S_{0}$ \Repeat \State Choose $A_{t}$ from $S_{t}$ using $\pi$ \State Take action $A_{t}$, observe $R_{t+1}$ and $S_{t+1}$ \State $Q(S_{t}, A_{t}) \gets Q(S_{t}, A_{t}) + \alpha \left[R_{t+1} + \gamma \max_{a} Q(S_{t+1}, a) - Q(S_{t}, A_{t})\right]$ \State $S_{t} \gets S_{t+1}$ \Until{$S_{t}$ is terminal} \end{algorithmic} \end{algorithm}
 </div>

@@ -1,0 +1,10 @@
+---
+title: "Homework 12"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+No Homework! Enjoy! 😊
+:::

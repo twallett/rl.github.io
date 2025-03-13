@@ -33,26 +33,35 @@ A formal framework that defines probability using three fundamental rules, ensur
 \caption{n-step TD Prediction}
 \begin{algorithmic}
 
-\State Initialize:
+\State \textbf{Initialize:}
 \State $V(s) \gets 0$, for all $s \in S$  
 \State $\gamma \in [0,1)$
 \State $\alpha \in (0,1]$
-\State Loop for each episode:
+
+\State \textbf{Loop for each episode:}
 \State Initialize $S_{0}$
 \State $T \gets \infty$
-\State Loop for each step $t = 0,...,T-2,T-1$ in episode: 
-\State If $t < T$:
-\State $A_{t} \gets$ action given by $\pi$ for $S_{t}$
-\State Take action $A_{t}$, observe $R_{t+1}$, $S_{t+1}$
-\State If $S_{t+1} = S_{T-1}$:
-\State $T \gets t + 1$
-\State $\tau \gets t - n + 1$
-\State If $\tau \geq 0$:
-\State $G \gets \sum^{min(\tau+n, T)}_{i=\tau+1} \gamma^{i-\tau-1}R_{i}$
-\State If $\tau + n < T$:
-\State $G \gets G + \gamma^{n}V(S_{\tau+n})$
-\State $V(S_{\tau}) \gets V(S_{\tau}) + \alpha [G - V(S_{\tau})]$
-\State Until $\tau = T-1$ 
+\State $t \gets 0$
+
+\Repeat
+  \If{$t < T$}
+    \State Choose $A_{t}$ using policy $\pi$ for $S_{t}$
+    \State Take action $A_{t}$, observe $R_{t+1}$ and $S_{t+1}$
+    \If{$S_{t+1}$ is terminal}
+      \State $T \gets t + 1$
+    \End
+  \Endif
+  \State $\tau \gets t - n + 1$
+  \If{$\tau \geq 0$}
+    \State $G \gets \sum\limits_{i=\tau+1}^{\min(\tau+n, T)} \gamma^{i-\tau-1} R_{i}$
+    \If{$\tau + n < T$}
+      \State $G \gets G + \gamma^{n} V(S_{\tau+n})$
+    \EndIf
+    \State $V(S_{\tau}) \gets V(S_{\tau}) + \alpha [G - V(S_{\tau})]$
+  \EndIf
+  \State $t \gets t + 1$
+\Until{$\tau = T-1$}
+
 \end{algorithmic}
 \end{algorithm}
 ```

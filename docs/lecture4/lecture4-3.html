@@ -478,7 +478,7 @@ window.Quarto = {
 <p>In fact, the rest of the course could be seen as a way to replicate the same effect of dynamic programming without its assumptions.</p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-line-number-punc=":" data-line-number="true" data-comment-delimiter="//" data-no-end="false" data-indent-size="1.2em" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-no-end="false" data-pseudocode-number="1" data-line-number="true" data-comment-delimiter="//" data-indent-size="1.2em" data-line-number-punc=":">
 <div class="pseudocode">
 \begin{algorithm} \caption{Iterative Policy Evaluation (Prediction)}\begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $\gamma \in [0,1)$ \State $\theta \gets 10^{-4}$ \Comment{small positive number for accuracy of estimation} \Repeat \State $\Delta \gets 0$ \ForAll{$s \in S$} \State $v \gets V(s)$ \State $V(s) \gets \sum_{a} \pi(a|s) \sum_{s',r} p(s',r|s,a) \left[ r + \gamma V(s') \right]$ \State $\Delta \gets \max(\Delta, |v - V(s)|)$ \EndFor \Until{$\Delta &lt; \theta$} \end{algorithmic} \end{algorithm}
 </div>
@@ -504,7 +504,7 @@ q_{\pi}(s, \pi^{'}(s)) \geq v_{\pi}(s)
 <p><strong>Value Iteration</strong> is a dynamic programming algorithm that truncates the policy evaluation step after just one sweep.</p>
 <section id="pseudocode-1" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode-1">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-line-number-punc=":" data-line-number="true" data-comment-delimiter="//" data-no-end="false" data-indent-size="1.2em" data-pseudocode-number="1">
+<div class="pseudocode-container quarto-float" data-caption-prefix="Algorithm" data-no-end="false" data-pseudocode-number="1" data-line-number="true" data-comment-delimiter="//" data-indent-size="1.2em" data-line-number-punc=":">
 <div class="pseudocode">
 \begin{algorithm} \caption{Value Iteration} \begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $\gamma \in [0,1)$ \State $\theta \gets 10^{-4}$ \textit{// small positive number for accuracy of estimation} \Repeat \State $\Delta \gets 0$ \Forall{$s \in S$} \State $v \gets V(s)$ \State $V(s) \gets \max_a \sum_{s^{'},r} p(s^{'},r|s,a) \left[ r + \gamma V(s^{'}) \right]$ \State $\Delta \gets \max(\Delta, |v - V(s)|)$ \Endfor \Until{$\Delta &lt; \theta$} \end{algorithmic} \end{algorithm}
 </div>

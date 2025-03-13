@@ -1,0 +1,19 @@
+---
+title: "Learning Objectives"
+format:
+  html:
+    number-sections: false
+---
+
+::: {.callout-note appearance="simple" icon=false}
+Learning Objectives for Lecture 7: Function Approximation 🎯
+:::
+
+- Value Function Approximation.
+- On-Policy Approximation.
+- Limitations of Off-Policy Approximation.
+- `MountainCarContinuous-v0` environment using `gymnasium` & `numpy`.
+
+::: {style = "text-align:center;"}
+![Taxonomy of Reinforcement Learning](images/Lecture7.drawio.svg)
+:::

@@ -362,22 +362,48 @@ window.Quarto = {
   <a href="../lecture6/lecture6-4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6.4 Double Q-Learning</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lecture 7: Function Approximation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lecture6/lecture6-5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6.5 (Optional) n-step Bootstrapping</span></a>
+  <a href="../lecture7/lo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Learning Objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture7/lecture7-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7.1 Value Function Approximation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture7/lecture7-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7.2 On-Policy Function Approximation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lecture7/lecture7-3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7.3 Off-Policy Function Approximation</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
  <span class="menu-text">Homeworks</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 1</span></a>
@@ -406,6 +432,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../homework/homework6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/homework7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Homework 7</span></a>
   </div>
 </li>
       </ul>
@@ -484,7 +515,7 @@ V(S_{t}) = V(S_{t}) + \underbrace{\alpha}_{Step \ Size} [ \underbrace{\underbrac
 </div>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-no-end="false" data-line-number-punc=":" data-pseudocode-number="1" data-line-number="true">
+<div class="pseudocode-container quarto-float" data-pseudocode-number="1" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-indent-size="1.2em" data-line-number="true" data-no-end="false" data-line-number-punc=":">
 <div class="pseudocode">
 \begin{algorithm} \caption{TD Prediction} \begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $\gamma \in [0, 1)$ \State $\alpha \in (0, 1]$ \State \textbf{Loop for each episode:} \State Initialize $S_{0}$ \Repeat \State $A_{t} \gets$ action given by $\pi$ for $S_{t}$ \State Take action $A_{t}$, observe $R_{t+1}$ and $S_{t+1}$ \State $V(S_{t}) \gets V(S_{t}) + \alpha \left[R_{t+1} + \gamma V(S_{t+1}) - V(S_{t})\right]$ \State $S_{t} \gets S_{t+1}$ \Until{$S_{t}$ is terminal} \end{algorithmic} \end{algorithm}
 </div>
