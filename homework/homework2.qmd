@@ -96,7 +96,7 @@ Find $p_X(\lambda)$.
 ## Question 8
 A player rolls a fair die and flips a fair coin. If heads, they win twice the die value; if tails, they win half. Determine the expected winnings.
 
-## Coding Exercise 1
+## Coding Exercise 1: Binomial Distribution
 The binomial distribution PMF is:
 
 $$

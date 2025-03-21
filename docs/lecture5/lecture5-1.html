@@ -673,7 +673,7 @@ G_{t} = r_{t+1} + \gamma G_{t+1}
 </div>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-pseudocode-number="1" data-no-end="false" data-line-number="true">
+<div class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-no-end="false" data-line-number="true" data-indent-size="1.2em" data-pseudocode-number="1">
 <div class="pseudocode">
 \begin{algorithm} \caption{Monte Carlo Prediction} \begin{algorithmic} \State \textbf{Initialize:} \State $V(s) \gets 0$ for all $s \in S$ \State $Returns(s) \gets \{\}$ for all $s \in S$ \State $\gamma \in [0,1)$ \State \textbf{Loop for each episode:} \State Generate an episode following $\pi$: $S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, \dots, S_{T-1}, A_{T-1}, R_{T}$ \State $G \gets 0$ \For{$t = T-1, T-2, \dots, 0$} \State $G \gets \gamma G + R_{t+1}$ \If{$S_{t}$ not in $\{S_{0}, S_{1}, \dots, S_{t-1}\}$} \Comment{First-visit check} \State $Returns(S_{t}) \gets Returns(S_{t}) \cup \{G\}$ \State $V(S_{t}) \gets \text{average}(Returns(S_{t}))$ \Endif \Endfor \end{algorithmic} \end{algorithm}
 </div>

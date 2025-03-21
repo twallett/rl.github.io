@@ -613,14 +613,10 @@ window.Quarto = {
    
   <ul>
   <li><a href="#coding-exercise-1-load-environments" id="toc-coding-exercise-1-load-environments" class="nav-link active" data-scroll-target="#coding-exercise-1-load-environments">Coding Exercise 1: Load Environments</a></li>
-  <li><a href="#coding-exercise-2-epsilon-greedy-recommendation-system" id="toc-coding-exercise-2-epsilon-greedy-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-2-epsilon-greedy-recommendation-system">Coding Exercise 2: Epsilon-Greedy Recommendation System</a></li>
-  <li><a href="#coding-exercise-3-ucb-algorithm-and-recommendation-system" id="toc-coding-exercise-3-ucb-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-3-ucb-algorithm-and-recommendation-system">Coding Exercise 3: UCB Algorithm and Recommendation System</a></li>
-  <li><a href="#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" id="toc-coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system">Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System</a></li>
-  <li><a href="#coding-exercise-5-mab-algorithm-performance-comparison" id="toc-coding-exercise-5-mab-algorithm-performance-comparison" class="nav-link" data-scroll-target="#coding-exercise-5-mab-algorithm-performance-comparison">Coding Exercise 5: MAB Algorithm Performance Comparison</a></li>
-  <li><a href="#coding-exercise-6-random-seed-analysis" id="toc-coding-exercise-6-random-seed-analysis" class="nav-link" data-scroll-target="#coding-exercise-6-random-seed-analysis">Coding Exercise 6: Random Seed Analysis</a></li>
-  <li><a href="#coding-exercise-7-amazon-dataset-analysis" id="toc-coding-exercise-7-amazon-dataset-analysis" class="nav-link" data-scroll-target="#coding-exercise-7-amazon-dataset-analysis">Coding Exercise 7: Amazon Dataset Analysis</a></li>
-  <li><a href="#coding-exercise-8-exp3-algorithm-and-recommendation-system" id="toc-coding-exercise-8-exp3-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-8-exp3-algorithm-and-recommendation-system">Coding Exercise 8: EXP3 Algorithm and Recommendation System</a></li>
-  <li><a href="#coding-exercise-9-gradient-method-algorithm-and-recommendation-system" id="toc-coding-exercise-9-gradient-method-algorithm-and-recommendation-system" class="nav-link" data-scroll-target="#coding-exercise-9-gradient-method-algorithm-and-recommendation-system">Coding Exercise 9: Gradient Method Algorithm and Recommendation System</a></li>
+  <li><a href="#coding-exercise-2-recommendation-systems" id="toc-coding-exercise-2-recommendation-systems" class="nav-link" data-scroll-target="#coding-exercise-2-recommendation-systems">Coding Exercise 2: Recommendation Systems</a></li>
+  <li><a href="#coding-exercise-3-mab-performance" id="toc-coding-exercise-3-mab-performance" class="nav-link" data-scroll-target="#coding-exercise-3-mab-performance">Coding Exercise 3: MAB Performance</a></li>
+  <li><a href="#coding-exercise-4-random-seed-analysis" id="toc-coding-exercise-4-random-seed-analysis" class="nav-link" data-scroll-target="#coding-exercise-4-random-seed-analysis">Coding Exercise 4: Random Seed Analysis</a></li>
+  <li><a href="#coding-exercise-5-amazon-dataset-analysis" id="toc-coding-exercise-5-amazon-dataset-analysis" class="nav-link" data-scroll-target="#coding-exercise-5-amazon-dataset-analysis">Coding Exercise 5: Amazon Dataset Analysis</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></li>
   </ul>
 </nav>
@@ -675,22 +671,14 @@ Note
 </div>
 <section id="coding-exercise-1-load-environments" class="level2">
 <h2 class="anchored" data-anchor-id="coding-exercise-1-load-environments">Coding Exercise 1: Load Environments</h2>
-<p>Load existing Bernoulli and Gaussian environments from <code>Utils.env</code> using the default options and a random seed of 123.</p>
+<p>Load existing Bernoulli and Gaussian environments from <code>create_environment</code> function using a random seed of <span class="math inline">\(123\)</span>.</p>
 </section>
-<section id="coding-exercise-2-epsilon-greedy-recommendation-system" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-2-epsilon-greedy-recommendation-system">Coding Exercise 2: Epsilon-Greedy Recommendation System</h2>
-<p>Using the existing Epsilon-Greedy (<span class="math inline">\(\epsilon = 0.10\)</span>) code, create a recommendation system.</p>
+<section id="coding-exercise-2-recommendation-systems" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-2-recommendation-systems">Coding Exercise 2: Recommendation Systems</h2>
+<p>Using the existing Epsilon Greedy (<span class="math inline">\(\epsilon\)</span> = 0.10), Upper Confidence Boundary (UCB) and Thompson Sampling code, create a recommendation system.</p>
 </section>
-<section id="coding-exercise-3-ucb-algorithm-and-recommendation-system" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-3-ucb-algorithm-and-recommendation-system">Coding Exercise 3: UCB Algorithm and Recommendation System</h2>
-<p>Code the Upper Confidence Boundary (UCB) algorithm and create a recommendation system.</p>
-</section>
-<section id="coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-4-thompson-sampling-algorithm-and-recommendation-system">Coding Exercise 4: Thompson Sampling Algorithm and Recommendation System</h2>
-<p>Code the Thompson Sampling algorithm and create a recommendation system.</p>
-</section>
-<section id="coding-exercise-5-mab-algorithm-performance-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-5-mab-algorithm-performance-comparison">Coding Exercise 5: MAB Algorithm Performance Comparison</h2>
+<section id="coding-exercise-3-mab-performance" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-3-mab-performance">Coding Exercise 3: MAB Performance</h2>
 <p>For 10,000 recommendations:</p>
 <ol type="1">
 <li>Does Epsilon-Greedy (<span class="math inline">\(\epsilon = 0.10\)</span>) perform better in the Bernoulli or Gaussian environment?</li>
@@ -701,29 +689,78 @@ Note
 </ol>
 <p><em>Hint: Check the performance of each MAB by observing the most frequently recommended arm.</em></p>
 </section>
-<section id="coding-exercise-6-random-seed-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-6-random-seed-analysis">Coding Exercise 6: Random Seed Analysis</h2>
-<p>Using random seeds 0-50, for 10,000 recommendations, do the algorithms perform the same?</p>
+<section id="coding-exercise-4-random-seed-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-4-random-seed-analysis">Coding Exercise 4: Random Seed Analysis</h2>
+<p>Using random seeds <span class="math inline">\(0\)</span>-<span class="math inline">\(50\)</span>, for <span class="math inline">\(10,000\)</span> recommendations, do the algorithms perform the same?</p>
 </section>
-<section id="coding-exercise-7-amazon-dataset-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-7-amazon-dataset-analysis">Coding Exercise 7: Amazon Dataset Analysis</h2>
-<p>For the <code>Amazon.csv</code> dataset, repeat exercise Coding Exercise 6 and find the most frequently recommended arm.</p>
-</section>
-<section id="coding-exercise-8-exp3-algorithm-and-recommendation-system" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-8-exp3-algorithm-and-recommendation-system">Coding Exercise 8: EXP3 Algorithm and Recommendation System</h2>
-<div class="pseudocode-container quarto-float" data-line-number="true" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-line-number-punc=":" data-no-end="false" data-indent-size="1.2em" data-pseudocode-number="1">
-<div class="pseudocode">
-\begin{algorithm} \caption{MAB EXP3} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets \frac{1}{k}$ \State $W(a) \gets 1$ \\ \For{$t$ in range($len(data)$)} \State $Q(a) \gets (1 - \gamma) \frac{W(a)}{\sum_{i=1}^{k} W(a_{i})} + \frac{\gamma}{k}$ \\ \State $A_t \gets$ random choice with probabilities $Q(a)$ \\ \State $R_t \gets \text{bandit}(A_t)$ \State $\hat{R_t} \gets \begin{cases} \frac{R_t}{Q(A_t)} &amp; \text{if } A_t = a\\ 0 &amp; \text{else} \end{cases}$ \State $W(a) \gets W(a) e^{\frac{\gamma \hat{R_t}}{k}}$ \Endfor \end{algorithmic} \end{algorithm}
-</div>
-</div>
-</section>
-<section id="coding-exercise-9-gradient-method-algorithm-and-recommendation-system" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-9-gradient-method-algorithm-and-recommendation-system">Coding Exercise 9: Gradient Method Algorithm and Recommendation System</h2>
-<div class="pseudocode-container quarto-float" data-line-number="true" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-line-number-punc=":" data-no-end="false" data-indent-size="1.2em" data-pseudocode-number="1">
-<div class="pseudocode">
-\begin{algorithm} \caption{MAB Gradient Method} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $Q(a) \gets 0$ \State $N(a) \gets 0$ \State $H(a) \gets 0$ \\ \For{$t$ in range($len(data)$)} \State $\pi(a) \gets \text{softmax}(H(a))$ \State $A_t \gets \text{argmax}_a(\pi(a))$ \State $R_t \gets \text{bandit}(A_t)$ \State $N(A_t) \gets N(A_t) + 1$ \State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$ \State $H(a) \gets \begin{cases} H(A_t) + \alpha (R_t - Q(A_t)) (1 - \pi(A_t)) &amp; \text{if } A_t = a\\ H(a) - \alpha (R_t - Q(a)) \pi(a) &amp; \text{else} \end{cases}$ \Endfor \end{algorithmic} \end{algorithm}
-</div>
-</div>
+<section id="coding-exercise-5-amazon-dataset-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-5-amazon-dataset-analysis">Coding Exercise 5: Amazon Dataset Analysis</h2>
+<p>For the <code>Amazon.csv</code> advertisement dataset repeat exercise E.4. Which arm (ad) would you recommend (advertise)?</p>
+<!-- ## Coding Exercise 8: EXP3 Algorithm and Recommendation System
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{MAB EXP3}
+\begin{algorithmic}
+\State Initialize, for $a = 1$ to $k$:
+\State $Q(a) \gets \frac{1}{k}$
+\State $W(a) \gets 1$ \\
+\For{$t$ in range($len(data)$)}
+    \State $Q(a) \gets (1 - \gamma) \frac{W(a)}{\sum_{i=1}^{k} W(a_{i})} + \frac{\gamma}{k}$ \\
+    \State $A_t \gets$ random choice with probabilities $Q(a)$ \\
+    \State $R_t \gets \text{bandit}(A_t)$
+    \State $\hat{R_t} \gets
+        \begin{cases}
+            \frac{R_t}{Q(A_t)} & \text{if } A_t = a\\
+            0 & \text{else}
+        \end{cases}$
+    \State $W(a) \gets W(a) e^{\frac{\gamma \hat{R_t}}{k}}$
+\Endfor
+\end{algorithmic}
+\end{algorithm}
+```
+
+## Coding Exercise 9: Gradient Method Algorithm and Recommendation System
+
+```pseudocode
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}
+\caption{MAB Gradient Method}
+\begin{algorithmic}
+\State Initialize, for $a = 1$ to $k$:
+\State $Q(a) \gets 0$
+\State $N(a) \gets 0$
+\State $H(a) \gets 0$ \\
+\For{$t$ in range($len(data)$)}
+\State $\pi(a) \gets \text{softmax}(H(a))$
+\State $A_t \gets \text{argmax}_a(\pi(a))$
+\State $R_t \gets \text{bandit}(A_t)$
+\State $N(A_t) \gets N(A_t) + 1$
+\State $Q(A_t) \gets Q(A_t) + \frac{1}{N(A_t)}[R_t - Q(A_t)]$
+\State $H(a) \gets
+    \begin{cases}
+        H(A_t) + \alpha (R_t - Q(A_t)) (1 - \pi(A_t)) & \text{if } A_t = a\\
+        H(a) - \alpha (R_t - Q(a)) \pi(a) & \text{else}
+    \end{cases}$
+\Endfor
+\end{algorithmic}
+\end{algorithm}
+``` -->
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"><a href="https://colab.research.google.com/drive/1B9ko8fJaSFJRbbK493zTUCjI-uBFGla7#scrollTo=sp5yXpnFeSrp"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></h2>

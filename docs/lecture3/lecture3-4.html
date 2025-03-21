@@ -678,7 +678,7 @@ window.Quarto = {
 <p>This update allows the algorithm to draw accurate samples and strike a balance between exploring and exploiting.</p>
 <section id="pseudocode" class="level3">
 <h3 class="anchored" data-anchor-id="pseudocode">Pseudocode</h3>
-<div class="pseudocode-container quarto-float" data-line-number-punc=":" data-no-end="false" data-line-number="true" data-pseudocode-number="1" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-indent-size="1.2em">
+<div class="pseudocode-container quarto-float" data-indent-size="1.2em" data-line-number-punc=":" data-comment-delimiter="//" data-no-end="false" data-pseudocode-number="1" data-caption-prefix="Algorithm" data-line-number="true">
 <div class="pseudocode">
 \begin{algorithm} \caption{MAB Thompson Sampling} \begin{algorithmic} \State Initialize, for $a = 1$ to $k$: \State $\alpha(a) \gets 1$ \State $\beta(a) \gets 1$ \\ \For{$t$ in range($len(data)$)} \State $Q(a) \leftarrow beta(\alpha(a),\beta(a))$ \State $A_t \leftarrow argmax_a Q(a)$ \State $R_t \gets \text{bandit}(A_t)$ \State $\alpha(A_t) \leftarrow \alpha(A_t) + R_t$ \State $\beta(A_t) \leftarrow \beta(A_t) + 1 - R_t$ \Endfor \end{algorithmic} \end{algorithm}
 </div>

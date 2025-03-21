@@ -18,15 +18,15 @@ Homework for Lecture 5: Monte Carlo 📝
 > - For coding questions, submit **ONE** `.py` file with comments. <br>
 
 ::: {.callout-note}
-For this homework, you only need `gymnasium`, `pygame`, & `numpy`.
+For this homework, you only need `numpy`, `gymnasium` & `pygame`.
 :::
 
-![](images/hw5-1.png){width=40% fig-align="center"}
+![](images/hw5-1.gif){width=40% fig-align="center"}
 
-## Coding Exercise 1
-For the `hw_env` environment, code the On-Policy Monte Carlo Control algorithm using the provided parameters.
+## Coding Exercise 1: On-Policy Monte Carlo Control
+For the `GridWorldEnv` environment, code the On-Policy Monte Carlo Control algorithm using the provided hyperparameters.
 
-## Coding Exercise 2
-For the `hw_env` environment, code the Off-Policy Monte Carlo Control algorithm using the provided parameters.
+## Coding Exercise 2: Off-Policy Monte Carlo Control
+For the `GridWorldEnv` environment, code the Off-Policy Monte Carlo Control algorithm using the provided hyperparameters.
 
 ## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Y_A4uKoSmjc6EmU-Or7tbeo3fe_ZD4RH?usp=sharing)

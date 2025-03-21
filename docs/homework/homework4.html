@@ -615,9 +615,9 @@ window.Quarto = {
   <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  <li><a href="#coding-exercise-1" id="toc-coding-exercise-1" class="nav-link" data-scroll-target="#coding-exercise-1">Coding Exercise 1</a></li>
-  <li><a href="#coding-exercise-2" id="toc-coding-exercise-2" class="nav-link" data-scroll-target="#coding-exercise-2">Coding Exercise 2</a></li>
-  <li><a href="#coding-exercise-3" id="toc-coding-exercise-3" class="nav-link" data-scroll-target="#coding-exercise-3">Coding Exercise 3</a></li>
+  <li><a href="#coding-exercise-1-markov-chain-i" id="toc-coding-exercise-1-markov-chain-i" class="nav-link" data-scroll-target="#coding-exercise-1-markov-chain-i">Coding Exercise 1: Markov Chain I</a></li>
+  <li><a href="#coding-exercise-2-markov-chain-ii" id="toc-coding-exercise-2-markov-chain-ii" class="nav-link" data-scroll-target="#coding-exercise-2-markov-chain-ii">Coding Exercise 2: Markov Chain II</a></li>
+  <li><a href="#coding-exercise-3-value-iteration" id="toc-coding-exercise-3-value-iteration" class="nav-link" data-scroll-target="#coding-exercise-3-value-iteration">Coding Exercise 3: Value Iteration</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></li>
   </ul>
 </nav>
@@ -667,12 +667,12 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For this homework, you only need <code>gymnasium</code>, <code>pygame</code>, <code>matplotlib</code> &amp; <code>numpy</code>.</p>
+<p>For this homework, you only need <code>numpy</code>, <code>matplotlib</code>, <code>gymnasium</code> &amp; <code>pygame</code>.</p>
 </div>
 </div>
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>If the current state is <span class="math inline">\(S_{t}\)</span>, and actions are selected according to stochastic policy <span class="math inline">\(\pi\)</span>, then what is the expectation of <span class="math inline">\(R_{t+1}\)</span> in terms of <span class="math inline">\(\pi\)</span> and the four-argument function <span class="math inline">\(p\)</span>?</p>
+<p>If the current state is <span class="math inline">\(S_{t}\)</span> and actions are selected according to stochastic policy <span class="math inline">\(\pi\)</span>, then what is the expectation of <span class="math inline">\(R_{t+1}\)</span> in terms of <span class="math inline">\(\pi\)</span> and the four-argument function <span class="math inline">\(p\)</span>?</p>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
@@ -682,8 +682,8 @@ Note
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
 <p>Give an equation for <span class="math inline">\(q_{\pi}\)</span> in terms of <span class="math inline">\(v_{\pi}\)</span> and <span class="math inline">\(\pi\)</span>.</p>
 </section>
-<section id="coding-exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-1">Coding Exercise 1</h2>
+<section id="coding-exercise-1-markov-chain-i" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-1-markov-chain-i">Coding Exercise 1: Markov Chain I</h2>
 <p>With a discount factor of <span class="math inline">\(\gamma = 0.9\)</span>, calculate <span class="math inline">\(v(t)\)</span> when <span class="math inline">\(t = 100\)</span> for the following Markov Chain:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -691,8 +691,8 @@ Note
 </figure>
 </div>
 </section>
-<section id="coding-exercise-2" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-2">Coding Exercise 2</h2>
+<section id="coding-exercise-2-markov-chain-ii" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-2-markov-chain-ii">Coding Exercise 2: Markov Chain II</h2>
 <p>With a discount factor of <span class="math inline">\(\gamma = 0.9\)</span>, calculate <span class="math inline">\(v(t)\)</span> when <span class="math inline">\(t = 100\)</span> for the following Markov Chain:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -700,12 +700,12 @@ Note
 </figure>
 </div>
 </section>
-<section id="coding-exercise-3" class="level2">
-<h2 class="anchored" data-anchor-id="coding-exercise-3">Coding Exercise 3</h2>
-<p>With a discount factor of <span class="math inline">\(\gamma = 0.9\)</span>, code Iterative Policy Evaluation (Prediction) and Value Iteration algorithms for the following GridWorld MDP:</p>
+<section id="coding-exercise-3-value-iteration" class="level2">
+<h2 class="anchored" data-anchor-id="coding-exercise-3-value-iteration">Coding Exercise 3: Value Iteration</h2>
+<p>With a discount factor of <span class="math inline">\(\gamma = 0.9\)</span>, code Value Iteration algorithm for <code>GridWorldEnv</code> using the provided hyperparameters.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/hw4-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="images/hw4-3.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p><strong>Note:</strong> The gray shaded areas are barriers. Moving into a barrier incurs a reward of <span class="math inline">\(R = -1\)</span>.</p>

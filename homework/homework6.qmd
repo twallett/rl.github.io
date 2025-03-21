@@ -18,18 +18,18 @@ Homework for Lecture 6: Temporal Differnce 📝
 > - For coding questions, submit **ONE** `.py` file with comments. <br>
 
 ::: {.callout-note}
-For this homework, you only need `gymnasium`, `pygame`, & `numpy`.
+For this homework, you only need `numpy`, `gymnasium` & `pygame`.
 :::
 
-![](images/hw6-1.png){width=40% fig-align="center"}
+![](images/hw6-1.gif){width=40% fig-align="center"}
 
 ## Coding Exercise 1
-For the `hw\_env` environment code the SARSA algorithm using the provided parameters.
+For the `GridWorldEnv` environment, code the SARSA algorithm using the provided hyperparameters.
 
 ## Coding Exercise 2
-For the `hw\_env` environment code the Q-learning algorithm using the provided parameters.
+For the `GridWorldEnv` environment, code the Q-learning algorithm using the provided hyperparameters.
 
 ## Coding Exercise 3
-For the `hw\_env` environment code the Double Q-learning algorithm using the provided parameters.
+For the `GridWorldEnv` environment, code the Double Q-learning algorithm using the provided hyperparameters.
 
 ## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Y_A4uKoSmjc6EmU-Or7tbeo3fe_ZD4RH?usp=sharing)
