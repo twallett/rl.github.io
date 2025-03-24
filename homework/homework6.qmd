@@ -23,13 +23,13 @@ For this homework, you only need `numpy`, `gymnasium` & `pygame`.
 
 ![](images/hw6-1.gif){width=40% fig-align="center"}
 
-## Coding Exercise 1
+## Coding Exercise 1: SARSA
 For the `GridWorldEnv` environment, code the SARSA algorithm using the provided hyperparameters.
 
-## Coding Exercise 2
+## Coding Exercise 2: Q-Learning
 For the `GridWorldEnv` environment, code the Q-learning algorithm using the provided hyperparameters.
 
-## Coding Exercise 3
+## Coding Exercise 3: Double Q-Learning
 For the `GridWorldEnv` environment, code the Double Q-learning algorithm using the provided hyperparameters.
 
-## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Y_A4uKoSmjc6EmU-Or7tbeo3fe_ZD4RH?usp=sharing)
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1V0ru_GlB4gkodGCDP5ReORu2fw0dW2BJ?usp=sharing)

@@ -18,7 +18,7 @@ Homework for Lecture 7: Function Approximation 📝
 > - For coding questions, submit **ONE** `.py` file with comments. <br>
 
 ::: {.callout-note}
-For this homework, you only need `gymnasium` & `numpy`.
+For this homework, you only need `numpy` and `gymnasium`.
 :::
 
 ![](images/mountaincar.gif){width=40% fig-align="center"}
