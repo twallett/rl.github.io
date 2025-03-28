@@ -18,12 +18,12 @@ Homework for Lecture 7: Function Approximation 📝
 > - For coding questions, submit **ONE** `.py` file with comments. <br>
 
 ::: {.callout-note}
-For this homework, you only need `numpy` and `gymnasium`.
+For this homework, you only need `numpy`, `gymnasium`, `os`, `pickle`, `tqdm` & `tensorboard`.
 :::
 
 ![](images/mountaincar.gif){width=40% fig-align="center"}
 
-## Coding Exercise 1
-For the `MountainCarContinuous-v0` environment, code the feature representation for Semi-Gradient SARSA algorithm using the provided parameters.
+## Coding Exercise 1: Semi-Gradient SARSA
+For the `MountainCar-v0` environment, code the update function for Semi-Gradient SARSA algorithm using the provided parameters.
 
-## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Y_A4uKoSmjc6EmU-Or7tbeo3fe_ZD4RH?usp=sharing)
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1uT_Hws32-uHKc25FWXQYObU2uFJpBIqE?usp=sharing)

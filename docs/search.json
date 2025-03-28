@@ -512,7 +512,7 @@
     "href": "homework/homework6.html",
     "title": "Homework 6",
     "section": "",
-    "text": "Coding Exercise 1\nFor the GridWorldEnv environment, code the SARSA algorithm using the provided hyperparameters.",
+    "text": "Coding Exercise 1: SARSA\nFor the GridWorldEnv environment, code the SARSA algorithm using the provided hyperparameters.",
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>57</span>  <span class='chapter-title'>Homework 6</span>"
@@ -999,6 +999,28 @@
     "text": "Brunskill, Emma. 2022. “CS234: Reinforcement Learning - Lecture\n1.” Course Lecture Slides, Stanford University. https://web.stanford.edu/class/cs234/slides/lecture1pre.pdf.\n\n\nLevine, Sergey. 2019. “Introduction to Deep Reinforcement\nLearning.” Course Lecture Slides, Deep RL Course, UC Berkeley. https://rail.eecs.berkeley.edu/deeprlcourse/deeprlcourse/static/slides/lec-1.pdf.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "homework/homework6.html#coding-exercise-2-q-learning",
+    "href": "homework/homework6.html#coding-exercise-2-q-learning",
+    "title": "Homework 6",
+    "section": "Coding Exercise 2: Q-Learning",
+    "text": "Coding Exercise 2: Q-Learning\nFor the GridWorldEnv environment, code the Q-learning algorithm using the provided hyperparameters.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Homework 6</span>"
+    ]
+  },
+  {
+    "objectID": "homework/homework6.html#coding-exercise-3-double-q-learning",
+    "href": "homework/homework6.html#coding-exercise-3-double-q-learning",
+    "title": "Homework 6",
+    "section": "Coding Exercise 3: Double Q-Learning",
+    "text": "Coding Exercise 3: Double Q-Learning\nFor the GridWorldEnv environment, code the Double Q-learning algorithm using the provided hyperparameters.",
+    "crumbs": [
+      "Homeworks",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Homework 6</span>"
     ]
   }
 ]

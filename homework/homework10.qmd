@@ -18,12 +18,12 @@ Homework for Lecture 10: Advanced Policy Gradients 📝
 > - For coding questions, submit **ONE** `.py` file with comments. <br>
 
 ::: {.callout-note}
-For this homework, you only need `gymnasium` & `numpy`.
+For this homework, you only need `gymnasium`, `numpy`, `tensorflow`, `os`, `pickle`, `tqdm` & `tensorboard`.
 :::
 
 ![](images/cheetah.gif){width=40% fig-align="center"}
 
-## Coding Exercise 1
-For the `HalfCheetah-v5` environment, code the update method for the Proximal Policy Optimization algorithm using the provided parameters.
+## Coding Exercise 1: PPO Clip
+For the `HalfCheetah-v5` environment, code the update function for the Proximal Policy Optimization: Clip algorithm using the provided parameters.
 
-## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Y_A4uKoSmjc6EmU-Or7tbeo3fe_ZD4RH?usp=sharing)
+## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17HOPCXYMyl7DNFPd_SAsgG2NynWZGIEr?usp=sharing)
