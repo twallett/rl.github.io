@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tyler Wallett, MS &amp; Amir Jafari, PhD">
+<meta name="author" content="Tyler Wallett, MS">
+<meta name="author" content="Amir Jafari, PhD">
 <meta name="dcterms.date" content="2025-03-28">
 
 <title>DATS 6450 – Reinforcement Learning</title>
@@ -671,9 +672,10 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
-             <p>Tyler Wallett, MS &amp; Amir Jafari, PhD </p>
+             <p>Tyler Wallett, MS <a href="mailto:twallett@gwu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+             <p>Amir Jafari, PhD <a href="mailto:ajafari@email.gwu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
           </div>
   </div>
     
@@ -695,73 +697,106 @@ window.Quarto = {
 <div class="slideshow-container">
   <div class="slideshow">
     <div class="slide">
-      <img src="data/images/breakout.gif">
-      <figcaption>Breakout (Lecture 8)</figcaption>
-    </div>
-    <div class="slide">
-      <img src="data/images/cheetah.gif">
-      <figcaption>Cheetah (Lecture 10)</figcaption>
-    </div>
-    <div class="slide">
       <img src="data/images/gridworld.gif">
       <figcaption>Gridworld (Lectures 4-6)</figcaption>
+    </div>
+    <div class="slide">
+      <img src="data/images/mountaincar.gif">
+      <figcaption>MountainCar (Lecture 7)</figcaption>
+    </div>
+    <div class="slide">
+      <img src="data/images/breakout.gif">
+      <figcaption>Breakout (Lecture 8)</figcaption>
     </div>
     <div class="slide">
       <img src="data/images/highway.gif">
       <figcaption>Highway (Lecture 8)</figcaption>
     </div>
-        <div class="slide">
-      <img src="data/images/mountaincar.gif">
-      <figcaption>MountainCar (Lecture 7)</figcaption>
+    <div class="slide">
+      <img src="data/images/cartpole.gif">
+      <figcaption>CartPole (Lecture 9)</figcaption>
+    </div>
+    <div class="slide">
+      <img src="data/images/cheetah.gif">
+      <figcaption>Cheetah (Lecture 10)</figcaption>
     </div>
   </div>
 </div>
 
 <style>
-  .slideshow-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
+.slideshow-container {
+  width: 50%;
+  max-width: 450px;
+  height: 500px; /* Adjust to fit GIFs */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 
-  .slideshow {
-    display: flex;
-    width: 100%;
-    animation: slide 16s ease-in-out infinite;
-  }
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .slide {
-    width: 100%;
-    flex-shrink: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* Increased transition duration for smoother effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .slide img {
-    width: 120%;
-    max-width: 415px;
-    height: auto;
-    margin: auto;
-  }
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
 
-  figcaption {
-    font-size: 14px;
-    margin-top: 5px;
-  }
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
 
-  @keyframes slide {
-    0%, 20% { transform: translateX(0); }
-    25%, 45% { transform: translateX(-100%); }
-    50%, 70% { transform: translateX(-200%); }
-    75%, 95% { transform: translateX(-300%); }
-    100% { transform: translateX(0); }
+figcaption {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+  color: #333;
+}
+
+/* Keyframes for smooth fade */
+@keyframes smoothFade {
+  0%, 16.66% {
+    opacity: 1;
+    z-index: 1;
   }
+  20%, 100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+/* Assign delays with smoother transition */
+.slide:nth-child(1) { animation: smoothFade 24s infinite 0s; }
+.slide:nth-child(2) { animation: smoothFade 24s infinite 4s; }
+.slide:nth-child(3) { animation: smoothFade 24s infinite 8s; }
+.slide:nth-child(4) { animation: smoothFade 24s infinite 12s; }
+.slide:nth-child(5) { animation: smoothFade 24s infinite 16s; }
+.slide:nth-child(6) { animation: smoothFade 24s infinite 20s; }
 </style>
-
 <section id="instructor-information" class="level2">
 <h2 class="anchored" data-anchor-id="instructor-information">Instructor Information</h2>
 <div class="grid">
@@ -770,19 +805,18 @@ window.Quarto = {
 </div>
 <div class="g-col-12 g-col-md-8">
 <ul>
-<li><strong>Name:</strong> Tyler Wallett, M.S.<br>
-</li>
+<li><strong>Name:</strong> Tyler Wallett</li>
 <li><strong>Term:</strong> Fall 2025<br>
 </li>
+<li><strong>Class location:</strong> MON 114</li>
+<li><strong>Class hours:</strong> 06:10 PM - 08:40 PM</li>
 <li><strong>Office location:</strong> Samson Hall Room 310<br>
 </li>
 <li><strong>Office hours:</strong> TBD<br>
 </li>
 <li><strong>E-mail:</strong> <a href="mailto:twallett@gwu.edu">twallett@gwu.edu</a><br>
 </li>
-<li><strong>Github:</strong> <a href="https://github.com/twallett">twallett</a><br>
-</li>
-<li><strong>Zoom:</strong> Meeting Link<br>
+<li><strong>GitHub:</strong> <a href="https://github.com/twallett">twallett</a><br>
 </li>
 </ul>
 </div>
@@ -790,138 +824,139 @@ window.Quarto = {
 </section>
 <section id="course-description" class="level2">
 <h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
-<p>The aim of this course is to provide a comprehensive understanding of the <strong>reinforcement learning framework</strong>. The course will explore the key distinctions between reinforcement learning and other artificial intelligence learning paradigms, delve into relevant industry applications, and examine both classical and deep learning approaches. Additionally, the course will cover the taxonomy of reinforcement learning and offer hands-on experience through practical implementations using OpenAI Gymnasium and other learning environments.</p>
+<p>The aim of this course is to provide a comprehensive understanding of the <strong>reinforcement learning framework</strong>. The course will explore the key distinctions between reinforcement learning and other artificial intelligence learning paradigms, delve into relevant industry applications, and examine both classical and deep learning approaches. Additionally, the course will cover the taxonomy of reinforcement learning and offer hands-on experience through practical implementations using <a href="https://gymnasium.farama.org/index.html">OpenAI Gymnasium</a> and other learning environments.</p>
 <p>The <strong>classical approach</strong> will focus on learning methods designed to find optimal solutions in tabular environments, whereas the <strong>deep learning approach</strong> will tackle the challenge of finding approximate optimal solutions in large or continuous environments through the use of deep learning architectures.</p>
-<p>The course will introduce the <strong>taxonomy of reinforcement learning</strong> by focusing on model-free value-based methods, transitioning to value function approximation and deep learning approaches, followed by novel policy-based methods using state-of-the-art architectures to tackle complex environments.</p>
+<p>The course will introduce the <strong>taxonomy of reinforcement learning</strong> by focusing on model-free value-based and policy-based methods. Model-based reinforcement learning will be covered briefly, as it is allocated only one lecture.</p>
 <p>To conclude, a discussion on <strong>advanced topics, applications, and outlook</strong> of reinforcement learning will be provided.</p>
 </section>
 <section id="learning-outcomes" class="level2">
 <h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
 <ol type="1">
-<li>Implement Reinforcement Learning frameworks using <code>numpy</code> and <code>tensorflow</code>. <br></li>
+<li>Implement reinforcement learning frameworks using <code>numpy</code> and <code>tensorflow</code>. <br></li>
 <li>Design decision-making systems using classical and deep learning architectures. <br></li>
-<li>Explain the Reinforcement Learning taxonomy. <br></li>
-<li>Identify Reinforcement Learning’s challenges, current research, and future outlook.</li>
+<li>Explain the reinforcement learning taxonomy. <br></li>
+<li>Identify reinforcement learning’s challenges, current research, and future outlook.</li>
 </ol>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
 <li><em>Reinforcement Learning: An Introduction</em> by Richard S. Sutton and Andrew G. Barto (<a href="https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf">Web Link</a>)</li>
+<li><em>The Reinforcement Learning Course</em> by Hugging Face (<a href="https://huggingface.co/learn/deep-rl-course/en/unit0/introduction">Web Link</a>)</li>
+<li><em>Spinning Up in Deep RL</em> by OpenAI (<a href="https://spinningup.openai.com/en/latest/">Web Link</a>)</li>
+<li><em>OpenAI Gymnasium API</em> documentation (<a href="https://gymnasium.farama.org/index.html">Web Link</a>)</li>
+<li><em>Tensorflow Python API</em> documentation (<a href="https://www.tensorflow.org/api_docs/python/tf/all_symbols">Web Link</a>)</li>
 </ul>
 </section>
 <section id="software-requirements" class="level2">
 <h2 class="anchored" data-anchor-id="software-requirements">Software Requirements</h2>
 <ul>
-<li><strong>Programming:</strong> Python.</li>
+<li><strong>Programming Language:</strong> Python.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tensorflow</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pygame</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install gymnasium</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install stable-baselines3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy tensorflow pygame gymnasium pickle tqdm tensorboard</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li><strong>Cloud Services:</strong> Google Colab.</li>
+<li><p><strong>Cloud Services:</strong> Google Colab.</p></li>
+<li><p><strong>Version Control:</strong> GitHub.</p></li>
 </ul>
 </section>
 <section id="course-outline" class="level2">
 <h2 class="anchored" data-anchor-id="course-outline">Course Outline</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 33%">
-<col style="width: 12%">
-<col style="width: 40%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Week</th>
 <th>Topic</th>
 <th>Quiz/Exams</th>
-<th>Subjects</th>
+<th>Learning Objectives</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Aug 29, 2025</td>
-<td>Introduction to Reinforcement Learning</td>
+<td>Aug.&nbsp;25, 2025</td>
+<td><a href="./lecture1/lecture1-1.html">Introduction to Reinforcement Learning</a></td>
 <td></td>
-<td>- Course Outline <br> - Why should I study Reinforcement Learning? <br> - What is Reinforcement Learning? <br> - Where is Reinforcement Learning Applied? <br> - How is Reinforcement Learning Structured? <br></td>
+<td>• Why should I study Reinforcement Learning? <br> • What is Reinforcement Learning? <br> • Where is Reinforcement Learning Applied? <br> • How is Reinforcement Learning Structured? <br></td>
 </tr>
 <tr class="even">
-<td>Sep 5, 2025</td>
-<td>Mathematical Foundations</td>
+<td>Sep.&nbsp;1, 2025</td>
+<td><strong>Labor Day</strong></td>
 <td></td>
-<td>- Set Theory <br> - Axiomatic Probability <br> - Conditioning <br> - Independence <br> - Random Variables <br> - Expectation <br> - Probability Distribution</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Sep 12, 2025</td>
-<td>Multi-Armed Bandits</td>
+<td>Sep.&nbsp;8, 2025</td>
+<td><a href="./lecture2/lo.html">Mathematical Foundations</a></td>
+<td></td>
+<td>• Set Theory <br> • Axiomatic Probability <br> • Conditioning <br> • Independence <br> • Random Variables <br> • Expectation <br> • Probability Distribution</td>
+</tr>
+<tr class="even">
+<td>Sep.&nbsp;15, 2025</td>
+<td><a href="./lecture3/lo.html">Multi-Armed Bandits</a></td>
 <td>Quiz 1</td>
-<td>- Multi-Armed Bandit Framework <br> - <span class="math inline">\(\epsilon\)</span>-Greedy <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling</td>
+<td>• Multi-Armed Bandit Framework <br> • <span class="math inline">\(\epsilon\)</span>-Greedy <br> • Upper Confidence Boundary (UCB) <br> • Thompson Sampling</td>
 </tr>
-<tr class="even">
-<td>Sep 19, 2025</td>
-<td>Dynamic Programming</td>
+<tr class="odd">
+<td>Sep.&nbsp;22, 2025</td>
+<td><a href="./lecture4/lo.html">Dynamic Programming</a></td>
 <td>Quiz 2</td>
-<td>- Markov Chain <br> - Markov Decision Process (MDPs) <br> - Dynamic Programming</td>
+<td>• OpenAI Gymansium <code>GridWorldEnv</code> <br> • Markov Chain <br> • Markov Decision Process (MDPs) <br> • Dynamic Programming</td>
 </tr>
-<tr class="odd">
-<td>Sep 26, 2025</td>
-<td>Monte Carlo</td>
+<tr class="even">
+<td>Sep.&nbsp;29, 2025</td>
+<td><a href="./lecture5/lo.html">Monte Carlo</a></td>
 <td>Quiz 3</td>
-<td>- OpenAI Gymansium Environment: GridWorld <br> - Monte Carlo Prediction <br> - Exploring Starts Monte Carlo <br> - On-Policy Monte Carlo <br> - Off-Policy Monte Carlo</td>
+<td>• OpenAI Gymansium <code>GridWorldEnv</code> <br> • Monte Carlo Prediction <br> • Exploring Starts Monte Carlo <br> • On-Policy Monte Carlo <br> • Off-Policy Monte Carlo</td>
 </tr>
-<tr class="even">
-<td>Oct 3, 2025</td>
-<td>Temporal Difference</td>
+<tr class="odd">
+<td>Oct.&nbsp;6, 2025</td>
+<td><a href="./lecture6/lo.html">Temporal Difference</a></td>
 <td>Quiz 4</td>
-<td>- OpenAI Gymansium Environment: GridWorld <br> - Temporal Difference (TD) Prediction <br> - SARSA <br> - Q-Learning <br> - Double Q-Learning <br> - (Optional) n-step TD</td>
+<td>• OpenAI Gymansium <code>GridWorldEnv</code> <br> • Temporal Difference (TD) Prediction <br> • SARSA <br> • Q-Learning <br> • Double Q-Learning <br> • (Optional) n-step TD</td>
 </tr>
-<tr class="odd">
-<td>Oct 10, 2025</td>
-<td>Function Approximation</td>
+<tr class="even">
+<td>Oct.&nbsp;13, 2025</td>
+<td><a href="./lecture7/lo.html">Function Approximation</a></td>
 <td><strong>Exam 1</strong></td>
-<td>- OpenAI Gymansium Environment: MountainCar <br> - Value Function Approximation (VFA) <br> - On-Policy Function Approximation <br> - Semi-gradient SARSA <br> - Limitations of Off-Policy Function Approximation</td>
+<td>• OpenAI Gymansium <code>MountainCar-v0</code> <br> • Value Function Approximation (VFA) <br> • On-Policy Function Approximation <br> • Semi-gradient SARSA <br> • Limitations of Off-Policy Function Approximation</td>
 </tr>
-<tr class="even">
-<td>Oct 24, 2025</td>
-<td>Deep Q-Networks</td>
+<tr class="odd">
+<td>Oct.&nbsp;20, 2025</td>
+<td><a href="./lecture8/lo.html">Deep Q-Networks</a></td>
 <td>Quiz 5</td>
-<td>- OpenAI Gymansium Environment: BreakOut <br> - Multi-Layered Perceprtons (MLPs) <br> - Convolutional Neural Networks (CNNs) <br> - Experience Replay <br> - Fixed Targets <br> - Vanilla Deep Q-Network</td>
-</tr>
-<tr class="odd">
-<td>Oct 31, 2025</td>
-<td>Policy Gradients</td>
-<td>Quiz 6</td>
-<td>- OpenAI Gymansium Environment: CartPole <br> - Policy Gradient Theorem <br> - Vanilla Policy Gradient</td>
+<td>• OpenAI Gymansium <code>ALE/Breakout-v5</code> <br> • Multi-Layered Perceprtons (MLPs) <br> • Convolutional Neural Networks (CNNs) <br> • Experience Replay <br> • Fixed Targets <br> • Vanilla Deep Q-Network</td>
 </tr>
 <tr class="even">
-<td>Nov 7, 2025</td>
-<td>Advanced Policy Gradients</td>
-<td>Quiz 7</td>
-<td>- OpenAI Gymansium Environment: HalfCheetah <br> - Trust Region Policy Optimization (TRPO) <br> - Proximal Policy Optimization: KL-Divergence <br> - Proximal Policy Optimization: Clip</td>
+<td>Oct.&nbsp;27, 2025</td>
+<td><a href="./lecture9/lo.html">Policy Gradients</a></td>
+<td>Quiz 6</td>
+<td>• OpenAI Gymansium <code>CartPole-v1</code> <br> • Policy Gradient Theorem <br> • Vanilla Policy Gradient</td>
 </tr>
 <tr class="odd">
-<td>Nov 14, 2025</td>
+<td>Nov.&nbsp;3, 2025</td>
+<td><a href="./lecture10/lo.html">Advanced Policy Gradients</a></td>
+<td>Quiz 7</td>
+<td>• OpenAI Gymansium <code>HalfCheetah-v5</code> <br> • Trust Region Policy Optimization (TRPO) <br> • Proximal Policy Optimization: KL-Divergence <br> • Proximal Policy Optimization: Clip</td>
+</tr>
+<tr class="even">
+<td>Nov.&nbsp;10, 2025</td>
+<td><a href="./lecture11/lo.html">Monte Carlo Tree Search</a></td>
+<td><strong>Exam 2</strong></td>
+<td>• OpenAI Gymansium <code>CartPole-v0</code> <br> • Model-based Reinforcement Learning <br> • Monte Carlo Tree Search <br> • AlphaGo <br> • MuZero</td>
+</tr>
+<tr class="odd">
+<td>Nov.&nbsp;17, 2025</td>
+<td><a href="./lecture12/lo.html">Conclusion</a></td>
+<td></td>
+<td>• Advanced Topics in Reinforcement Learning <br> • Identify the Reinforcement Learning Application <br> • Outlook of Reinforcement Learning</td>
+</tr>
+<tr class="even">
+<td>Nov.&nbsp;24, 2025</td>
 <td><strong>Thanksgiving Break</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
-<td>Nov 21, 2025</td>
-<td>Monte Carlo Tree Search</td>
-<td><strong>Exam 2</strong></td>
-<td>- OpenAI Gymansium Environment: Tic Tac Toe <br> - Model-based Reinforcement Learning <br> - Monte Carlo Tree Search <br> - AlphaGo <br> - MuZero</td>
-</tr>
 <tr class="odd">
-<td>Oct 28, 2025</td>
-<td>Conclusion</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Dec 5, 2025</td>
+<td>Dec.&nbsp;1, 2025</td>
 <td>Final Project Submission</td>
 <td></td>
 <td></td>
@@ -986,7 +1021,7 @@ Online Resources
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For technical requirements and support, student services, obtaining a GWorld card, and state contact information please check <a href="online.gwu.edu/student-support">HERE</a></p>
+<p>For technical requirements and support, student services, obtaining a GWorld card, and state contact information please check <a href="https://students.gwu.edu/community-resources">HERE</a></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1012,7 +1047,7 @@ Virtual Academic Support
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A full range of academic support is offered virtually in fall 2020. See <a href="coronavirus.gwu.edu/top-faqs">HERE</a> for updates. Tutoring and course review sessions are offered through Academic Commons in an online format. See <a href="academiccommons.gwu.edu/tutoring">HERE</a>. Writing and research consultations are available online. See <a href="academiccommons.gwu.edu/writing-research-help">HERE</a>. Coaching, offered through the Office of Student Success, is available in a virtual format. See <a href="studentsuccess.gwu.edu/academic-program-support">HERE</a>. Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See <a href="academiccommons.gwu.edu/study-skills">HERE</a>. They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See <a href="tinyurl.com/gw-virtual-learning">HERE</a>.</p>
+<p>Writing and research consultations are available online. See <a href="https://academiccommons.gwu.edu/writing-help">HERE</a>. Coaching, offered through the Office of Student Success, is available in a virtual format. See <a href="https://studentsuccess.gwu.edu/academic-program-support">HERE</a>. Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See <a href="https://academiccommons.gwu.edu/skills-academic-success">HERE</a>. They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See <a href="https://library.gwu.edu/events?order=DATE_ASC&amp;format=workshop&amp;open_to=GWorld&amp;series=&amp;category=&amp;sponsor=&amp;events_date_start=&amp;events_date_end=&amp;terms=&amp;page=1">HERE</a>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -1025,7 +1060,7 @@ Safety and Security
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in <a href="safety.gwu.edu/emergency-response-handbook">HERE</a>. In an active violence situation: Get Out, Hide Out, or Take Out. See <a href="go.gwu.edu/shooterpret">HERE</a>. Stay informed: safety.gwu.edu/stay-informed.</p>
+<p>In an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in <a href="https://safety.gwu.edu/emergency-procedures">HERE</a>. In an active violence situation: Get Out, Hide Out, or Take Out. See <a href="https://www.gwu.edu/?utm_campaign=go404&amp;utm_medium=broken-links&amp;utm_source=">HERE</a>. Stay informed: safety.gwu.edu/stay-informed.</p>
 </div>
 </div>
 

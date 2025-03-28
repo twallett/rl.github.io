@@ -1,6 +1,10 @@
 ---
 title: "DATS 6450 – Reinforcement Learning"
-author: "Tyler Wallett, MS & Amir Jafari, PhD"
+author:
+  - name: Tyler Wallett, MS
+    email: twallett@gwu.edu
+  - name: Amir Jafari, PhD
+    email: ajafari@email.gwu.edu
 date: "today"
 format: 
   html:
@@ -11,73 +15,106 @@ format:
 <div class="slideshow-container">
   <div class="slideshow">
     <div class="slide">
-      <img src="data/images/breakout.gif" />
-      <figcaption>Breakout (Lecture 8)</figcaption>
-    </div>
-    <div class="slide">
-      <img src="data/images/cheetah.gif" />
-      <figcaption>Cheetah (Lecture 10)</figcaption>
-    </div>
-    <div class="slide">
       <img src="data/images/gridworld.gif" />
       <figcaption>Gridworld (Lectures 4-6)</figcaption>
+    </div>
+    <div class="slide">
+      <img src="data/images/mountaincar.gif" />
+      <figcaption>MountainCar (Lecture 7)</figcaption>
+    </div>
+    <div class="slide">
+      <img src="data/images/breakout.gif" />
+      <figcaption>Breakout (Lecture 8)</figcaption>
     </div>
     <div class="slide">
       <img src="data/images/highway.gif" />
       <figcaption>Highway (Lecture 8)</figcaption>
     </div>
-        <div class="slide">
-      <img src="data/images/mountaincar.gif" />
-      <figcaption>MountainCar (Lecture 7)</figcaption>
+    <div class="slide">
+      <img src="data/images/cartpole.gif" />
+      <figcaption>CartPole (Lecture 9)</figcaption>
+    </div>
+    <div class="slide">
+      <img src="data/images/cheetah.gif" />
+      <figcaption>Cheetah (Lecture 10)</figcaption>
     </div>
   </div>
 </div>
 
 <style>
-  .slideshow-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
+.slideshow-container {
+  width: 50%;
+  max-width: 450px;
+  height: 500px; /* Adjust to fit GIFs */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 
-  .slideshow {
-    display: flex;
-    width: 100%;
-    animation: slide 16s ease-in-out infinite;
-  }
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .slide {
-    width: 100%;
-    flex-shrink: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* Increased transition duration for smoother effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .slide img {
-    width: 120%;
-    max-width: 415px;
-    height: auto;
-    margin: auto;
-  }
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
 
-  figcaption {
-    font-size: 14px;
-    margin-top: 5px;
-  }
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
 
-  @keyframes slide {
-    0%, 20% { transform: translateX(0); }
-    25%, 45% { transform: translateX(-100%); }
-    50%, 70% { transform: translateX(-200%); }
-    75%, 95% { transform: translateX(-300%); }
-    100% { transform: translateX(0); }
+figcaption {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+  color: #333;
+}
+
+/* Keyframes for smooth fade */
+@keyframes smoothFade {
+  0%, 16.66% {
+    opacity: 1;
+    z-index: 1;
   }
+  20%, 100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+/* Assign delays with smoother transition */
+.slide:nth-child(1) { animation: smoothFade 24s infinite 0s; }
+.slide:nth-child(2) { animation: smoothFade 24s infinite 4s; }
+.slide:nth-child(3) { animation: smoothFade 24s infinite 8s; }
+.slide:nth-child(4) { animation: smoothFade 24s infinite 12s; }
+.slide:nth-child(5) { animation: smoothFade 24s infinite 16s; }
+.slide:nth-child(6) { animation: smoothFade 24s infinite 20s; }
 </style>
-
 ```
 
 ## Instructor Information
@@ -89,70 +126,74 @@ format:
 :::
 
 ::: {.g-col-12 .g-col-md-8}
-- **Name:** Tyler Wallett, M.S.  
+- **Name:** Tyler Wallett
 - **Term:** Fall 2025  
+- **Class location:** MON 114
+- **Class hours:** 06:10 PM - 08:40 PM
 - **Office location:** Samson Hall Room 310  
 - **Office hours:** TBD  
 - **E-mail:** [twallett@gwu.edu](mailto:twallett@gwu.edu)  
-- **Github:** [twallett](https://github.com/twallett)  
-- **Zoom:** Meeting Link  
+- **GitHub:** [twallett](https://github.com/twallett)  
 :::
 
 :::
 
 ## Course Description
 
-The aim of this course is to provide a comprehensive understanding of the **reinforcement learning framework**. The course will explore the key distinctions between reinforcement learning and other artificial intelligence learning paradigms, delve into relevant industry applications, and examine both classical and deep learning approaches. Additionally, the course will cover the taxonomy of reinforcement learning and offer hands-on experience through practical implementations using OpenAI Gymnasium and other learning environments.
+The aim of this course is to provide a comprehensive understanding of the **reinforcement learning framework**. The course will explore the key distinctions between reinforcement learning and other artificial intelligence learning paradigms, delve into relevant industry applications, and examine both classical and deep learning approaches. Additionally, the course will cover the taxonomy of reinforcement learning and offer hands-on experience through practical implementations using [OpenAI Gymnasium](https://gymnasium.farama.org/index.html) and other learning environments.
 
 The **classical approach** will focus on learning methods designed to find optimal solutions in tabular environments, whereas the **deep learning approach** will tackle the challenge of finding approximate optimal solutions in large or continuous environments through the use of deep learning architectures.
 
-The course will introduce the **taxonomy of reinforcement learning** by focusing on model-free value-based methods, transitioning to value function approximation and deep learning approaches, followed by novel policy-based methods using state-of-the-art architectures to tackle complex environments.
+The course will introduce the **taxonomy of reinforcement learning** by focusing on model-free value-based and policy-based methods. Model-based reinforcement learning will be covered briefly, as it is allocated only one lecture.
 
 To conclude, a discussion on **advanced topics, applications, and outlook** of reinforcement learning will be provided.
 
 ## Learning Outcomes
 
-1. Implement Reinforcement Learning frameworks using `numpy` and `tensorflow`. <br>
+1. Implement reinforcement learning frameworks using `numpy` and `tensorflow`. <br>
 2. Design decision-making systems using classical and deep learning architectures. <br>
-3. Explain the Reinforcement Learning taxonomy. <br>
-4. Identify Reinforcement Learning’s challenges, current research, and future outlook. 
+3. Explain the reinforcement learning taxonomy. <br>
+4. Identify reinforcement learning’s challenges, current research, and future outlook. 
 
 ## Resources
 
 - *Reinforcement Learning: An Introduction* by Richard S. Sutton and Andrew G. Barto ([Web Link](https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf))
+- *The Reinforcement Learning Course* by Hugging Face ([Web Link](https://huggingface.co/learn/deep-rl-course/en/unit0/introduction))
+- *Spinning Up in Deep RL* by OpenAI ([Web Link](https://spinningup.openai.com/en/latest/))
+- *OpenAI Gymnasium API* documentation ([Web Link](https://gymnasium.farama.org/index.html))
+- *Tensorflow Python API* documentation ([Web Link](https://www.tensorflow.org/api_docs/python/tf/all_symbols))
 
 ## Software Requirements
 
-- **Programming:** Python.
+- **Programming Language:** Python.
   
 ```bash
-pip install numpy
-pip install tensorflow
-pip install pygame
-pip install gymnasium
-pip install stable-baselines3
+pip install numpy tensorflow pygame gymnasium pickle tqdm tensorboard
 ```
 
 - **Cloud Services:** Google Colab.
 
+- **Version Control:** GitHub.
+
 ## Course Outline
 
-| Week             | Topic                                      | Quiz/Exams      | Subjects                                             |
+| Week             | Topic                                      | Quiz/Exams      | Learning Objectives                                         |
 |------------------|--------------------------------------------|-----------------|------------------------------------------------------|
-| Aug 29, 2025 | Introduction to Reinforcement Learning | | - Course Outline  <br> - Why should I study Reinforcement Learning? <br> - What is Reinforcement Learning?  <br> - Where is Reinforcement Learning Applied?  <br> - How is Reinforcement Learning Structured? <br>|
-| Sep 5, 2025  | Mathematical Foundations       | | - Set Theory <br> - Axiomatic Probability <br> - Conditioning <br> - Independence <br> - Random Variables <br> - Expectation <br> - Probability Distribution |
-| Sep 12, 2025 | Multi-Armed Bandits            | Quiz 1      | - Multi-Armed Bandit Framework  <br> - $\epsilon$-Greedy  <br> - Upper Confidence Boundary (UCB) <br> - Thompson Sampling |
-| Sep 19, 2025 | Dynamic Programming            | Quiz 2      | - Markov Chain <br> - Markov Decision Process (MDPs) <br> - Dynamic Programming |
-| Sep 26, 2025 | Monte Carlo            | Quiz 3      | - OpenAI Gymansium Environment: GridWorld <br> - Monte Carlo Prediction <br> - Exploring Starts Monte Carlo <br> - On-Policy Monte Carlo  <br> - Off-Policy Monte Carlo |
-| Oct 3, 2025  | Temporal Difference            | Quiz 4      | - OpenAI Gymansium Environment: GridWorld <br> - Temporal Difference (TD) Prediction <br> - SARSA  <br> - Q-Learning  <br> - Double Q-Learning <br> - (Optional) n-step TD|
-| Oct 10, 2025 | Function Approximation         | **Exam 1**  | - OpenAI Gymansium Environment: MountainCar <br> - Value Function Approximation (VFA) <br> - On-Policy Function Approximation <br> - Semi-gradient SARSA <br> - Limitations of Off-Policy Function Approximation |
-| Oct 24, 2025 | Deep Q-Networks                | Quiz 5      | - OpenAI Gymansium Environment: BreakOut <br> - Multi-Layered Perceprtons (MLPs) <br> - Convolutional Neural Networks (CNNs) <br> - Experience Replay  <br> - Fixed Targets <br> - Vanilla Deep Q-Network |
-| Oct 31, 2025  | Policy Gradients               | Quiz 6      | - OpenAI Gymansium Environment: CartPole <br> - Policy Gradient Theorem  <br> - Vanilla Policy Gradient |
-| Nov 7, 2025 | Advanced Policy Gradients      | Quiz 7      | - OpenAI Gymansium Environment: HalfCheetah <br> - Trust Region Policy Optimization (TRPO) <br> - Proximal Policy Optimization: KL-Divergence <br> - Proximal Policy Optimization: Clip |
-| Nov 14, 2025 | **Thanksgiving Break**         |             |                                                                          |
-| Nov 21, 2025 | Monte Carlo Tree Search        | **Exam 2**  | - OpenAI Gymansium Environment: Tic Tac Toe <br> - Model-based Reinforcement Learning <br> - Monte Carlo Tree Search <br> - AlphaGo <br> - MuZero |
-| Oct 28, 2025 | Conclusion                     |             |                                                                          |
-| Dec 5, 2025  | Final Project Submission       |             |                                                                          |
+| Aug. 25, 2025 | [Introduction to Reinforcement Learning](lecture1/lecture1-1.qmd) | | • Why should I study Reinforcement Learning? <br> • What is Reinforcement Learning?  <br> • Where is Reinforcement Learning Applied?  <br> • How is Reinforcement Learning Structured? <br>|
+| Sep. 1, 2025 | **Labor Day**         |             |                                                                          |
+| Sep. 8, 2025  | [Mathematical Foundations](lecture2/lo.qmd)       | | • Set Theory <br> • Axiomatic Probability <br> • Conditioning <br> • Independence <br> • Random Variables <br> • Expectation <br> • Probability Distribution |
+| Sep. 15, 2025 | [Multi-Armed Bandits](lecture3/lo.qmd)            | Quiz 1      | • Multi-Armed Bandit Framework  <br> • $\epsilon$-Greedy  <br> • Upper Confidence Boundary (UCB) <br> • Thompson Sampling |
+| Sep. 22, 2025 | [Dynamic Programming](lecture4/lo.qmd)            | Quiz 2      | • OpenAI Gymansium `GridWorldEnv` <br> • Markov Chain <br> • Markov Decision Process (MDPs) <br> • Dynamic Programming |
+| Sep. 29, 2025 | [Monte Carlo](lecture5/lo.qmd)            | Quiz 3      | • OpenAI Gymansium `GridWorldEnv` <br> • Monte Carlo Prediction <br> • Exploring Starts Monte Carlo <br> • On-Policy Monte Carlo  <br> • Off-Policy Monte Carlo |
+| Oct. 6, 2025  | [Temporal Difference](lecture6/lo.qmd)            | Quiz 4      | • OpenAI Gymansium `GridWorldEnv` <br> • Temporal Difference (TD) Prediction <br> • SARSA  <br> • Q-Learning  <br> • Double Q-Learning <br> • (Optional) n-step TD|
+| Oct. 13, 2025 | [Function Approximation](lecture7/lo.qmd)         | **Exam 1**  | • OpenAI Gymansium `MountainCar-v0` <br> • Value Function Approximation (VFA) <br> • On-Policy Function Approximation <br> • Semi-gradient SARSA <br> • Limitations of Off-Policy Function Approximation |
+| Oct. 20, 2025 | [Deep Q-Networks](lecture8/lo.qmd)                | Quiz 5      | • OpenAI Gymansium `ALE/Breakout-v5` <br> • Multi-Layered Perceprtons (MLPs) <br> • Convolutional Neural Networks (CNNs) <br> • Experience Replay  <br> • Fixed Targets <br> • Vanilla Deep Q-Network |
+| Oct. 27, 2025  | [Policy Gradients](lecture9/lo.qmd)               | Quiz 6      | • OpenAI Gymansium `CartPole-v1` <br> • Policy Gradient Theorem  <br> • Vanilla Policy Gradient |
+| Nov. 3, 2025 | [Advanced Policy Gradients](lecture10/lo.qmd)      | Quiz 7      | • OpenAI Gymansium `HalfCheetah-v5` <br> • Trust Region Policy Optimization (TRPO) <br> • Proximal Policy Optimization: KL-Divergence <br> • Proximal Policy Optimization: Clip |
+| Nov. 10, 2025 | [Monte Carlo Tree Search](lecture11/lo.qmd)        | **Exam 2**  | • OpenAI Gymansium `CartPole-v0` <br> • Model-based Reinforcement Learning <br> • Monte Carlo Tree Search <br> • AlphaGo <br> • MuZero |
+| Nov. 17, 2025 | [Conclusion](lecture12/lo.qmd)                     |             | • Advanced Topics in Reinforcement Learning <br> • Identify the Reinforcement Learning Application <br> • Outlook of Reinforcement Learning |
+| Nov. 24, 2025 | **Thanksgiving Break**         |             |                                                                          |
+| Dec. 1, 2025  | Final Project Submission       |             |                                                                          |
 
 ## Prerequisites
 
@@ -174,7 +215,7 @@ Students are expected to spend a minimum of 100 minutes of out-of-class work for
 
 ::: {.callout-note}
 ## Online Resources 
-For technical requirements and support, student services, obtaining a GWorld card, and state contact information please check [HERE](online.gwu.edu/student-support)
+For technical requirements and support, student services, obtaining a GWorld card, and state contact information please check [HERE](https://students.gwu.edu/community-resources)
 :::
 
 ::: {.callout-note}
@@ -184,10 +225,10 @@ The particular class recordings will be available to students who are registered
 
 ::: {.callout-tip}
 ## Virtual Academic Support
-A full range of academic support is offered virtually in fall 2020. See [HERE](coronavirus.gwu.edu/top-faqs) for updates. Tutoring and course review sessions are offered through Academic Commons in an online format. See [HERE](academiccommons.gwu.edu/tutoring). Writing and research consultations are available online. See [HERE](academiccommons.gwu.edu/writing-research-help). Coaching, offered through the Office of Student Success, is available in a virtual format. See [HERE](studentsuccess.gwu.edu/academic-program-support). Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See [HERE](academiccommons.gwu.edu/study-skills). They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See [HERE](tinyurl.com/gw-virtual-learning).
+Writing and research consultations are available online. See [HERE](https://academiccommons.gwu.edu/writing-help). Coaching, offered through the Office of Student Success, is available in a virtual format. See [HERE](https://studentsuccess.gwu.edu/academic-program-support). Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See [HERE](https://academiccommons.gwu.edu/skills-academic-success). They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See [HERE](https://library.gwu.edu/events?order=DATE_ASC&format=workshop&open_to=GWorld&series=&category=&sponsor=&events_date_start=&events_date_end=&terms=&page=1).
 :::
 
 ::: {.callout-warning}
 ## Safety and Security
-In an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in [HERE](safety.gwu.edu/emergency-response-handbook). In an active violence situation: Get Out, Hide Out, or Take Out. See [HERE](go.gwu.edu/shooterpret). Stay informed: safety.gwu.edu/stay-informed.
+In an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in [HERE](https://safety.gwu.edu/emergency-procedures). In an active violence situation: Get Out, Hide Out, or Take Out. See [HERE](https://www.gwu.edu/?utm_campaign=go404&utm_medium=broken-links&utm_source=). Stay informed: safety.gwu.edu/stay-informed.
 :::

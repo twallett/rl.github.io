@@ -14,7 +14,7 @@
     "href": "index.html#instructor-information",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "",
-    "text": "Name: Tyler Wallett, M.S.\n\nTerm: Fall 2025\n\nOffice location: Samson Hall Room 310\n\nOffice hours: TBD\n\nE-mail: twallett@gwu.edu\n\nGithub: twallett\n\nZoom: Meeting Link",
+    "text": "Name: Tyler Wallett\nTerm: Fall 2025\n\nClass location: MON 114\nClass hours: 06:10 PM - 08:40 PM\nOffice location: Samson Hall Room 310\n\nOffice hours: TBD\n\nE-mail: twallett@gwu.edu\n\nGitHub: twallett",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#course-description",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "Course Description",
-    "text": "Course Description\nThe aim of this course is to provide a comprehensive understanding of the reinforcement learning framework. The course will explore the key distinctions between reinforcement learning and other artificial intelligence learning paradigms, delve into relevant industry applications, and examine both classical and deep learning approaches. Additionally, the course will cover the taxonomy of reinforcement learning and offer hands-on experience through practical implementations using OpenAI Gymnasium and other learning environments.\nThe classical approach will focus on learning methods designed to find optimal solutions in tabular environments, whereas the deep learning approach will tackle the challenge of finding approximate optimal solutions in large or continuous environments through the use of deep learning architectures.\nThe course will introduce the taxonomy of reinforcement learning by focusing on model-free value-based methods, transitioning to value function approximation and deep learning approaches, followed by novel policy-based methods using state-of-the-art architectures to tackle complex environments.\nTo conclude, a discussion on advanced topics, applications, and outlook of reinforcement learning will be provided.",
+    "text": "Course Description\nThe aim of this course is to provide a comprehensive understanding of the reinforcement learning framework. The course will explore the key distinctions between reinforcement learning and other artificial intelligence learning paradigms, delve into relevant industry applications, and examine both classical and deep learning approaches. Additionally, the course will cover the taxonomy of reinforcement learning and offer hands-on experience through practical implementations using OpenAI Gymnasium and other learning environments.\nThe classical approach will focus on learning methods designed to find optimal solutions in tabular environments, whereas the deep learning approach will tackle the challenge of finding approximate optimal solutions in large or continuous environments through the use of deep learning architectures.\nThe course will introduce the taxonomy of reinforcement learning by focusing on model-free value-based and policy-based methods. Model-based reinforcement learning will be covered briefly, as it is allocated only one lecture.\nTo conclude, a discussion on advanced topics, applications, and outlook of reinforcement learning will be provided.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#learning-outcomes",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "Learning Outcomes",
-    "text": "Learning Outcomes\n\nImplement Reinforcement Learning frameworks using numpy and tensorflow. \nDesign decision-making systems using classical and deep learning architectures. \nExplain the Reinforcement Learning taxonomy. \nIdentify Reinforcement Learning’s challenges, current research, and future outlook.",
+    "text": "Learning Outcomes\n\nImplement reinforcement learning frameworks using numpy and tensorflow. \nDesign decision-making systems using classical and deep learning architectures. \nExplain the reinforcement learning taxonomy. \nIdentify reinforcement learning’s challenges, current research, and future outlook.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -44,7 +44,7 @@
     "href": "index.html#resources",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "Resources",
-    "text": "Resources\n\nReinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto (Web Link)",
+    "text": "Resources\n\nReinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto (Web Link)\nThe Reinforcement Learning Course by Hugging Face (Web Link)\nSpinning Up in Deep RL by OpenAI (Web Link)\nOpenAI Gymnasium API documentation (Web Link)\nTensorflow Python API documentation (Web Link)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "index.html#software-requirements",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "Software Requirements",
-    "text": "Software Requirements\n\nProgramming: Python.\n\npip install numpy\npip install tensorflow\npip install pygame\npip install gymnasium\npip install stable-baselines3\n\nCloud Services: Google Colab.",
+    "text": "Software Requirements\n\nProgramming Language: Python.\n\npip install numpy tensorflow pygame gymnasium pickle tqdm tensorboard\n\nCloud Services: Google Colab.\nVersion Control: GitHub.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "index.html#course-outline",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "Course Outline",
-    "text": "Course Outline\n\n\n\n\n\n\n\n\n\nWeek\nTopic\nQuiz/Exams\nSubjects\n\n\n\n\nAug 29, 2025\nIntroduction to Reinforcement Learning\n\n- Course Outline  - Why should I study Reinforcement Learning?  - What is Reinforcement Learning?  - Where is Reinforcement Learning Applied?  - How is Reinforcement Learning Structured? \n\n\nSep 5, 2025\nMathematical Foundations\n\n- Set Theory  - Axiomatic Probability  - Conditioning  - Independence  - Random Variables  - Expectation  - Probability Distribution\n\n\nSep 12, 2025\nMulti-Armed Bandits\nQuiz 1\n- Multi-Armed Bandit Framework  - \\(\\epsilon\\)-Greedy  - Upper Confidence Boundary (UCB)  - Thompson Sampling\n\n\nSep 19, 2025\nDynamic Programming\nQuiz 2\n- Markov Chain  - Markov Decision Process (MDPs)  - Dynamic Programming\n\n\nSep 26, 2025\nMonte Carlo\nQuiz 3\n- OpenAI Gymansium Environment: GridWorld  - Monte Carlo Prediction  - Exploring Starts Monte Carlo  - On-Policy Monte Carlo  - Off-Policy Monte Carlo\n\n\nOct 3, 2025\nTemporal Difference\nQuiz 4\n- OpenAI Gymansium Environment: GridWorld  - Temporal Difference (TD) Prediction  - SARSA  - Q-Learning  - Double Q-Learning  - (Optional) n-step TD\n\n\nOct 10, 2025\nFunction Approximation\nExam 1\n- OpenAI Gymansium Environment: MountainCar  - Value Function Approximation (VFA)  - On-Policy Function Approximation  - Semi-gradient SARSA  - Limitations of Off-Policy Function Approximation\n\n\nOct 24, 2025\nDeep Q-Networks\nQuiz 5\n- OpenAI Gymansium Environment: BreakOut  - Multi-Layered Perceprtons (MLPs)  - Convolutional Neural Networks (CNNs)  - Experience Replay  - Fixed Targets  - Vanilla Deep Q-Network\n\n\nOct 31, 2025\nPolicy Gradients\nQuiz 6\n- OpenAI Gymansium Environment: CartPole  - Policy Gradient Theorem  - Vanilla Policy Gradient\n\n\nNov 7, 2025\nAdvanced Policy Gradients\nQuiz 7\n- OpenAI Gymansium Environment: HalfCheetah  - Trust Region Policy Optimization (TRPO)  - Proximal Policy Optimization: KL-Divergence  - Proximal Policy Optimization: Clip\n\n\nNov 14, 2025\nThanksgiving Break\n\n\n\n\nNov 21, 2025\nMonte Carlo Tree Search\nExam 2\n- OpenAI Gymansium Environment: Tic Tac Toe  - Model-based Reinforcement Learning  - Monte Carlo Tree Search  - AlphaGo  - MuZero\n\n\nOct 28, 2025\nConclusion\n\n\n\n\nDec 5, 2025\nFinal Project Submission",
+    "text": "Course Outline\n\n\n\nWeek\nTopic\nQuiz/Exams\nLearning Objectives\n\n\n\n\nAug. 25, 2025\nIntroduction to Reinforcement Learning\n\n• Why should I study Reinforcement Learning?  • What is Reinforcement Learning?  • Where is Reinforcement Learning Applied?  • How is Reinforcement Learning Structured? \n\n\nSep. 1, 2025\nLabor Day\n\n\n\n\nSep. 8, 2025\nMathematical Foundations\n\n• Set Theory  • Axiomatic Probability  • Conditioning  • Independence  • Random Variables  • Expectation  • Probability Distribution\n\n\nSep. 15, 2025\nMulti-Armed Bandits\nQuiz 1\n• Multi-Armed Bandit Framework  • \\(\\epsilon\\)-Greedy  • Upper Confidence Boundary (UCB)  • Thompson Sampling\n\n\nSep. 22, 2025\nDynamic Programming\nQuiz 2\n• OpenAI Gymansium GridWorldEnv  • Markov Chain  • Markov Decision Process (MDPs)  • Dynamic Programming\n\n\nSep. 29, 2025\nMonte Carlo\nQuiz 3\n• OpenAI Gymansium GridWorldEnv  • Monte Carlo Prediction  • Exploring Starts Monte Carlo  • On-Policy Monte Carlo  • Off-Policy Monte Carlo\n\n\nOct. 6, 2025\nTemporal Difference\nQuiz 4\n• OpenAI Gymansium GridWorldEnv  • Temporal Difference (TD) Prediction  • SARSA  • Q-Learning  • Double Q-Learning  • (Optional) n-step TD\n\n\nOct. 13, 2025\nFunction Approximation\nExam 1\n• OpenAI Gymansium MountainCar-v0  • Value Function Approximation (VFA)  • On-Policy Function Approximation  • Semi-gradient SARSA  • Limitations of Off-Policy Function Approximation\n\n\nOct. 20, 2025\nDeep Q-Networks\nQuiz 5\n• OpenAI Gymansium ALE/Breakout-v5  • Multi-Layered Perceprtons (MLPs)  • Convolutional Neural Networks (CNNs)  • Experience Replay  • Fixed Targets  • Vanilla Deep Q-Network\n\n\nOct. 27, 2025\nPolicy Gradients\nQuiz 6\n• OpenAI Gymansium CartPole-v1  • Policy Gradient Theorem  • Vanilla Policy Gradient\n\n\nNov. 3, 2025\nAdvanced Policy Gradients\nQuiz 7\n• OpenAI Gymansium HalfCheetah-v5  • Trust Region Policy Optimization (TRPO)  • Proximal Policy Optimization: KL-Divergence  • Proximal Policy Optimization: Clip\n\n\nNov. 10, 2025\nMonte Carlo Tree Search\nExam 2\n• OpenAI Gymansium CartPole-v0  • Model-based Reinforcement Learning  • Monte Carlo Tree Search  • AlphaGo  • MuZero\n\n\nNov. 17, 2025\nConclusion\n\n• Advanced Topics in Reinforcement Learning  • Identify the Reinforcement Learning Application  • Outlook of Reinforcement Learning\n\n\nNov. 24, 2025\nThanksgiving Break\n\n\n\n\nDec. 1, 2025\nFinal Project Submission",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "index.html#assignments-grading",
     "title": "DATS 6450 – Reinforcement Learning",
     "section": "Assignments & Grading",
-    "text": "Assignments & Grading\n\n\n\nAssignment\nPoints\n\n\n\n\nQuizzes (5 best scores)\n25\n\n\nExam 1\n25\n\n\nExam 2\n25\n\n\nFinal Project\n25\n\n\n\n\n\n\n\n\n\nAverage Learning Per Week\n\n\n\nStudents are expected to spend a minimum of 100 minutes of out-of-class work for every 50 minutes of direct instruction, for a minimum total of 2.5 hours a week. A 3-credit course should include 2.5 hours of direct instruction and a minimum of 5 hours of independent learning or 7.5 hours per week.\n\n\n\n\n\n\n\n\nOnline Resources\n\n\n\nFor technical requirements and support, student services, obtaining a GWorld card, and state contact information please check HERE\n\n\n\n\n\n\n\n\nClassroom Recording\n\n\n\nThe particular class recordings will be available to students who are registered on an individual basis, upon request. Please let me know in advance if you have any medical issues or emergencies that will prevent you from joining the class.\n\n\n\n\n\n\n\n\nVirtual Academic Support\n\n\n\nA full range of academic support is offered virtually in fall 2020. See HERE for updates. Tutoring and course review sessions are offered through Academic Commons in an online format. See HERE. Writing and research consultations are available online. See HERE. Coaching, offered through the Office of Student Success, is available in a virtual format. See HERE. Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See HERE. They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See HERE.\n\n\n\n\n\n\n\n\nSafety and Security\n\n\n\nIn an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in HERE. In an active violence situation: Get Out, Hide Out, or Take Out. See HERE. Stay informed: safety.gwu.edu/stay-informed.",
+    "text": "Assignments & Grading\n\n\n\nAssignment\nPoints\n\n\n\n\nQuizzes (5 best scores)\n25\n\n\nExam 1\n25\n\n\nExam 2\n25\n\n\nFinal Project\n25\n\n\n\n\n\n\n\n\n\nAverage Learning Per Week\n\n\n\nStudents are expected to spend a minimum of 100 minutes of out-of-class work for every 50 minutes of direct instruction, for a minimum total of 2.5 hours a week. A 3-credit course should include 2.5 hours of direct instruction and a minimum of 5 hours of independent learning or 7.5 hours per week.\n\n\n\n\n\n\n\n\nOnline Resources\n\n\n\nFor technical requirements and support, student services, obtaining a GWorld card, and state contact information please check HERE\n\n\n\n\n\n\n\n\nClassroom Recording\n\n\n\nThe particular class recordings will be available to students who are registered on an individual basis, upon request. Please let me know in advance if you have any medical issues or emergencies that will prevent you from joining the class.\n\n\n\n\n\n\n\n\nVirtual Academic Support\n\n\n\nWriting and research consultations are available online. See HERE. Coaching, offered through the Office of Student Success, is available in a virtual format. See HERE. Academic Commons offers several short videos addressing different virtual learning strategies for the unique circumstances of the fall 2020 semester. See HERE. They also offer a variety of live virtual workshops to equip students with the tools they need to succeed in a virtual environment. See HERE.\n\n\n\n\n\n\n\n\nSafety and Security\n\n\n\nIn an emergency: call GWPD 202-994-6111 or 911. For situation-specific actions: review the Emergency Response Handbook in HERE. In an active violence situation: Get Out, Hide Out, or Take Out. See HERE. Stay informed: safety.gwu.edu/stay-informed.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>DATS 6450 – Reinforcement Learning</span>"
     ]
@@ -1021,6 +1021,347 @@
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>57</span>  <span class='chapter-title'>Homework 6</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html",
+    "href": "lecture1/lecture1-1.html",
+    "title": "1.1 Why should I study Reinforcement Learning?",
+    "section": "",
+    "text": "Advances in Artificial Intelligence\nIn essence, the AI model’s behavior closely mirrors human-like actions. This is expected, given its training on extensive datasets derived from human behavior. However, continued training on the same datasets will likely result in models that perform at a human-equivalent level. To achieve significant breakthroughs, we must explore learning methods that transcend typical human capabilities.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Why should I study Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html#advances-in-artificial-intelligence",
+    "href": "lecture1/lecture1-1.html#advances-in-artificial-intelligence",
+    "title": "1.1 Why should I study Reinforcement Learning?",
+    "section": "",
+    "text": "June 2018: OpenAI introduces the Generative Pre-trained Transformer (GPT), laying the foundation for subsequent LLMs.\nFebruary 2019: OpenAI releases GPT-2, demonstrating significant improvements in text generation capabilities.\nJune 2020: GPT-3 is unveiled, featuring 175 billion parameters and showcasing advanced language understanding and generation.\nJanuary 2021: OpenAI announces DALL-E, a model capable of generating images from textual descriptions.\nApril 2022: DALL-E 2 is introduced, offering enhanced image resolution and greater realism in generated images.\nNovember 2022: OpenAI releases ChatGPT, a conversational AI based on the GPT-3.5 architecture, enabling more interactive and contextually relevant dialogues.\n\n\n\n\n\n\n\n\n\n\n\n\n\nAt GWU, where minds aspire,  Reinforcement learners never tire  In search of policies, bold and bright,  They train their agents, day and night.   With Sutton, Barto as their guide,  They walk the path, rewards beside.  Exploring states with epsilon’s grace,  They find the optimal embrace.   Gridworlds vast, mazes deep,  In code they sow, in dreams they reap.  The future’s theirs, they push, they strive–  GWU’s learners, alive, alive!\n\n\n\nPoem and images generated by Large Language Model: ChatGPT 3.5 & Diffusion Models: DALL-E, correspondingly.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Why should I study Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html#the-goal-of-reinforcement-learning",
+    "href": "lecture1/lecture1-1.html#the-goal-of-reinforcement-learning",
+    "title": "1.1 Why should I study Reinforcement Learning?",
+    "section": "The Goal of Reinforcement Learning",
+    "text": "The Goal of Reinforcement Learning\n\n\n\n\n\n\nEmergent Behavior\n\n\n\nReinforcement Learning is concerned with seeking emergent behavior, or behavior that goes beyond what people might do or think of. \n\n\nUltimately, as scientists, we want to discover new solutions for a task so that when an agent, or decision-maker, is placed in a novel situation it can respond intelligently (Levine 2019).\n\nExample: AlphaGO\n\n\n\n\n\nAlphaGo Move 37\n\n\n\n“It’s not a human move. I’ve never seen a human play this move.” – Commentator on Move 37, AlphaGo (2017)\n\n\n\n\nExample: Matrix Multiplication\n\n\n\n\n\nDiscovering faster matrix multiplication algorithms with reinforcement learning\n\n\n\n“Trained from scratch, AlphaTensor discovers matrix multiplication algorithms that are more efficient than existing human and computer-designed algorithms.” - Discovering faster matrix multiplication algorithms with reinforcement learning",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Why should I study Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-1.html#so-why-should-i-study-reinforcement-learning",
+    "href": "lecture1/lecture1-1.html#so-why-should-i-study-reinforcement-learning",
+    "title": "1.1 Why should I study Reinforcement Learning?",
+    "section": "So why should I study Reinforcement Learning?",
+    "text": "So why should I study Reinforcement Learning?\nReinforcement Learning (RL) is not just another machine learning paradigm; it is a fundamental framework for decision-making, control, and optimizing sequential actions in uncertain environments. Studying RL enables us to: \n\n✅ Understand Intelligence  ✅ Develop Cutting-Edge AI  ✅ Solve Real-World Problems  ✅ Push Beyond Human Limits \n\nBy studying RL, we gain the tools to create AI that learns, adapts, and innovates beyond predefined rules and static datasets. 🚀\n\n\n\n\nLevine, Sergey. 2019. “Introduction to Deep Reinforcement Learning.” Course Lecture Slides, Deep RL Course, UC Berkeley. https://rail.eecs.berkeley.edu/deeprlcourse/deeprlcourse/static/slides/lec-1.pdf.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1.1 Why should I study Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-4.html",
+    "href": "lecture1/lecture1-4.html",
+    "title": "1.4 How is Reinforcement Learning Structured?",
+    "section": "",
+    "text": "Taxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>1.4 How is Reinforcement Learning Structured?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html",
+    "href": "lecture1/lecture1-3.html",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "",
+    "text": "Recommendation Systems\nReinforcement Learning powers modern recommendation systems by dynamically adapting to user preferences, optimizing content suggestions in platforms like Netflix, YouTube, and Spotify using techniques such as Multi-Armed Bandits (MAB).",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#recommendation-systems",
+    "href": "lecture1/lecture1-3.html#recommendation-systems",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "",
+    "text": "Trained using MAB (Lecture 2)\nLink to Online Article",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#games",
+    "href": "lecture1/lecture1-3.html#games",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Games",
+    "text": "Games\nReinforcement Learning has revolutionized gaming by enabling AI to master complex environments, from Atari classics to advanced strategy games, using deep learning techniques like Deep Q-Networks (DQN) to achieve superhuman performance.\n\n\nTrained using DQN (Lecture 9)\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#robotics",
+    "href": "lecture1/lecture1-3.html#robotics",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Robotics",
+    "text": "Robotics\nIn robotics, Reinforcement Learning enables autonomous agents to learn complex motor skills, such as dexterous manipulation and locomotion, through continuous interaction and training with Proximal Policy Optimization (PPO).\n\n\nTrained using PPO (Lecture 11)\nLink to Blog",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#autonomous-vehicles",
+    "href": "lecture1/lecture1-3.html#autonomous-vehicles",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Autonomous Vehicles",
+    "text": "Autonomous Vehicles\nSelf-driving cars rely on Reinforcement Learning to navigate complex environments, optimize decision-making, and improve safety, often incorporating PPO and deep learning to refine real-time control strategies.\n\n   Partly trained using PPO (Lecture 11)",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#natural-language-processing",
+    "href": "lecture1/lecture1-3.html#natural-language-processing",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Natural Language Processing",
+    "text": "Natural Language Processing\nReinforcement Learning from Human Feedback (RLHF) enhances AI language models like ChatGPT, allowing them to refine responses based on user interactions and align better with human preferences.\n\n\nTrained using PPO (Lecture 11)\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-3.html#finance",
+    "href": "lecture1/lecture1-3.html#finance",
+    "title": "1.3 Where is Reinforcement Learning Applied?",
+    "section": "Finance",
+    "text": "Finance\nIn financial markets, RL is applied to portfolio optimization, algorithmic trading, and risk management, leveraging techniques like PPO to make data-driven investment decisions.\n\n\nTrained using PPO (Lecture 11)\nLink to Research Paper",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1.3 Where is Reinforcement Learning Applied?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-2.html",
+    "href": "lecture1/lecture1-2.html",
+    "title": "1.2 What is Reinforcement Learning?",
+    "section": "",
+    "text": "Learning Optimal Sequential Decision-Making Under Uncertainty\nGood news! We can sum up the core idea of Reinforcement Learning in just one powerful sentence (Brunskill 2022):\nBut what exactly does that mean? Let’s break it down!",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1.2 What is Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-2.html#learning",
+    "href": "lecture1/lecture1-2.html#learning",
+    "title": "1.2 What is Reinforcement Learning?",
+    "section": "Learning",
+    "text": "Learning\nAt its core, learning in Reinforcement Learning occurs through trial and error, where an agent refines its actions based on evaluative feedback from the environment.\n\n\n\n\n\n\nEvaluative Feedback\n\n\n\nEvaluative feedback indicates how good the action taken was, but not whether it was the best or the worst action. \n\nIntuition: Learning through experience\n\n\n\n\n\n\n\n\n\nLearning to Walk\n\n\n\n\n\n\n\n\nEthics (Right vs. Wrong)\n\n\n\n\n\nUnlike both supervised/unsupervised learning which rely on instructive feedback through gradient based optimization.\n\n\n\n\n\n\nInstructive Feedback\n\n\n\nInstructive feedback indicates the correct action to take, independently of the action actually taken. \n\nIntuition: Learning through ground truth\n\n\n\n\n\n\n\nSupervised/Unsupervised Learning\n\n\n\nFor example, supervised/unsupervised learning focus on identifying what makes an image a cheetah by learning patterns from a dataset of animal images. In contrast, Reinforcement Learning is about teaching a cheetah how to run by interacting with its environment (Lecture 10).\n\n\n\n “Here’s some examples (images), now learn patterns in these examples…”\n\n\n\n “Here’s an environment, now learn patterns by exploring it…”",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1.2 What is Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-2.html#optimal",
+    "href": "lecture1/lecture1-2.html#optimal",
+    "title": "1.2 What is Reinforcement Learning?",
+    "section": "Optimal",
+    "text": "Optimal\nThe goal of Reinforcement Learning is to maximize rewards over time by finding the best possible strategy. This involves seeking:\n\nA Maximized discounted sum of rewards, or goal \\(G\\).\nOptimal Value Functions \\(V^{*}\\).\nOptimal Action-Value Functions \\(Q^{*}\\).\nOptimal Policies \\(\\pi^{*}\\).\nA Balance between exploration vs. exploitation.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1.2 What is Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture1/lecture1-2.html#sequential-decision-making",
+    "href": "lecture1/lecture1-2.html#sequential-decision-making",
+    "title": "1.2 What is Reinforcement Learning?",
+    "section": "Sequential Decision-Making",
+    "text": "Sequential Decision-Making\nUnlike a one-time choice, Reinforcement Learning involves a chain of decisions where each action affects the next.\n\n\n\n\nMarkov Decision Process\n\n\n\n\n\\(\\pi: S_{0}, A_{0}, R_{1}, S_{1}, A_{1}, R_{2}, ... , S_{T-1}, A_{T-1}, R_{T}\\)\n\n\nMarkov Decision Process (MDP) is a formal framework for modeling decision-making.\nThe agent selects actions over multiple time steps, shaping its future states and rewards.\nEach decision affects not only immediate rewards but also the trajectory of future outcomes.\n\n\n\n\n\nBrunskill, Emma. 2022. “CS234: Reinforcement Learning - Lecture 1.” Course Lecture Slides, Stanford University. https://web.stanford.edu/class/cs234/slides/lecture1pre.pdf.",
+    "crumbs": [
+      "Lecture 1: Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1.2 What is Reinforcement Learning?</span>"
+    ]
+  },
+  {
+    "objectID": "lecture2/lo.html",
+    "href": "lecture2/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 2: Mathematical Foundations 🎯\n\n\n\n\nProbability Theory:\n\nSet Theory\nAxiomatic Probability\nConditioning\nIndependence\nDiscrete Random Variables\nContinuous Random Variables\nProbability Distributions\n\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 2: Mathematical Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture3/lo.html",
+    "href": "lecture3/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 3: Multi-Armed Bandits 🎯\n\n\n\n\nMulti-Amed Bandits Framework.\n\\(\\epsilon\\)-greedy.\nUpper Confidence Boundary (UCB).\nThompson Sampling.\nBernoulli & Gaussian generated environment using numpy.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 3: Multi-Armed Bandits",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture4/lo.html",
+    "href": "lecture4/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 4: Dynamic Programming 🎯\n\n\n\n\nMarkov Chain.\nMarkov Decision Process (MDPs).\nDynamic Programming.\nHomemade GridWorld OpenAI environment using gymnasium, pygame & numpy.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 4: Dynamic Programming",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture5/lo.html",
+    "href": "lecture5/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 5: Monte Carlo 🎯\n\n\n\n\nMonte Carlo Prediction.\nOn-Policy Monte Carlo.\nOff-Policy Monte Carlo.\nHomemade GridWorld OpenAI environment using gymnasium, pygame & numpy.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 5: Monte Carlo",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture6/lo.html",
+    "href": "lecture6/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 6: Temporal Difference 🎯\n\n\n\n\nTemporal Difference (TD) Prediction.\nSARSA.\nQ-Learning.\nDouble Q-Learning.\n(Optional) n-step Bootstrapping.\nHomemade GridWorld OpenAI environment using gymnasium, pygame & numpy.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 6: Temporal Difference",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture7/lo.html",
+    "href": "lecture7/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 7: Function Approximation 🎯\n\n\n\n\nValue Function Approximation.\nOn-Policy Approximation.\nLimitations of Off-Policy Approximation.\nMountainCarContinuous-v0 environment using gymnasium & numpy.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 7: Function Approximation",
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture8/lo.html",
+    "href": "lecture8/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 8: Deep Q-Networks 🎯\n\n\n\n\nDeep Learning.\nDeep Q-Networks (DQN).\nALE/Breakout-v5 environment using gymnasium & tensorflow.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 8: Deep Q-Networks (DQN)",
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture9/lo.html",
+    "href": "lecture9/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 9: Policy Gradients 🎯\n\n\n\n\nPolicy Gradients.\nCartPole-v1 environment using gymnasium & tensorflow.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 9: Policy Gradients",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture10/lo.html",
+    "href": "lecture10/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 10: Advanced Policy Gradients 🎯\n\n\n\n\nTrust Region Policy Optimization (TRPO).\nProximal Policy Optimization (PPO).\nHalfCheetah-v5 environment using gymnasium & tensorflow.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 10: Advanced Policy Gradients",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lo.html",
+    "href": "lecture11/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 11: Monte Carlo Tree Search 🎯\n\n\n\n\nMonte Carlo Tree Search (MCTS).\nAdvanced Monte Carlo Tree Search.\nCartPole-v0 environment using gymnasium & tensorflow.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture12/lo.html",
+    "href": "lecture12/lo.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning Objectives for Lecture 12: Conclusion 🎯\n\n\n\n\nAdvanced Topics in Reinforcement Learning\nIdentify the Reinforcement Learning Application.\nOutlook of Reinforcement Learning.\n\n\n\n\n\nTaxonomy of Reinforcement Learning",
+    "crumbs": [
+      "Lecture 12: Conclusion",
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Learning Objectives</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-1.html",
+    "href": "lecture11/lecture11-1.html",
+    "title": "11.1 Monte Carlo Tree Search (MCTS)",
+    "section": "",
+    "text": "Model-based Reinforcement Learning\nProblem:\nAgents need to sample many environment interactions to learn environment dynamics.\n\\[\nP(s^{'}, r| s, a)\n\\]\nExploration is blind without a model of environment dynamics. Model-free methods focus on immediate rewards.\nSolution:\nAgents can plan future rewards by leveraging environment dynamics. Safe exploration - informed exploration.",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>11.1 Monte Carlo Tree Search (MCTS)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-1.html#model-based-reinforcement-learning",
+    "href": "lecture11/lecture11-1.html#model-based-reinforcement-learning",
+    "title": "11.1 Monte Carlo Tree Search (MCTS)",
+    "section": "",
+    "text": "Model-based Reinforcement Learning: Illustration",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>11.1 Monte Carlo Tree Search (MCTS)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-1.html#mcts-motivation",
+    "href": "lecture11/lecture11-1.html#mcts-motivation",
+    "title": "11.1 Monte Carlo Tree Search (MCTS)",
+    "section": "MCTS: Motivation",
+    "text": "MCTS: Motivation\nProblem:\nRequire an algorithm that demonstrates strong empirical performance and effectively plans based on the dynamics of an environment.\nSolution:\n\nUniversité Charles de Gaulle 2006\nLink to Research Paper\n\nMCTS: Illustration\n\n\n\nSimilar to UCB bandit problems, we select actions according to a confidence interval that balances exploration and exploitation, with the formula:\n\\[A_t = \\arg\\max_a \\left[ Q(s,a) + C \\sqrt{\\frac{\\ln(N(s)_{\\text{parent}})}{N(s)}} \\right]\\]\n\n\n\n\n\n\n\nMCTS: Expansion\n\n\n\nAfter selecting an action (A_t), if the corresponding child node does not exist, we expand the search tree by creating a new node for the resulting state (S^{A_t}_{t+1}).\n\n\n\n\n\n\n\nMCTS: Simulation\n\n\n\nFrom the expanded node, we simulate n-times acting randomly and calculate the average rewards for all simulations:\n\\[\\bar{R} = \\frac{1}{n} \\sum_{j=1}^{n} R_j\\]\n\n\n\n\n\n\n\nMCTS: Backpropagation\n\n\n\nAfter obtaining the average rewards, we update the values from the current node up to the root node:\n\n\\[\nN(s) = N(s) + 1\n\\]\n\\[\nQ(s,a) = Q(s,a) + \\frac{\\bar{R}}{N(s)}\n\\]\n\n\n\n\n\n\nMCTS: Summary Illustration",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>11.1 Monte Carlo Tree Search (MCTS)</span>"
+    ]
+  },
+  {
+    "objectID": "lecture11/lecture11-1.html#pseudocode",
+    "href": "lecture11/lecture11-1.html#pseudocode",
+    "title": "11.1 Monte Carlo Tree Search (MCTS)",
+    "section": "Pseudocode",
+    "text": "Pseudocode\n\n\n\n\n\n\n  \n\n\n Exercise \nHow does the Upper Confidence Bound for Trees (UCT) algorithm balance exploration and exploitation in MCTS?\n\\[\nA_t = \\arg\\max_a \\left[ Q(s,a) + C \\sqrt{\\frac{\\ln(N(s)_{\\text{parent}})}{N(s)}} \\right]\n\\]",
+    "crumbs": [
+      "Lecture 11: Monte Carlo Tree Search",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>11.1 Monte Carlo Tree Search (MCTS)</span>"
     ]
   }
 ]

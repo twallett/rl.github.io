@@ -14,5 +14,5 @@ Learning Objectives for Lecture 11: Monte Carlo Tree Search 🎯
 - `CartPole-v0` environment using `gymnasium` & `tensorflow`.
 
 ::: {style = "text-align:center;"}
-![Taxonomy of Reinforcement Learning](images/Lecture10.drawio.svg)
+![Taxonomy of Reinforcement Learning](images/Lecture11.drawio.svg)
 :::
