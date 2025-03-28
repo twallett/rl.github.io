@@ -23,7 +23,7 @@ For this homework, you only need `gymnasium`, `numpy`, `tensorflow`, `os`, `pick
 
 ![](images/cheetah.gif){width=40% fig-align="center"}
 
-## Coding Exercise 1: PPO Clip
+## Coding Exercise 1: Proximal Policy Optimization (PPO) Clip
 For the `HalfCheetah-v5` environment, code the update function for the Proximal Policy Optimization: Clip algorithm using the provided parameters.
 
 ## [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17HOPCXYMyl7DNFPd_SAsgG2NynWZGIEr?usp=sharing)

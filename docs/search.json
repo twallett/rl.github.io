@@ -94,7 +94,7 @@
     "href": "homework/homework8.html",
     "title": "Homework 8",
     "section": "",
-    "text": "Coding Exercise 1\nFor the highway-v0 environment, code the update method for the Deep Q-Netowrk (DQN) algorithm using the provided parameters.",
+    "text": "Coding Exercise 1: Deep Q-Network (DQN)\nFor the highway-v0 environment, code the update function for the Deep Q-Netowrk (DQN) algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>59</span>  <span class='chapter-title'>Homework 8</span>"
@@ -105,7 +105,7 @@
     "href": "homework/homework7.html",
     "title": "Homework 7",
     "section": "",
-    "text": "Coding Exercise 1\nFor the MountainCarContinuous-v0 environment, code the feature representation for Semi-Gradient SARSA algorithm using the provided parameters.",
+    "text": "Coding Exercise 1: Semi-Gradient SARSA\nFor the MountainCar-v0 environment, code the update function for Semi-Gradient SARSA algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>58</span>  <span class='chapter-title'>Homework 7</span>"
@@ -545,7 +545,7 @@
     "href": "homework/homework9.html",
     "title": "Homework 9",
     "section": "",
-    "text": "Coding Exercise 1\nFor the CartPole-v1 environment, code the update method for the Vanilla Policy Graidient algorithm using the provided parameters.",
+    "text": "Coding Exercise 1: Vanilla Policy Gradient\nFor the CartPole-v1 environment, code the update function for the Vanilla Policy Gradient algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>60</span>  <span class='chapter-title'>Homework 9</span>"
@@ -556,7 +556,7 @@
     "href": "homework/homework10.html",
     "title": "Homework 10",
     "section": "",
-    "text": "Coding Exercise 1\nFor the HalfCheetah-v5 environment, code the update method for the Proximal Policy Optimization algorithm using the provided parameters.",
+    "text": "Coding Exercise 1: Proximal Policy Optimization (PPO) Clip\nFor the HalfCheetah-v5 environment, code the update function for the Proximal Policy Optimization: Clip algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>61</span>  <span class='chapter-title'>Homework 10</span>"
@@ -567,7 +567,7 @@
     "href": "homework/homework11.html",
     "title": "Homework 11",
     "section": "",
-    "text": "Coding Exercise 1\nFor the CartPole-v0 environment, code the update method for the Monte Carlo Tree Search (MCTS) algorithm using the provided parameters.",
+    "text": "Coding Exercise 1: Monte Carlo Tree Search (MCTS)\nFor the CartPole-v0 environment, code the update function for the Monte Carlo Tree Search (MCTS) algorithm using the provided parameters.",
     "crumbs": [
       "Homeworks",
       "<span class='chapter-number'>62</span>  <span class='chapter-title'>Homework 11</span>"
